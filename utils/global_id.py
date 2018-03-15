@@ -1,6 +1,6 @@
 
 
-def get_global_id(self, id, type):
+def get_global_id(id, type):
     '''
     The different entities may have same id (e.g. both author and conference can have id 1),
     to get a unique id for all entities in HIN (call it global id), we shift the origin id left by 2 bit,
@@ -17,8 +17,8 @@ def get_global_id(self, id, type):
     '''
     return (int(id) << 2) + type
 
-def retrieve_type(self, global_id):
+def retrieve_type(global_id):
     return global_id & 3
 
-def retrieve_id(self, global_id):
+def retrieve_id(global_id):
     return global_id >> 2
