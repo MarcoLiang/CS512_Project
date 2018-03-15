@@ -1,6 +1,7 @@
 import sys
 import codecs
-from utils.global_id import get_global_id
+from utils.global_id import *
+
 
 
 class MetaPathGenerator:
@@ -81,12 +82,11 @@ class MetaPathGenerator:
         '''
         write global id
         '''
-        global_id_meta_path = [self.get_global_id(node.id) for node in meta_path]
-        meta_str = '\t'.join(list(map(str, global_id_meta_path))) + '\n'
+        meta_str = '\t'.join(list(map(str, meta_path))) + '\n'
         file.write(meta_str)
 
     def write_file_str(self, meta_path, file):
-        meta_str = [self.dict_list[node.type][node.id] for node in meta_path]
+        meta_str = [self.dict_list[retrieve_type(g_id)][str(retrieve_id(g_id))] for g_id in meta_path]
         meta_str = '\t'.join(meta_str) + '\n'
         file.write(meta_str)
 
