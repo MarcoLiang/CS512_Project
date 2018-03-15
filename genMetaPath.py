@@ -16,7 +16,7 @@ class MetaPathGenerator:
         self.type_num = type_num
 
     def read_data(self, dirpath):
-        with codecs.open(dirpath + "/id_author_1000.txt", 'r', 'utf-8') as adictfile:
+        with codecs.open(dirpath + "/id_author.txt", 'r', 'utf-8') as adictfile:
             for line in adictfile:
                 toks = line.strip().split("\t")
                 if len(toks) == 2:
@@ -25,7 +25,7 @@ class MetaPathGenerator:
 
         # print "#authors", len(self.id_author)
 
-        with codecs.open(dirpath + "/id_conf_1000.txt", 'r', 'utf-8') as cdictfile:
+        with codecs.open(dirpath + "/id_conf.txt", 'r', 'utf-8') as cdictfile:
             for line in cdictfile:
                 toks = line.strip().split("\t")
                 if len(toks) == 2:
@@ -35,7 +35,7 @@ class MetaPathGenerator:
         #
         # # print "#conf", len(self.id_conf)
         #
-        with codecs.open(dirpath + "/paper_author_1000.txt", 'r', 'utf-8') as pafile:
+        with codecs.open(dirpath + "/paper_author.txt", 'r', 'utf-8') as pafile:
             for line in pafile:
                 toks = line.strip().split("\t")
                 if len(toks) == 2:
@@ -47,7 +47,7 @@ class MetaPathGenerator:
                         self.author_paper[a] = []
                     self.author_paper[a].append(p)
 
-        with codecs.open(dirpath + "/paper_conf_1000.txt") as pcfile:
+        with codecs.open(dirpath + "/paper_conf.txt", 'r', 'utf-8') as pcfile:
             for line in pcfile:
                 toks = line.strip().split("\t")
                 if len(toks) == 2:
@@ -57,7 +57,7 @@ class MetaPathGenerator:
                         self.conf_paper[c] = []
                     self.conf_paper[c].append(p)
 
-        with codecs.open(dirpath + "/paper_paper_1000.txt") as ppfile:
+        with codecs.open(dirpath + "/paper_paper.txt") as ppfile:
             for line in ppfile:
                 toks = line.strip().split("\t")
                 if len(toks) == 2:
@@ -69,11 +69,34 @@ class MetaPathGenerator:
                         self.paper_from_paper[p2]= []
                     self.paper_from_paper[p2] = p1
 
+    def generate_metapath(self, dir_out):
+        '''
+        :param dir_out: the direction of the output file
+
+        The different entities may have same id (e.g. both author and conference can have id 1),
+        to get a unique id for all entities in HIN (call it global id), we shift the origin id left by 2 bit,
+        and use the lowest 2 bits to store the entity type information:
+
+        global_id: xxxxx00 => Entity Type: author
+        global_id: xxxxx01 => Entity Type: conference
+        global_id: xxxxx10 => Entity Type: paper
+
+        And we can retrieve the type information from global id by global_id & 3:
+        global_id & 3 == 0 => Entity Type: author
+        global_id & 3 == 1 => Entity Type: conference
+        global_id & 3 == 2 => Entity Type: paper
+        '''
+
 
 
 def main():
     meta = MetaPathGenerator(10, 3)
-    meta.read_data("data/dblp_1000")
+    meta.read_data("_reduced_dataset/output")
+    for p, lst in meta.paper_to_paper.items():
+        print(p)
+        print(lst)
+        print('=====')
+        # print(meta.paper_from_paper[])
 
 
 
