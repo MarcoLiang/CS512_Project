@@ -1,0 +1,45 @@
+1	Jian Pei
+2	Xin Li
+3	Wei Wang
+4	Sangkyum Kim
+5	Jiawei Han
+6	Yizhou Sun
+7	Hector Gonzalez
+8	Xiaoxin Yin
+9	Xifeng Yan
+10	Wei Lu
+11	Dong Xin
+12	Xin Jin
+13	Bolin Ding
+14	Christos Faloutsos
+15	Feida Zhu
+16	Jing Gao
+17	Deng Cai
+18	Flip Korn
+19	Jure Leskovec
+20	Zhijun Yin
+21	Manish Gupta
+22	Shashank Pandit
+23	Hong Cheng
+24	Deepayan Chakrabarti
+25	Anthony K. H. Tung
+26	Leman Akoglu
+27	Ling Liu
+28	Lei Li
+29	Chen Chen
+30	Michael I. Jordan
+31	Xiaolei Li
+32	Gabor Melli
+33	Hwanjo Yu
+34	Peixiang Zhao
+35	Spiros Papadimitriou
+36	Gert R. G. Lanckriet
+37	Purnamrita Sarkar
+38	Hanghang Tong
+39	Chiranjib Bhattacharyya
+40	Jimeng Sun
+41	Zheng Shao
+42	Fan Guo
+43	Wen-tau Yih
+44	Mary McGlohon
+45	Dan Roth

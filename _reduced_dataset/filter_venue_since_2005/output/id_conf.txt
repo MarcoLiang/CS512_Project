@@ -1,0 +1,8 @@
+1	international conference on data engineering
+2	international acm sigir conference on research and development in information retrieval
+3	extending database technology
+4	international world wide web conferences
+5	World Wide Web
+6	international conference on data mining
+7	asia-pacific web conference
+8	european conference on principles of data mining and knowledge discovery
