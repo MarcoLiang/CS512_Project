@@ -1,0 +1,222 @@
+1	On shortest unique substring queries
+2	Context sensitive stemming for web search
+3	Efficiently indexing shortest paths by exploiting symmetry in graphs
+4	Comparing both relevance and robustness in selection of web ranking functions
+5	OrthoCluster: a new tool for mining synteny blocks and applications in comparative genomics
+6	Multidimensional Analysis of Atypical Events in Cyber-Physical Data
+7	Multi-dimensional search for personal information management systems
+8	Approximate Clustering on Distributed Data Streams
+9	FACTO: a fact lookup engine based on web tables
+10	Trie-based similarity search and join
+11	gIceberg: Towards iceberg analysis in large graphs
+12	Fixed versus dynamic co-occurrence windows in TextRank term weights for information retrieval
+13	P-Cube: Answering Preference Queries in Multi-Dimensional Space
+14	Load balancing for partition-based similarity search
+15	Discovering Threshold-based Frequent Closed Itemsets over Probabilistic Data
+16	Emerging Graph Queries in Linked Data
+17	XML keyword search with promising result type recommendations
+18	Spotting Suspicious Link Behavior with fBox: An Adversarial Perspective
+19	TopicSketch: Real-Time Bursty Topic Detection from Twitter
+20	Multilabel Consensus Classification
+21	Laplacian optimal design for image retrieval
+22	Quantile-based KNN over multi-valued objects
+23	Discovering Conservation Rules
+24	Community Detection in Networks with Node Attributes
+25	LINKREC: a unified framework for link recommendation with user attributes and graph structure
+26	Parallel crawling for online social networks
+27	Finding email correspondents in online social networks
+28	A Monte Carlo algorithm for cold start recommendation
+29	Parameter-Free Determination of Distance Thresholds for Metric Distance Constraints
+30	Towards Active Learning on Graphs: An Error Bound Minimization Approach
+31	Predicting Links in Multi-relational and Heterogeneous Networks
+32	CETR: content extraction via tag ratios
+33	A graph-theoretic approach to webpage segmentation
+34	Estimating Local Information Trustworthiness via Multi-source Joint Matrix Factorization
+35	Cross Domain Search by Exploiting Wikipedia
+36	External Evaluation of Topic Models: A Graph Mining Approach
+37	Orthogonal locality preserving indexing
+38	Mining Statistically Significant Sequential Patterns
+39	Entity relation discovery from web tables and links
+40	iCoDA: Interactive and exploratory data completeness analysis
+41	iRIN: image retrieval in image-rich information networks
+42	Understanding Data Completeness in Network Monitoring Systems
+43	Graph Database Indexing Using Structured Graph Decomposition
+44	On Discovery of Traveling Companions from Streaming Trajectories
+45	Sharoes: A Data Sharing Platform for Outsourced Enterprise Storage Environments
+46	Personalized Recommendation via Parameter-Free Contextual Bandits
+47	Algorithm-safe privacy-preserving data publishing
+48	Monitoring Network Evolution using MDL
+49	Efficient and Scalable Information Geometry Metric Learning
+50	Predicting query potential for personalization, classification or regression?
+51	AC-Close: Efficiently Mining Approximate Closed Itemsets by Core Pattern Recovery
+52	Mining closed discriminative dyadic sequential patterns
+53	Random-walk domination in large graphs
+54	Mixed Membership Subspace Clustering
+55	BlueFinder: estimate where a beach photo was taken
+56	Mobile Phone Graph Evolution: Findings, Model and Interpretation
+57	PatentLine: analyzing technology evolution on multi-view patent graphs
+58	Clash of the Contagions: Cooperation and Competition in Information Diffusion
+59	Metric Learning from Relative Comparisons by Minimizing Squared Residual
+60	adaQAC: Adaptive Query Auto-Completion via Implicit Negative Feedback
+61	Collective topic modeling for heterogeneous networks
+62	Stream Prediction Using Representative Episode Rules
+63	Mining Probabilistic Frequent Spatio-Temporal Sequential Patterns with Gap Constraints from Uncertain Databases
+64	Monitoring continuous state violation in datacenters: Exploring the time dimension
+65	Mining Approximate Order Preserving Clusters in the Presence of Noise
+66	ELM * : distributed extreme learning machine with MapReduce
+67	Solving Consensus and Semi-supervised Clustering Problems Using Nonnegative Matrix Factorization
+68	Trajectory Outlier Detection: A Partition-and-Detect Framework
+69	Mining most frequently changing component in evolving graphs
+70	A Spectral Framework for Detecting Inconsistency across Multi-source Object Relationships
+71	LRBM: A Restricted Boltzmann Machine Based Approach for Representation Learning on Linked Data
+72	Growing parallel paths for entity-page discovery
+73	Chinese news event 5W1H semantic elements extraction for event ontology population
+74	An Overview of the CPROD1 Contest on Consumer Product Recognition within User Generated Postings and Normalization against a Large Product Catalog
+75	Community-Affiliation Graph Model for Overlapping Network Community Detection
+76	BlogCast effect on information diffusion in a blogosphere
+77	Constructing Topical Hierarchies in Heterogeneous Information Networks
+78	Large graph mining: patterns, cascades, fraud detection, and algorithms
+79	Engaging with massive online courses
+80	Scalable and parallelizable processing of influence maximization for large-scale social networks?
+81	Querying the past, present and future: where we are and where we will be
+82	Robust multivariate autoregression for anomaly detection in dynamic product ratings
+83	Random Error Reduction in Similarity Search on Time Series: A Statistical Approach
+84	Graphical models for text: a new paradigm for text representation and processing
+85	Semantic Frame-Based Document Representation for Comparable Corpora
+86	Fast Graph Pattern Matching
+87	Social context-aware trust inference for trust enhancement in social network based recommendations on service providers
+88	Correlation hiding by independence masking
+89	Malicious URL detection by dynamically mining patterns without pre-defined elements
+90	An exploration of improving collaborative recommender systems via user-item subgroups
+91	Top-K aggregation queries over large networks
+92	The paths more taken: matching DOM trees to search logs for accurate webpage clustering
+93	Multi-guarded safe zone: An effective technique to monitor moving circular range queries
+94	Mining Query-Based Subnetwork Outliers in Heterogeneous Information Networks
+95	Ontology-based subgraph querying
+96	Approximate entity extraction in temporal databases
+97	Stream Classification with Recurring and Novel Class Detection Using Class-Based Ensemble
+98	Mining Billion-node Graphs: Patterns, Generators and Tools
+99	Finding superior skyline points for multidimensional recommendation applications
+100	Web search/browse log mining: challenges, methods, and applications
+101	The dual-sparse topic model: mining focused topics and focused terms in short text
+102	Interactive hierarchical tag clouds for summarizing spatiotemporal social contents
+103	Efficient Common Items Extraction from Multiple Sorted Lists
+104	Trendspedia: An Internet observatory for analyzing and visualizing the evolving web
+105	Suggestion of promising result types for XML keyword search
+106	ETM: Entity Topic Models for Mining Documents Associated with Entities
+107	Online Failure Forecast for Fault-Tolerant Data Stream Processing
+108	SPARK: A Keyword Search Engine on Relational Databases
+109	CARE: Finding Local Linear Correlations in High Dimensional Data
+110	Continuous privacy preserving publishing of data streams
+111	X-warehouse: building query pattern-driven data
+112	Ontology-enriched multi-document summarization in disaster management
+113	Patent Maintenance Recommendation with Patent Information Network Model
+114	Predicting positive and negative links in online social networks
+115	Scalable top-k spatial keyword search
+116	Online Spectral Learning on a Graph with Bandit Feedback
+117	CT-IC: Continuously Activated and Time-Restricted Independent Cascade Model for Viral Marketing
+118	Twitter+: Build personalized newspaper for Twitter
+119	Combining audio content and social context for semantic music discovery
+120	Efficient top-K approximate searches against a relation with multiple attributes
+121	Answering aggregate keyword queries on relational databases using minimal group-bys
+122	Tensor space model for document analysis
+123	Compact Similarity Joins
+124	MLI: An API for Distributed Machine Learning
+125	iMecho: a context-aware desktop search system
+126	Advances in information and knowledge management
+127	CricketLinking: Linking Event Mentions from Cricket Match Reports to Ball Entities in Commentaries
+128	Crowdsourced enumeration queries
+129	On supporting effective web extraction
+130	Signature Pattern Covering via Local Greedy Algorithm and Pattern Shrink
+131	Learning, Analyzing and Predicting Object Roles on Dynamic Networks
+132	Overlapping Clustering with Sparseness Constraints
+133	LI-MR: A Local Iteration Map/Reduce Model and Its Application to Mine Community Structure in Large-Scale Networks
+134	EUDEMON: A System for Online Video Frame Copy Detection by Earth Mover's Distance
+135	Cloud service placement via subgraph matching
+136	Dynamic Multi-relational Chinese Restaurant Process for Analyzing Influences on Users in Social Media
+137	Learning Dirichlet Processes from Partially Observed Groups
+138	Profit Maximization over Social Networks
+139	Connecting the next billion web users
+140	LPTA: A Probabilistic Model for Latent Periodic Topic Analysis
+141	Recovering Low-Rank and Sparse Matrices via Robust Bilateral Factorization
+142	CharBoxes: a system for automatic discovery of character infoboxes from books
+143	Road network mix-zones for anonymous location based services
+144	Outsourcing multi-version key-value stores with verifiable data freshness
+145	Information Retrieval with Verbose Queries
+146	Top-K interesting subgraph discovery in information networks
+147	Spotting Culprits in Epidemics: How Many and Which Ones?
+148	On Signatures for Communication Graphs
+149	Tag-based social interest discovery
+150	Preserving Privacy in Social Networks Against Neighborhood Attacks
+151	A System for Mining Temporal Physiological Data Streams for Advanced Prognostic Decision Support
+152	MATRI: a multi-aspect and transitive trust inference model
+153	Efficient similarity joins for near duplicate detection
+154	EntityTagger: automatically tagging entities with descriptive phrases
+155	Efficient Discovery of Frequent Approximate Sequential Patterns
+156	gSkeletonClu: Density-Based Network Clustering via Structure-Connected Tree Division or Agglomeration
+157	C-Cubing: Efficient Computation of Closed Cubes by Aggregation-Based Checking
+158	Parameter-free spatial data mining using MDL
+159	Mining cross-graph quasi-cliques in gene expression and protein interaction data
+160	Mining closed relational graphs with connectivity constraints
+161	Predicting Multiple Metrics for Queries: Better Decisions Enabled by Machine Learning
+162	Tru-Alarm: Trustworthiness Analysis of Sensor Networks in Cyber-Physical Systems
+163	Taxonomy-Oriented recommendation towards recommendation with stage
+164	Predicting positive and negative links in signed social networks by transfer learning
+165	K-AP: Generating Specified K Clusters by Efficient Affinity Propagation
+166	gApprox: Mining Frequent Approximate Patterns from a Massive Network
+167	On reducing classifier granularity in mining concept-drifting data streams
+168	Page-level template detection via isotonic smoothing
+169	On the Inverse Classification Problem and its Applications
+170	How to influence my customers?: the impact of electronic market design
+171	Improving Grouped-Entity Resolution Using Quasi-Cliques
+172	Scalable multi-dimensional user intent identification using tree structured distributions
+173	A general framework for adaptive and online detection of web attacks
+174	Top-k Set Similarity Joins
+175	EigenDiagnostics: Spotting Connection Patterns and Outliers in Large Graphs
+176	Branch Code: A Labeling Scheme for Efficient Query Answering on Trees
+177	Click chain model in web search
+178	AutoLag: automatic discovery of lag correlations in stream data
+179	A Practical Approach to Classify Evolving Data Streams: Training with Limited Amount of Labeled Data
+180	Efficient Kernel Discriminant Analysis via Spectral Regression
+181	The bursty dynamics of the Twitter information network
+182	Privacy Preserving Publishing on Multiple Quasi-identifiers
+183	HashFile: An efficient index structure for multimedia data
+184	Identifying regional sensitive queries in web search
+185	Investigation of partial query proximity in web search
+186	Mining, Indexing, and Similarity Search in Graphs and Complex Structures
+187	ReadAlong: reading articles and comments together
+188	Measuring Proximity on Graphs with Side Information
+189	ValuePick: Towards a Value-Oriented Dual-Goal Recommender System
+190	Adaptive near-duplicate detection via similarity learning
+191	Temporal Outlier Detection in Vehicle Traffic Data
+192	SCENE: a scalable two-stage personalized news recommendation system
+193	Computing Compressed Multidimensional Skyline Cubes Efficiently
+194	Efficient Mining of Closed Repetitive Gapped Subsequences from a Sequence Database
+195	Empirical comparison of algorithms for network community detection
+196	A multiresolution symbolic representation of time series
+197	Local Correlation Tracking in Time Series
+198	Trust analysis with clustering
+199	Conditional Models for Non-smooth Ranking Loss Functions
+200	Stabbing the sky: efficient skyline computation over sliding windows
+201	RTM: Laws and a Recursive Generator for Weighted Time-Evolving Graphs
+202	Keyword extraction for social snippets
+203	Advanced Indexing Techniques for Wide-Area Network Monitoring
+204	Mining large graphs: Algorithms, inference, and discoveries
+205	Online mining of data streams: applications, techniques and progress
+206	The million song dataset challenge
+207	Quicklink selection for navigational query results
+208	Fast algorithms for time series mining
+209	Community mining from multi-relational networks
+210	Online System Problem Detection by Mining Patterns of Console Logs
+211	Effective computation of biased quantiles over data streams
+212	Skyline-join in distributed databases
+213	Supporting top-K item exchange recommendations in large online communities
+214	Distributed query sampling: a quality-conscious approach
+215	MobiMix: Protecting location privacy with mix-zones over road networks
+216	Direct Discriminative Pattern Mining for Effective Classification
+217	Classification and novel class detection of data streams in a dynamic feature space
+218	Publishing Sensitive Transactions for Itemset Utility
+219	Which "Apple" are you talking about ?
+220	Discriminative Frequent Pattern Analysis for Effective Classification
+221	Contextual advertising by combining relevance with click feedback
+222	Understanding task-driven information flow in collaborative networks
