@@ -1,0 +1,1942 @@
+1	vhigh performance computing and communications
+2	vinternational conference on conceptual structures
+3	vinternational conference on control, automation, robotics and vision
+4	vCommunications of The ACM
+5	vJournal of Computational Chemistry
+6	v
+7	vFrontiers in Digital Humanities
+8	vinternational symposium on information theory and its applications
+9	vinternational conference on machine learning and applications
+10	vinternational symposium on mixed and augmented reality
+11	vtools and algorithms for construction and analysis of systems
+12	vpanhellenic conference on informatics
+13	varXiv: Artificial Intelligence
+14	vglobal communications conference
+15	varXiv: Information Theory
+16	vLecture Notes in Computer Science
+17	varXiv: Robotics
+18	vMobile Information Systems
+19	vInformatica (lithuanian Academy of Sciences)
+20	vNeurocomputing
+21	vEuropean Journal of Operational Research
+22	vIntelligent Service Robotics
+23	vAutomatica
+24	vrobotics and biomimetics
+25	vIntelligent Decision Technologies
+26	vacm sigplan symposium on principles and practice of parallel programming
+27	varXiv: Computer Vision and Pattern Recognition
+28	vwireless communications and networking conference
+29	vIEEE Signal Processing Magazine
+30	vInternational Journal of Human Capital and Information Technology Professionals
+31	vconference on innovative data systems research
+32	vApplied Mathematics Letters
+33	vTelematics and Informatics
+34	vIntegration
+35	vGene
+36	vIEEE Access
+37	vNatural Language Engineering
+38	vExpert Systems With Applications
+39	varXiv: Learning
+40	vIEEE Transactions on Wireless Communications
+41	vTraitement Du Signal
+42	vIEEE Signal Processing Letters
+43	vfield programmable gate arrays
+44	vJournal of Cognitive Neuroscience
+45	vvisual communications and image processing
+46	veuropean symposium on programming
+47	vinternational world wide web conferences
+48	vInternational Journal of Ambient Computing and Intelligence
+49	vieee international conference on cloud computing technology and science
+50	vInternational Journal of Computer Integrated Manufacturing
+51	vcomputer science symposium in russia
+52	vinternational conference on human computer interaction
+53	vFormal Aspects of Computing
+54	vpower and timing modeling optimization and simulation
+55	vSensors
+56	vSoftwaretechnik-trends
+57	vNeuroImage
+58	vJournal of Network and Computer Applications
+59	vnational conference on artificial intelligence
+60	vhawaii international conference on system sciences
+61	vJournal of Electronic Testing
+62	vGeoinformatica
+63	vEducational Technology & Society
+64	vComputers in Education
+65	vTheoretical Computer Science
+66	vKybernetes
+67	vinternational conference on management of data
+68	vIEEE Transactions on Information Forensics and Security
+69	vElectronic Journal of Combinatorics
+70	vIEEE Transactions on Medical Imaging
+71	varXiv: Cryptography and Security
+72	varXiv: Programming Languages
+73	vweb search and data mining
+74	varXiv: Computer Science and Game Theory
+75	vbusiness information systems
+76	veuropean conference on parallel processing
+77	vMobile Networks and Applications
+78	vinternational conference on acoustics, speech, and signal processing
+79	vScientometrics
+80	vJournal of Communications
+81	vinternational symposium on signal processing and information technology
+82	vJournal of Advanced Computational Intelligence and Intelligent Informatics
+83	vIEEE Journal on Selected Areas in Communications
+84	vComputers & Mathematics With Applications
+85	varXiv: Quantum Physics
+86	vIEEE Transactions on Image Processing
+87	vInformation Research
+88	vIEEE Transactions on Instrumentation and Measurement
+89	vIndustrial Management and Data Systems
+90	vApplied Soft Computing
+91	vvehicular networking conference
+92	vInformation Processing Letters
+93	vthe internet of things
+94	vinternational conference on data mining
+95	vInternational Journal of Information Systems in The Service Sector
+96	vcompiler construction
+97	vsymposium on computer architecture and high performance computing
+98	varXiv: Networking and Internet Architecture
+99	vconference on computer supported cooperative work
+100	vInternational Journal of Bioinformatics Research and Applications
+101	vconference on intelligent text processing and computational linguistics
+102	vElektrotechnik Und Informationstechnik
+103	vApplied Mathematics and Computation
+104	varXiv: Methodology
+105	vNeuroinformatics
+106	varXiv: Machine Learning
+107	vieee international conference on high performance computing data and analytics
+108	vIEEE Transactions on Systems, Man, and Cybernetics
+109	vparallel problem solving from nature
+110	vsymposium on theoretical aspects of computer science
+111	vInternational Journal of Communication Systems
+112	vIEEE Transactions on Visualization and Computer Graphics
+113	varXiv: Combinatorics
+114	vworkshop on applications of computer vision
+115	vinternational conference on robotics and automation
+116	vtheorem proving in higher order logics
+117	vIEEE Transactions on Intelligent Transportation Systems
+118	vWireless Personal Communications
+119	vEmpirical Software Engineering
+120	vJournal of Sensors
+121	vFrontiers in Robotics and AI
+122	varXiv: Numerical Analysis
+123	vconference on information and knowledge management
+124	vIEEE Transactions on Vehicular Technology
+125	vinternational conference on pattern recognition applications and methods
+126	vCircuits Systems and Signal Processing
+127	vinternational conference on concurrency theory
+128	vIEEE Transactions on Geoscience and Remote Sensing
+129	varXiv: Other Computer Science
+130	vMathematics and Computers in Simulation
+131	vintelligent robots and systems
+132	varXiv: Software Engineering
+133	vinternational conference on digital information management
+134	vFrontiers of Computer Science in China
+135	vTelecommunication Systems
+136	vScopus
+137	vInternational Journal of Foundations of Computer Science
+138	vComputers in Human Behavior
+139	vComputers & Chemical Engineering
+140	vJournal of Heuristics
+141	vJournal of Systems and Software
+142	vJournal of Software: Evolution and Process
+143	vIEEE Transactions on Parallel and Distributed Systems
+144	vIEICE Transactions on Information and Systems
+145	vElectronic Colloquium on Computational Complexity
+146	vintelligent data analysis
+147	vInteractive Learning Environments
+148	vPhysical Review E
+149	varXiv: Logic in Computer Science
+150	vJournal of Visual Communication and Image Representation
+151	vJournal of the ACM
+152	vJournal of Computational and Applied Mathematics
+153	vlanguages and compilers for parallel computing
+154	vInformation Processing and Management
+155	vInternational Journal of Automation and Control
+156	vwireless on demand network systems and service
+157	vComputer Networks
+158	varXiv: Databases
+159	varXiv: Computational Geometry
+160	vACM Transactions on Internet Technology
+161	vconference of the international speech communication association
+162	vInternational Journal of Information Management
+163	vJournal of Organizational and End User Computing
+164	vKnowledge Based Systems
+165	vprinciples of security and trust
+166	vACM Transactions on Accessible Computing
+167	vInternational Journal of Knowledge Engineering and Data Mining
+168	vIEEE Geoscience and Remote Sensing Letters
+169	vIEEE Communications Letters
+170	vJournal of Computational Physics
+171	vinternational symposium on bioinformatics research and applications
+172	vinternational conference on logic programming
+173	vIndustrial Robot-an International Journal
+174	vInformation & Software Technology
+175	vNeural Networks
+176	vIEEE Transactions on Very Large Scale Integration Systems
+177	vOnline Information Review
+178	vSecurity and Communication Networks
+179	vBritish Journal of Educational Technology
+180	vJournal of Computational Design and Engineering
+181	vData Science and Engineering
+182	vSiam Journal on Applied Dynamical Systems
+183	vJournal of Intelligent and Robotic Systems
+184	vBMC Systems Biology
+185	vJournal of Parallel and Distributed Computing
+186	vIEICE Transactions on Communications
+187	vIEEE Internet of Things Journal
+188	vscalable information systems
+189	vNetwork Modeling Analysis in Health Informatics and BioInformatics
+190	vBiodata Mining
+191	vhardware oriented security and trust
+192	vProgress in Artificial Intelligence
+193	vInternational Journal of Critical Computer-based Systems
+194	vhuman factors in computing systems
+195	vconference on information sciences and systems
+196	vIEEE Transactions on Biomedical Circuits and Systems
+197	varXiv: Computation and Language
+198	vInternational Journal of Systems Science
+199	vintelligent human computer interaction
+200	varXiv: Distributed, Parallel, and Cluster Computing
+201	vInternational Journal of Digital Earth
+202	vsymbolic and numeric algorithms for scientific computing
+203	vElectronic Proceedings in Theoretical Computer Science
+204	varXiv: Formal Languages and Automata Theory
+205	vCluster Computing
+206	vInternational Journal of Bio-inspired Computation
+207	vInternational Journal of Multimedia Data Engineering and Management
+208	vJournal on Multimodal User Interfaces
+209	vRemote Sensing
+210	vA Quarterly Journal of Operations Research
+211	vComputers & Geosciences
+212	vbroadband communications, networks and systems
+213	vInternational Journal of Intelligent Systems
+214	vInternational Journal of Mathematical Modelling and Numerical Optimisation
+215	vComputers and Electronics in Agriculture
+216	vGovernment Information Quarterly
+217	vComputación Y Sistemas
+218	vBMC Bioinformatics
+219	vFormal Methods in System Design
+220	vIEEE Transactions on Knowledge and Data Engineering
+221	varXiv: Data Structures and Algorithms
+222	vtechnical symposium on computer science education
+223	vWind Energy
+224	vQuantum Information Processing
+225	vworkshop on information security applications
+226	vsymposium on computational geometry
+227	vRobotics and Autonomous Systems
+228	vEnvironmental Modelling and Software
+229	vInternational Journal of Mobile Human Computer Interaction
+230	vpicture coding symposium
+231	vComputer Communications
+232	vSignal Processing
+233	vIEEE Wireless Communications Letters
+234	vPervasive and Mobile Computing
+235	vJournal of Web Engineering
+236	vComputational and Mathematical Methods in Medicine
+237	vAdvanced Robotics
+238	vSystems Engineering
+239	vIEEE Software
+240	vSimulation
+241	vcollaborative computing
+242	vIEEE Transactions on Circuits and Systems I-regular Papers
+243	vPattern Recognition Letters
+244	vAdaptive Behavior
+245	varXiv: Hardware Architecture
+246	vsoft computing
+247	vsystems, man and cybernetics
+248	vJournal of Zhejiang University Science C
+249	vJournal of Computational Science
+250	vArtificial Intelligence
+251	vInternational Journal of Enterprise Information Systems
+252	vDigital Signal Processing
+253	vMonte Carlo Methods and Applications
+254	vEntropy
+255	vasian conference on machine learning
+256	vWireless Communications and Mobile Computing
+257	vBioinformatics
+258	vMultimedia Tools and Applications
+259	vinternational conference on data engineering
+260	varXiv: Neural and Evolutionary Computing
+261	vComputers, Environment and Urban Systems
+262	vneural information processing systems
+263	vElectronic Notes in Theoretical Computer Science
+264	vFrontiers in Neuroinformatics
+265	vFrontiers in Neurorobotics
+266	vBig Data Research
+267	vComputers & Operations Research
+268	vPattern Recognition
+269	vComputer Applications in Engineering Education
+270	vPeerJ
+271	varXiv: Digital Libraries
+272	vconference on management of data
+273	vNature
+274	vComputer Standards & Interfaces
+275	vIEEE Transactions on Control Systems and Technology
+276	vInformation and Organization
+277	varXiv: Optimization and Control
+278	vworkshop on algorithms and data structures
+279	vInternational Journal of Web and Grid Services
+280	vJournal of Artificial Intelligence Research
+281	vEngineering Applications of Artificial Intelligence
+282	vSpeech Communication
+283	vLanguage and Linguistics Compass
+284	vWirtschaftsinformatik \/ Angewandte Informatik
+285	vIEEE Wireless Communications
+286	vSignal Processing-image Communication
+287	vInternational Journal of Autonomic Computing
+288	vGenomics, Proteomics & Bioinformatics
+289	vAnnals of Physical and Rehabilitation Medicine
+290	vScandinavian Journal of Information Systems
+291	vWorld Wide Web
+292	vJournal of Global Optimization
+293	varXiv: Human-Computer Interaction
+294	varXiv: Mathematical Software
+295	vInternational Journal of Interactive Mobile Technologies (ijim)
+296	vIEEE Journal of Solid-state Circuits
+297	varXiv: Systems and Control
+298	varXiv: Discrete Mathematics
+299	vComputational Intelligence and Neuroscience
+300	varXiv: Sound
+301	vInformation Systems Journal
+302	vMicroelectronics Journal
+303	velectronic government
+304	vdata compression conference
+305	vusenix conference on file and storage technologies
+306	vInternational Journal of Emerging Technologies in Learning (ijet)
+307	vtheory and applications of models of computation
+308	vErcim News
+309	vadaptive agents and multi-agents systems
+310	vFuzzy Sets and Systems
+311	vIEEE Transactions on Learning Technologies
+312	vProceedings of SPIE
+313	vhuman-robot interaction
+314	vinternational conference on case-based reasoning
+315	vIEEE Transactions on Industrial Informatics
+316	vIEEE Transactions on Molecular, Biological, and Multi-Scale Communications
+317	varXiv: Computers and Society
+318	vcomputer and communications security
+319	vIntelligence\/sigart Bulletin
+320	varXiv: Computational Complexity
+321	vinternational conference on cryptology in india
+322	vDiscrete Applied Mathematics
+323	vJournal of Medical Systems
+324	vfoundations of software technology and theoretical computer science
+325	vIEICE Transactions on Fundamentals of Electronics, Communications and Computer Sciences
+326	vBiomedical Signal Processing and Control
+327	vNano Communication Networks
+328	vComputational Biology and Chemistry
+329	vTheory of Computing
+330	vIpsj Transactions on System Lsi Design Methodology
+331	vSimulation Modelling Practice and Theory
+332	vEcological Informatics
+333	vMathematics in Computer Science
+334	vComputers in Biology and Medicine
+335	vIEEE Transactions on Smart Grid
+336	vIEICE Transactions on Electronics
+337	vinternational test conference
+338	vActa Informatica
+339	vKybernetika
+340	vInternational Journal of Grid and Utility Computing
+341	vComputers & Graphics
+342	vdecision support systems
+343	vinternational conference on communications
+344	vStudia Logica
+345	valgorithmic learning theory
+346	vIEEE Transactions on Audio, Speech, and Language Processing
+347	vArtificial Life
+348	vIEEE Communications Surveys and Tutorials
+349	vInternational Journal of Biomedical Imaging
+350	vJournal of Intelligent and Fuzzy Systems
+351	vsignal image technology and internet based systems
+352	vcomputational learning theory
+353	vIEEE Transactions on Communications
+354	veuropean conference on information retrieval
+355	vACM Queue
+356	vConcurrency and Computation: Practice and Experience
+357	vAi Magazine
+358	vInternational Journal of Emerging Technologies in Learning
+359	vInternational Journal of Applied Mathematics and Computer Science
+360	vinternational conference on application of concurrency to system design
+361	vIEEE Transactions on Acoustics, Speech, and Signal Processing
+362	vACM Sigsmall\/pc Notes
+363	vpractical aspects of declarative languages
+364	varXiv: Computational Engineering, Finance, and Science
+365	vChild and Adolescent Psychiatric Clinics of North America
+366	vBMC Medical Informatics and Decision Making
+367	vComputational Optimization and Applications
+368	vInternational Journal of Geographical Information Science
+369	vInformation Sciences
+370	vReal-time Systems
+371	vBulletin of The European Association for Theoretical Computer Science
+372	vComputers & Electrical Engineering
+373	vJournal of Computer and System Sciences
+374	vIEEE Transactions on Information Theory
+375	vadvances in computing and communications
+376	vJournal of Machine Learning Research
+377	vwireless personal multimedia communications
+378	vSIAM Journal on Scientific Computing
+379	vThe Journal of Supercomputing
+380	vEuropean Journal of Combinatorics
+381	vSource Code for Biology and Medicine
+382	vfundamentals of computation theory
+383	vasian conference on computer vision
+384	vconference on multimedia modeling
+385	vEnvironmental Pollution
+386	vInformation Technology & Tourism
+387	vIEEE Annals of the History of Computing
+388	vApplied Artificial Intelligence
+389	vApplied Intelligence
+390	vReliability Engineering & System Safety
+391	vProceedings of The Vldb Endowment
+392	vJournal of Artificial Societies and Social Simulation
+393	vIEEE Transactions on Automatic Control
+394	vInformation Fusion
+395	vfoundations and practice of security
+396	vinternational conference on computer vision theory and applications
+397	vIEEE Transactions on Robotics
+398	vJournal of Electronic Imaging
+399	vmeeting of the association for computational linguistics
+400	vInternational Journal of High Performance Computing Applications
+401	vconference on computability in europe
+402	vData Mining and Knowledge Discovery
+403	vArchives and Museum Informatics
+404	vJournal of Computer Assisted Learning
+405	vinternational conference on software engineering
+406	vsecurity and privacy in communication networks
+407	vComputers & Industrial Engineering
+408	vJournal of Chemical Information and Modeling
+409	vOperations Research Letters
+410	vinternational symposium on algorithms and computation
+411	valgorithmic aspects of wireless sensor networks
+412	vIet Communications
+413	vCognition, Technology & Work
+414	vInternational Journal of Applied Earth Observation and Geoinformation
+415	vvery large data bases
+416	vSIAM Journal on Computing
+417	vambient intelligence
+418	vJournal of Digital Information Management
+419	vHuman Factors
+420	vformal methods
+421	vJournal of Robotics
+422	varXiv: Quantitative Methods
+423	vComputers & Security
+424	vAlgorithmica
+425	vDatenbank-spektrum
+426	vJournal of the Association for Information Systems
+427	vInformation Systems
+428	vEurasip Journal on Bioinformatics and Systems Biology
+429	vMicroprocessors and Microsystems
+430	vdiscovery science
+431	vsymposium on discrete algorithms
+432	vartificial intelligence in education
+433	vJournal of Reliable Intelligent Environments
+434	vInternational Journal of Speech Technology
+435	vIEEE Transactions on Computers
+436	vSynthese
+437	vpublic key cryptography
+438	varXiv: Multiagent Systems
+439	vQuantum Information & Computation
+440	vJournal of Cheminformatics
+441	varXiv: Fluid Dynamics
+442	vInternational Journal of Advanced Corporate Learning (ijac)
+443	vInformation Systems Management
+444	vPraxis Journal of Philosophy
+445	vAnnales Des Télécommunications
+446	vJournal of Optimization Theory and Applications
+447	vJournal of Scientific Computing
+448	vOperating Systems Review
+449	vJournal of Biomedical Informatics
+450	vIet Circuits Devices & Systems
+451	vArtificial Intelligence in Medicine
+452	vMathematical Methods of Operations Research
+453	vworkshop on algorithms and computation
+454	vcolor imaging conference
+455	vAdvances in Computers
+456	vinternational conference on pattern recognition
+457	vCommunications of The Ais
+458	vinternational conference on distributed smart cameras
+459	vInternational Journal of Approximate Reasoning
+460	vDatenschutz Und Datensicherheit
+461	vprinciples of knowledge representation and reasoning
+462	vJournal of Biomedical Semantics
+463	vJournal of Systems Architecture
+464	vIEEE Internet Computing
+465	vFuel and Energy Abstracts
+466	vInternational Journal of Computer Science & Applications
+467	vComputer-aided Design
+468	vIEEE Communications Magazine
+469	vJournal of Computational Biology
+470	vGenetic Programming and Evolvable Machines
+471	vrobotics and applications
+472	vComputerized Medical Imaging and Graphics
+473	vinternational symposium on biomedical imaging
+474	vJournal of Electrical and Computer Engineering
+475	vComputational Management Science
+476	varXiv: Atmospheric and Oceanic Physics
+477	vInternational Journal of Information Technology and Web Engineering
+478	vMemetic Computing
+479	vinternational semantic web conference
+480	vinternational conference on security and cryptography
+481	vinternational conference on image processing
+482	vconference of the centre for advanced studies on collaborative research
+483	vAnnals of Operations Research
+484	vSprachwissenschaft
+485	vJournal of Universal Computer Science
+486	vinternational symposium on microarchitecture
+487	vinternational conference on algorithms and complexity
+488	varXiv: Physics and Society
+489	vMedical Image Analysis
+490	vComputer Physics Communications
+491	vgraphics interface
+492	vBulletin of Mathematical Biology
+493	vJournal of Decision Systems
+494	varXiv: Social and Information Networks
+495	vFirst Monday
+496	varXiv: Information Retrieval
+497	vconference on automated deduction
+498	vMachine Translation
+499	vAsymptotic Analysis
+500	vTechnometrics
+501	vSIAM Journal on Matrix Analysis and Applications
+502	varXiv: Emerging Technologies
+503	varchitectural support for programming languages and operating systems
+504	vFrontiers in Computational Neuroscience
+505	vstatic analysis symposium
+506	vCyberpsychology, Behavior, and Social Networking
+507	vGames
+508	vowl: experiences and directions
+509	vTechnique Et Science Informatiques
+510	vMachine Learning
+511	vspoken language technology workshop
+512	vInternational Journal of Information Systems and Social Change
+513	vJournal of Theoretical Biology
+514	vinternational conference on parallel processing
+515	vOptical Switching and Networking
+516	vIEEE Transactions on Education
+517	vlatin american symposium on theoretical informatics
+518	vmachine vision applications
+519	vMathematical Social Sciences
+520	vInternational Journal of Pattern Recognition and Artificial Intelligence
+521	vCognitive Systems Research
+522	vMedical & Biological Engineering & Computing
+523	vACM Transactions on Computer-Human Interaction
+524	varXiv: Medical Physics
+525	vconference on decision and control
+526	vDiscrete Mathematics
+527	vinternational conference on conceptual modeling
+528	vJournal of Ambient Intelligence and Humanized Computing
+529	vinternational conference on learning representations
+530	vasian test symposium
+531	varXiv: Probability
+532	vAd Hoc & Sensor Wireless Networks
+533	vInternational Journal of Manufacturing Technology and Management
+534	vrandomization and approximation techniques in computer science
+535	vInformation Systems Frontiers
+536	vInternational Journal of Online Engineering
+537	vInternational Journal of Social Robotics
+538	vJournal of Circuits, Systems, and Computers
+539	vMathematical and Computer Modelling
+540	vMicroelectronics Reliability
+541	varXiv: Metric Geometry
+542	vEurasip Journal on Information Security
+543	vInternational Journal of Intelligent Computing and Cybernetics
+544	vInternational Journal of Technology and Human Interaction
+545	vinternational parallel and distributed processing symposium
+546	vinternational symposium on chinese spoken language processing
+547	vCentral European Journal of Operations Research
+548	vinternational conference on contemporary computing
+549	vJournal of Physics D
+550	vFuture Generation Computer Systems
+551	vJournal for General Philosophy of Science
+552	vubiquitous computing
+553	vimage and vision computing new zealand
+554	vInformatica (slovenia)
+555	vad hoc networks
+556	vComputer Vision and Image Understanding
+557	vBMC Medical Imaging
+558	valgorithmic game theory
+559	vcomputing and combinatorics conference
+560	vvehicular technology conference
+561	vTransfusion and Apheresis Science
+562	vArchive for Mathematical Logic
+563	vJournal of Arabic and Islamic Studies
+564	vWireless Networks
+565	vinternational symposium on object/component/service-oriented real-time distributed computing
+566	vIEEE Transactions on Engineering Management
+567	vJournal of the American Medical Informatics Association
+568	vcombinatorial pattern matching
+569	vComputational Statistics & Data Analysis
+570	vComputer Speech & Language
+571	varXiv: Neurons and Cognition
+572	vACM Transactions on Autonomous and Adaptive Systems
+573	vConnection Science
+574	vEuropean Journal of Control
+575	vBioSystems
+576	vmedical informatics europe
+577	vInternational Journal of Computer Networks & Communications
+578	vEurasip Journal on Image and Video Processing
+579	vAnnals of Pure and Applied Logic
+580	vTheory of Computing Systems \/ Mathematical Systems Theory
+581	vEURASIP Journal on Advances in Signal Processing
+582	vJournal of Computer-aided Molecular Design
+583	vEarth Science Informatics
+584	vScientific Programming
+585	vInternational Journal of Human-computer Studies \/ International Journal of Man-machine Studies
+586	vInternational Journal of Medical Informatics
+587	vScience of Computer Programming
+588	vIEEE\/ACM Transactions on Networking
+589	vJournal of The Franklin Institute-engineering and Applied Mathematics
+590	varXiv: Category Theory
+591	vfundamental approaches to software engineering
+592	vpervasive computing and communications
+593	vEducation and Information Technologies
+594	vACM Sigweb Newsletter
+595	vEurasip Journal on Embedded Systems
+596	vInternational Journal of Business Intelligence and Data Mining
+597	vnetwork and distributed system security symposium
+598	vJournal of Combinatorial Theory
+599	vMolecular & Cellular Proteomics
+600	vInternational Journal of Network Management
+601	vIEEE Transactions on Power Systems
+602	vBiochimica et Biophysica Acta
+603	vinternational conference on semantic computing
+604	vinternational conference on computational collective intelligence
+605	varXiv
+606	vinductive logic programming
+607	vconference on current trends in theory and practice of informatics
+608	vInternational Journal of Humanoid Robotics
+609	vInformatik Spektrum
+610	vExpert Systems
+611	vSiam Journal on Control and Optimization
+612	vInternational Journal of Agent Technologies and Systems
+613	vJournal of Graph Theory
+614	vInternational Journal of Algebra and Computation
+615	vlanguage and automata theory and applications
+616	vpacific-asia conference on knowledge discovery and data mining
+617	vamerican control conference
+618	vinternational joint conference on knowledge discovery knowledge engineering and knowledge management
+619	vNederlands Tijdschrift voor Geneeskunde
+620	vEuropean Transactions on Telecommunications
+621	vinternational symposium on information theory
+622	vBiophysical Journal
+623	vLibrary Hi Tech
+624	vprinciples and practice of constraint programming
+625	vAdvances in Fuzzy Systems
+626	vIEEE Transactions on Fuzzy Systems
+627	vOptics Communications
+628	vgrid and cooperative computing
+629	vDatenschutz Und Datensicherheit - Dud
+630	vinternational conference on machine learning and cybernetics
+631	vComputer Aided Geometric Design
+632	vIEEE Transactions on Multimedia
+633	vReports on Mathematical Logic
+634	vInternational Journal of Intelligent Games & Simulation
+635	vinternational conference on computer aided design
+636	varXiv: Statistics Theory
+637	vInternational Journal of Wireless Information Networks
+638	vconference on object-oriented programming systems, languages, and applications
+639	vcomputational intelligence and security
+640	vAutomatisierungstechnik
+641	vEurasip Journal on Wireless Communications and Networking
+642	vKnowledge Engineering Review
+643	varXiv: Functional Analysis
+644	vThe Computer Journal
+645	vsiam international conference on data mining
+646	vAlgorithms
+647	vOperations Research
+648	vSIAM Journal on Discrete Mathematics
+649	varXiv: Molecular Networks
+650	vAutomation and Remote Control
+651	vInternational Journal of Neural Systems
+652	vJournal of the Association for Information Science and Technology
+653	vunifying theories of programming
+654	vMathematical Programming
+655	vNew Media & Society
+656	vIEEE Design & Test of Computers
+657	vComputers in Industry
+658	vrewriting techniques and applications
+659	vIEEE Transactions on Neural Networks
+660	vComputer Methods and Programs in Biomedicine
+661	voperating systems design and implementation
+662	vAdvances in Engineering Software
+663	vJournal of Information Processing Systems
+664	vElearn
+665	vcomputer vision and pattern recognition
+666	vSynthesis Lectures on Biomedical Engineering
+667	vJournal of Aerospace Information Systems
+668	vScientific Reports
+669	vinternational conference on agents and artificial intelligence
+670	vpacific asia conference on information systems
+671	vJournal of Signal Processing Systems
+672	vOptics Letters
+673	vsystems man and cybernetics
+674	vMinds and Machines
+675	vflexible query answering systems
+676	vResearch Evaluation
+677	vCognitive Processing
+678	vJournal of Information Technology
+679	varXiv: General Topology
+680	vIbis
+681	vDesalination
+682	vSoftware Quality Journal
+683	vdesign, automation, and test in europe
+684	veuromicro conference on real-time systems
+685	vinternational symposium on multiple-valued logic
+686	vDigital Investigation
+687	vACM Transactions on Cyber-Physical Systems
+688	vInformation & Management
+689	vACM Transactions on Information Systems
+690	vFrontiers in Applied Mathematics and Statistics
+691	vInternational Journal of Advanced Computer Science and Applications
+692	vJournal of Complexity
+693	varXiv: Dynamical Systems
+694	vJournal of Network and Systems Management
+695	vCollege & Research Libraries
+696	varXiv: Symbolic Computation
+697	varXiv: Statistical Mechanics
+698	vIt Professional
+699	vSiam Journal on Mathematical Analysis
+700	vinternational conference on ubiquitous information management and communication
+701	vJournal of Knowledge Management
+702	vinteractive 3d graphics and games
+703	vSignal, Image and Video Processing
+704	vPublic Transport
+705	vBusiness & Information Systems Engineering
+706	vIEEE Transactions on Aerospace and Electronic Systems
+707	varXiv: Logic
+708	vinternational workshop on fuzzy logic and applications
+709	vIEEE Computer
+710	vInternational Journal of Multimedia Information Retrieval
+711	vGraphs and Combinatorics
+712	vAt-automatisierungstechnik
+713	vSocial Choice and Welfare
+714	vJournal of Computer Security
+715	vInternational Journal of Knowledge and Systems Science
+716	vJournal of Management Information Systems
+717	vTopics in Cognitive Science
+718	vInformation Resources Management Journal
+719	vIEEE Transactions on Consumer Electronics
+720	vJournal of Systems Science & Complexity
+721	vautomated software engineering
+722	vJournal of Computer Applications in Technology
+723	varXiv: Mathematical Physics
+724	vpacific rim international symposium on dependable computing
+725	vInternational Journal of Web-based Learning and Teaching Technologies
+726	vIEEE Transactions on Antennas and Propagation
+727	vAutomatic Control and Computer Sciences
+728	vIEEE Transactions on Network and Service Management
+729	vInternational Journal of Gaming and Computer-mediated Simulations
+730	vgemeinschaften in neuen medien
+731	vGames and Economic Behavior
+732	vNeural Processing Letters
+733	vInternational Journal of Artificial Life Research
+734	vadvances in mobile multimedia
+735	vDiscrete Optimization
+736	vinternational conference on information security and cryptology
+737	vubiquitous intelligence and computing
+738	vIEEE/ACM Transactions on Computational Biology and Bioinformatics
+739	vIEEE MultiMedia
+740	vJournal of Field Robotics
+741	vIEICE Electronics Express
+742	vsimulation modeling and programming for autonomous robots
+743	vWiley Interdisciplinary Reviews-Data Mining and Knowledge Discovery
+744	vinternational conference on database theory
+745	vSoftware Testing, Verification & Reliability
+746	vIEEE Computer Graphics and Applications
+747	vIEEE Transactions on Automation Science and Engineering
+748	vJournal of Global Information Management
+749	vadvanced information networking and applications
+750	vComputer Methods in Applied Mechanics and Engineering
+751	vInternational Journal of Systems and Service-oriented Engineering
+752	veuropean symposium on algorithms
+753	vcomputer assisted radiology and surgery
+754	vPattern Analysis and Applications
+755	vLearned Publishing
+756	varXiv: Adaptation and Self-Organizing Systems
+757	varXiv: High Energy Physics - Lattice
+758	vJournal of Phonetics
+759	vinternational conference on networking
+760	vIEEE Transactions on Signal Processing
+761	vScience in China Series F: Information Sciences
+762	vBehaviour & Information Technology
+763	vUser Modeling and User-adapted Interaction
+764	vAnnals of Statistics
+765	vInternational Journal of Bifurcation and Chaos
+766	vNeural Computation
+767	vACM Transactions on Design Automation of Electronic Systems
+768	vcomputational intelligence and games
+769	vparallel computing
+770	vGraphical Models \/graphical Models and Image Processing \/computer Vision, Graphics, and Image Processing
+771	vSystems & Control Letters
+772	vadaptive agents and multi agents systems
+773	vNetworks
+774	vSIAM Journal on Numerical Analysis
+775	vJournal of Computer Science
+776	vACM Transactions on Database Systems
+777	vIet Computers and Digital Techniques
+778	vInternational Journal of Electronic Healthcare
+779	vDiscrete Mathematics, Algorithms and Applications
+780	vACM Transactions on Intelligent Systems and Technology
+781	vInternational Journal of Distance Education Technologies
+782	vFinite Fields and Their Applications
+783	vEntertainment Computing
+784	vJournal of Computational Mathematics
+785	vIEEE Transactions on Circuits and Systems for Video Technology
+786	vInternational Journal of Information and Decision Sciences
+787	vInternational Journal of Swarm Intelligence Research
+788	vJournal of Discrete Algorithms
+789	vJournal of Visualization and Computer Animation
+790	vIEEE Transactions on Industry Applications
+791	vACM Journal on Emerging Technologies in Computing Systems
+792	vcongress on evolutionary computation
+793	vJournal of Multivariate Analysis
+794	vScientific Annals of Cuza University
+795	vACM Transactions in Embedded Computing Systems
+796	varXiv: Optics
+797	vcomputer games
+798	vThe Journal of Logic and Algebraic Programming
+799	vIEEE Transactions on Cognitive and Developmental Systems
+800	vAutonomous Agents and Multi-Agent Systems
+801	vInternational Journal of E-business Research
+802	vfoundations of genetic algorithms
+803	vinternational workshop on digital watermarking
+804	vInternational Journal of Operations Research and Information Systems
+805	vInternational Journal
+806	veuropean solid state circuits conference
+807	vsymposium on code generation and optimization
+808	vInternational Journal of Embedded and Real-time Communication Systems
+809	vintegrating technology into computer science education
+810	vIet Image Processing
+811	vElectronic Commerce Research and Applications
+812	vComplex Systems
+813	vvlsi test symposium
+814	vInternational Journal of Wavelets, Multiresolution and Information Processing
+815	vsymposium on the theory of computing
+816	vJournal of Experimental and Theoretical Artificial Intelligence
+817	vCombinatorica
+818	vIpsj Transactions on Computer Vision and Applications
+819	vJournal of the Brazilian Computer Society
+820	vComputer Languages, Systems & Structures
+821	vIEEE Transactions on Big Data
+822	vProduction Engineering
+823	vMarketing Science
+824	vIEEE Transactions on Emerging Topics in Computing
+825	vworkshop on internet and network economics
+826	vJournal of Information, Communication and Ethics in Society
+827	vInternational Journal of Computer Vision
+828	vACM Transactions on Modeling and Performance Evaluation of Computing 
+829	vInternational Journal on Digital Libraries
+830	vIEEE Transactions on Pattern Analysis and Machine Intelligence
+831	vMathematics of Operations Research
+832	vAdvanced Engineering Informatics
+833	vJournal of Bioinformatics and Computational Biology
+834	vIEEE Transactions on Professional Communication
+835	vACM Transactions on Programming Languages and Systems
+836	vJournal of Formalized Reasoning
+837	vProceedings of the National Academy of Sciences of the United States of America
+838	vInformation-an International Interdisciplinary Journal
+839	vComputer Music Journal
+840	vIEEE Transactions on Information Technology in Biomedicine
+841	vJournal of Functional Programming
+842	vInternational Journal of Information Technology Project Management
+843	vJournal of the Operational Research Society
+844	vImage and Vision Computing
+845	vcomputer supported collaborative learning
+846	vlanguage resources and evaluation
+847	vSystem
+848	vJournal of Mathematical Cryptology
+849	vSiam Journal on Optimization
+850	vIEEE Aerospace and Electronic Systems Magazine
+851	vInternational Journal of Distributed Sensor Networks
+852	vInternational Journal of Data Mining and Bioinformatics
+853	vBiological Cybernetics
+854	vInternational Journal of E-adoption
+855	vCommunications in Statistics - Simulation and Computation
+856	vLogical Methods in Computer Science
+857	vCognitive Computation
+858	vFrontiers in ICT
+859	vbritish machine vision conference
+860	vJournal of Plasma Physics
+861	vJournal of Symbolic Computation
+862	vInformation Systems and E-business Management
+863	vinternational acm sigir conference on research and development in information retrieval
+864	vsoftware engineering and knowledge engineering
+865	vwinter simulation conference
+866	vApplied Geography
+867	varXiv: Graphics
+868	varXiv: Applications
+869	vTransportation Science
+870	vJournal of Documentation
+871	vSiam Journal on Imaging Sciences
+872	vACM Transactions on Algorithms
+873	vinternational conference on automated planning and scheduling
+874	vPhysical Review Letters
+875	vJournal of Simulation
+876	vinternational conference on acoustics speech and signal processing
+877	vInternational Transactions in Operational Research
+878	vinternational conference on software testing verification and validation
+879	vThe International Journal of Press/Politics
+880	vAutonomous Robots
+881	viberoamerican congress on pattern recognition
+882	vasia and south pacific design automation conference
+883	vbiomedical engineering and informatics
+884	vIEEE Transactions on Computational Imaging
+885	vInternational Journal of Mathematics in Operational Research
+886	vlocal computer networks
+887	vreconfigurable computing and fpgas
+888	vInternational Journal of Software Engineering and Knowledge Engineering
+889	vAdvances in Mathematics of Communications
+890	vComputing and Informatics \/ Computers and Artificial Intelligence
+891	vdistributed multimedia systems
+892	vpassive and active network measurement
+893	vPersonal and Ubiquitous Computing
+894	vieee symposium on security and privacy
+895	varXiv: Multimedia
+896	velectronic commerce and web technologies
+897	vJournal of Mathematical Imaging and Vision
+898	vinternational symposium on parallel and distributed computing
+899	vInternational Journal of Information Technology and Decision Making
+900	vintelligent systems design and applications
+901	vSymmetry
+902	vsource code analysis and manipulation
+903	vIEEE Transactions on Industrial Electronics
+904	varXiv: Performance
+905	vgrid computing
+906	vSiam Journal on Applied Mathematics
+907	vhigh performance embedded architectures and compilers
+908	vJournal of Logic, Language and Information
+909	vparallel, distributed and network-based processing
+910	vIEEE Transactions on Cognitive Communications and Networking
+911	vworld congress on computational intelligence
+912	vInternational Journal of Business Information Systems
+913	vInformation Security Journal: A Global Perspective
+914	vSiam Review
+915	vThe Electronic Library
+916	vIEEE Journal of Selected Topics in Signal Processing
+917	vIEEE Journal on Emerging and Selected Topics in Circuits and Systems
+918	vKnowledge and Information Systems
+919	veuropean conference on web services
+920	vTechnology Analysis & Strategic Management
+921	vInterfaces
+922	vCryptography and Communications
+923	vJournal of Spatial Information Science
+924	vIEEE Intelligent Systems
+925	vProceedings of the IEEE
+926	vInternational Journal of Data Mining, Modelling and Management
+927	vComputational Visual Media
+928	vIEEE Robotics & Automation Magazine
+929	vPhonetica
+930	vProgress in Biophysics & Molecular Biology
+931	vInternational Journal of Services and Standards
+932	vDiscrete and Computational Geometry
+933	vieee virtual reality conference
+934	vFormalized Mathematics
+935	vIEEE Network
+936	vComputer-aided Civil and Infrastructure Engineering
+937	vproduct focused software process improvement
+938	vInternational Journal of Modelling, Identification and Control
+939	vSwarm Intelligence
+940	vPhysical Communication
+941	vJournal of Integrative Bioinformatics
+942	vMathematics of Computation
+943	vwireless and mobile computing, networking and communications
+944	vindustrial engineering and engineering management
+945	vInternational Journal of Knowledge-based and Intelligent Engineering Systems
+946	vInternational Journal of Technology Management
+947	vInternational Journal of Mobile Communications
+948	vNeural Computing and Applications
+949	vInternational Journal of Wireless and Mobile Computing
+950	vEuropean Journal of Information Systems
+951	vComputer Graphics Forum
+952	vInternational Journal of Manufacturing Research
+953	vadvances in modal logic
+954	vComputer Science Education
+955	vIEEE Transactions on Haptics
+956	vhuman robot interaction
+957	vSigir Forum
+958	vBiomechanisms
+959	vQueueing Systems
+960	vIma Journal of Mathematical Control and Information
+961	vIEEE Transactions on Biomedical Engineering
+962	vusenix technical conference
+963	vACM Transactions on Storage
+964	vInternational Journal on Document Analysis and Recognition
+965	vStatistical Methods and Applications
+966	vJournal of Strategic Information Systems
+967	vJournal of Information & Knowledge Management
+968	vACM Sigarch Computer Architecture News
+969	vInternational Journal of Information Quality
+970	vJournal of Economic Theory
+971	vJournal of Intelligent Transportation Systems
+972	vInformation Technology
+973	vDigital Creativity
+974	vJournal of Visualization
+975	vAnalog Integrated Circuits and Signal Processing
+976	vBulletin of The Australian Mathematical Society
+977	vJournal of Computer-Mediated Communication
+978	vRandom Structures and Algorithms
+979	vJournal of Computational Geometry
+980	vDisplays
+981	vAlgorithms for Molecular Biology
+982	vArtificial Intelligence Review
+983	vProceedings of The International Astronomical Union
+984	vJournal of Scheduling
+985	vIEEE Embedded Systems Letters
+986	vJournal of Enterprise Information Management
+987	vasian conference on intelligent information and database systems
+988	vIEEE Transactions on Control of Network Systems
+989	vAgeing Research Reviews
+990	vInternational Journal of Computer Applications
+991	vPerformance Evaluation
+992	vAdvances in Computational Mathematics
+993	vElectronic Markets
+994	vcommunications and networking symposium
+995	vconference on risks and security of internet and systems
+996	vInternational Journal on Artificial Intelligence Tools
+997	vinternational conference on bioinformatics and biomedical engineering
+998	vWasserwirtschaft
+999	vfinite-state methods and natural language processing
+1000	vrequirements engineering: foundation for software quality
+1001	vInternet Research
+1002	vIEEE Transactions on Evolutionary Computation
+1003	varXiv: Disordered Systems and Neural Networks
+1004	vcluster computing and the grid
+1005	vElectronic Government, An International Journal
+1006	vIEEE Transactions on Human-Machine Systems
+1007	vInternational Journal of Technoethics
+1008	vSystems Science & Control Engineering
+1009	vinternational solid-state circuits conference
+1010	vNumerische Mathematik
+1011	vInternational Journal of Hybrid Intelligent Systems
+1012	vElectronic Journal of Knowledge Management
+1013	vNetworks and Heterogeneous Media
+1014	vInformation Systems Research
+1015	vIEEE Transactions on Circuits and Systems Ii-express Briefs
+1016	vtbilisi symposium on logic language and computation
+1017	vGeophysical Journal International
+1018	vinternational conference on vlsi design
+1019	vOptimization Methods & Software
+1020	vJournal of Ambient Intelligence and Smart Environments
+1021	vLogica Universalis
+1022	vJournal of Informetrics
+1023	vIEEE Transactions on Dependable and Secure Computing
+1024	vControl and Intelligent Systems
+1025	vAdvances in Human-computer Interaction
+1026	vindustrial and engineering applications of artificial intelligence and expert systems
+1027	vJournal of Organizational Computing and Electronic Commerce
+1028	vProceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering
+1029	vNumerical Algorithms
+1030	vJournal of Quantitative Linguistics
+1031	vEurasip Journal on Audio, Speech, and Music Processing
+1032	vRobotica
+1033	vComputational Geometry: Theory and Applications
+1034	vInternational Game Theory Review
+1035	vInternational Journal of Synthetic Emotions
+1036	vfinancial cryptography
+1037	vinternational conference on model-driven engineering and software development
+1038	vweb intelligence
+1039	vJournal of Combinatorial Optimization
+1040	vJournal of Cases on Information Technology
+1041	vconference of the european chapter of the association for computational linguistics
+1042	vinternational symposium on physical design
+1043	vJournal of Logic and Computation
+1044	vThe International Journal of Robotics Research
+1045	vJournal of Librarianship and Information Science
+1046	vinternational conference on mobile systems, applications, and services
+1047	vnon-monotonic reasoning
+1048	vDigital Humanities Quarterly
+1049	vJournal of Korean Society of Medical Informatics
+1050	vInformation Economics and Policy
+1051	vMobile Computing and Communications Review
+1052	vInternational Journal of Applied Metaheuristic Computing
+1053	vintelligent user interfaces
+1054	vDesign Automation for Embedded Systems
+1055	vJournal of Geographical Systems
+1056	vcanadian conference on artificial intelligence
+1057	vintelligence and security informatics
+1058	vACM Computing Surveys
+1059	vBusiness Process Management Journal
+1060	vProgramming and Computer Software
+1061	vComputer Science Review
+1062	vInternational Journal of Information Technologies and Systems Approach
+1063	vComputers & Fluids
+1064	vInternational Journal of Intelligent Engineering Informatics
+1065	vManufacturing & Service Operations Management
+1066	vDatabase
+1067	vInternational Journal of Control
+1068	vDecision Analysis
+1069	vAnnals of Mathematics and Artificial Intelligence
+1070	vIEEE Magnetics Letters
+1071	vTransactions of The Japanese Society for Artificial Intelligence
+1072	vdistributed computing and artificial intelligence
+1073	vcanadian conference on computational geometry
+1074	vtbilisi symposium on logic, language, and computation
+1075	vLogic Journal of The Igpl \/ Bulletin of The Igpl
+1076	veuropean conference on principles of data mining and knowledge discovery
+1077	vJournal of Computational Neuroscience
+1078	vIEEE Transactions on Software Engineering
+1079	vvisual analytics science and technology
+1080	vSocial Networks
+1081	vJournal of Digital Information
+1082	vinternational conference on computer graphics theory and applications
+1083	vinternational conference on evaluation of novel approaches to software engineering
+1084	vpacific conference on computer graphics and applications
+1085	vSoftware - Practice and Experience
+1086	vDrug Discovery Today: Disease Models
+1087	vLinear & Multilinear Algebra
+1088	vTheory in Biosciences
+1089	vcologne twente workshop on graphs and combinatorial optimization
+1090	vJournal of Web Semantics
+1091	vExperimental Mathematics
+1092	vArs Combinatoria
+1093	vCybernetics and Systems
+1094	vTransactions of the American Mathematical Society
+1095	vDiscrete Event Dynamic Systems
+1096	vIEEE Micro
+1097	vComputing
+1098	vKsii Transactions on Internet and Information Systems
+1099	vInternational Journal of Artificial Intelligence in Education
+1100	vComputer Science and Information Systems
+1101	vautomation, robotics and control systems
+1102	vInternational Journal of Parallel, Emergent and Distributed Systems
+1103	vInternational Journal of Computer Mathematics
+1104	vinternational conference on operations research and enterprise systems
+1105	vrobotics science and systems
+1106	vInternational Journal of Web Information Systems
+1107	vBioimaging
+1108	vpersonal indoor and mobile radio communications
+1109	vbusiness process management
+1110	vPhysical Review A
+1111	vIEEE Transactions on Broadcasting
+1112	vnetworked systems design and implementation
+1113	vworkshop on approximation and online algorithms
+1114	vvirtual systems and multimedia
+1115	vSigecom Exchanges
+1116	vPublic Library Quarterly
+1117	vBiochemistry
+1118	vJournal of Computer Science and Technology
+1119	vApplied Ontology
+1120	vInternational Journal of Intelligent Information Technologies
+1121	vcollaboration technologies and systems
+1122	vinternational conference on persuasive technology
+1123	vACM Communications in Computer Algebra
+1124	vinternational conference on cloud computing and services science
+1125	vACM Transactions on Knowledge Discovery From Data
+1126	vbrazilian symposium on databases
+1127	vfield-programmable technology
+1128	vInternational Journal of Mobile and Blended Learning
+1129	vAdvances in Complex Systems
+1130	vInternational Journal of Autonomous and Adaptive Communications Systems
+1131	vInternational Journal of Information and Computer Security
+1132	vInteractions
+1133	vComputer Science - Research and Development
+1134	vJournal of the Royal Society Interface
+1135	vSpringerPlus
+1136	vInternational Journal of Reconfigurable Computing
+1137	vinternational conference on bioinformatics
+1138	vInternational Journal of Network Security
+1139	vThe International Arab Journal of Information Technology
+1140	vinternational conference on information systems security
+1141	vinternational conference on bio-inspired systems and signal processing
+1142	vinternational conference on information visualization theory and applications
+1143	vinternational conference on health informatics
+1144	vJournal of Approximation Theory
+1145	vInternational Journal of Online Engineering (ijoe)
+1146	vNumerical Linear Algebra With Applications
+1147	vInternational Journal of Knowledge Discovery in Bioinformatics
+1148	vThe Information Society
+1149	vStatistical Analysis and Data Mining
+1150	vJournal of Computers
+1151	vMathematical Logic Quarterly
+1152	vIngénierie Des Systèmes D'information
+1153	vrequirements engineering foundation for software quality
+1154	vIET Biometrics
+1155	vinternational symposium on computer and information sciences
+1156	vJournal of Electronic Commerce in Organizations
+1157	vTransactions in Gis
+1158	vInternational Journal of Information System Modeling and Design
+1159	vIEEE Journal of Biomedical and Health Informatics
+1160	vsimulation tools and techniques for communications, networks and system
+1161	vOpen Systems & Information Dynamics
+1162	vscandinavian conference on ai
+1163	vInternational Journal of Computer Assisted Radiology and Surgery
+1164	vMultiscale Modeling & Simulation
+1165	vInformation & Computation
+1166	vInternational Journal of Web Based Communities
+1167	vJournal of Low Power Electronics
+1168	vNatural Computing
+1169	vtheory and application of cryptographic techniques
+1170	vInternational Journal of Secure Software Engineering
+1171	vcomputer science and software engineering
+1172	varXiv: Data Analysis, Statistics and Probability
+1173	vJournal of Nonlinear Science
+1174	vsmart card research and advanced application conference
+1175	vFinance and Stochastics
+1176	vinternational conference on biomedical electronics and devices
+1177	vComputational Materials Science
+1178	vnetwork and system security
+1179	vJournal of Computing in Higher Education
+1180	vIEEE Systems Journal
+1181	varXiv: Classical Analysis and ODEs
+1182	vinternational colloquium on grammatical inference
+1183	vInternational Journal of High Performance Computing and Networking
+1184	varXiv: Commutative Algebra
+1185	vtext retrieval conference
+1186	vInternational Journal of Biometrics
+1187	vElectronic Notes in Discrete Mathematics
+1188	varXiv: Number Theory
+1189	vAi Communications
+1190	vFundamenta Informaticae
+1191	vInternational Journal of Computational Intelligence and Applications
+1192	vInternational Journal of Simulation and Process Modelling
+1193	vinternational conference on information systems
+1194	vInternational Journal of Strategic Information Technology and Applications
+1195	vIEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems
+1196	vActa Applicandae Mathematicae
+1197	vinternational conference on computer supported education
+1198	vJournal of Symbolic Logic
+1199	vPersonality and Individual Differences
+1200	vArtificial Intelligence and Law
+1201	vACM Transactions on Computational Logic
+1202	vInforms Journal on Computing
+1203	vdata and knowledge engineering
+1204	vAstronomy and Computing
+1205	vsystem level interconnect prediction
+1206	vInternational Journal of Agricultural and Environmental Information Systems
+1207	vinformation processing in medical imaging
+1208	vPLOS ONE
+1209	vKünstliche Intelligenz
+1210	vadvances in multimedia
+1211	vOptics Express
+1212	vcyber enabled distributed computing and knowledge discovery
+1213	vImmunotechnology
+1214	vinternational conference on weblogs and social media
+1215	vACM Transactions on Architecture and Code Optimization
+1216	varXiv: Algebraic Geometry
+1217	vJournal on Data Semantics
+1218	vInternational Journal of Information Systems for Crisis Response Management
+1219	vinternational joint conference on computer vision, imaging and computer graphics theory and applications
+1220	vcomputational models of argument
+1221	vApplicable Algebra in Engineering, Communication and Computing
+1222	vInternational Journal of Advanced Intelligence Paradigms
+1223	vIEEE Transactions on Computational Social Systems
+1224	vInternational Journal of Digital Crime and Forensics
+1225	vJournal of Korean Medical Science
+1226	vInternational Journal of Database Management Systems
+1227	vInternational Journal of General Systems
+1228	vIEEE Instrumentation & Measurement Magazine
+1229	vinternational conference on telecommunications
+1230	vAi & Society
+1231	vJournal of Philosophical Logic
+1232	vnew trends in software methodologies, tools and techniques
+1233	vJournal of Applied Logic
+1234	vComplexity
+1235	vNew Generation Computing
+1236	vInternational Journal of Information Systems and Supply Chain Management
+1237	vInternational Journal of Information Security and Privacy
+1238	vInternational Journal of Cooperative Information Systems
+1239	vInternet Mathematics
+1240	vInternational Journal of Uncertainty, Fuzziness and Knowledge-Based Systems
+1241	vJournal of Lightwave Technology
+1242	vIEEE Transactions on Mobile Computing
+1243	vsemantic web applications and tools for life sciences
+1244	vJapanese Journal of Applied Physics
+1245	vJournal of The London Mathematical Society-second Series
+1246	vJournal of Digital Imaging
+1247	vJournal of Software Engineering and Applications
+1248	vInformation Retrieval
+1249	vIEEE Transactions on Reliability
+1250	vACM Transactions on Reconfigurable Technology and Systems
+1251	vTransportation Research Part C-emerging Technologies
+1252	vAStA Wirtschafts- und Sozialstatistisches Archiv
+1253	vInformation Technology & People
+1254	vpacific symposium on biocomputing
+1255	vinternational joint conference on computer vision imaging and computer graphics theory and applications
+1256	vProcesamiento Del Lenguaje Natural
+1257	vJournal of Database Management
+1258	vinternational symposium on robotics
+1259	vInternational Journal of Healthcare Information Systems and Informatics
+1260	vMathematical Problems in Engineering
+1261	vJournal of Research and Practice in Information Technology
+1262	varXiv: Group Theory
+1263	vapplied reconfigurable computing
+1264	vParallel Processing Letters
+1265	vJournal of Location Based Services
+1266	vInternational Journal of Digital Literacy and Digital Competence
+1267	vnorth american chapter of the association for computational linguistics
+1268	vworkshop on graph theoretic concepts in computer science
+1269	velectronic commerce
+1270	vfun with algorithms
+1271	vJournal of Neural Engineering
+1272	vInternational Journal of Mobile Computing and Multimedia Communications
+1273	vinternational symposium on experimental robotics
+1274	vComputer Science
+1275	vJournal of Communications and Networks
+1276	vinformation security and cryptology
+1277	vdoctoral conference on computing, electrical and industrial systems
+1278	vforum on specification and design languages
+1279	vreconfigurable architectures workshop
+1280	vOmega-international Journal of Management Science
+1281	vJournal of Applied Probability
+1282	vworld summit on the knowledge society
+1283	vFuture Internet
+1284	vDistributed and Parallel Databases
+1285	vHeat and Mass Transfer
+1286	vJournal of Statistical Planning and Inference
+1287	vPanoeconomicus
+1288	vInternational Journal of Technology Diffusion
+1289	vManagement Science
+1290	vIEEE Antennas and Wireless Propagation Letters
+1291	vIEEE Transactions on Affective Computing
+1292	vInternational Journal on Software Tools for Technology Transfer
+1293	vweb and wireless geographical information systems
+1294	vJournal of Applied Mathematics
+1295	vCombinatorics, Probability & Computing
+1296	vdatabase and expert systems applications
+1297	vsystem-level interconnect prediction
+1298	vThe American Economic Review
+1299	vPhysics of Life Reviews
+1300	vbusiness intelligence for the real-time enterprises
+1301	varXiv: Populations and Evolution
+1302	vinternational symposium on memory management
+1303	vpersonal, indoor and mobile radio communications
+1304	vinternational joint conference on artificial intelligence
+1305	vInternational Journal of E-business Management
+1306	vhigh-performance computer architecture
+1307	vApplied Categorical Structures
+1308	vinternational conference on computational science and its applications
+1309	vgraph drawing
+1310	vtraffic monitoring and analysis
+1311	vOrder
+1312	vEsaim: Proceedings
+1313	vIEEE Transactions on Circuits and Systems
+1314	vinternational symposium/conference on music information retrieval
+1315	vOptimization Letters
+1316	vhigh-assurance systems engineering
+1317	vPedagogische Studien
+1318	vTheoretical Informatics and Applications
+1319	vconsumer communications and networking conference
+1320	vInternational Journal of Computational Biology and Drug Design
+1321	vManagement Information Systems Quarterly
+1322	vinternational conference on cyber physical systems
+1323	vinternational conference on ultra modern telecommunications
+1324	vinternational conference on machine learning
+1325	vopen source systems
+1326	vacm ieee international conference on mobile computing and networking
+1327	vquantum communication and quantum networking
+1328	vOrganization Science
+1329	vJournal of Inequalities and Applications
+1330	vCommunicative & Integrative Biology
+1331	varXiv: Analysis of PDEs
+1332	vInternational Journal of Applied Decision Sciences
+1333	vinternational conference on computational linguistics
+1334	vSchedae Informaticae
+1335	vJournal of Applied Physics
+1336	vembedded and ubiquitous computing
+1337	vNotre Dame Journal of Formal Logic
+1338	vDynamic Games and Applications
+1339	vwearable and implantable body sensor networks
+1340	vCommunications in Nonlinear Science and Numerical Simulation
+1341	vNeural Network World
+1342	varXiv: Computational Physics
+1343	vlogic in computer science
+1344	vinternational conference on information networking
+1345	varXiv: Computation
+1346	vAsia-Pacific Journal of Operational Research
+1347	vworkshop on graph-theoretic concepts in computer science
+1348	vservice-oriented computing and applications
+1349	vsoftware product lines
+1350	vJournal of Software
+1351	vACM Transactions on Multimedia Computing, Communications, and Applications
+1352	vinternational conference on supercomputing
+1353	vIEEE Cloud Computing
+1354	vJournal of Cloud Computing
+1355	vArgument & Computation
+1356	vSpring
+1357	vIete Journal of Research
+1358	vIEEE Consumer Electronics Magazine
+1359	vMathematical Programming Computation
+1360	vInternational Journal of Reasoning-based Intelligent Systems
+1361	vworkshop on algorithms and models for the web-graph
+1362	vTheory and Practice of Logic Programming
+1363	vInternational Journal of Computer Aided Engineering and Technology
+1364	vIEEE Technology and Society Magazine
+1365	vsymposium on large spatial databases
+1366	vIEEE Computer Society
+1367	vRevista Iberoamericana De Tecnologías Del Aprendizaje
+1368	vDistributed Computing
+1369	vinternational symposium on distributed computing
+1370	vInternational Journal of Computational Science and Engineering
+1371	vinternational conference on neural information processing
+1372	vSigact News
+1373	vitalian conference on theoretical computer science
+1374	veuropean conference on information systems
+1375	vACM Transactions on The Web
+1376	vComputing in Science and Engineering
+1377	vMathematics of Control, Signals, and Systems
+1378	vscandinavian workshop on algorithm theory
+1379	vdatabase systems for advanced applications
+1380	veuropean conference on computer vision
+1381	vEvolutionary Intelligence
+1382	vieee international conference on pervasive computing and communications
+1383	vinternational conference on principles of distributed systems
+1384	vInternational Journal of Business Process Integration and Management
+1385	vvirtual execution environments
+1386	vIbm Journal of Research and Development
+1387	vIet Information Security
+1388	vJournal of Global Positioning Systems
+1389	vJournal of Real-time Image Processing
+1390	vmathematical foundations of computer science
+1391	vComputational Linguistics
+1392	vDiscrete Mathematics & Theoretical Computer Science
+1393	vscandinavian conference on image analysis
+1394	vInternational Journal of It Standards and Standardization Research
+1395	vInternational Journal of Internet Protocol Technology
+1396	vinternational conference on distributed computing systems
+1397	vInternational Journal of Mathematics and Mathematical Sciences
+1398	vinternational workshop on combinatorial image analysis
+1399	vinternational colloquium on automata, languages and programming
+1400	vD-lib Magazine
+1401	vThe Vldb Journal
+1402	vCybernetics and Human Knowing
+1403	vprague stringology conference
+1404	vInternational Journal of Network Security & Its Applications
+1405	vInteractive Technology and Smart Education
+1406	vBiology of Reproduction
+1407	vsocial informatics
+1408	vfixed points in computer science
+1409	vACM Transactions on Mathematical Software
+1410	vknowledge acquisition, modeling and management
+1411	vwireless network security
+1412	vmodelling, computation and optimization in information systems and management sciences
+1413	vworkshop on algorithms in bioinformatics
+1414	vReview of Symbolic Logic
+1415	vjob scheduling strategies for parallel processing
+1416	vextending database technology
+1417	vRobotics
+1418	vinformation theory and applications
+1419	vSoft Computing
+1420	vEvolutionary Computation
+1421	vmodeling and optimization in mobile, ad-hoc and wireless networks
+1422	vJournal of Internet Technology
+1423	vInternational Journal on It\/business Alignment and Governance
+1424	vInternational Journal of Networking and Virtual Organisations
+1425	vThe Visual Computer
+1426	vsmart graphics
+1427	vasia-pacific software engineering conference
+1428	vprobabilistic graphical models
+1429	vComputational and Mathematical Organization Theory
+1430	vinternational conference on artificial neural networks
+1431	vformal methods in computer-aided design
+1432	vAnalyst
+1433	vInternational Journal of Imaging Systems and Technology
+1434	vInternational Journal of Computational Vision and Robotics
+1435	vInternational Journal of Metaheuristics
+1436	vcomputer and information technology
+1437	vinternational workshop on security
+1438	vinternational conference on asian language processing
+1439	vInternational Journal of Virtual Communities and Social Networking
+1440	vinformation and communication technologies and development
+1441	vInternational Journal of Sensor Networks
+1442	vLegal Studies
+1443	vIEEE Transactions on Network Science and Engineering
+1444	vmicroprocessor test and verification
+1445	vPeer-to-peer Networking and Applications
+1446	vACM Sigsoft Software Engineering Notes
+1447	vitalian workshop on neural nets
+1448	vcomputational color imaging workshop
+1449	vIEEE Pervasive Computing
+1450	vrapid system prototyping
+1451	vACM Journal on Computing and Cultural Heritage
+1452	vcomputational intelligence
+1453	vInternational Journal of Service Science, Management, Engineering, and Technology
+1454	vinformation security
+1455	vInternational Journal of Organizational and Collective Intelligence
+1456	vACM Transactions on Graphics
+1457	vInternational Journal of Adaptive and Innovative Systems
+1458	vInternational Journal of Embedded Systems
+1459	vIntegrated Computer-aided Engineering
+1460	vInternational Journal of Asian Business and Information Management
+1461	vinternational symposium on computers and communications
+1462	vInternational Journal of Computer Games Technology
+1463	vInternational Journal of Computing Science and Mathematics
+1464	vJournal of The Korean Magnetics Society
+1465	vJournal of Applied Mathematics and Decision Sciences
+1466	velectro information technology
+1467	vBMJ
+1468	vInternational Journal of Electronic Business
+1469	vJournal of Classification
+1470	vieee symposium on information visualization
+1471	vInternational Journal of Open Source Software and Processes
+1472	vresearch in computational molecular biology
+1473	vSiam Journal on Financial Mathematics
+1474	vAnnual Reviews in Control
+1475	vJournal of Computing and Information Technology
+1476	vJournal of Media Psychology
+1477	vSoftware and Systems Modeling
+1478	vPharmaceuticals
+1479	vinternational conference on intelligent computing
+1480	vcomputer aided verification
+1481	vintegrated network management
+1482	vconference on recommender systems
+1483	vknowledge discovery and data mining
+1484	vACM Transactions on Computer Systems
+1485	vInternational Journal of Information Security
+1486	vLecture Notes in Mathematics
+1487	vInternational Journal of Cognitive Informatics and Natural Intelligence
+1488	vAmerican Journal of Botany
+1489	vrobotics: science and systems
+1490	vInternational Journal of Critical Infrastructure Protection
+1491	vamericas conference on information systems
+1492	vInternational Journal of Information and Communication Technology
+1493	vInternational Journal of Knowledge Engineering and Soft Data Paradigms
+1494	vMis Quarterly Executive
+1495	vieee international conference on automatic face and gesture recognition
+1496	vJournal of Mathematical Analysis and Applications
+1497	vJournal of Cerebral Blood Flow and Metabolism
+1498	vScholarpedia
+1499	vmodeling and optimization in mobile ad hoc and wireless networks
+1500	vInternational Journal of Critical Infrastructures
+1501	vCognitive Science
+1502	vCondensed Matter Physics
+1503	vAnnales Umcs, Informatica
+1504	vJournal of Next Generation Information Technology
+1505	vBrain Informatics
+1506	varXiv: Instrumentation and Methods for Astrophysics
+1507	vinternational conference on web information systems and technologies
+1508	vinternational conference on web engineering
+1509	vnew interfaces for musical expression
+1510	vMicrofluidics and Nanofluidics
+1511	vInternational Journal of Electronic Commerce
+1512	vMemorandum (institute of Pacific Relations, American Council)
+1513	vThe Journal of Object Technology
+1514	vacm/ieee joint conference on digital libraries
+1515	vInternational Journal of Human-computer Interaction
+1516	vSiam Journal on Scientific and Statistical Computing
+1517	vJournal of Grid Computing
+1518	vfield programmable logic and applications
+1519	vresearch challenges in information science
+1520	vinternational conference on cloud computing
+1521	vFoundations and Trends in Robotics
+1522	vinternational symposium on neural networks
+1523	vInternational Journal of Data Analysis Techniques and Strategies
+1524	vtests and proofs
+1525	vElectronic Journal of Statistics
+1526	vimplementation and application of functional languages
+1527	vAstronomy and Astrophysics
+1528	vInternational Journal of Web Portals
+1529	vRequirements Engineering
+1530	vreal time technology and applications symposium
+1531	vJournal of Automated Reasoning
+1532	vJournal of Algorithms
+1533	vnasa formal methods
+1534	vInternational Journal of Knowledge and Learning
+1535	vJournal of Pragmatics
+1536	vDesigns, Codes and Cryptography
+1537	vActa Cybernetica
+1538	vfoundations of software science and computation structure
+1539	vSynthesis
+1540	vSeibutsu Butsuri
+1541	vThe Journal of Experimental Biology
+1542	vSigkdd Explorations
+1543	vuncertainty in artificial intelligence
+1544	vComputers and The Humanities
+1545	vworkshop on recent trends in algebraic development techniques
+1546	vStatistics and Computing
+1547	vinternational workshop on quality of service
+1548	vSoftware Focus
+1549	vJournal of Automata, Languages and Combinatorics
+1550	vfield programmable custom computing machines
+1551	vConstraints - An International Journal
+1552	vJournal of Cellular Automata
+1553	vJournal of Information Science and Engineering
+1554	vconference on privacy security and trust
+1555	veuropean conference on computer systems
+1556	vsymposium on cloud computing
+1557	vgeographic information science
+1558	vACM Sigbed Review
+1559	vbusiness modeling and software design
+1560	vinternational conference on electronics, communications, and computers
+1561	veuropean conference on genetic programming
+1562	vComputer Systems: Science & Engineering
+1563	varXiv: Biomolecules
+1564	vMathematical Structures in Computer Science
+1565	vACM Crossroads Student Magazine
+1566	vApplied Medical Informaticvs
+1567	vEPJ Data Science
+1568	vPhysica A-statistical Mechanics and Its Applications
+1569	vparallel processing and applied mathematics
+1570	vInternational Journal of Electronic Security and Digital Forensics
+1571	vInternational Journal of Grid and High Performance Computing
+1572	vGeoscientific Model Development Discussions
+1573	vJournal of Visual Languages and Computing
+1574	vIEEE Sensors Journal
+1575	vInternational Journal of Computational Intelligence Studies
+1576	vInternational Journal of Strategic Decision Sciences
+1577	vJournal of Internet Services and Applications
+1578	vOceanology
+1579	vTheoretical Chemistry Accounts
+1580	vPsychnology Journal
+1581	vEngineering With Computers
+1582	vJournal of Interconnection Networks
+1583	vInformation Management & Computer Security
+1584	vprivacy enhancing technologies
+1585	vInternational Journal of Medical Engineering and Informatics
+1586	vSigmod Record
+1587	vFoundations and Trends in Human-computer Interaction
+1588	vInternational Journal of Ad Hoc and Ubiquitous Computing
+1589	vInternational Journal of Artificial Intelligence & Applications
+1590	vConcurrent Engineering
+1591	vintelligent information systems
+1592	vtyped lambda calculus and applications
+1593	vInternational Journal of Biomathematics
+1594	vInternational Journal of Metadata, Semantics and Ontologies
+1595	vApplied Geomatics
+1596	vIsa Transactions
+1597	vCrisis-the Journal of Crisis Intervention and Suicide Prevention
+1598	vsignal processing systems
+1599	vJournal of Logic and Analysis
+1600	vBMC Infectious Diseases
+1601	vinternational conference on performance engineering
+1602	vAerospace Science and Technology
+1603	vgrid and pervasive computing
+1604	vSensors and Actuators B-chemical
+1605	vinternational symposium on computer architecture
+1606	vinternational workshop on the web and databases
+1607	vinternational conference on e-business engineering
+1608	vProblems of Information Transmission
+1609	vinformation processing in sensor networks
+1610	vInternational Journal of Handheld Computing Research
+1611	vagent-directed simulation
+1612	vpacific asia workshop on intelligence and security informatics
+1613	vIntelligenza Artificiale
+1614	vIEEE Computational Intelligence Magazine
+1615	vInternational Journal of Computer Network and Information Security
+1616	vIEEE Intelligent Transportation Systems Magazine
+1617	vInternational Journal of Communication Networks and Distributed Systems
+1618	vintelligent virtual agents
+1619	vaustralasian conference on information security and privacy
+1620	vinternational conference on multimedia retrieval
+1621	vChina Communications
+1622	varXiv: Operating Systems
+1623	vieee international conference on fuzzy systems
+1624	vInternational Journal of Web Services Research
+1625	vinternational colloquium on automata languages and programming
+1626	vcommunications and mobile computing
+1627	vInternational Journal of High Performance Systems Architecture
+1628	vInternational Journal of Innovative Computing Information and Control
+1629	vInternational Journal of Arts and Technology
+1630	vJournal of Pharmacology and Experimental Therapeutics
+1631	vCanadian Journal of Neurological Sciences
+1632	vinternational conference on parallel architectures and compilation techniques
+1633	vInternational Journal of Computational Geometry and Applications
+1634	venterprise distributed object computing
+1635	vJournal of Software Engineering Research and Development
+1636	vIEEE Distributed Systems Online
+1637	veuropean semantic web conference
+1638	vInternational Journal of Business Performance and Supply Chain Modelling
+1639	vDigital Communications and Networks
+1640	vEnvironmental Monitoring and Assessment
+1641	vsemantics, knowledge and grid
+1642	vTransactions of the Institute of Measurement and Control
+1643	vbrazilian symposium on multimedia and the web
+1644	vACM Transactions on Sensor Networks
+1645	vparallel and distributed computing: applications and technologies
+1646	vJournal of High Speed Networks
+1647	vMultiagent and Grid Systems
+1648	vacm symposium on applied computing
+1649	vInternational Journal of Image and Graphics
+1650	vCryptologia
+1651	vsymposium on principles of database systems
+1652	vpacific asia conference on knowledge discovery and data mining
+1653	vJournal of Applied Non-Classical Logics
+1654	vComputer Animation and Virtual Worlds
+1655	vfoundations of computer science
+1656	vGenetic Resources and Crop Evolution
+1657	varXiv: Pricing of Securities
+1658	vconference on spatial information theory
+1659	venterprise engineering working conference
+1660	vInternational Journal of Information and Coding Theory
+1661	vIEEE Transactions on Circuits and Systems Ii: Analog and Digital Signal Processing
+1662	vPhysics Letters B
+1663	vInternational Journal of Security and Networks
+1664	vNew Journal of Physics
+1665	vinternational conference on computer communications
+1666	vInternational Journal of Parallel Programming
+1667	vMechatronics
+1668	vdesigning interactive systems
+1669	vACM Transactions on Modeling and Computer Simulation
+1670	vJournal of the Acoustical Society of America
+1671	vPaladyn
+1672	vNature Communications
+1673	vsoftware and compilers for embedded systems
+1674	vInternational Journal of Information Technology and Management
+1675	varchitectures for networking and communications systems
+1676	vAustralian Journal of Early Childhood
+1677	vgenetic and evolutionary computation conference
+1678	varXiv: Algebraic Topology
+1679	vruntime verification
+1680	vVirtual Reality
+1681	vProcedia - Social and Behavioral Sciences
+1682	vDecision Sciences
+1683	vRadiocarbon
+1684	vinternational conference on knowledge discovery and information retrieval
+1685	vsimulation of adaptive behavior
+1686	vinternational joint conference on automated reasoning
+1687	vinternational symposium on quality electronic design
+1688	vstatistical and scientific database management
+1689	vconference on scientific computing
+1690	vtrends in functional programming
+1691	vIet Signal Processing
+1692	vprogramming language design and implementation
+1693	vinternational convention on information and communication technology electronics and microelectronics
+1694	vIEEE Transactions on Neural Systems and Rehabilitation Engineering
+1695	vInternational Journal on Semantic Web and Information Systems
+1696	vEnergy Procedia
+1697	vinternational conference on computer graphics and interactive techniques
+1698	vfield-programmable custom computing machines
+1699	vinternational cryptology conference
+1700	veuropean conference on artificial intelligence
+1701	vinternational symposium on symbolic and algebraic computation
+1702	vautonomous and intelligent systems
+1703	vacm special interest group on data communication
+1704	vComputers and Biomedical Research
+1705	vdata management on new hardware
+1706	vAi Edam Artificial Intelligence for Engineering Design, Analysis and Manufacturing
+1707	vTransactions of The Society for Computer Simulation International
+1708	vinternational conference on evolvable systems
+1709	veuropean conference on research and advanced technology for digital libraries
+1710	vcomputer aided design and computer graphics
+1711	vasian semantic web conference
+1712	vdatabase programming languages
+1713	vInternational Journal of Learning Technology
+1714	vparallel and distributed computing systems (isca)
+1715	vBest Practice & Research in Clinical Obstetrics & Gynaecology
+1716	vsemantic web applications and perspectives
+1717	vStroke
+1718	veurographics symposium on rendering techniques
+1719	vcomputer applications in industry and engineering
+1720	veuropean conference on object oriented programming
+1721	vvirtual reality continuum and its applications in industry
+1722	vinternational conference on embedded software and systems
+1723	vlearning and intelligent optimization
+1724	vrobot soccer world cup
+1725	vverified software: theories, tools, experiments
+1726	vJournal of Cryptology
+1727	vpacific rim international conference on artificial intelligence
+1728	vdesign automation conference
+1729	vsymposium on principles of programming languages
+1730	vinternational conference on coordination models and languages
+1731	vapplications and theory of petri nets
+1732	vACM Sigsim Simulation Digest
+1733	vJournal of Japan Society for Fuzzy Theory and Intelligent Informatics
+1734	vinternational symposium on visual computing
+1735	vIEEE Parallel & Distributed Technology: Systems & Applications
+1736	vdistributed event based systems
+1737	vmeasurement and modeling of computer systems
+1738	vquality of multimedia experience
+1739	vcomputer science logic
+1740	vinternational conference on model transformation
+1741	vsoftware engineering for resilient systems
+1742	vgreat lakes symposium on vlsi
+1743	vin Silico Biology
+1744	valgorithm engineering and experimentation
+1745	vcomputer software and applications conference
+1746	vACM Sigevolution
+1747	vJournal of Residuals Science & Technology
+1748	vaustralasian computer-human interaction conference
+1749	vEuromicro Newsletter
+1750	vgranular computing
+1751	vfast software encryption
+1752	vinnovative applications of artificial intelligence
+1753	vInternational Journal of Web Engineering and Technology
+1754	vChicago Journal of Theoretical Computer Science
+1755	vformal methods for open object-based distributed systems
+1756	vJournal of Guidance Control and Dynamics
+1757	vClei Electronic Journal
+1758	vChemical Physics Letters
+1759	vmultiple criteria decision making
+1760	vasia pacific software engineering conference
+1761	vSoftware - Concepts and Tools \/ Structured Programming
+1762	valgebraic methodology and software technology
+1763	vFoundations of Computational Mathematics
+1764	vinternational conference on software and data technologies
+1765	vinternational conference on autonomic computing
+1766	vverification model checking and abstract interpretation
+1767	vmodel driven engineering languages and systems
+1768	vinternational conference on hybrid information technology
+1769	vFrontiers of Physics in China
+1770	vJournal of Mathematical Sciences
+1771	vACM Journal of Experimental Algorithms
+1772	vbrazilian symposium on artificial intelligence
+1773	vSigplan Notices
+1774	vChemical Engineering Journal
+1775	vdevelopments in language theory
+1776	vIEEE Transactions on Robotics and Automation
+1777	varXiv: Biological Physics
+1778	vInternational Journal of Fuzzy Systems
+1779	vintegration of ai and or techniques in constraint programming
+1780	vinternational work conference on the interplay between natural and artificial computation
+1781	vInternational Journal for Numerical Methods in Fluids
+1782	vintelligent agents
+1783	vcomputer, information, and systems sciences, and engineering
+1784	vinternational conference on cluster computing
+1785	vChemical Engineering & Technology
+1786	vfoundations of software engineering
+1787	vStructural Control & Health Monitoring
+1788	vProcedia Computer Science
+1789	vTransactions on Rough Sets
+1790	vStress
+1791	vinteger programming and combinatorial optimization
+1792	vInternational Journal of Semantic Computing
+1793	vGeobios
+1794	vACM Transactions on Software Engineering and Methodology
+1795	vinternational symposium on multiple valued logic
+1796	vinternational conference on social computing
+1797	vusenix security symposium
+1798	vInternational Journal of Information Systems and Change Management
+1799	vinternational conference on functional programming
+1800	varXiv: Rings and Algebras
+1801	vlogical aspects of computational linguistics
+1802	vrules and rule markup languages for the semantic web
+1803	vInternational Journal of Pervasive Computing and Communications
+1804	vmodeling analysis and simulation of wireless and mobile systems
+1805	vinformation security practice and experience
+1806	vmedical image computing and computer assisted intervention
+1807	vieee-ras international conference on humanoid robots
+1808	valgorithmic applications in management
+1809	vJournal of Social Structure
+1810	vreal time systems symposium
+1811	vcryptographic hardware and embedded systems
+1812	vinternational symposium on industrial embedded systems
+1813	vJournal of Physics: Conference Series
+1814	varXiv: Genomics
+1815	varXiv: Tissues and Organs
+1816	vvision modeling and visualization
+1817	vacs ieee international conference on computer systems and applications
+1818	vACM Sigcas Computers and Society
+1819	vSsrn Electronic Journal
+1820	vCarbon
+1821	vInnovations in Systems and Software Engineering
+1822	vinternational conference on software engineering advances
+1823	vitalian research conference on digital library management systems
+1824	vinternational conference on computer vision
+1825	vprinciples of distributed computing
+1826	vtext speech and dialogue
+1827	vintelligent data engineering and automated learning
+1828	vInternational Journal of Advanced Media and Communication
+1829	vACM Sigsam Bulletin
+1830	viberian conference on pattern recognition and image analysis
+1831	vinternational conference on artificial intelligence and soft computing
+1832	vacm ieee joint conference on digital libraries
+1833	vFeminist Economics
+1834	vIEEE Photonics Technology Letters
+1835	vformal ontology in information systems
+1836	vInternational Journal of Intelligent Systems Technologies and Applications
+1837	vinternational conference on advanced learning technologies
+1838	vCvgip: Image Understanding
+1839	vIEEE Transactions on Nanobioscience
+1840	vtheorem proving with analytic tableaux and related methods
+1841	vLanguage and Cognitive Processes
+1842	vcomputer information systems and industrial management applications
+1843	vJournal of The American Society for Information Science
+1844	vIntelligent Automation and Soft Computing
+1845	vinternational conference on human-computer interaction
+1846	vmathematics of program construction
+1847	vembedded software
+1848	vinternational conference on reliable software technologies
+1849	vinternational conference on service oriented computing
+1850	vPraxis Der Wirtschaftsinformatik
+1851	vinternational conference on wireless communications and mobile computing
+1852	vwireless and optical communications conference
+1853	vIEEE Data(base) Engineering Bulletin
+1854	vinternational conference on systems
+1855	vApplied Computational Intelligence and Soft Computing
+1856	vInternational Journal of Virtual Reality
+1857	vperformance evaluation methodolgies and tools
+1858	vThe International Journal of Advanced Manufacturing Technology
+1859	vAdvanced Nonlinear Studies
+1860	vInternational Journal of Artificial Intelligence and Soft Computing
+1861	vLinear Algebra and its Applications
+1862	vconference on advanced information systems engineering
+1863	vtheory of cryptography conference
+1864	vinternational conference on networking sensing and control
+1865	vPsychonomic Bulletin & Review
+1866	vapplication specific systems architectures and processors
+1867	vJournal of Software Maintenance and Evolution: Research and Practice
+1868	vinternational conference on formal concept analysis
+1869	vVehicular Communications
+1870	vdata warehousing and knowledge discovery
+1871	vACM Transactions on Spatial Algorithms and Systems
+1872	veclipse technology exchange
+1873	vACM Transactions on Computation Theory
+1874	vPhysics Letters A
+1875	vNucleic Acids Research
+1876	vTeleoperators and Virtual Environments
+1877	vinternational conference of the ieee engineering in medicine and biology society
+1878	vinternational conference on sensor networks
+1879	vAnnals of Probability
+1880	vfoundations of information and knowledge systems
+1881	vieee automatic speech recognition and understanding workshop
+1882	vInternational Journal of Advanced Operations Management
+1883	vtheory and applications of satisfiability testing
+1884	vinternational conference on enterprise information systems
+1885	vsymposium on access control models and technologies
+1886	vdesign and diagnostics of electronic circuits and systems
+1887	vComputer Networks and Isdn Systems
+1888	vQuality and Reliability Engineering International
+1889	vinternational conference on computers in education
+1890	vinternational conference on graph transformation
+1891	vinternational conference on web services
+1892	vformal methods for industrial critical systems
+1893	vstring processing and information retrieval
+1894	vApplied Mathematics-a Journal of Chinese Universities Series B
+1895	vSynthesis Lectures on Computer Architecture
+1896	vapplied perception in graphics and visualization
+1897	vInternational Journal of Software and Informatics
+1898	varXiv: Chaotic Dynamics
+1899	vsupercomputing conference
+1900	vInternational Journal of Robotics & Automation
+1901	vSigspatial Special
+1902	vthe practice of enterprise modeling
+1903	vInternational Journal of Mobile Learning and Organisation
+1904	vinternational conference on tools with artificial intelligence
+1905	veuropean symposium on research in computer security
+1906	vInternational Journal of Applied Logistics
+1907	vElectronic Communication of The European Association of Software Science and Technology
+1908	vinternational symposium on parallel and distributed processing and applications
+1909	vJournal of Logic Programming
+1910	vVlsi Design
+1911	vInternational Journal of e-Collaboration
+1912	vPhysics Reports
+1913	vRevista De Informática Teórica E Aplicada
+1914	vPolicy & Internet
+1915	vJournal of Intelligent Information Systems
+1916	vJournal of Economic Behavior and Organization
+1917	vInternational Journal of Quantum Information
+1918	vChemical Engineering Research & Design
+1919	vknowledge and systems engineering
+1920	vHuman-centric Computing and Information Sciences
+1921	vmultimedia signal processing
+1922	valgebraic biology
+1923	vAdvances in Artificial Neural Systems
+1924	vmobile data management
+1925	vnon photorealistic animation and rendering
+1926	vperformance evaluation of wireless ad hoc, sensor, and ubiquitous networks
+1927	vthe florida ai research society
+1928	vinformation processing and management of uncertainty
+1929	vWorld Wide Web Journal
+1930	vJournal of Multimedia
+1931	vbrazilian symposium on geoinformatics
+1932	vagent and multi-agent systems: technologies and applications
+1933	vAutomation in Construction
+1934	vFoundations and Trends in Communications and Information Theory
+1935	vcompilers, architecture, and synthesis for embedded systems
+1936	vThe Computer Science Journal of Moldova
+1937	vZeitschrift Für Interaktive Und Kooperative Medien
+1938	vEnterprise Information Systems
+1939	vScience and Engineering Ethics
+1940	vJournal of Educational Research
+1941	vThe Review of Socionetwork Strategies
+1942	vMathematical Models and Methods in Applied Sciences
