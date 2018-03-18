@@ -1,83 +1,142 @@
 import numpy as np
 import torch
+torch.backends.cudnn.enabled = True
 from torch.autograd import Variable
 import torch.autograd as autograd
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 
-LENGTH = 2
-NUM_METAPATH = 100
-NUM_AUTHOR = 100
-EMBED_SIZE = 2
+
+# module options
+max_length = 2
+num_metapath = 3
+num_entity = 3
+embed_size = 128
+classifier_first_dim = 128
+classifier_second_dim = 32
+
+# Optimization options
 learning_rate = 0.01
+batsize = 2
+num_iterations = 100
 
 
-####### to do ########
-a = np.array([[1., 2.], [2., 3.], [3., 4.]])
-author_embedding = Variable(torch.from_numpy(a).float(), requires_grad=False)
-metapath_weight = Variable(torch.Tensor(2, 2), requires_grad=True)
-metapath_bias = Variable(torch.Tensor(2, 2), requires_grad=True)
-fc1_weight = Variable(torch.Tensor(LENGTH, EMBED_SIZE*2), requires_grad=True)
-fc2_weight = Variable(torch.Tensor(LENGTH, 1), requires_grad=True)
+# toy data
+# there are 2 data in 1 batch
+label = [1, 0]
+paths = [[[[0,0,1,2],[0,1,1,3]],[[0,0,2,1,1,3],[0,0,2,0,1,4]]],
+         [[[1,1,2,1],[1,0,2,2],[1,2,2,3]],[[1,0,0,1,2,3],[1,0,0,0,2,5]]]]
+
+dataset = [[paths, label]] # only one batch
 
 
 
-path = [0,0,1,1,2]
-length = 2
-data = [[[0,0,1],[1,0,2],[1,1,2]],[[0,0,1,1,2],[1,0,0,0,2]]]
+class ModuleBlock(nn.Module):
+    def __init__(self, embed_size):
+        super(ModuleBlock, self).__init__()
+        self.weight = Variable(torch.Tensor(1, embed_size).cuda(), requires_grad=True)
+        self.bias = Variable(torch.Tensor(1, embed_size).cuda(), requires_grad=True)
+
+    def forward(self, x, y):
+        # x, y are embeddings
+        out = x * self.weight * y + self.bias
+        out = F.relu(out)
+        return out
 
 
-def compose_path(path, length):
-    current_state = author_embedding[path[0]]
-    for i in range(length):
-        next_state = author_embedding[path[2*(i+1)]]
-        metapath = path[2*i+1]
-        w = metapath_weight[metapath]
-        b = metapath_bias[metapath]
-        current_state = current_state * w * next_state + b
-    output1 = current_state
+class ModuleNet(nn.Module):
+    def __init__(self, num_entity,
+                 num_metapath,
+                 max_length,
+                 embed_size,
+                 classifier_first_dim,
+                 classifier_second_dim,
+                 verbose=True):
+        super(ModuleNet, self).__init__()
 
-    current_state = author_embedding[path[-1]]
-    for i in reversed(range(length)):
-        metapath = path[2*i+1]
-        next_state = author_embedding[path[2*i]]
-        w = metapath_weight[metapath]
-        b = metapath_bias[metapath]
-        current_state = current_state * w * next_state + b
+        self.embeds = nn.Embedding(num_entity, embed_size)
+        self.function_modules = {}
+        for id in range(num_metapath):
+            module = ModuleBlock(embed_size=embed_size)
+            self.add_module(str(id), module)
+            self.function_modules[id] = module
+        self.classifier = nn.Sequential(nn.Linear(2*embed_size*max_length, classifier_first_dim),
+                                        nn.ReLU(inplace=True),
+                                        nn.Linear(classifier_first_dim, classifier_second_dim),
+                                        nn.ReLU(inplace=True),
+                                        nn.Linear(classifier_second_dim, 1))
 
-    output2 = current_state
-    return torch.cat([output1,output2])
+    def look_up_embed(self, id):
+        lookup_tensor = torch.LongTensor([id]).cuda()
+        return self.embeds(autograd.Variable(lookup_tensor))
+
+    def forward_path(self, path, length):
+        current_id = path[0]
+        x = self.look_up_embed(current_id)
+        for i in range(length):
+            next_id = path[2*(i+1)]
+            y = self.look_up_embed(next_id)
+            mid = path[2*i+1]
+            module = self.function_modules[mid]
+            x = module(x, y)
+        output1 = x
+        current_id = path[-1]
+        x = self.look_up_embed(current_id)
+        for i in reversed(range(length)):
+            mid = path[2*i+1]
+            module = self.function_modules[mid]
+            next_id = path[2*i]
+            x = module(x, y)
+        output2 = x
+        return torch.cat([output1, output2], 1)
+
+    def forward(self, batch):
+        output = []
+        for data in batch:
+            assert len(data) <= max_length
+            length = 0
+            data_output = []
+            for group in data:
+                length += 1
+                total = 0
+                group_output = 0
+                for path in group:
+                    count = path[-1]
+                    total += count
+                    path = path[:-1]
+                    path_output = count * self.forward_path(path, length)
+                    group_output += path_output
+                group_output /= total
+                data_output.append(group_output)
+            data_output = torch.cat(data_output, 1)
+            output.append(self.classifier(data_output))
+        output =torch.cat(output, 0)
+        return output
 
 
-def calculate_group(paths, length):
-    output = 0
-    for path in paths:
-        output += compose_path(path, length)
-    return output / len(paths)
+execution_engine = ModuleNet(embed_size=embed_size,
+                             num_entity=num_entity,
+                             num_metapath=num_metapath,
+                             max_length=max_length,
+                             classifier_first_dim=classifier_first_dim,
+                             classifier_second_dim=classifier_second_dim).cuda()
+execution_engine.train()
+optimizer = torch.optim.Adam(execution_engine.parameters(), lr=learning_rate)
+loss_fn = torch.nn.BCEWithLogitsLoss().cuda()
 
-
-def combine_goups(data):
-    length = 0
-    for group in data:
-        length += 1
-        if length == 1:
-            output = F.relu(torch.matmul(calculate_group(group, length), fc1_weight[length-1]))
-            continue
-        z = F.relu(torch.matmul(calculate_group(group, length), fc1_weight[length-1]))
-        output = torch.cat([output, z])
-    return output
-
-
-combined_output = combine_goups(data)
-output = F.sigmoid(torch.matmul(combined_output, fc2_weight))
-
-
-output.backward()
-
-metapath_weight.data.sub_(metapath_weight.grad.data * learning_rate)
-metapath_bias.data.sub_(metapath_bias.grad.data * learning_rate)
-fc1_weight.data.sub_(fc1_weight.grad.data * learning_rate)
-fc2_weight.data.sub_(fc2_weight.grad.data * learning_rate)
-
-
+t=0
+epoch=0
+while t < num_iterations:
+    epoch += 1
+    print('Starting epoch %d' % epoch)
+    for batch in dataset:
+        t += 1
+        paths, labels = batch
+        labels_var = Variable(torch.FloatTensor(labels).cuda())
+        optimizer.zero_grad()
+        scores = execution_engine(paths)
+        loss = loss_fn(scores, labels_var.view(-1,1))
+        loss.backward()
+        optimizer.step()
+        print(t)
