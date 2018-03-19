@@ -1,17 +1,10 @@
-1	international acm sigir conference on research and development in information retrieval
-2	very large data bases
-3	international conference on data mining
+1	international conference on data engineering
+2	international acm sigir conference on research and development in information retrieval
+3	extending database technology
 4	knowledge discovery and data mining
-5	international conference on data engineering
-6	international world wide web conferences
+5	international world wide web conferences
+6	very large data bases
 7	World Wide Web
-8	extending database technology
-9	Sigkdd Explorations
-10	asia-pacific web conference
-11	symposium on principles of database systems
-12	Proceedings of The Vldb Endowment
-13	european conference on principles of data mining and knowledge discovery
-14	Sigmod Record
-15	database systems for advanced applications
-16	text retrieval conference
-17	pacific-asia conference on knowledge discovery and data mining
+8	international conference on data mining
+9	asia-pacific web conference
+10	european conference on principles of data mining and knowledge discovery
