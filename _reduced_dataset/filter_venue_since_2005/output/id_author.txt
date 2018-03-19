@@ -5,41 +5,52 @@
 5	Jiawei Han
 6	Yizhou Sun
 7	Hector Gonzalez
-8	Xiaoxin Yin
-9	Xifeng Yan
-10	Wei Lu
-11	Dong Xin
-12	Xin Jin
-13	Bolin Ding
-14	Christos Faloutsos
-15	Feida Zhu
-16	Jing Gao
-17	Deng Cai
-18	Flip Korn
-19	Jure Leskovec
-20	Zhijun Yin
-21	Manish Gupta
-22	Shashank Pandit
-23	Hong Cheng
-24	Deepayan Chakrabarti
-25	Anthony K. H. Tung
-26	Leman Akoglu
-27	Ling Liu
-28	Lei Li
-29	Chen Chen
-30	Michael I. Jordan
-31	Xiaolei Li
-32	Gabor Melli
-33	Hwanjo Yu
-34	Peixiang Zhao
-35	Spiros Papadimitriou
-36	Gert R. G. Lanckriet
-37	Purnamrita Sarkar
-38	Hanghang Tong
-39	Chiranjib Bhattacharyya
-40	Jimeng Sun
-41	Zheng Shao
-42	Fan Guo
-43	Wen-tau Yih
-44	Mary McGlohon
-45	Dan Roth
+8	Hwanjo Yu
+9	Xiaoxin Yin
+10	Xifeng Yan
+11	Lei Li
+12	Christos Faloutsos
+13	Wei Lu
+14	Dong Xin
+15	Hong Cheng
+16	Xiaolei Li
+17	Thomas Hofmann
+18	Xin Jin
+19	Jimeng Sun
+20	Bolin Ding
+21	Feida Zhu
+22	Jing Gao
+23	Deng Cai
+24	Flip Korn
+25	Jure Leskovec
+26	Zhijun Yin
+27	Manish Gupta
+28	Deepayan Chakrabarti
+29	Hanghang Tong
+30	Ling Liu
+31	Shashank Pandit
+32	Jia-Yu Pan
+33	Peixiang Zhao
+34	Anthony K. H. Tung
+35	Leman Akoglu
+36	Spiros Papadimitriou
+37	Chen Chen
+38	Kevin Small
+39	Dan Roth
+40	Milind R. Naphade
+41	Gabor Melli
+42	Michael I. Jordan
+43	Michal Rosen-Zvi
+44	David M. Blei
+45	Gert R. G. Lanckriet
+46	Mary McGlohon
+47	Purnamrita Sarkar
+48	Fan Guo
+49	Alice X. Zheng
+50	Chiranjib Bhattacharyya
+51	Tianyi Wu
+52	Zheng Shao
+53	Wen Jin
+54	Wen-tau Yih
+55	Zhihua Zhang
+56	Jin Li
