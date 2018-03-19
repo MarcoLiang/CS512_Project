@@ -1,10 +1,14 @@
-1	international conference on data engineering
-2	international acm sigir conference on research and development in information retrieval
-3	extending database technology
-4	knowledge discovery and data mining
+1	knowledge discovery and data mining
+2	World Wide Web
+3	pacific-asia conference on knowledge discovery and data mining
+4	very large data bases
 5	international world wide web conferences
-6	very large data bases
-7	World Wide Web
-8	international conference on data mining
-9	asia-pacific web conference
-10	european conference on principles of data mining and knowledge discovery
+6	international conference on data engineering
+7	european conference on principles of data mining and knowledge discovery
+8	international acm sigir conference on research and development in information retrieval
+9	international conference on data mining
+10	Proceedings of The Vldb Endowment
+11	The Vldb Journal
+12	database systems for advanced applications
+13	extending database technology
+14	asia-pacific web conference
