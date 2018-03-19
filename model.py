@@ -35,8 +35,8 @@ dataset = [[paths, label]] # only one batch
 class ModuleBlock(nn.Module):
     def __init__(self, embed_size):
         super(ModuleBlock, self).__init__()
-        self.weight = Variable(torch.Tensor(1, embed_size).cuda(), requires_grad=True)
-        self.bias = Variable(torch.Tensor(1, embed_size).cuda(), requires_grad=True)
+        self.weight = nn.Parameter(torch.Tensor(1, embed_size).cuda(), requires_grad=True)
+        self.bias = nn.Parameter(torch.Tensor(1, embed_size).cuda(), requires_grad=True)
 
     def forward(self, x, y):
         # x, y are embeddings
