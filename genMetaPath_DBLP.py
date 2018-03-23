@@ -99,13 +99,20 @@ class MetaPathGenerator:
         meta_str = '\t'.join(meta_str) + '\n'
         file.write(meta_str)
 
-    def write_file_pattern(self, pattern_counter, file_pos, file_neg):
+    def write_file_pattern1(self, pattern_counter, file_pos, file_neg):
         print(pattern_counter)
         for k, v in pattern_counter.items():
             out_str = [str(i) for i in k]
             out_str = '\t'.join(out_str)
             file_pos.write(out_str + '\t' + str(v[0]) + '\n')
             file_neg.write(out_str + '\t' + str(v[1]) + '\n')
+
+    def write_file_pattern_all(self, meta_path, file):
+        meta_str = [retrieve_type(e) for e in meta_path[1:-1]]
+        meta_str = '\t'.join(list(map(str, meta_str)))
+        file.write(str(meta_path[0]) + '\t')
+        file.write(meta_str + '\t')
+        file.write(str(meta_path[-1]) + '\n')
 
 
     def meta_path_type(self, meta_path):
@@ -118,9 +125,10 @@ class MetaPathGenerator:
 
     def generate_metapath(self, dir_out):
         marked_author = set() # store the global_id of marked author
-        # out_file_id = open(dir_out + '/meta_path_id.txt', 'w')
+        out_file_id = open(dir_out + '/meta_path_id.txt', 'w')
         out_file_pattern_pos = open(dir_out + '/meta_path_pattern_l1__pos.txt', 'w')
         out_file_pattern_neg = open(dir_out + '/meta_path_pattern_l1_neg.txt', 'w')
+        out_file_pattern_all = open(dir_out + '/meta_path_pattern_l1_all.txt', 'w')
         # out_file_str = open(dir_out + '/meta_path_str.txt', 'w')
         pattern_counter = {}
         for author_id in self.id_author.keys():
@@ -146,13 +154,25 @@ class MetaPathGenerator:
                 if node.type == self.author_type and (not node.id in marked_author):
                     # self.write_file_id(meta_path[:node.step + 1], out_file_id) # write file
                     # print(self.meta_path_type(meta_path[:node.step + 1]))
-                    meta_path_type = tuple(self.meta_path_type(meta_path[:node.step + 1]))
+
+                    # ============== write all patterns ===================#
+                    meta_path_type = tuple(self.meta_path_type(meta_path[1:node.step]))
                     if not meta_path_type in pattern_counter:
                         pattern_counter[meta_path_type] = [0, 0]
                     elif self.check_same_group(meta_path[:node.step + 1]):
                         pattern_counter[meta_path_type][0] += 1
                     else:
                         pattern_counter[meta_path_type][1] += 1
+                    #======================================================#
+
+                    # ============== write patterns without authors ========#
+                    self.write_file_pattern_all(meta_path[:node.step + 1], out_file_pattern_all)
+                    # ======================================================#
+
+
+
+
+
                     continue
                 if node.step == self.max_path_length - 1:
                     continue
@@ -188,7 +208,7 @@ class MetaPathGenerator:
                         if not get_global_id(a_id, self.author_type) in meta_path[:node.step]:
                             stack.push(Node(a_id, self.author_type, node.step + 1))
         # out_file_id.close()
-        self.write_file_pattern(pattern_counter, out_file_pattern_pos, out_file_pattern_neg)
+        self.write_file_pattern1(pattern_counter, out_file_pattern_pos, out_file_pattern_neg)
         out_file_pattern_pos.close()
         out_file_pattern_neg.close()
 
@@ -222,13 +242,13 @@ class Node:
 
 
 def main():
-    meta = MetaPathGenerator(10, 3)
-    meta.read_data("_reduced_dataset/output")
+    # meta = MetaPathGenerator(10, 3)
+    # meta.read_data("_reduced_dataset/output")
     # print(meta.author_group)
     # print(meta.paper_from_paper['1792'])
     # print(meta.paper_to_paper['2445'])
     # print(meta.paper_conf['1792'])
-    meta.generate_metapath("_reduced_dataset/pattern")
+    # meta.generate_metapath("_reduced_dataset/pattern")
     # for p, lst in meta.paper_to_paper.items():
     #     print(p)
     #     print(lst)
@@ -243,6 +263,7 @@ def main():
     # print(global_id)
     # print(meta.retrieve_type(global_id))
     # print(meta.retrieve_id(global_id))
+    file = open("_reduced_dataset/pattern/meta_path_pattern_l1_all.txt")
 
 
 if __name__ == "__main__":
