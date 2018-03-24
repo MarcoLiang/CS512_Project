@@ -1,3 +1,6 @@
+import argparse
+parser = argparse.ArgumentParser()
+
 import numpy as np
 import torch
 torch.backends.cudnn.enabled = True
@@ -20,6 +23,7 @@ classifier_second_dim = 32
 learning_rate = 0.01
 batsize = 2
 num_iterations = 100
+check_every = 1000
 
 
 # toy data
@@ -35,8 +39,8 @@ dataset = [[paths, label]] # only one batch
 class ModuleBlock(nn.Module):
     def __init__(self, embed_size):
         super(ModuleBlock, self).__init__()
-        self.weight = nn.Parameter(torch.Tensor(1, embed_size).cuda(), requires_grad=True)
-        self.bias = nn.Parameter(torch.Tensor(1, embed_size).cuda(), requires_grad=True)
+        self.weight = Variable(torch.Tensor(1, embed_size).cuda(), requires_grad=True)
+        self.bias = Variable(torch.Tensor(1, embed_size).cuda(), requires_grad=True)
 
     def forward(self, x, y):
         # x, y are embeddings
@@ -115,28 +119,47 @@ class ModuleNet(nn.Module):
         return output
 
 
-execution_engine = ModuleNet(embed_size=embed_size,
-                             num_entity=num_entity,
-                             num_metapath=num_metapath,
-                             max_length=max_length,
-                             classifier_first_dim=classifier_first_dim,
-                             classifier_second_dim=classifier_second_dim).cuda()
-execution_engine.train()
-optimizer = torch.optim.Adam(execution_engine.parameters(), lr=learning_rate)
-loss_fn = torch.nn.BCEWithLogitsLoss().cuda()
+def train_model(embed_size, num_entity, num_metapath, max_length, classifier_first_dim, classifier_second_dim, num_iterations, check_every):
+    execution_engine = ModuleNet(embed_size=embed_size,
+                                 num_entity=num_entity,
+                                 num_metapath=num_metapath,
+                                 max_length=max_length,
+                                 classifier_first_dim=classifier_first_dim,
+                                 classifier_second_dim=classifier_second_dim).cuda()
+    execution_engine.train()
+    optimizer = torch.optim.Adam(execution_engine.parameters(), lr=learning_rate)
+    loss_fn = torch.nn.BCEWithLogitsLoss().cuda()
 
-t=0
-epoch=0
-while t < num_iterations:
-    epoch += 1
-    print('Starting epoch %d' % epoch)
-    for batch in dataset:
-        t += 1
-        paths, labels = batch
-        labels_var = Variable(torch.FloatTensor(labels).cuda())
-        optimizer.zero_grad()
-        scores = execution_engine(paths)
-        loss = loss_fn(scores, labels_var.view(-1,1))
-        loss.backward()
-        optimizer.step()
-        print(t)
+    t=0
+    epoch=0
+    while t < num_iterations:
+        epoch += 1
+        print('Starting epoch %d' % epoch)
+        for batch in dataset:
+            t += 1
+            paths, labels = batch
+            labels_var = Variable(torch.FloatTensor(labels).cuda())
+            optimizer.zero_grad()
+            scores = execution_engine(paths)
+            loss = loss_fn(scores, labels_var.view(-1,1))
+            loss.backward()
+            optimizer.step()
+            print(t, loss.data[0])
+            if t % check_every == 0:
+                check_accuracy()
+
+
+def check_accuracy():
+    pass
+
+
+train_model(embed_size, num_entity, num_metapath, max_length, classifier_first_dim, classifier_second_dim, num_iterations, check_every)
+
+
+# def main(args):
+#     train_model(embed_size, num_entity, num_metapath, max_length, classifier_first_dim, classifier_second_dim, num_iterations, check_every)
+#
+#
+# if __name__ == '__main__':
+#   args = parser.parse_args()
+#   main(args)
