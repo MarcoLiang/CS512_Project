@@ -30,9 +30,11 @@ class Data:
                         y_dict[a_pair] = []
                     X_dict[a_pair].append(toks[:-1])
                     y_dict[a_pair].append(label)
-        self.X = list(X_dict.values())
-        self.y = list(y_dict.values())
-        return list(X_dict.values()), list(y_dict.values())
+        # self.X = np.fromiter(X_dict.values(), dtype=int)
+        # self.y = np.fromiter(y_dict.values(), dtype=int)
+        self.X = np.array(list(X_dict.values()))
+        self.y = np.array(list(y_dict.values()))
+        return self.X, self.y.shape
 
     def split_dataset(self, ratio=[0.7, 0.15, 0.15]):
         '''
@@ -41,9 +43,10 @@ class Data:
         '''
         N = self.X.shape[0]
         indices = np.random.permutation(N)
-        train_idx = indices[0 : np.floor(ratio[0] * N)]
-        test_idx = indices[np.ceil(ratio[0] * N) : np.floor((ratio[0] + ratio[1]) * N)]
-        valid_idx = indices[np.ceil((ratio[0] + ratio[1]) * N)]
+        print(type(indices))
+        train_idx = indices[0 : int(np.floor(ratio[0] * N))]
+        test_idx = indices[int(np.ceil(ratio[0] * N)) : int(np.floor((ratio[0] + ratio[1]) * N))]
+        valid_idx = indices[int(np.ceil((ratio[0] + ratio[1]) * N))]
         self.X_train = self.X[train_idx]
         self.y_train = self.y[train_idx]
         self.X_test = self.X[test_idx]
@@ -60,8 +63,11 @@ meta = Data()
 X, y = meta.combine_data(["../_reduced_dataset/filter_venue_since_2005/pattern/meta-path_pattern_l1",
                            "../_reduced_dataset/filter_venue_since_2005/pattern/meta-path_pattern_l2",
                            "../_reduced_dataset/filter_venue_since_2005/pattern/meta-path_pattern_l3"])
-print(X)
-print(y)
+
+meta.split_dataset()
+print(meta.X_train[1])
+# print(type(X[0]))
+# print(y)
 
 
 
