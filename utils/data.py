@@ -98,19 +98,21 @@ class Data:
 
 
 
-
-data = Data()
+#
+# data = Data()
 # X, y = meta.combine_data(["../_reduced_dataset/filter_venue_since_2005/pattern/meta-path_pattern_l1",
 #                            "../_reduced_dataset/filter_venue_since_2005/pattern/meta-path_pattern_l2",
 #                            "../_reduced_dataset/filter_venue_since_2005/pattern/meta-path_pattern_l3"])
 
 
-
-dir = "../_reduced_dataset/filter_venue_since_2005/pattern"
-data.data_load(dir, 3)
+#
+# dir = "../_reduced_dataset/filter_venue_since_2005/pattern"
+# data.data_load(dir, 3)
 # print(data.X_train)
 # print(type(data.y[0]))
-print(type(data.X[0]))
+# print(type(data.X[0]))
+# print(data.author_num)
+# print(data.pattern_num)
 # for X_batch, y_batch in data.next_batch(data.X_train, data.y_train):
 #     print(X_batch)
 #     print(y_batch)
