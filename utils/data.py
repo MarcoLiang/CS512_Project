@@ -22,7 +22,8 @@ class Data:
             with codecs.open(dataset) as f:
                 for line in f:
                     toks = list(map(int, line.strip().split("\t")))
-                    a_pair = (toks[0], toks[-2])
+                    a_pair = (toks[0], toks[-3])
+                    # print(a_pair)
                     label = toks[-1]
                     # print(label)
                     if not a_pair in X_dict:
@@ -32,6 +33,7 @@ class Data:
                     y_dict[a_pair].append(label)
         # self.X = np.fromiter(X_dict.values(), dtype=int)
         # self.y = np.fromiter(y_dict.values(), dtype=int)
+        # print(X_dict)
         self.X = np.array(list(X_dict.values()))
         self.y = np.array(list(y_dict.values()))
         return self.X, self.y.shape
@@ -94,9 +96,10 @@ data = Data()
 
 dir = "../_reduced_dataset/filter_venue_since_2005/pattern"
 data.data_load(dir, 3)
-for X_batch, y_batch in data.next_batch(data.X_train, data.y_train):
-    print(X_batch)
-    print(y_batch)
+print(data.X_train[5])
+# for X_batch, y_batch in data.next_batch(data.X_train, data.y_train):
+#     print(X_batch)
+#     print(y_batch)
 
 
 
