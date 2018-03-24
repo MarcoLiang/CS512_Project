@@ -12,7 +12,8 @@ class Data:
         self.y_test = None
         self.X_valid = None
         self.y_valid = None
-        self.author_group = dict()
+        #self.author_group = dict()
+        self.author_num = 0
 
 
     def combine_data(self, datasets):
@@ -30,13 +31,14 @@ class Data:
                         X_dict[a_pair] = []
                         y_dict[a_pair] = []
                     X_dict[a_pair].append(toks[:-1])
-                    y_dict[a_pair].append(label)
-        # self.X = np.fromiter(X_dict.values(), dtype=int)
+                    y_dict[a_pair] = label
+        # self.X = np.fromiter(X_dict.values(), dtype=np.int64)
         # self.y = np.fromiter(y_dict.values(), dtype=int)
         # print(X_dict)
-        self.X = np.array(list(X_dict.values()))
+        # self.X = np.array(list(X_dict.values()))
         self.y = np.array(list(y_dict.values()))
-        return self.X, self.y.shape
+        # self.author_num = len()
+        # return self.X, self.y.shape
 
     # def build_dict(self, dataset, X_dict, y_dict):
     #     with codecs.open(dataset) as f:
@@ -96,7 +98,9 @@ data = Data()
 
 dir = "../_reduced_dataset/filter_venue_since_2005/pattern"
 data.data_load(dir, 3)
-print(data.X_train[5])
+# print(data.X_train)
+# print(type(data.y[0]))
+print(type(data.X[0]))
 # for X_batch, y_batch in data.next_batch(data.X_train, data.y_train):
 #     print(X_batch)
 #     print(y_batch)
