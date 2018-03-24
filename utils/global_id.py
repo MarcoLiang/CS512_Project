@@ -21,4 +21,5 @@ def retrieve_type(global_id):
     return global_id & 3
 
 def retrieve_id(global_id):
+    global_id = int(global_id)
     return global_id >> 2
