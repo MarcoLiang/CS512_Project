@@ -1,6 +1,5 @@
 import argparse
 parser = argparse.ArgumentParser()
-
 import numpy as np
 import torch
 torch.backends.cudnn.enabled = True
@@ -10,9 +9,11 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 
+from utils.data import Data
+
 
 # module options
-max_length = 2
+max_length = 3
 num_metapath = 3
 num_entity = 3
 embed_size = 128
@@ -26,13 +27,21 @@ num_iterations = 100
 check_every = 1000
 
 
+data_set = Data()
+data_dir = "./_reduced_dataset/filter_venue_since_2005/pattern"
+data_set.data_load(data_dir, max_length)
+for X_batch, y_batch in data.next_batch(data.X_train, data.y_train):
+    print(X_batch)
+    print(y_batch)
+    
+
 # toy data
 # there are 2 data in 1 batch
-label = [1, 0]
-paths = [[[[0,0,1,2],[0,1,1,3]],[[0,0,2,1,1,3],[0,0,2,0,1,4]]],
-         [[[1,1,2,1],[1,0,2,2],[1,2,2,3]],[[1,0,0,1,2,3],[1,0,0,0,2,5]]]]
-
-dataset = [[paths, label]] # only one batch
+# label = [1, 0]
+# paths = [[[[0,0,1,2],[0,1,1,3]],[[0,0,2,1,1,3],[0,0,2,0,1,4]]],
+#          [[[1,1,2,1],[1,0,2,2],[1,2,2,3]],[[1,0,0,1,2,3],[1,0,0,0,2,5]]]]
+# 
+# dataset = [[paths, label]] # only one batch
 
 
 
