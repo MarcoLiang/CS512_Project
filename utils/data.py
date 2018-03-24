@@ -1,6 +1,7 @@
 import codecs
 from collections import OrderedDict
 import numpy as np
+from itertools import repeat
 
 class Data:
     def __init__(self):
@@ -22,23 +23,29 @@ class Data:
     def combine_data(self, datasets):
         X_dict = OrderedDict() # author pair -> X
         y_dict = OrderedDict() # author pair -> y
+        curr_len = 1
         for dataset in datasets:
             with codecs.open(dataset) as f:
                 for line in f:
                     toks = list(map(int, line.strip().split("\t")))
+                    # print(toks)
                     a_pair = (toks[0], toks[-3])
 
                     # print(a_pair)
                     label = toks[-1]
                     # print(label)
                     if not a_pair in X_dict:
-                        X_dict[a_pair] = []
+                        X_dict[a_pair] = [[] for i in repeat(None, len(datasets))]
                         y_dict[a_pair] = []
-                    X_dict[a_pair].append(toks[:-1])
+                    X_dict[a_pair][curr_len - 1].append(toks[:-1])
                     y_dict[a_pair] = label
                     self.author_set.add(toks[0])
                     self.author_set.add(toks[-3])
                     self.pattern_set.add(tuple(toks[:-2]))
+            # print(curr_len)
+            # print('======xxxx=======')
+            curr_len += 1
+            # print(X_dict)
         # self.X = np.fromiter(X_dict.values(), dtype=np.int64)
         # self.y = np.fromiter(y_dict.values(), dtype=int)
         # print(X_dict)
@@ -109,6 +116,9 @@ class Data:
 # dir = "../_reduced_dataset/filter_venue_since_2005/pattern"
 # data.data_load(dir, 3)
 # print(data.X_train)
+# for d in data.X_train:
+#     print(d)
+#     print('==============')
 # print(type(data.y[0]))
 # print(type(data.X[0]))
 # print(data.author_num)
