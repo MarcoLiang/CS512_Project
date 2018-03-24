@@ -76,7 +76,7 @@ class Data:
             yield X[i:i + batch_size], y[i:i + batch_size]
 
 
-    def data_load(self, dir, length, shuffle = True, batch_size = 1, split_ratio = [0.7, 0.15, 0.15]):
+    def data_load(self, dir, length, shuffle = True, split_ratio = [0.7, 0.15, 0.15]):
         dataset = dir + "/meta-path_pattern_l"
         datasets = [dataset + str(i) for i in range(1, length + 1)]
         self.combine_data(datasets)
