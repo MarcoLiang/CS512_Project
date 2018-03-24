@@ -13,7 +13,10 @@ class Data:
         self.X_valid = None
         self.y_valid = None
         #self.author_group = dict()
-        self.author_num = 0
+        self.author_set = set()
+        self.pattern_set = set()
+        self.author_num = None
+        self.pattern_num = None
 
 
     def combine_data(self, datasets):
@@ -24,6 +27,7 @@ class Data:
                 for line in f:
                     toks = list(map(int, line.strip().split("\t")))
                     a_pair = (toks[0], toks[-3])
+
                     # print(a_pair)
                     label = toks[-1]
                     # print(label)
@@ -32,11 +36,16 @@ class Data:
                         y_dict[a_pair] = []
                     X_dict[a_pair].append(toks[:-1])
                     y_dict[a_pair] = label
+                    self.author_set.add(toks[0])
+                    self.author_set.add(toks[-3])
+                    self.pattern_set.add(tuple(toks[:-2]))
         # self.X = np.fromiter(X_dict.values(), dtype=np.int64)
         # self.y = np.fromiter(y_dict.values(), dtype=int)
         # print(X_dict)
-        # self.X = np.array(list(X_dict.values()))
+        self.X = np.array(list(X_dict.values()))
         self.y = np.array(list(y_dict.values()))
+        self.author_num = len(self.author_set)
+        self.pattern_num = len(self.pattern_set)
         # self.author_num = len()
         # return self.X, self.y.shape
 
@@ -85,6 +94,7 @@ class Data:
         datasets = [dataset + str(i) for i in range(1, length + 1)]
         self.combine_data(datasets)
         self.split_dataset(split_ratio, shuffle)
+
 
 
 
