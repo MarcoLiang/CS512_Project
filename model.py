@@ -30,6 +30,7 @@ class ModuleNet(nn.Module):
                  verbose=True):
         super(ModuleNet, self).__init__()
 
+        self.max_length = max_length
         self.embeds = nn.Embedding(num_entity, embed_size)
         self.function_modules = {}
         for id in range(num_metapath):
@@ -69,7 +70,7 @@ class ModuleNet(nn.Module):
     def forward(self, batch):
         output = []
         for data in batch:
-            assert len(data) <= max_length
+            assert len(data) <= self.max_length
             length = 0
             data_output = []
             for group in data:
