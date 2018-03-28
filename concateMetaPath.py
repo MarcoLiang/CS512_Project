@@ -18,9 +18,10 @@ class concatMetaPath:
         with codecs.open(l1_full_path_dir) as file:
             for line in file:
                 toks = line.strip().split("\t")
-                author_pair = (toks[0], toks[-3])
-                # print(author_pair)
-                pattern = tuple(toks[1:-1]) # e.g. P - A - P is a pattern
+                author_pair = (retrieve_id(toks[0]), retrieve_id(toks[-1]))
+
+                pattern = tuple([retrieve_type(e) for e in toks[1:-1]]) # e.g. P - A - P is a pattern
+                # print(pattern)
 
                 if not author_pair in self.authorPair_pattern:
                     self.authorPair_pattern[author_pair] = dict()
@@ -56,11 +57,13 @@ class concatMetaPath:
             # a_pair = [retrieve_id(e) for e in pair]
             for pattern, cnt in pattern_dict.items():
                 label = int(self.author_group[str(a_pair[0])] == self.author_group[str(a_pair[1])])
+                # print(pattern)
                 lst = list(map(str, [a_pair[0], pattern, a_pair[1], cnt, label]))
                 file.write('\t'.join(lst) + '\n')
         file.close()
 
-    def write_pattern_id(self, file):
+    def write_pattern_id(self, out_dir):
+        file = open(out_dir, "w")
         for k, v in self.pattern_id.items():
             file.write(str(k) + '\t' + str(v) + '\n')
 
@@ -167,15 +170,18 @@ class concatMetaPath:
 
 
 
-# def main():
 l1_full_path_dir = "_reduced_dataset/pattern/meta_path_pattern_l1_all.txt"
 name_group_dir = "data/name-group.txt"
 id_author_dir = "_reduced_dataset/output/id_author.txt"
-out_dir = "_reduced_dataset/filter_venue_since_2005/pattern"
+pattern_id_dir = "_reduced_dataset/filter_venue_since_2005/pattern_id.txt"
+out_dir = "_reduced_dataset/pattern"
 
 
 
 meta = concatMetaPath()
+# meta.build_dict(l1_full_path_dir, name_group_dir, id_author_dir)
+# meta.write_pattern_id(pattern_id_dir)
+# print(meta.authorPair_pattern[(1, 4)])
 meta.propagate_meta_path(l1_full_path_dir,name_group_dir,id_author_dir, out_dir, 3)
 # file = open("_reduced_dataset/pattern/meta_path_pattern_l1_all.txt")
 # meta.build_dict("_reduced_dataset/pattern/meta_path_pattern_l1_all.txt",
