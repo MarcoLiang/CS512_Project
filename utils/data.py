@@ -83,7 +83,7 @@ class Data:
         # print(type(indices))
         train_idx = indices[0 : int(np.floor(ratio[0] * N))]
         test_idx = indices[int(np.ceil(ratio[0] * N)) : int(np.floor((ratio[0] + ratio[1]) * N))]
-        valid_idx = indices[int(np.ceil((ratio[0] + ratio[1]) * N))]
+        valid_idx = indices[int(np.ceil((ratio[0] + ratio[1]) * N)):]
         self.X_train = self.X[train_idx]
         self.y_train = self.y[train_idx]
         self.X_test = self.X[test_idx]

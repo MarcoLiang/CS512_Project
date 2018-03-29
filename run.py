@@ -16,7 +16,7 @@ from model import ModuleNet
 # data options
 parser.add_argument('--max_length', default=1)
 parser.add_argument('--batch_size', default=64)
-parser.add_argument('--data_dir', default="./_reduced_dataset/filter_venue_since_2005/pattern")
+parser.add_argument('--data_dir', default="./_reduced_dataset/pattern")
 
 # module options
 parser.add_argument('--embed_size', default=128)
@@ -25,7 +25,7 @@ parser.add_argument('--classifier_second_dim', default=32)
 
 # Optimization options
 parser.add_argument('--learning_rate', default=5e-4)
-parser.add_argument('--num_epoch', default=1000)
+parser.add_argument('--num_epoch', default=100000)
 
 # Output options
 parser.add_argument('--checkpoint_path', default='./trained_model/checkpoint.pt')
@@ -37,8 +37,8 @@ def main(args):
     # load data
     dataset = Data()
     dataset.data_load(args.data_dir, args.max_length)
-    args.num_metapath = dataset.pattern_num
-    args.num_entity = dataset.author_num
+    args.num_metapath = 4
+    args.num_entity = 104
 
     train_model(dataset, args)
 
@@ -50,15 +50,15 @@ def train_model(dataset, args):
         'num_entity': args.num_entity,
         'num_metapath': args.num_metapath,
         'max_length': args.max_length,
-        'classfier_firse_dim': args.classifier_first_dim,
-        'classifier_second': args.classifier_second_dim
+        'classifier_first_dim': args.classifier_first_dim,
+        'classifier_second_dim': args.classifier_second_dim
     }
 
     execution_engine = ModuleNet(**kwargs)
     execution_engine.cuda()
     execution_engine.train()
     optimizer = torch.optim.Adam(execution_engine.parameters(), lr=args.learning_rate)
-    loss_fn = torch.nn.BCEWithLogitsLoss().cuda()
+    loss_fn = torch.nn.BCELoss().cuda()
 
     stats = {
         'train_losses': [], 'train_losses_ts': [],
@@ -80,6 +80,9 @@ def train_model(dataset, args):
             scores = execution_engine(paths)
             loss = loss_fn(scores, labels_var.view(-1, 1))
             loss.backward()
+            # for param in execution_engine.parameters():
+            #     print(param.data)
+            #     print(param.grad.data.sum())
             optimizer.step()
 
             if t % args.record_loss_every == 0:
@@ -87,32 +90,32 @@ def train_model(dataset, args):
                 stats['train_losses'].append(loss.data[0])
                 stats['train_losses_ts'].append(t)
 
-            if epoch % args.check_every == 0:
-                print('Checking training/validation accuracy ... ')
-                train_acc, val_acc = check_accuracy(dataset, execution_engine, args.batch_size)
-                print('train accuracy is', train_acc)
-                print('val accuracy is ', val_acc)
-                stats['train_accs'].append(train_acc)
-                stats['val_accs'].append(val_acc)
-                stats['val_accs_es'].append(epoch)
+        if epoch % args.check_every == 0:
+            print('Checking training/validation accuracy ... ')
+            train_acc, val_acc = check_accuracy(dataset, execution_engine, args.batch_size)
+            print('train accuracy is', train_acc)
+            print('val accuracy is ', val_acc)
+            stats['train_accs'].append(train_acc)
+            stats['val_accs'].append(val_acc)
+            stats['val_accs_es'].append(epoch)
 
-                if val_acc > stats['best_val_acc']:
-                    stats['best_val_acc'] = val_acc
-                    stats['model_e'] = epoch
-                    best_state = get_state(execution_engine)
+            if val_acc > stats['best_val_acc']:
+                stats['best_val_acc'] = val_acc
+                stats['model_e'] = epoch
+                best_state = get_state(execution_engine)
 
-                checkpoint = {
-                    'args': args.__dict__,
-                    'kwargs': kwargs,
-                    'state': best_state,
-                }
-                for k, v in stats.items():
-                    checkpoint[k] = v
-                print('Saving checkpoint to %s' % args.checkpoint_path)
-                torch.save(checkpoint, args.checkpoint_path)
-                del checkpoint['state']
-                with open(args.checkpoint_path + '.json', 'w') as f:
-                    json.dump(checkpoint, f)
+            checkpoint = {
+                'args': args.__dict__,
+                'kwargs': kwargs,
+                'state': best_state,
+            }
+            for k, v in stats.items():
+                checkpoint[k] = v
+            print('Saving checkpoint to %s' % args.checkpoint_path)
+            torch.save(checkpoint, args.checkpoint_path)
+            del checkpoint['state']
+            with open(args.checkpoint_path + '.json', 'w') as f:
+                json.dump(checkpoint, f)
 
     print("training is done!")
     print("best validate accuracy:{}".format(stats['best_val_acc']))
@@ -133,24 +136,20 @@ def check_accuracy(dataset, model, batch_size):
     num_correct, num_samples = 0, 0
     for batch in dataset.next_batch(dataset.X_train, dataset.y_train, batch_size=batch_size):
         paths, labels = batch
-        labels_var = Variable(torch.FloatTensor(labels).cuda(), volatile=True)
-
-        ## to do
+        labels_var = torch.FloatTensor(labels)
         scores = model(paths)
-        _, preds = scores.data.cpu().max(1)
-        num_correct += (preds == labels).sum()
+        preds = (scores.data>0.5).cpu().float().squeeze()
+        num_correct += (preds == labels_var).sum()
         num_samples += preds.size(0)
     train_acc = float(num_correct) / num_samples
 
     num_correct, num_samples = 0, 0
     for batch in dataset.next_batch(dataset.X_valid, dataset.y_valid, batch_size=batch_size):
         paths, labels = batch
-        labels_var = Variable(torch.FloatTensor(labels).cuda(), volatile=True)
-
-        ## to do
+        labels_var = torch.FloatTensor(labels)
         scores = model(paths)
-        _, preds = scores.data.cpu().max(1)
-        num_correct += (preds == labels).sum()
+        preds = (scores.data > 0.5).cpu().float().squeeze()
+        num_correct += (preds == labels_var).sum()
         num_samples += preds.size(0)
     valid_acc = float(num_correct) / num_samples
 

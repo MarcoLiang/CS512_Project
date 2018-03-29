@@ -10,8 +10,10 @@ import torch.optim as optim
 class ModuleBlock(nn.Module):
     def __init__(self, embed_size):
         super(ModuleBlock, self).__init__()
-        self.weight = Variable(torch.Tensor(1, embed_size).cuda(), requires_grad=True)
-        self.bias = Variable(torch.Tensor(1, embed_size).cuda(), requires_grad=True)
+        self.weight = nn.Parameter(torch.Tensor(1, embed_size).cuda(), requires_grad=True)
+        self.bias = nn.Parameter(torch.Tensor(1, embed_size).cuda(), requires_grad=True)
+        torch.nn.init.xavier_uniform(self.weight)
+        torch.nn.init.xavier_uniform(self.bias)
 
     def forward(self, x, y):
         # x, y are embeddings
@@ -33,18 +35,20 @@ class ModuleNet(nn.Module):
         self.max_length = max_length
         self.embeds = nn.Embedding(num_entity, embed_size)
         self.function_modules = {}
-        for id in range(num_metapath):
+        for id in range(1, num_metapath+1):
             module = ModuleBlock(embed_size=embed_size)
             self.add_module(str(id), module)
             self.function_modules[id] = module
-        self.classifier = nn.Sequential(nn.Linear(2*embed_size*max_length, classifier_first_dim),
+        self.classifier = nn.Sequential(nn.Linear(2*embed_size*max_length, classifier_first_dim, bias=True),
                                         nn.ReLU(inplace=True),
-                                        nn.Linear(classifier_first_dim, classifier_second_dim),
+                                        nn.Linear(classifier_first_dim, classifier_second_dim, bias=True),
                                         nn.ReLU(inplace=True),
-                                        nn.Linear(classifier_second_dim, 1))
+                                        nn.Linear(classifier_second_dim, 1, bias=True),
+                                        nn.Sigmoid())
+        print(self.classifier)
 
     def look_up_embed(self, id):
-        lookup_tensor = torch.LongTensor([id]).cuda()
+        lookup_tensor = torch.LongTensor([id-1]).cuda()
         return self.embeds(autograd.Variable(lookup_tensor))
 
     def forward_path(self, path, length):
@@ -63,6 +67,7 @@ class ModuleNet(nn.Module):
             mid = path[2*i+1]
             module = self.function_modules[mid]
             next_id = path[2*i]
+            y = self.look_up_embed(next_id)
             x = module(x, y)
         output2 = x
         return torch.cat([output1, output2], 1)
