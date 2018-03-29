@@ -28,7 +28,7 @@ parser.add_argument('--learning_rate', default=5e-4)
 parser.add_argument('--num_epoch', default=100000)
 
 # Output options
-parser.add_argument('--checkpoint_path', default='./trained_model/checkpoint.pt')
+parser.add_argument('--checkpoint_path', default='./model/trained_model/checkpoint.pt')
 parser.add_argument('--check_every', default=1)
 parser.add_argument('--record_loss_every', default=1)
 
