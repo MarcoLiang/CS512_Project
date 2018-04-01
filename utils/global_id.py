@@ -18,6 +18,7 @@ def get_global_id(id, type):
     return (int(id) << 2) + type
 
 def retrieve_type(global_id):
+    global_id = int(global_id)
     return global_id & 3
 
 def retrieve_id(global_id):

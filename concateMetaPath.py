@@ -182,7 +182,7 @@ meta = concatMetaPath()
 # meta.build_dict(l1_full_path_dir, name_group_dir, id_author_dir)
 # meta.write_pattern_id(pattern_id_dir)
 # print(meta.authorPair_pattern[(1, 4)])
-meta.propagate_meta_path(l1_full_path_dir,name_group_dir,id_author_dir, out_dir, 3)
+meta.propagate_meta_path(l1_full_path_dir,name_group_dir,id_author_dir, out_dir, 5)
 # file = open("_reduced_dataset/pattern/meta_path_pattern_l1_all.txt")
 # meta.build_dict("_reduced_dataset/pattern/meta_path_pattern_l1_all.txt",
 #                 "data/name-group.txt",
