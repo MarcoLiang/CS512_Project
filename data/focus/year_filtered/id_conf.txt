@@ -1,0 +1,1934 @@
+1	Journal of Parallel and Distributed Computing
+2	international acm sigir conference on research and development in information retrieval
+3	IEEE Transactions on Geoscience and Remote Sensing
+4	international conference on program comprehension
+5	Science in China Series F: Information Sciences
+6	international symposium on multimedia
+7	principles and practice of declarative programming
+8	Communications of The ACM
+9	computational intelligence
+10	ACM Transactions on Knowledge Discovery From Data
+11	Data Mining and Knowledge Discovery
+12	technical symposium on computer science education
+13	ACM Transactions on Multimedia Computing, Communications, and Applications
+14	Automatica
+15	Multiscale Modeling & Simulation
+16	IEICE Transactions on Fundamentals of Electronics, Communications and Computer Sciences
+17	Internet Mathematics
+18	Journal of Applied Logic
+19	empirical methods in natural language processing
+20	international symposium on quality electronic design
+21	International Journal on Semantic Web and Information Systems
+22	International Journal of Modelling, Identification and Control
+23	IEEE Computer
+24	international conference on management of data
+25	international conference on data mining
+26	conference on information and knowledge management
+27	international conference on multimedia and expo
+28	annual computer security applications conference
+29	Logica Universalis
+30	IEICE Transactions on Information and Systems
+31	Neural Networks
+32	Telecommunication Systems
+33	ACM Transactions on Asian Language Information Processing
+34	Distributed and Parallel Databases
+35	Information Processing and Management
+36	Proceedings of SPIE
+37	The Journal of Supercomputing
+38	Neurocomputing
+39	IEEE Transactions on Circuits and Systems I-regular Papers
+40	international conference on embedded networked sensor systems
+41	Journal of Computer Science and Technology
+42	Neural Computing and Applications
+43	International Journal of Digital Content Technology and Its Applications
+44	Multimedia Tools and Applications
+45	genetic and evolutionary computation conference
+46	workshop on positioning navigation and communication
+47	Pattern Recognition
+48	Informatik Spektrum
+49	ieee international conference on high performance computing data and analytics
+50	Industrial Robot-an International Journal
+51	International Journal of Approximate Reasoning
+52	artificial intelligence and symbolic computation
+53	web intelligence
+54	international conference on quality software
+55	Journal of Grid Computing
+56	Computer Animation and Virtual Worlds
+57	international conference on human computer interaction
+58	Journal of Combinatorial Optimization
+59	IET Software
+60	IEEE Transactions on Audio, Speech, and Language Processing
+61	IEEE Robotics & Automation Magazine
+62	Control and Intelligent Systems
+63	ACM Transactions on Programming Languages and Systems
+64	congress on evolutionary computation
+65	Journal of Discrete Algorithms
+66	computer vision and pattern recognition
+67	International Journal of Granular Computing, Rough Sets and Intelligent Systems
+68	International Journal of Knowledge Discovery in Bioinformatics
+69	vehicular technology conference
+70	ACM Transactions on Information Systems
+71	pervasive technologies related to assistive environments
+72	acm symposium on applied computing
+73	Mobile Information Systems
+74	global communications conference
+75	computer and information technology
+76	international symposium on computers and communications
+77	Journal of Information Processing
+78	international symposium on neural networks
+79	IEEE Transactions on Parallel and Distributed Systems
+80	very large data bases
+81	requirements engineering
+82	IEEE Transactions on Vehicular Technology
+83	Artificial Intelligence
+84	human factors in computing systems
+85	IEEE Geoscience and Remote Sensing Letters
+86	international conference on database theory
+87	intelligent robots and systems
+88	IEEE Signal Processing Magazine
+89	adaptive agents and multi-agents systems
+90	Applied Medical Informaticvs
+91	web search and data mining
+92	Journal of the Operational Research Society
+93	network computing and applications
+94	symposium on access control models and technologies
+95	International Journal of Internet Protocol Technology
+96	knowledge discovery and data mining
+97	asia-pacific bioinformatics conference
+98	autonomic and trusted computing
+99	Journal of the Association for Information Science and Technology
+100	intelligent user interfaces
+101	Autonomous Robots
+102	PLOS Computational Biology
+103	D-lib Magazine
+104	british machine vision conference
+105	symposium on reliable distributed systems
+106	mobility management and wireless access
+107	IEEE Transactions on Knowledge and Data Engineering
+108	parallel and distributed computing: applications and technologies
+109	international conference on robotics and automation
+110	Journal of Cognitive Neuroscience
+111	international symposium on computer architecture
+112	Journal of Automated Reasoning
+113	Advanced Robotics
+114	Information Processing Letters
+115	international conference on communications
+116	IEEE Transactions on Industrial Electronics
+117	Journal of Network and Computer Applications
+118	conference on image and video retrieval
+119	Cognitive Science
+120	computational intelligence for modelling, control and automation
+121	acm sigplan symposium on principles and practice of parallel programming
+122	fuzzy systems and knowledge discovery
+123	Journal of Biomedical Informatics
+124	ACM Transactions on Design Automation of Electronic Systems
+125	computer supported collaborative learning
+126	mobile data management
+127	advances in geographic information systems
+128	ACM Sigarch Computer Architecture News
+129	international conference on distributed computing systems
+130	empirical software engineering and measurement
+131	biomedical engineering and informatics
+132	acm/ieee joint conference on digital libraries
+133	Computer-aided Design
+134	Applied Mathematics Letters
+135	international symposium on performance analysis of systems and software
+136	The Computer Journal
+137	Computational Statistics & Data Analysis
+138	international conference on machine learning
+139	ubiquitous computing
+140	acm multimedia
+141	graph drawing
+142	Nucleic Acids Research
+143	international conference on vlsi design
+144	conference on object oriented programming systems languages and applications
+145	Behaviour & Information Technology
+146	signal processing systems
+147	International Journal of Web Engineering and Technology
+148	image and vision computing new zealand
+149	secure web services
+150	IEEE\/ACM Transactions on Networking
+151	Wireless Personal Communications
+152	Expert Systems With Applications
+153	Journal of Computer-Mediated Communication
+154	international conference on supercomputing
+155	international symposium on computational intelligence and design
+156	Journal of Digital Imaging
+157	Microelectronics Reliability
+158	Journal of Computers
+159	International Journal of Web Services Research
+160	Optical Switching and Networking
+161	Computing in Science and Engineering
+162	international conference on information and communication security
+163	international conference on computer aided design
+164	acm special interest group on data communication
+165	Statistical Methods and Applications
+166	virtual reality continuum and its applications in industry
+167	IEEE Transactions on Information Forensics and Security
+168	international conference on networking, sensing and control
+169	design, automation, and test in europe
+170	international conference on data engineering
+171	international conference on e-business engineering
+172	Journal of Visualization
+173	Applied Intelligence
+174	IEEE Pervasive Computing
+175	conference on decision and control
+176	international conference on document analysis and recognition
+177	international database engineering and applications symposium
+178	intelligent information hiding and multimedia signal processing
+179	Computer Science Education
+180	ACM Transactions on Reconfigurable Technology and Systems
+181	Journal of Computational Physics
+182	international geoscience and remote sensing symposium
+183	wireless communications and networking conference
+184	extending database technology
+185	service-oriented computing and applications
+186	intelligent systems design and applications
+187	Knowledge and Information Systems
+188	IEEE Intelligent Systems
+189	SIAM Journal on Numerical Analysis
+190	ACM Transactions on Intelligent Systems and Technology
+191	Künstliche Intelligenz
+192	international conference on multimedia retrieval
+193	Swarm Intelligence
+194	IEEE/ACM Transactions on Computational Biology and Bioinformatics
+195	IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems
+196	scalable information systems
+197	Algorithmica
+198	Parallel Processing Letters
+199	computational intelligence and security
+200	user interface software and technology
+201	symposium on discrete algorithms
+202	document engineering
+203	Computational Optimization and Applications
+204	international conference on image processing
+205	Logical Methods in Computer Science
+206	Robotics and Autonomous Systems
+207	intelligent information systems
+208	world of wireless mobile and multimedia networks
+209	robotics and biomimetics
+210	conference on computer supported cooperative work
+211	bioinformatics and biomedicine
+212	hardware oriented security and trust
+213	advances in social networks analysis and mining
+214	mobile ad hoc networking and computing
+215	BMC Bioinformatics
+216	Neural Computation
+217	Computer Standards & Interfaces
+218	IEICE Transactions on Communications
+219	conference on recommender systems
+220	Sigspatial Special
+221	Journal of Mathematical Psychology
+222	Multimedia Systems
+223	international symposium on information theory
+224	international conference on bioinformatics
+225	Journal of Computational Biology
+226	IEICE Electronics Express
+227	principles of distributed computing
+228	IEEE Transactions on Image Processing
+229	Genomics, Proteomics & Bioinformatics
+230	International Journal of Multimedia Data Engineering and Management
+231	systems, man and cybernetics
+232	European Journal of Operational Research
+233	bioinformatics and bioengineering
+234	Ingénierie Des Systèmes D'information
+235	international conference on machine learning and applications
+236	EURASIP Journal on Advances in Signal Processing
+237	Journal of Decision Systems
+238	symposium on the theory of computing
+239	Pattern Recognition Letters
+240	advances in computing and communications
+241	collaborative computing
+242	Computers & Security
+243	Annals of Mathematics and Artificial Intelligence
+244	Performance Evaluation
+245	Computer Graphics Forum
+246	Simulation Modelling Practice and Theory
+247	international symposium on chinese spoken language processing
+248	panhellenic conference on informatics
+249	international conference on control, automation, robotics and vision
+250	Pervasive and Mobile Computing
+251	Ibm Journal of Research and Development
+252	IEEE Transactions on Signal Processing
+253	User Modeling and User-adapted Interaction
+254	field-programmable technology
+255	International Journal of E-business Research
+256	Chaos Solitons & Fractals
+257	Journal of Intelligent Information Systems
+258	Mathematical and Computer Modelling
+259	IEEE Transactions on Circuits and Systems Ii-express Briefs
+260	high performance computing systems and applications
+261	Computer-aided Civil and Infrastructure Engineering
+262	computer software and applications conference
+263	Iet Information Security
+264	international conference on software engineering
+265	International Journal on Software Tools for Technology Transfer
+266	Journal of the ACM
+267	Sigecom Exchanges
+268	Proceedings of the IEEE
+269	data and knowledge engineering
+270	IEEE Communications Letters
+271	IEEE Transactions on Very Large Scale Integration Systems
+272	Digital Signal Processing
+273	Fuzzy Sets and Systems
+274	international conference on cloud computing
+275	NeuroImage
+276	IEEE Transactions on Automatic Control
+277	multimedia signal processing
+278	Applied Mathematics and Computation
+279	ACM Transactions on Speech and Language Processing
+280	Journal of Computer and System Sciences
+281	ACM Transactions on Modeling and Computer Simulation
+282	IEEE Transactions on Computers
+283	international conference on acoustics, speech, and signal processing
+284	Information Sciences
+285	ACM Transactions on Database Systems
+286	Mathematical Programming Computation
+287	BMC Medical Informatics and Decision Making
+288	International Journal of Communication Systems
+289	Journal of Data and Information Quality
+290	local computer networks
+291	IEEE Transactions on Robotics
+292	International Journal of Intelligent Systems
+293	brazilian symposium on multimedia and the web
+294	IEEE Transactions on Multimedia
+295	international conference on health informatics
+296	International Journal of Computer Mathematics
+297	IEEE Transactions on Automation Science and Engineering
+298	Scientometrics
+299	computational intelligence and games
+300	Annals of Operations Research
+301	Evolutionary Intelligence
+302	Journal of Biomedical Semantics
+303	network and operating system support for digital audio and video
+304	international world wide web conferences
+305	Journal of Visual Communication and Image Representation
+306	Information Systems
+307	Neural Processing Letters
+308	Computer Networks
+309	Information Retrieval
+310	The Artist and Journal of Home Culture
+311	Electronic Commerce Research and Applications
+312	Designs, Codes and Cryptography
+313	IEEE Transactions on Smart Grid
+314	Journal of Intelligent Manufacturing
+315	International Journal of Network Management
+316	acm conference on hypertext
+317	International Journal of Bioinformatics Research and Applications
+318	Applied Categorical Structures
+319	ieee international conference on fuzzy systems
+320	international test conference
+321	Procedia Computer Science
+322	SIAM Journal on Computing
+323	Circuits Systems and Signal Processing
+324	Journal of Field Robotics
+325	International Journal of Computer Vision
+326	Journal of Information Processing Systems
+327	ieee-ras international conference on humanoid robots
+328	Computer Science and Information Systems
+329	conference on object-oriented programming systems, languages, and applications
+330	international conference on advanced learning technologies
+331	Online Information Review
+332	Management Science
+333	grid computing
+334	IEEE Transactions on Wireless Communications
+335	Journal of Global Optimization
+336	architectures for networking and communications systems
+337	Optimization Letters
+338	International Journal of Computers in Healthcare
+339	Ksii Transactions on Internet and Information Systems
+340	international conference on computer communications
+341	wireless and mobile computing, networking and communications
+342	asia and south pacific design automation conference
+343	machine vision applications
+344	International Journal of Distributed Sensor Networks
+345	measurement and modeling of computer systems
+346	visual analytics science and technology
+347	Wireless Networks
+348	quality in databases
+349	international conference on electronics, communications, and computers
+350	robot and human interactive communication
+351	Engineering Applications of Artificial Intelligence
+352	Ecological Informatics
+353	Computing
+354	Statistical Analysis and Data Mining
+355	Journal of Approximation Theory
+356	IEEE Communications Magazine
+357	acm ieee international conference on mobile computing and networking
+358	Computers in Human Behavior
+359	IEEE Transactions on Circuits and Systems for Video Technology
+360	conference on information sciences and systems
+361	Journal of Systems and Software
+362	international symposium on circuits and systems
+363	Signal Processing
+364	IEEE Signal Processing Letters
+365	pervasive computing and communications
+366	service oriented software engineering
+367	Dynamic Games and Applications
+368	ACM Transactions on Autonomous and Adaptive Systems
+369	ambient intelligence
+370	international conference on computer graphics and interactive techniques
+371	international conference on mobile and ubiquitous systems: networking and services
+372	meeting of the association for computational linguistics
+373	computer and communications security
+374	Journal of Sensors
+375	Knowledge Based Systems
+376	IEEE Design & Test of Computers
+377	Artificial Intelligence Review
+378	International Journal of Asian Business and Information Management
+379	quality of multimedia experience
+380	aspect-oriented software development
+381	IEEE Journal of Solid-state Circuits
+382	international computing education research workshop
+383	Computers & Mathematics With Applications
+384	foundations of software engineering
+385	New Generation Computing
+386	Electronic Notes in Theoretical Computer Science
+387	workshop on applications of computer vision
+388	IEEE Transactions on Communications
+389	Journal of Applied Mathematics
+390	International Journal of Bio-inspired Computation
+391	Interacting with Computers
+392	ACM Transactions on Computational Logic
+393	Journal of Combinatorial Theory
+394	ACM Computing Surveys
+395	Operations Research
+396	Sensors
+397	north american chapter of the association for computational linguistics
+398	latin-american symposium on dependable computing
+399	conference on computers and accessibility
+400	symposium on computational geometry
+401	international conference on pattern recognition
+402	Source Code for Biology and Medicine
+403	IEEE Transactions on Neural Networks
+404	Spatial Cognition and Computation
+405	Journal of Information Technology
+406	Frontiers of Computer Science in China
+407	Speech Communication
+408	Vine
+409	geographic information retrieval
+410	International Journal of Grid and Utility Computing
+411	Journal of Bioinformatics and Computational Biology
+412	soft computing
+413	Physical Review E
+414	Information & Computation
+415	foundations of digital games
+416	International Journal of Data Warehousing and Mining
+417	IEEE Transactions on Pattern Analysis and Machine Intelligence
+418	computational intelligence in bioinformatics and computational biology
+419	granular computing
+420	information interaction in context
+421	Journal of Chemical Information and Modeling
+422	prague stringology conference
+423	IEEE Software
+424	computational science and engineering
+425	International Journal of Systems Science
+426	international conference on networking
+427	IEEE Transactions on Control Systems and Technology
+428	Bell Labs Technical Journal
+429	haifa verification conference
+430	Security and Communication Networks
+431	Photonic Network Communications
+432	mobile adhoc and sensor systems
+433	Games and Economic Behavior
+434	Journal of Software
+435	Cybernetics and Systems
+436	Computer Methods and Programs in Biomedicine
+437	Computers & Industrial Engineering
+438	Journal of Computational Science
+439	IEEE Internet Computing
+440	Discrete Applied Mathematics
+441	Quantum Information Processing
+442	International Journal of Bifurcation and Chaos
+443	Computers & Electrical Engineering
+444	international conference on tools with artificial intelligence
+445	computing and combinatorics conference
+446	Information Fusion
+447	IEEE Transactions on Systems, Man, and Cybernetics
+448	knowledge science engineering and management
+449	Constraints - An International Journal
+450	international conference on information networking
+451	international conference on social computing
+452	Future Generation Computer Systems
+453	Journal of Electronic Imaging
+454	modeling, analysis, and simulation on computer and telecommunication systems
+455	International Journal on Artificial Intelligence Tools
+456	ACM Transactions on Internet Technology
+457	field programmable gate arrays
+458	language resources and evaluation
+459	ieee international conference on cloud computing technology and science
+460	hawaii international conference on system sciences
+461	International Journal of Geographical Information Science
+462	Synthese
+463	international symposium on wireless communication systems
+464	Fuzzy Information and Engineering
+465	Theoretical Computer Science
+466	statistical and scientific database management
+467	research in computational molecular biology
+468	International Journal of Dependable and Trustworthy Information Systems
+469	high performance distributed computing
+470	IEEE Systems Journal
+471	The International Journal of Robotics Research
+472	high-performance computer architecture
+473	Signal Processing-image Communication
+474	interactive 3d graphics and games
+475	international conference on machine learning and cybernetics
+476	International Journal of General Systems
+477	visual communications and image processing
+478	Journal of Systems Architecture
+479	international conference on parallel architectures and compilation techniques
+480	international conference on web services
+481	Computer Communications
+482	Program: Electronic Library and Information Systems
+483	international conference on autonomic computing
+484	Journal of Systems Science & Complexity
+485	International Journal of Information System Modeling and Design
+486	Journal of Communications
+487	IEEE Journal of Biomedical and Health Informatics
+488	Artificial Intelligence and Law
+489	Education and Information Technologies
+490	SIAM Journal on Scientific Computing
+491	IEEE Distributed Systems Online
+492	Mathematics and Computers in Simulation
+493	applied perception in graphics and visualization
+494	Computer Vision and Image Understanding
+495	Autonomous Agents and Multi-Agent Systems
+496	decision support systems
+497	Networks
+498	international conference on ubiquitous information management and communication
+499	Journal of Optimization Theory and Applications
+500	IEEE Transactions on Mobile Computing
+501	systems man and cybernetics
+502	international conference on web engineering
+503	services science, management and engineering
+504	international conference on network protocols
+505	personal, indoor and mobile radio communications
+506	International Journal of Control
+507	IEEE Transactions on Computational Intelligence and Ai in Games
+508	programming language design and implementation
+509	International Journal of Foundations of Computer Science
+510	communication system software and middleware
+511	Engineering With Computers
+512	Information & Software Technology
+513	international conference on knowledge capture
+514	Peer-to-peer Networking and Applications
+515	Logic Journal of The Igpl \/ Bulletin of The Igpl
+516	Iet Communications
+517	International Journal of Human-computer Studies \/ International Journal of Man-machine Studies
+518	International Journal of Information Security
+519	international symposium on information theory and its applications
+520	International Journal of Human-computer Interaction
+521	Journal of Software Engineering and Applications
+522	The Visual Computer
+523	IEEE Transactions on Human-Machine Systems
+524	International Journal of Information Technology and Decision Making
+525	Environmental Modelling and Software
+526	high performance computing and communications
+527	intelligence and security informatics
+528	conference on computer as a tool
+529	international conference on computer vision
+530	ACM Transactions on Sensor Networks
+531	Annals of Pure and Applied Logic
+532	quantitative evaluation of systems
+533	ACM Transactions on Graphics
+534	Journal of Visual Languages and Computing
+535	international conference on automation and logistics
+536	human-robot interaction
+537	international conference on networking sensing and control
+538	intelligent systems in molecular biology
+539	BMC Systems Biology
+540	information processing in sensor networks
+541	Journal of Graph Theory
+542	Journal of Multimedia
+543	Journal of Database Management
+544	Journal of Heuristics
+545	computer assisted radiology and surgery
+546	Journal of Logic and Computation
+547	symposium on principles of database systems
+548	Datenbank-spektrum
+549	International Journal of Computational Intelligence Systems
+550	international conference on pervasive computing
+551	Discrete Mathematics
+552	computer supported cooperative work in design
+553	performance evaluation of wireless ad hoc, sensor, and ubiquitous networks
+554	distributed event-based systems
+555	Journal of Electronic Testing
+556	International Journal of Data Mining and Bioinformatics
+557	Acta Informatica
+558	Computers & Operations Research
+559	Optimization Methods & Software
+560	World Wide Web
+561	Enterprise Information Systems
+562	foundations of computer science
+563	Geoinformatica
+564	SIAM Journal on Discrete Mathematics
+565	system analysis and modeling
+566	international joint conference on artificial intelligence
+567	Computational Geometry: Theory and Applications
+568	Image and Vision Computing
+569	Distributed Computing
+570	International Journal of Digital Earth
+571	international conference on digital information management
+572	Concurrency and Computation: Practice and Experience
+573	Future Internet
+574	ieee international symposium on workload characterization
+575	Information and Organization
+576	international conference on control and automation
+577	ACM Transactions on Architecture and Code Optimization
+578	Computer Speech & Language
+579	Virtual Reality
+580	Journal on Data Semantics
+581	Computational Intelligence and Neuroscience
+582	Journal of Computational Chemistry
+583	international conference on wireless communications and mobile computing
+584	ieee symposium on security and privacy
+585	soft computing and pattern recognition
+586	cluster computing and the grid
+587	Information Technology & Management
+588	mathematical foundations of computer science
+589	Innovations in Systems and Software Engineering
+590	arXiv: Optimization and Control
+591	Journal of Experimental and Theoretical Artificial Intelligence
+592	International Journal of Information Security and Privacy
+593	IEEE Consumer Electronics Magazine
+594	Journal of Web Semantics
+595	real time technology and applications symposium
+596	Theory and Practice of Logic Programming
+597	ACM Transactions on Mathematical Software
+598	IEEE Transactions on Broadcasting
+599	data compression conference
+600	embedded and real-time computing systems and applications
+601	international conference on genetic and evolutionary computing
+602	Praxis Der Informationsverarbeitung Und Kommunikation
+603	human robot interaction
+604	Machine Learning
+605	Advances in Complex Systems
+606	Operational Research
+607	international conference on functional programming
+608	Numerische Mathematik
+609	communications and mobile computing
+610	advanced video and signal based surveillance
+611	document analysis systems
+612	Theory of Computing Systems \/ Mathematical Systems Theory
+613	hot topics in networks
+614	international conference on mobile and ubiquitous systems networking and services
+615	data engineering for wireless and mobile access
+616	Biomedical Signal Processing and Control
+617	asia pacific conference on circuits and systems
+618	IEEE Journal on Selected Areas in Communications
+619	Computers & Geosciences
+620	theoretical aspects of rationality and knowledge
+621	international conference on natural language generation
+622	canadian conference on computer and robot vision
+623	integration of ai and or techniques in constraint programming
+624	ACM Transactions on Computing Education \/ ACM Journal of Educational Resources in Computing
+625	International Journal of Computer Integrated Manufacturing
+626	Biological Cybernetics
+627	consumer communications and networking conference
+628	ACM Transactions on The Web
+629	automated software engineering
+630	international solid-state circuits conference
+631	Siam Journal on Optimization
+632	information theory and applications
+633	document recognition and retrieval
+634	software language engineering
+635	Journal of Philosophical Logic
+636	international parallel and distributed processing symposium
+637	the internet of things
+638	software product lines
+639	canadian conference on electrical and computer engineering
+640	International Journal of Speech Technology
+641	International Journal of Wireless Information Networks
+642	international conference on parallel and distributed systems
+643	International Journal of Neural Systems
+644	modeling analysis and simulation of wireless and mobile systems
+645	Journal of Internet Services and Applications
+646	international conference on mobile technology, applications, and systems
+647	data warehousing and olap
+648	Journal of Scientific Computing
+649	IEEE Journal of Selected Topics in Signal Processing
+650	acm symposium on parallel algorithms and architectures
+651	international conference on parallel processing
+652	IEEE MultiMedia
+653	generative programming and component engineering
+654	optical network design and modelling
+655	BioSystems
+656	internet measurement conference
+657	international conference on computational linguistics
+658	international symposium on mixed and augmented reality
+659	International Journal of Pattern Recognition and Artificial Intelligence
+660	great lakes symposium on vlsi
+661	electronic commerce
+662	ieee automatic speech recognition and understanding workshop
+663	Graphical Models \/graphical Models and Image Processing \/computer Vision, Graphics, and Image Processing
+664	cyberworlds
+665	International Journal of Web Information Systems
+666	advanced information networking and applications
+667	Journal of Librarianship and Information Science
+668	IEEE Annals of the History of Computing
+669	international workshop on security
+670	similarity search and applications
+671	European Journal of Combinatorics
+672	networked computing and advanced information management
+673	international conference on e-business and e-government
+674	International Journal of Ambient Computing and Intelligence
+675	fun with algorithms
+676	Computational and Mathematical Organization Theory
+677	Journal of Computer Applications in Technology
+678	Iet Image Processing
+679	enterprise distributed object computing
+680	Advanced Engineering Informatics
+681	semantic web applications and tools for life sciences
+682	Foundations and Trends in Computer Graphics and Vision
+683	International Journal of Distance Education Technologies
+684	International Journal of Mobile Communications
+685	network operations and management symposium
+686	Journal of Simulation
+687	international conference on conceptual structures
+688	Entropy
+689	Communications in Statistics - Simulation and Computation
+690	IEEE Transactions on Aerospace and Electronic Systems
+691	international conference on semantic computing
+692	pacific symposium on biocomputing
+693	international conference on computer communications and networks
+694	International Journal of Cooperative Information Systems
+695	wireless and optical communications conference
+696	symposium on principles of programming languages
+697	data management for sensor networks
+698	principles and practice of programming in java
+699	international conference on image and graphics
+700	Computational Linguistics
+701	Journal of Multivariate Analysis
+702	International Journal of Digital Curation
+703	electro/information technology
+704	Empirical Software Engineering
+705	IEEE Transactions on Visualization and Computer Graphics
+706	international conference on peer-to-peer computing
+707	Rairo-operations Research
+708	american control conference
+709	international conference on artificial intelligence and law
+710	International Journal of Computational Models and Algorithms in Medicine
+711	Statistics and Computing
+712	database and expert systems applications
+713	australasian document computing symposium
+714	artificial intelligence in education
+715	design automation conference
+716	international conference on engineering of complex computer systems
+717	Mobile Networks and Applications
+718	International Journal of Computational Biology and Drug Design
+719	Journal of Informetrics
+720	IEEE Transactions on Fuzzy Systems
+721	symposium on usable privacy and security
+722	IEEE Transactions on Software Engineering
+723	workshop on internet and network economics
+724	IEEE Wireless Communications
+725	Microelectronics Journal
+726	Aslib Proceedings
+727	International Journal of Secure Software Engineering
+728	International Journal of Intelligent Systems Technologies and Applications
+729	Microprocessors and Microsystems
+730	Mathematical Methods of Operations Research
+731	Government Information Quarterly
+732	virtual systems and multimedia
+733	Electronic Commerce Research
+734	computer science and software engineering
+735	ACM Transactions on Information and System Security
+736	International Journal of Electronic Commerce
+737	international conference on cluster computing
+738	Journal of Networks
+739	international conference on neural computation theory and applications
+740	International Journal of Online Engineering (ijoe)
+741	IEEE Transactions on Intelligent Transportation Systems
+742	Intelligent Automation and Soft Computing
+743	motion in games
+744	Software - Practice and Experience
+745	Algorithms for Molecular Biology
+746	Artificial Intelligence in Medicine
+747	ACM Transactions on Computer Systems
+748	advances in mobile multimedia
+749	IEEE Transactions on Dependable and Secure Computing
+750	Int'l J. of Communications, Network and System Sciences
+751	Journal of Computer Research and Development
+752	Mathematical Social Sciences
+753	Information Systems Frontiers
+754	conference of the european chapter of the association for computational linguistics
+755	International Journal on Digital Libraries
+756	IEEE Transactions on Industrial Informatics
+757	partial evaluation and semantic-based program manipulation
+758	Wireless Communications and Mobile Computing
+759	international conference on information systems
+760	international symposium on biomedical imaging
+761	IEEE Transactions on Consumer Electronics
+762	Software Testing, Verification & Reliability
+763	Fuzzy Optimization and Decision Making
+764	Ai Edam Artificial Intelligence for Engineering Design, Analysis and Manufacturing
+765	Ipsj Transactions on Computer Vision and Applications
+766	The Forum
+767	Journal of Computer-aided Molecular Design
+768	International Journal of Information Technology and Management
+769	conference of the centre for advanced studies on collaborative research
+770	International Journal of Humanoid Robotics
+771	content-based multimedia indexing
+772	annual software engineering workshop
+773	Advances in Artificial Intelligence
+774	International Journal of Intelligent Computing and Cybernetics
+775	Journal of Scheduling
+776	Ai & Society
+777	Information-an International Interdisciplinary Journal
+778	collaboration technologies and systems
+779	Mathematical Logic Quarterly
+780	IEEE Transactions on Network and Service Management
+781	Experimental Mathematics
+782	PLOS ONE
+783	International Journal of Knowledge Engineering and Soft Data Paradigms
+784	Foundations of Computational Mathematics
+785	Applied Artificial Intelligence
+786	Digital Investigation
+787	Journal of Information, Communication and Ethics in Society
+788	mobile and ubiquitous multimedia
+789	International Journal of Distributed Systems and Technologies
+790	Journal of Aerospace Information Systems
+791	Journal of Intelligent and Robotic Systems
+792	International Journal of Game Theory
+793	Electronic Markets
+794	network-based information systems
+795	ACM Communications in Computer Algebra
+796	ACM Journal on Emerging Technologies in Computing Systems
+797	Pattern Analysis and Applications
+798	asia-pacific services computing conference
+799	Journal of Computational and Applied Mathematics
+800	IEEE Transactions on Autonomous Mental Development
+801	international symposium on autonomous decentralized systems
+802	ACM Transactions in Embedded Computing Systems
+803	broadband communications, networks and systems
+804	IEEE Transactions on Medical Imaging
+805	International Journal of Critical Computer-based Systems
+806	International Journal of Computer Processing of Languages
+807	It Professional
+808	ACM Journal on Computing and Cultural Heritage
+809	IEEE Transactions on Evolutionary Computation
+810	Siam Journal on Imaging Sciences
+811	conference on emerging network experiment and technology
+812	adaptive hardware and systems
+813	Computerized Medical Imaging and Graphics
+814	Annals of Statistics
+815	IEEE Transactions on Services Computing
+816	Computers in Biology and Medicine
+817	Computational and Mathematical Methods in Medicine
+818	Electronic Notes in Discrete Mathematics
+819	Frontiers in Neuroinformatics
+820	multimedia information retrieval
+821	The British Journal for the Philosophy of Science
+822	Medical & Biological Engineering & Computing
+823	arXiv: Digital Libraries
+824	international symposium on physical design
+825	Cognitive Computation
+826	Advances in Engineering Software
+827	ieee virtual reality conference
+828	international workshop on quality of service
+829	acs/ieee international conference on computer systems and applications
+830	Journal of Logic, Language and Information
+831	International Journal of Agent Technologies and Systems
+832	Information Systems and E-business Management
+833	International Journal of Applied Earth Observation and Geoinformation
+834	social informatics
+835	Universal Access in The Information Society
+836	international conference of distributed computing and networking
+837	Journal of Interconnection Networks
+838	Wireless Sensor Network
+839	Interactions
+840	web information and data management
+841	Computers & Graphics
+842	Operations Research Letters
+843	Revue Dintelligence Artificielle
+844	Journal of Intelligent Transportation Systems
+845	component based software engineering
+846	spoken language technology workshop
+847	Research and Practice in Technology Enhanced Learning
+848	Adaptive Behavior
+849	IEEE Transactions on Biomedical Engineering
+850	international symposium on microarchitecture
+851	asia-pacific software engineering conference
+852	International Journal of Advanced Intelligence Paradigms
+853	IEICE Transactions on Electronics
+854	Systems & Control Letters
+855	information reuse and integration
+856	network and distributed system security symposium
+857	intelligent networking and collaborative systems
+858	acm ieee joint conference on digital libraries
+859	Interactive Technology and Smart Education
+860	parallel computing
+861	Scopus
+862	content based multimedia indexing
+863	International Journal of Computing Science and Mathematics
+864	IEEE Transactions on Control of Network Systems
+865	International Journal of Natural Computing Research
+866	international symposium on parallel and distributed processing and applications
+867	advanced visual interfaces
+868	self-adaptive and self-organizing systems
+869	signal-image technology and internet-based systems
+870	machine vision and human machine interface
+871	Annales Des Télécommunications
+872	Synthesis Lectures on Data Management
+873	international conference on performance engineering
+874	ad hoc networks
+875	Siam Journal on Control and Optimization
+876	workshops on enabling technologies: infrastracture for collaborative enterprises
+877	ACM Transactions on Computer-Human Interaction
+878	international joint conference on knowledge discovery, knowledge engineering and knowledge management
+879	International Journal of Social Robotics
+880	Graphs and Combinatorics
+881	Combinatorica
+882	Literary and Linguistic Computing
+883	management of emergent digital ecosystems
+884	working ieee/ifip conference on software architecture
+885	Finite Fields and Their Applications
+886	International Journal of Intelligent Defence Support Systems
+887	Journal of Graph Algorithms and Applications
+888	world haptics conference
+889	international symposium on software testing and analysis
+890	Lecture Notes in Computer Science
+891	IEEE Transactions on Information Theory
+892	information hiding
+893	International Journal of Intelligent Transportation Systems Research
+894	Foundations and Trends in Human-computer Interaction
+895	International Journal of Cognitive Informatics and Natural Intelligence
+896	Journal of Spatial Information Science
+897	nano/micro engineered and molecular systems
+898	International Journal of Uncertainty, Fuzziness and Knowledge-Based Systems
+899	international conference on service oriented computing
+900	european conference on cognitive ergonomics
+901	Systems and Computers in Japan
+902	International Journal on Advances in Information Sciences and Service Sciences
+903	Numerical Algorithms
+904	symposium on cloud computing
+905	BMC Medical Imaging
+906	digital image computing techniques and applications
+907	symposium on code generation and optimization
+908	integrating technology into computer science education
+909	ieee international conference on pervasive computing and communications
+910	Computers in Industry
+911	international conference on software testing verification and validation
+912	Cyberpsychology, Behavior, and Social Networking
+913	Mathematics in Computer Science
+914	designing interactive systems
+915	working conference on reverse engineering
+916	international conference on biometrics
+917	Applied Soft Computing
+918	Concurrent Engineering
+919	International Journal of Mobile Human Computer Interaction
+920	arXiv: Learning
+921	IEEE Network
+922	Connection Science
+923	Requirements Engineering
+924	ieee international conference on high performance computing, data, and analytics
+925	computer science logic
+926	Journal of Knowledge Management
+927	international conference on mobile systems, applications, and services
+928	Electronic Proceedings in Theoretical Computer Science
+929	electronic and mechanical engineering and information technology
+930	computer based medical systems
+931	Computer Science - Research and Development
+932	Public Transport
+933	Journal of Mathematical Imaging and Vision
+934	tests and proofs
+935	Data Science Journal
+936	formal methods
+937	International Journal of Data Mining, Modelling and Management
+938	Science of Computer Programming
+939	communication systems and networks
+940	international conference on sensor networks
+941	Presence: Teleoperators & Virtual Environments
+942	rapid system prototyping
+943	nordic conference on human-computer interaction
+944	International Journal of Agent-oriented Software Engineering
+945	Signal, Image and Video Processing
+946	performance evaluation methodolgies and tools
+947	Intelligent Service Robotics
+948	international symposium on object component service oriented real time distributed computing
+949	IEEE Computational Intelligence Magazine
+950	Displays
+951	Computers, Environment and Urban Systems
+952	virtual reality software and technology
+953	spring simulation multiconference
+954	Cluster Computing
+955	Journal of Zhejiang University Science C
+956	international conference on information technology: new generations
+957	International Journal of Imaging Systems and Technology
+958	robotics, automation and mechatronics
+959	Computers & Chemical Engineering
+960	Journal of Mathematical Modelling and Algorithms
+961	international conference on networks
+962	computational intelligence and data mining
+963	international conference on enterprise information systems
+964	computational sciences and optimization
+965	Brain Informatics
+966	conference on software maintenance and reengineering
+967	cyber enabled distributed computing and knowledge discovery
+968	wireless personal multimedia communications
+969	high assurance systems engineering
+970	Journal of Strategic Information Systems
+971	international symposium on symbolic and algebraic computation
+972	conference on email and anti-spam
+973	Computational Management Science
+974	IEEE Transactions on Biomedical Circuits and Systems
+975	international conference on signal and image processing applications
+976	mobile ad-hoc and sensor networks
+977	Knowledge Engineering Review
+978	Information & Management
+979	ACM Sigsoft Software Engineering Notes
+980	Argument & Computation
+981	acm/ieee international conference on mobile computing and networking
+982	International Journal of Handheld Computing Research
+983	Information Technology & Tourism
+984	Expert Systems
+985	asia pacific bioinformatics conference
+986	parallel, distributed and network-based processing
+987	field-programmable logic and applications
+988	Natural Computing
+989	Wiley Interdisciplinary Reviews-Data Mining and Knowledge Discovery
+990	Micromachines
+991	cyber-enabled distributed computing and knowledge discovery
+992	Computer Aided Geometric Design
+993	International Journal of Service Science, Management, Engineering, and Technology
+994	A Quarterly Journal of Operations Research
+995	Journal of Aerospace Computing Information and Communication
+996	european conference on artificial life
+997	integrated network management
+998	International Journal of Software Science and Computational Intelligence
+999	IEEE Transactions on Affective Computing
+1000	Journal of Medical Systems
+1001	Studia Informatica Universalis
+1002	embedded and ubiquitous computing
+1003	international conference on frontiers in handwriting recognition
+1004	computational aspects of social networks
+1005	ACM Sigmis Database
+1006	digital image computing: techniques and applications
+1007	national conference on artificial intelligence
+1008	Scientific Programming
+1009	Transactions in Gis
+1010	information security
+1011	embedded software
+1012	conference on privacy, security and trust
+1013	Remote Sensing
+1014	Journal of Cheminformatics
+1015	software engineering and advanced applications
+1016	Technology Analysis & Strategic Management
+1017	Eurasip Journal on Wireless Communications and Networking
+1018	Mobile Computing and Communications Review
+1019	emerging technologies and factory automation
+1020	Informatik - Forschung Und Entwicklung
+1021	international performance computing and communications conference
+1022	Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering
+1023	International Journal of Biomedical Imaging
+1024	Natural Language Engineering
+1025	The New Review of Hypermedia and Multimedia
+1026	Computers in Education
+1027	Iet Circuits Devices & Systems
+1028	international conference on telecommunications
+1029	Journal of Communications and Networks
+1030	Journal of Documentation
+1031	graphics interface
+1032	International Journal of Medical Informatics
+1033	asian internet engineering conference
+1034	Machine Translation
+1035	arXiv: Artificial Intelligence
+1036	source code analysis and manipulation
+1037	ACM Transactions on Accessible Computing
+1038	semantics, knowledge and grid
+1039	wireless communications, networking and information security
+1040	International Journal of Pervasive Computing and Communications
+1041	Reliability Engineering & System Safety
+1042	IEEE Transactions on Learning Technologies
+1043	workshop on program analysis for software tools and engineering
+1044	ACM Transactions on Storage
+1045	security of information and networks
+1046	Evolutionary Computation
+1047	international symposium on low power electronics and design
+1048	Memetic Computing
+1049	International Journal on Document Analysis and Recognition
+1050	international workshop on xquery implementation, experience and perspectives
+1051	Solid State Nuclear Magnetic Resonance
+1052	communications and networking symposium
+1053	Information Technology
+1054	The Journal of Object Technology
+1055	International Journal of Sensor Networks
+1056	usenix conference on file and storage technologies
+1057	artificial general intelligence
+1058	new technologies, mobility and security
+1059	many task computing on grids and supercomputers
+1060	Numerical Linear Algebra With Applications
+1061	ACM Queue
+1062	International Journal of Virtual and Personal Learning Environments
+1063	international conference on systems
+1064	privacy enhancing technologies
+1065	Genetic Programming and Evolvable Machines
+1066	International Journal of Wavelets, Multiresolution and Information Processing
+1067	International Journal of Applied Mathematics and Computer Science
+1068	Technometrics
+1069	Topics in Cognitive Science
+1070	international conference on distributed smart cameras
+1071	australasian computer-human interaction conference
+1072	International Journal of Information Systems for Crisis Response Management
+1073	Journal of Applied Non-Classical Logics
+1074	sensor, mesh and ad hoc communications and networks
+1075	latin american web congress
+1076	rules and rule markup languages for the semantic web
+1077	mining and learning with graphs
+1078	Journal of Theoretical Biology
+1079	symposium/workshop on haskell
+1080	architectural support for programming languages and operating systems
+1081	International Journal of Humanities and Arts Computing
+1082	multiple criteria decision making
+1083	new zealand chapter's international conference on computer human interaction
+1084	Transportation Science
+1085	languages, compilers, and tools for embedded systems
+1086	electro information technology
+1087	innovative applications of artificial intelligence
+1088	Software and Systems Modeling
+1089	embedded systems for real time multimedia
+1090	digital identity management
+1091	International Journal of Information Technology and Web Engineering
+1092	IEEE Transactions on Instrumentation and Measurement
+1093	Central European Journal of Operations Research
+1094	international symposium on industrial embedded systems
+1095	computer-aided design and computer graphics
+1096	Information Visualization
+1097	Journal of Symbolic Logic
+1098	arXiv: Computer Science and Game Theory
+1099	Bioinformatics
+1100	Advances in Bioinformatics
+1101	australian software engineering conference
+1102	Studia Logica
+1103	Physical Communication
+1104	nano micro engineered and molecular systems
+1105	Applicable Algebra in Engineering, Communication and Computing
+1106	international conference on supporting group work
+1107	Library Hi Tech
+1108	Inteligencia Artificial,revista Iberoamericana De Inteligencia Artificial
+1109	workshop on parallel and distributed simulation
+1110	International Journal of Security and Networks
+1111	frontier of computer science and technology
+1112	ACM Journal of Experimental Algorithms
+1113	Journal of Management Information Systems
+1114	Journal of Convergence Information Technology
+1115	International Journal of Image and Graphics
+1116	Human Factors
+1117	model driven engineering languages and systems
+1118	virtual environments human computer interfaces and measurement systems
+1119	Journal of Quantitative Linguistics
+1120	international symposium on software reliability engineering
+1121	International Journal of Metadata, Semantics and Ontologies
+1122	SIAM Journal on Matrix Analysis and Applications
+1123	conference on information technology education
+1124	simulation tools and techniques for communications, networks and system
+1125	foundations of genetic algorithms
+1126	International Journal of Business Intelligence and Data Mining
+1127	International Journal of Advanced Operations Management
+1128	european conference on computer systems
+1129	Design Automation for Embedded Systems
+1130	Simulation
+1131	Foundations and Trends in Databases
+1132	industrial engineering and engineering management
+1133	international conference on asian language processing
+1134	Praxis Der Wirtschaftsinformatik
+1135	ACM Sigsam Bulletin
+1136	modeling and optimization in mobile ad hoc and wireless networks
+1137	Foundations and Trends in Information Retrieval
+1138	International Journal of Computational Intelligence and Applications
+1139	symbolic and numeric algorithms for scientific computing
+1140	First Monday
+1141	Legal Studies
+1142	Iete Technical Review
+1143	dependable systems and networks
+1144	international conference on information technology new generations
+1145	Discrete Mathematics, Algorithms and Applications
+1146	international conference on systems engineering
+1147	data management on new hardware
+1148	IEEE Intelligent Transportation Systems Magazine
+1149	Telematics and Informatics
+1150	international conference on informatics in control automation and robotics
+1151	custom integrated circuits conference
+1152	Science and Engineering Ethics
+1153	international conference of the ieee engineering in medicine and biology society
+1154	Journal of Circuits, Systems, and Computers
+1155	atlantic web intelligence conference
+1156	Journal of Robotics
+1157	digital systems design
+1158	compiler construction
+1159	symposium/workshop on electronic design, test and applications
+1160	IEEE Journal on Emerging and Selected Topics in Circuits and Systems
+1161	Queueing Systems
+1162	european solid-state circuits conference
+1163	International Journal of Web Based Communities
+1164	ACM Transactions on Algorithms
+1165	International Journal of Interdisciplinary Telecommunications and Networking
+1166	Journal of Information & Knowledge Management
+1167	Neuroinformatics
+1168	pervasive computing technologies for healthcare
+1169	field programmable logic and applications
+1170	IEEE Computer Graphics and Applications
+1171	new security paradigms workshop
+1172	Operating Systems Review
+1173	research challenges in information science
+1174	arXiv: Data Structures and Algorithms
+1175	Social Choice and Welfare
+1176	Journal of Real-time Image Processing
+1177	Cognitive Processing
+1178	Sigact News
+1179	Discrete and Computational Geometry
+1180	Computer Networks and Isdn Systems
+1181	acm sigmm conference on multimedia systems
+1182	arXiv: Physics and Society
+1183	Theoretical Informatics and Applications
+1184	winter simulation conference
+1185	Iet Computers and Digital Techniques
+1186	Annals of Gis \/ Geographic Information Sciences
+1187	ACM Crossroads Student Magazine
+1188	Journal of Low Power Electronics
+1189	international conference on security and cryptography
+1190	Evolving Systems
+1191	Minds and Machines
+1192	international colloquium on automata languages and programming
+1193	Ibm Systems Journal
+1194	scandinavian conference on information systems
+1195	Internet Research
+1196	data storage and data engineering
+1197	IEEE Transactions on Emerging Topics in Computing
+1198	Order
+1199	nature and biologically inspired computing
+1200	IEEE Data(base) Engineering Bulletin
+1201	arXiv: Distributed, Parallel, and Cluster Computing
+1202	advances in computer-human interaction
+1203	conference on information technology in asia
+1204	International Journal of Industrial Ergonomics
+1205	Technique Et Science Informatiques
+1206	Integration
+1207	Formal Aspects of Computing
+1208	Information Technology & People
+1209	international workshop on fuzzy logic and applications
+1210	International Journal of Electronic Security and Digital Forensics
+1211	Scientific Reports
+1212	Informs Journal on Computing
+1213	variability modelling of software-intensive systems
+1214	conference on communication networks and services research
+1215	Journal on Multimodal User Interfaces
+1216	Sigmod Record
+1217	Advanced Data Analysis and Classification
+1218	asia-pacific web conference
+1219	affective computing and intelligent interaction
+1220	algorithmic learning theory
+1221	Advances in Mathematics of Communications
+1222	network and system support for games
+1223	network and system security
+1224	International Journal of Semantic Computing
+1225	database programming languages
+1226	Journal of Intelligent Learning Systems and Applications
+1227	variability modelling of software intensive systems
+1228	European Transactions on Telecommunications
+1229	ubiquitous intelligence and computing
+1230	arXiv: Cryptography and Security
+1231	eclipse technology exchange
+1232	predictive models in software engineering
+1233	international workshop conference on parsing technologies
+1234	visualizing software for understanding and analysis
+1235	Medical Image Analysis
+1236	EPL
+1237	Software Quality Journal
+1238	international conference on software maintenance
+1239	International Journal of Software Engineering and Knowledge Engineering
+1240	arXiv: Information Retrieval
+1241	testbeds and research infrastructures for the development of networks and communities
+1242	workshop on image analysis for multimedia interactive services
+1243	International Journal of Business Process Integration and Management
+1244	International Journal of Information and Communication Technology Education
+1245	Physical Review A
+1246	International Journal of Medical Engineering and Informatics
+1247	international conference on computer design
+1248	component-based software engineering
+1249	international conference on multimodal interfaces
+1250	Mathematical Structures in Computer Science
+1251	italian research conference on digital library management systems
+1252	Robotica
+1253	British Journal of Educational Technology
+1254	Complexity
+1255	International Journal of Organizational and Collective Intelligence
+1256	Information Security Technical Report
+1257	IEEE Transactions on Power Systems
+1258	Journal of Information Security
+1259	International Journal of Knowledge and Web Intelligence
+1260	computational intelligence communication systems and networks
+1261	grid and cooperative computing
+1262	International Journal of Systems Assurance Engineering and Management
+1263	International Journal of Information Management
+1264	European Journal of Information Systems
+1265	Journal of Clinical Bioinformatics
+1266	IEEE Transactions on Reliability
+1267	Interactive Learning Environments
+1268	european dependable computing conference
+1269	IEEE Transactions on Engineering Management
+1270	symposium on theoretical aspects of computer science
+1271	International Journal of Reasoning-based Intelligent Systems
+1272	web information systems engineering
+1273	asian test symposium
+1274	computer graphics, virtual reality, visualisation and interaction in africa
+1275	International Journal of Applied Metaheuristic Computing
+1276	Computational Biology and Chemistry
+1277	arXiv: Computation and Language
+1278	International Journal of Synthetic Emotions
+1279	european conference on information retrieval
+1280	arXiv: Databases
+1281	Naval Research Logistics
+1282	The Review of Socionetwork Strategies
+1283	computer human interaction for management of information technology
+1284	Business Process Management Journal
+1285	international wireless internet conference
+1286	Applied Physics Letters
+1287	Journal of Nonlinear Science
+1288	International Journal of E-entrepreneurship and Innovation
+1289	workshop on hot topics in operating systems
+1290	pacific asia conference on knowledge discovery and data mining
+1291	Scholarpedia
+1292	BMC Neuroscience
+1293	international conference on design of communication
+1294	Computer Physics Communications
+1295	Real-time Systems
+1296	environmental science and information application technology
+1297	international conference on knowledge engineering and ontology development
+1298	software engineering, artificial intelligence, networking and parallel/distributed computing
+1299	european conference on mobile robots
+1300	mexican international conference on computer science
+1301	Earth Science Informatics
+1302	International Journal of e-Collaboration
+1303	International Journal of Healthcare Information Systems and Informatics
+1304	international conference on learning representations
+1305	International Journal of Intelligent Information and Database Systems
+1306	Journal of Economic Theory
+1307	computational methods in systems biology
+1308	The Journal of Logic and Algebraic Programming
+1309	quality of software architectures
+1310	IEEE Computer Architecture Letters
+1311	Journal of Global Information Management
+1312	International Journal of Digital Literacy and Digital Competence
+1313	Paladyn
+1314	Human-Computer Interaction
+1315	International Journal of Learning Technology
+1316	New Astronomy
+1317	Intelligent Information Management
+1318	conference on advanced information systems engineering
+1319	IEEE Micro
+1320	sensor mesh and ad hoc communications and networks
+1321	types in languages design and implementation
+1322	Progress in Artificial Intelligence
+1323	International Journal of Parallel Programming
+1324	Briefings in Bioinformatics
+1325	Elektrotechnik Und Informationstechnik
+1326	Sigplan Notices
+1327	IEEE Wireless Communications Letters
+1328	european conference on web services
+1329	principles and practice of constraint programming
+1330	International Journal of Intelligent Information Technologies
+1331	International Journal of Information Acquisition
+1332	international conference on internet and web applications and services
+1333	petascale data storage workshop
+1334	Quest
+1335	mining software repositories
+1336	international conference on intelligent computing
+1337	compilers, architecture, and synthesis for embedded systems
+1338	service oriented computing and applications
+1339	International Journal of Gaming and Computer-mediated Simulations
+1340	Journal of Statistical Mechanics: Theory and Experiment
+1341	Algebra Universalis
+1342	Phonetica
+1343	The Electronic Library
+1344	Journal of Network and Systems Management
+1345	Journal of Computational Neuroscience
+1346	advanced robotics and its social impacts
+1347	arXiv: Multiagent Systems
+1348	Information Systems Research
+1349	Journal of Functional Programming
+1350	formal methods in computer-aided design
+1351	uncertainty in artificial intelligence
+1352	Random Structures and Algorithms
+1353	International Journal of Multimedia Information Retrieval
+1354	european conference on research and advanced technology for digital libraries
+1355	Neuroscience Research
+1356	International Journal of Web and Grid Services
+1357	international workshop on the web and databases
+1358	advances in model based software testing
+1359	IEEE Communications Surveys and Tutorials
+1360	International Journal of Parallel, Emergent and Distributed Systems
+1361	logic in computer science
+1362	Systems Engineering
+1363	Journal of Information Science
+1364	Clinical Rehabilitation
+1365	ACM Transactions on Software Engineering and Methodology
+1366	International Journal of Knowledge and Learning
+1367	database technology and applications
+1368	international conference on optical communication systems
+1369	pacific rim international symposium on dependable computing
+1370	vehicular networking conference
+1371	IEEE Internet of Things Journal
+1372	Journal of Symbolic Computation
+1373	International Journal of Digital Crime and Forensics
+1374	Asia-Pacific Journal of Operational Research
+1375	mobile ad hoc and sensor networks
+1376	Bulletin of The American Society for Information Science and Technology
+1377	innovative mobile and internet services in ubiquitous computing
+1378	secure software integration and reliability improvement
+1379	Cognition, Technology & Work
+1380	wearable and implantable body sensor networks
+1381	Advances in Operations Research
+1382	ACM Sigweb Newsletter
+1383	international conference on agents and artificial intelligence
+1384	multimedia and ubiquitous engineering
+1385	Advances in Computational Mathematics
+1386	Theory in Biosciences
+1387	Computers and Electronics in Agriculture
+1388	arXiv: Networking and Internet Architecture
+1389	International Journal of Mobile Learning and Organisation
+1390	Journal of Software Maintenance and Evolution: Research and Practice
+1391	inductive logic programming
+1392	application specific systems architectures and processors
+1393	Journal of Organizational Computing and Electronic Commerce
+1394	Computer Music Journal
+1395	symposium on web systems evolution
+1396	International Journal of Advanced Computer Science and Applications
+1397	IEEE Transactions on Professional Communication
+1398	Vietnam Journal of Computer Science
+1399	Artificial Life
+1400	picture coding symposium
+1401	workflows in support of large scale science
+1402	new zealand chapter's international conference on computer-human interaction
+1403	symposium on computer architecture and high performance computing
+1404	European Journal of Control
+1405	At-automatisierungstechnik
+1406	Automatisierungstechnik
+1407	international conference on automation robotics and applications
+1408	Information Resources Management Journal
+1409	databases knowledge and data applications
+1410	international conference on spatial data mining and geographical knowledge services
+1411	conference on risks and security of internet and systems
+1412	Frontiers in Computational Neuroscience
+1413	International Journal of Enterprise Information Systems
+1414	symposium on applications and the internet
+1415	International Journal of Computer Networks & Communications
+1416	Foundations and Trends in Web Science
+1417	electronic government
+1418	Journal of Banking and Finance
+1419	Algorithms
+1420	International Journal of Artificial Life Research
+1421	international conference for young computer scientists
+1422	international conference on ultra modern telecommunications
+1423	Database
+1424	adaptive agents and multi agents systems
+1425	workshop on logic language information and computation
+1426	Foundations and Trends in Electronic Design Automation
+1427	International Journal of Strategic Decision Sciences
+1428	computer games
+1429	International Journal of Radio Frequency Identification Technology and Applications
+1430	International Journal of Networking and Virtual Organisations
+1431	Marketing Science
+1432	Journal of Electrical and Computer Engineering
+1433	international conference on computational advances in bio and medical sciences
+1434	Scientific Journal of Riga Technical University. Computer Sciences
+1435	acm conference on systems programming languages and applications software for humanity
+1436	International Journal of Mathematics and Mathematical Sciences
+1437	Journal of Classification
+1438	International Journal of Simulation and Process Modelling
+1439	Chaos
+1440	rfid technologies and applications
+1441	Social Networks
+1442	Mathematical Programming
+1443	asia-pacific network operations and management symposium
+1444	wireless network security
+1445	Cognitive Systems Research
+1446	international conference on hybrid information technology
+1447	software engineering research and applications
+1448	Softwaretechnik-trends
+1449	symposium on operating systems principles
+1450	International Journal of Technology Management
+1451	Optics Express
+1452	Ubiquity
+1453	international symposium on parallel and distributed computing
+1454	workshop on privacy in the electronic society
+1455	Electronic Communications in Probability
+1456	advanced industrial conference on telecommunications
+1457	Electronic Communication of The European Association of Software Science and Technology
+1458	formal methods in computer aided design
+1459	International Journal of Reconfigurable Computing
+1460	international conference on software engineering advances
+1461	industrial and engineering applications of artificial intelligence and expert systems
+1462	runtime verification
+1463	Learned Publishing
+1464	Journal of Geographic Information System
+1465	Siam Journal on Applied Dynamical Systems
+1466	new interfaces for musical expression
+1467	next generation internet
+1468	Ieej Transactions on Electronics, Information and Systems
+1469	workshop on software and performance
+1470	Health Informatics Journal
+1471	International Journal of Digital Library Systems
+1472	foundations of computational intelligence
+1473	Nano Communication Networks
+1474	International Journal of Law and Information Technology
+1475	ACM Sigbed Review
+1476	International Journal of Decision Support System Technology
+1477	european conference on interactive tv
+1478	international symposium on signal processing and information technology
+1479	Eurasip Journal on Image and Video Processing
+1480	asia-pacific computer and human interaction
+1481	theoretical aspects of software engineering
+1482	international conference on cyber-physical systems
+1483	Manufacturing & Service Operations Management
+1484	Journal of Complexity
+1485	Chinese Optics Letters
+1486	Ai Magazine
+1487	Synthesis Lectures on Information Security, Privacy, and Trust
+1488	arXiv: Systems and Control
+1489	australian joint conference on artificial intelligence
+1490	Nature
+1491	Journal of Organizational and End User Computing
+1492	Mathematics of Operations Research
+1493	Electronic Journal of Statistics
+1494	european conference on software architecture
+1495	international joint conferences on bioinformatics, systems biology and intelligent computing
+1496	supercomputing conference
+1497	IEEE Access
+1498	intelligent human computer interaction
+1499	computer-based medical systems
+1500	Network Protocols and Algorithms
+1501	Quality and Reliability Engineering International
+1502	Journal of Japan Society for Fuzzy Theory and Intelligent Informatics
+1503	Production Engineering
+1504	Journal of Algorithms
+1505	Advances in Software Engineering
+1506	conference on computability in europe
+1507	International Journal of Information and Computer Security
+1508	advances in multimedia
+1509	International Game Theory Review
+1510	grid computing environments
+1511	International Journal of Information Systems in The Service Sector
+1512	information security and assurance
+1513	task models and diagrams for user interface design
+1514	arXiv: Information Theory
+1515	international conference on mobile technology applications and systems
+1516	International Journal of Electronic Business
+1517	Software Process: Improvement and Practice
+1518	International Journal of Satellite Communications and Networking
+1519	Synthesis Lectures on Biomedical Engineering
+1520	Journal of Cloud Computing
+1521	Computer Science Review
+1522	intelligent virtual agents
+1523	Theory and Applications of Categories
+1524	Siam Journal on Mathematical Analysis
+1525	BioMed Research International
+1526	many-task computing on grids and supercomputers
+1527	International Journal of Critical Infrastructures
+1528	Eurasip Journal on Embedded Systems
+1529	Synthesis Lectures on Artificial Intelligence and Machine Learning
+1530	conference on privacy security and trust
+1531	International Journal of Critical Infrastructure Protection
+1532	Journal of Phonetics
+1533	International Journal of Central Banking
+1534	virtual execution environments
+1535	workshop on information security applications
+1536	modeling and optimization in mobile, ad-hoc and wireless networks
+1537	International Journal of Information Quality
+1538	Journal of Information Technology Research
+1539	Mathematics of Computation
+1540	International Journal of Knowledge and Systems Science
+1541	high-assurance systems engineering
+1542	defect and fault tolerance in vlsi and nanotechnology systems
+1543	international symposium on memory management
+1544	International Journal of Electronic Healthcare
+1545	international symposium on wearable computers
+1546	ieee computer security foundations symposium
+1547	integrated formal methods
+1548	International Journal of Swarm Intelligence Research
+1549	Ergonomics
+1550	International Journal of Information and Decision Sciences
+1551	international conference on peer to peer computing
+1552	arXiv: Applications
+1553	Current Medical Imaging Reviews
+1554	advanced data mining and applications
+1555	IEEE Transactions on Haptics
+1556	Physica A-statistical Mechanics and Its Applications
+1557	databases in networked information systems
+1558	bangalore annual compute conference
+1559	conference on creating, connecting and collaborating through computing
+1560	design of reliable communication networks
+1561	database systems for advanced applications
+1562	adversarial information retrieval on the web
+1563	International Journal of Applied Cryptography
+1564	Cartographica: The International Journal for Geographic Information and Geovisualization
+1565	Journal of Systems and Information Technology
+1566	real time systems symposium
+1567	International Journal of Emerging Technologies in Learning (ijet)
+1568	International Journal of Strategic Information Technology and Applications
+1569	International Journal of E-health and Medical Communications
+1570	Synthesis Lectures on Distributed Computing Theory
+1571	International Journal of Functional Informatics and Personalised Medicine
+1572	International Journal of Wireless and Mobile Computing
+1573	real-time systems symposium
+1574	system-level interconnect prediction
+1575	International Journal of Embedded Systems
+1576	International Journal of Technology and Human Interaction
+1577	Journal of Computational and Graphical Statistics
+1578	Journal of the Royal Society Interface
+1579	international symposium on ubiquitous virtual reality
+1580	International Journal of High Performance Systems Architecture
+1581	conference on innovative data systems research
+1582	Transactions of The Japanese Society for Artificial Intelligence
+1583	latin american network operations and management symposium
+1584	international conference on pervasive services
+1585	visualization for computer security
+1586	BMC Genomics
+1587	Informs Transactions on Education
+1588	Geometric and Functional Analysis
+1589	natural language generation
+1590	International Journal of Business Data Communications and Networking
+1591	distributed computing in sensor systems
+1592	reconfigurable computing and fpgas
+1593	conference on network and service management
+1594	Big Data Research
+1595	Advances in Human-computer Interaction
+1596	Review of Symbolic Logic
+1597	logic in databases
+1598	information processing and trusted computing
+1599	international conference on knowledge discovery and information retrieval
+1600	P-adic Numbers, Ultrametric Analysis, and Applications
+1601	networked systems design and implementation
+1602	Advances in Artificial Neural Systems
+1603	Journal of Graphics Tools
+1604	International Journal of Open Source Software and Processes
+1605	Analog Integrated Circuits and Signal Processing
+1606	broadband and wireless computing, communication and applications
+1607	international conference on robot communication and coordination
+1608	International Transactions in Operational Research
+1609	intelligent data acquisition and advanced computing systems: technology and applications
+1610	balkan conference in informatics
+1611	arXiv: Computer Vision and Pattern Recognition
+1612	international conference on autonomic and autonomous systems
+1613	IEEE Cloud Computing
+1614	Advances in Adaptive Data Analysis
+1615	microelectronics systems education
+1616	Real-time Imaging
+1617	data warehousing and knowledge discovery
+1618	international conference on algorithms and complexity
+1619	Notre Dame Journal of Formal Logic
+1620	international conference on global software engineering
+1621	Journal of Theoretical and Applied Electronic Commerce Research
+1622	Journal of Electronic Commerce in Organizations
+1623	arXiv: Robotics
+1624	operating systems design and implementation
+1625	international conference on mobile multimedia communications
+1626	Electronics Letters
+1627	automation of software test
+1628	computer information systems and industrial management applications
+1629	Kybernetes
+1630	autonomous and intelligent systems
+1631	networks-on-chips
+1632	international conference on data technologies and applications
+1633	IEEE Transactions on Nanobioscience
+1634	siam international conference on data mining
+1635	International Journal of Web-based Learning and Teaching Technologies
+1636	software visualization
+1637	International Journal of Mathematics in Operational Research
+1638	Interfaces
+1639	Synthesis Lectures on Computer Graphics and Animation
+1640	Kybernetika
+1641	arXiv: Social and Information Networks
+1642	International Journal of Autonomous and Adaptive Communications Systems
+1643	Archive for Mathematical Logic
+1644	The Prague Bulletin of Mathematical Linguistics
+1645	Information Management & Computer Security
+1646	neural information processing systems
+1647	asian conference on computer vision
+1648	distributed multimedia systems
+1649	Digital Creativity
+1650	IEEE Embedded Systems Letters
+1651	combinatorial pattern matching
+1652	Datenschutz Und Datensicherheit - Dud
+1653	International Journal of Web Portals
+1654	web age information management
+1655	international conference on graph transformation
+1656	information processing in medical imaging
+1657	ReCALL
+1658	Mathematics of Control, Signals, and Systems
+1659	information and communication technologies and development
+1660	IEEE Transactions on Education
+1661	Vitae-revista De La Facultad De Quimica Farmaceutica
+1662	International Journal of Digital Multimedia Broadcasting
+1663	Discrete Optimization
+1664	Journal of Artificial Intelligence Research
+1665	conference on management of data
+1666	international asia conference on informatics in control, automation and robotics
+1667	international symposium on bioinformatics research and applications
+1668	text retrieval conference
+1669	european conference on principles of data mining and knowledge discovery
+1670	active media technology
+1671	Proceedings of The Vldb Endowment
+1672	International Journal of Knowledge-based and Intelligent Engineering Systems
+1673	Journal of Machine Learning Research
+1674	robot soccer world cup
+1675	high performance computer architecture
+1676	adaptive multimedia retrieval
+1677	Library Trends
+1678	principles of knowledge representation and reasoning
+1679	information sciences, signal processing and their applications
+1680	symposium on large spatial databases
+1681	intelligent data analysis
+1682	Fundamenta Informaticae
+1683	web-age information management
+1684	computer science and information engineering
+1685	european conference on parallel processing
+1686	arXiv: Discrete Mathematics
+1687	ieee symposium on information visualization
+1688	international joint conference on neural network
+1689	vlsi test symposium
+1690	public key cryptography
+1691	international conference on innovative computing, information and control
+1692	european conference on artificial intelligence
+1693	conference on multimedia modeling
+1694	wireless algorithms systems and applications
+1695	international conference on smart homes and health telematics
+1696	international conference on conceptual modeling
+1697	workshop on knowledge discovery and data mining
+1698	in Silico Biology
+1699	engineering of computer-based systems
+1700	international conference on logic programming
+1701	computational learning theory
+1702	rough sets and knowledge technology
+1703	Eurasip Journal on Audio, Speech, and Music Processing
+1704	Journal of Universal Computer Science
+1705	arXiv: Computational Complexity
+1706	International Feminist Journal of Politics
+1707	text speech and dialogue
+1708	portuguese conference on artificial intelligence
+1709	international semantic web conference
+1710	international colloquium on automata, languages and programming
+1711	international symposium/conference on music information retrieval
+1712	IEEE Transactions on Computational Social Systems
+1713	arXiv: Machine Learning
+1714	high performance switching and routing
+1715	international conference on weblogs and social media
+1716	computer aided verification
+1717	international syposium on methodologies for intelligent systems
+1718	the florida ai research society
+1719	Proceedings of the National Academy of Sciences of the United States of America
+1720	Journal of the American Medical Informatics Association
+1721	conference of the international speech communication association
+1722	european conference on symbolic and quantitative approaches to reasoning and uncertainty
+1723	european conference on smart sensing and context
+1724	high performance interconnects
+1725	web information systems modeling
+1726	international conference on computer vision systems
+1727	data integration in the life sciences
+1728	european conference on computer vision
+1729	cross language evaluation forum
+1730	international conference on automated planning and scheduling
+1731	british national conference on databases
+1732	Multiagent and Grid Systems
+1733	Applied Ontology
+1734	arXiv: Software Engineering
+1735	machine learning and data mining in pattern recognition
+1736	symposium on abstraction, reformulation and approximation
+1737	Discrete Event Dynamic Systems
+1738	international conference on software testing, verification, and validation
+1739	network and parallel computing
+1740	theory and applications of satisfiability testing
+1741	arXiv: Neurons and Cognition
+1742	international conference on swarm intelligence
+1743	Nature Communications
+1744	international symposium on robotics
+1745	simulated evolution and learning
+1746	asian conference on machine learning
+1747	ieee international conference on requirements engineering
+1748	Electronic Government, An International Journal
+1749	robotics science and systems
+1750	field-programmable custom computing machines
+1751	string processing and information retrieval
+1752	Educational Technology & Society
+1753	discovery science
+1754	energy minimization methods in computer vision and pattern recognition
+1755	simulation of adaptive behavior
+1756	european semantic web conference
+1757	ubiquitous data management
+1758	australasian database conference
+1759	algorithmic approaches for transportation modeling, optimization, and systems
+1760	Society
+1761	asian conference on intelligent information and database systems
+1762	business process management
+1763	usenix technical conference
+1764	international workshop on peer to peer systems
+1765	international symposium on computer and information sciences
+1766	Journal of Intelligent and Fuzzy Systems
+1767	web reasoning and rule systems
+1768	information security practice and experience
+1769	Journal of Integrative Bioinformatics
+1770	international joint conference on natural language processing
+1771	The Kips Transactions:partd
+1772	cross-language evaluation forum
+1773	Journal of Artificial Societies and Social Simulation
+1774	job scheduling strategies for parallel processing
+1775	New Media & Society
+1776	intelligent data engineering and automated learning
+1777	scandinavian workshop on algorithm theory
+1778	information technology interfaces
+1779	financial cryptography
+1780	symposium on geometry processing
+1781	international symposium on visual computing
+1782	information processing and management of uncertainty
+1783	distributed systems operations and management
+1784	symposium on abstraction reformulation and approximation
+1785	international symposium on imprecise probabilities and their applications
+1786	flexible query answering systems
+1787	grid economics and business models
+1788	Bulletin of The European Association for Theoretical Computer Science
+1789	pacific asia workshop on intelligence and security informatics
+1790	international symposium on algorithms and computation
+1791	canadian conference on artificial intelligence
+1792	workshop on applications of signal processing to audio and acoustics
+1793	international conference on embedded software and systems
+1794	Procesamiento Del Lenguaje Natural
+1795	international colloquium on theoretical aspects of computing
+1796	IEEE Transactions on Speech and Audio Processing
+1797	computational systems bioinformatics
+1798	international symposium on object/component/service-oriented real-time distributed computing
+1799	international conference on computational science and its applications
+1800	Biodata Mining
+1801	international provenance and annotation workshop
+1802	Information Research
+1803	international conference on image analysis and processing
+1804	Journal of Computer Security
+1805	international symposium on electronic commerce and security
+1806	Alzheimers & Dementia
+1807	Informatica (lithuanian Academy of Sciences)
+1808	medical image computing and computer assisted intervention
+1809	intelligent technologies for interactive entertainment
+1810	pacific rim international conference on artificial intelligence
+1811	international conference on formal concept analysis
+1812	fundamental approaches to software engineering
+1813	international conference on networking and services
+1814	international symposium on multiple-valued logic
+1815	scalable uncertainty management
+1816	Journal of Digital Information
+1817	european conference on computational biology
+1818	tools and algorithms for construction and analysis of systems
+1819	verification model checking and abstract interpretation
+1820	international symposium on multiple valued logic
+1821	pacific asia conference on information systems
+1822	asia information retrieval symposium
+1823	the european symposium on artificial neural networks
+1824	self adaptive and self organizing systems
+1825	Integrated Computer-aided Engineering
+1826	hellenic conference on artificial intelligence
+1827	acs ieee international conference on computer systems and applications
+1828	Journal of Service Science
+1829	Journal in Computer Virology
+1830	indian international conference on artificial intelligence
+1831	Decision Sciences
+1832	Journal of Web Engineering
+1833	Journal of Information Science and Engineering
+1834	Spring
+1835	International Journal of Autonomic Computing
+1836	international conference on artificial neural networks
+1837	Frontiers in Education
+1838	computer graphics international
+1839	Symmetry
+1840	geometric modeling and processing
+1841	system level interconnect prediction
+1842	international on line testing symposium
+1843	Synthesis Lectures on Data Mining and Knowledge Discovery
+1844	arXiv: Computers and Society
+1845	arXiv: Programming Languages
+1846	pacific-asia workshop on computational intelligence and industrial application
+1847	grid and pervasive computing
+1848	international conference on concurrency theory
+1849	cooperative information systems
+1850	fast software encryption
+1851	agent and multi agent systems technologies and applications
+1852	international work conference on the interplay between natural and artificial computation
+1853	international conference on asian digital libraries
+1854	field and service robotics
+1855	Security Informatics
+1856	pacific rim international conference on multi-agents
+1857	Decision Analysis
+1858	international conference on information security and cryptology
+1859	conference on intelligent text processing and computational linguistics
+1860	Computer Languages, Systems & Structures
+1861	Ai Communications
+1862	arXiv: Logic in Computer Science
+1863	americas conference on information systems
+1864	conference on computational complexity
+1865	practical aspects of declarative languages
+1866	european workshop on multi-agent systems
+1867	Finance and Stochastics
+1868	international conference on neural information processing
+1869	asia pacific web conference
+1870	arXiv: Human-Computer Interaction
+1871	Journal of Software: Evolution and Process
+1872	pacific-asia conference on knowledge discovery and data mining
+1873	international conference on computer modeling and simulation
+1874	International Journal of Computational Geometry and Applications
+1875	mathematics of program construction
+1876	intelligent tutoring systems
+1877	medical image computing and computer-assisted intervention
+1878	Eurasip Journal on Bioinformatics and Systems Biology
+1879	high performance computational finance
+1880	Web Intelligence and Agent Systems: An International Journal
+1881	applied reconfigurable computing
+1882	artificial intelligence and computational intelligence
+1883	pacific-asia conference on circuits, communications and systems
+1884	computational intelligence in robotics and automation
+1885	Isprs Journal of Photogrammetry and Remote Sensing
+1886	international conference on emerging security information, systems and technologies
+1887	conference on automated deduction
+1888	biocomputation, bioinformatics, and biomedical technologies
+1889	language and automata theory and applications
+1890	nasa formal methods
+1891	Genome Biology
+1892	international conference on informatics in control, automation and robotics
+1893	international conference on data management in grid and p2p systems
+1894	international conference on case based reasoning
+1895	ieee visualization
+1896	software engineering and formal methods
+1897	arXiv: Graphics
+1898	frontiers of combining systems
+1899	recent advances in intrusion detection
+1900	pattern recognition in bioinformatics
+1901	brazilian symposium on geoinformatics
+1902	computational models of argument
+1903	applications of natural language to data bases
+1904	software engineering approaches for offshore and outsourced development
+1905	International Journal of Mathematical Modelling and Numerical Optimisation
+1906	european symposium on algorithms
+1907	biomedical engineering systems and technologies
+1908	agents and data mining interaction
+1909	discrete geometry for computer imagery
+1910	international symposium on distributed computing
+1911	IEEE Transactions on Magnetics
+1912	international conference on coordination models and languages
+1913	algorithmic game theory
+1914	symposium on application specific processors
+1915	international conference on e business
+1916	arXiv: Methodology
+1917	european conference on modelling foundations and applications
+1918	international xml database symposium
+1919	international conference on algorithms and architectures for parallel processing
+1920	european test symposium
+1921	Transactions on Rough Sets
+1922	european conference on circuit theory and design
+1923	Frontiers in Neurorobotics
+1924	international conference on computing theory and applications
+1925	field programmable custom computing machines
+1926	theory and practice of digital libraries
+1927	foundations of software technology and theoretical computer science
+1928	knowledge science, engineering and management
+1929	advances in databases and information systems
+1930	robotics: science and systems
+1931	international conference on e-learning and games
+1932	international conference on formal methods and models for co design
+1933	asian semantic web conference
+1934	european conference on technology enhanced learning
