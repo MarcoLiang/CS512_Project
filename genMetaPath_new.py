@@ -7,7 +7,7 @@ import itertools
 
 
 class MetaPathGenerator:
-    def __init__(self, max_path_length, type_num=3):
+    def __init__(self, max_path_length, type_num=3, label_by = 'focus'):
         self.id_author = dict() # author_id(int) -> author_name(str)
         self.id_conf = dict() # paper_id(int) -> conf_id(int)
         self.id_paper = dict() # paper_id(int) -> paper_title(str)
@@ -24,7 +24,9 @@ class MetaPathGenerator:
         self.paper_type = 2
         self.dict_list = [self.id_author, self.id_conf, self.id_paper, self.id_paper]
         self.author_group = dict() # author_name(str) -> group_id(str)
+        self.author_focus = dict()
         self.nn_list = []
+        self.label_by = label_by
 
     def read_data(self, dirpath):
         with codecs.open(dirpath + "/id_author.txt", 'r', 'utf-8') as adictfile:
@@ -68,7 +70,7 @@ class MetaPathGenerator:
                         self.conf_paper[c] = []
                     self.conf_paper[c].append(p)
 
-        with codecs.open(dirpath + "/paper_paper.txt") as ppfile:
+        with codecs.open(dirpath + "/paper_paper.txt", 'r', 'utf-8') as ppfile:
             for line in ppfile:
                 toks = line.strip().split("\t")
                 if len(toks) == 2:
@@ -79,12 +81,19 @@ class MetaPathGenerator:
                     if p2 not in self.paper_from_paper:
                         self.paper_from_paper[p2] = set()
                     self.paper_from_paper[p2].add(p1)
+        if self.label_by == 'group':
+            with codecs.open("data/name-group.txt", 'r', 'utf-8') as agfile:
+                for line in agfile:
+                    toks = line.strip().split("\t")
+                    toks[0] = toks[0].replace('_', ' ')
+                    self.author_group[toks[0]] = int(toks[1])
+        else:
+            with codecs.open("data/name-focus.txt", 'r', 'utf-8') as affile:
+                for line in affile:
+                    toks = line.strip().split("\t")
+                    toks[0] = toks[0].replace('_', ' ')
+                    self.author_focus[toks[0]] = int(toks[1])
 
-        with codecs.open("data/name-group.txt") as agfile:
-            for line in agfile:
-                toks = line.strip().split("\t")
-                toks[0] = toks[0].replace('_', ' ')
-                self.author_group[toks[0]] = int(toks[1])
 
     def write_file_pattern_full(self, meta_path, file):
         '''
@@ -130,7 +139,7 @@ class MetaPathGenerator:
         path_fwd = [0] * (len(entities_fwd) + len(edges_fwd))
         path_bwd = [0] * (len(entities_bwd) + len(edges_bwd))
 
-        label =  self.check_same_group(meta_path)
+        label =  self.check_label(meta_path)
         path_fwd[::2] = entities_fwd
         path_fwd[1::2] = edges_fwd
         path_fwd.append(label)
@@ -148,10 +157,15 @@ class MetaPathGenerator:
     def meta_path_type(self, meta_path):
         return [retrieve_type(id) for id in meta_path]
 
-    def check_same_group(self, meta_path):
-        id1 = self.id_author[retrieve_id(meta_path[0])]
-        id2 = self.id_author[retrieve_id(meta_path[-1])]
-        return int(self.author_group[id1] == self.author_group[id2])
+    def check_label(self, meta_path):
+        a1 = self.id_author[retrieve_id(meta_path[0])]
+        a2 = self.id_author[retrieve_id(meta_path[-1])]
+        label = None
+        if self.label_by == 'group':
+           label =  int(self.author_group[a1] == self.author_group[a2])
+        else:
+            label = int(self.author_focus[a1] == self.author_focus[a2])
+        return label
 
     def generate_metapath(self, dir_out):
         marked_author = set() # store the global_id of marked author
@@ -239,11 +253,11 @@ class Node:
 
 
 def main():
-    dir_input = "_reduced_dataset/output"
-    dir_output = "_reduced_dataset/pattern"
-    meta = MetaPathGenerator(5, 3)
+    dir_input = "data/focus/venue_filtered"
+    dir_output = "data/pattern"
+    meta = MetaPathGenerator(5, 3, "focus")
     meta.read_data(dir_input)
-    print('Generating Meta-Path using files in {}...'.format(dir_input))
+    print('Generating Meta-Path using files in {0}, label by {1}'.format(dir_input, meta.label_by))
     meta.generate_metapath(dir_output)
     print('====================================================')
     print('Mata-Path stored in {}: meta_path_l1_new.txt: '.format(dir_output))
