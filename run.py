@@ -11,17 +11,17 @@ import torch.nn.functional as F
 import torch.optim as optim
 
 from utils.data import Data
-from model import ModuleNet
+from model.model2 import ModuleNet
 
 # data options
-parser.add_argument('--max_length', default=1)
+# parser.add_argument('--max_length', default=1)
 parser.add_argument('--batch_size', default=64)
-parser.add_argument('--data_dir', default="./_reduced_dataset/pattern")
+# parser.add_argument('--data_dir', default="./data/pattern/meta_path_l1_new.txt")
 
 # module options
 parser.add_argument('--embed_size', default=128)
-parser.add_argument('--classifier_first_dim', default=128)
-parser.add_argument('--classifier_second_dim', default=32)
+# parser.add_argument('--classifier_first_dim', default=128)
+# parser.add_argument('--classifier_second_dim', default=32)
 
 # Optimization options
 parser.add_argument('--learning_rate', default=5e-4)
@@ -36,9 +36,15 @@ parser.add_argument('--record_loss_every', default=1)
 def main(args):
     # load data
     dataset = Data()
-    dataset.data_load(args.data_dir, args.max_length)
-    args.num_metapath = 4
-    args.num_entity = 104
+    # dataset.data_load(args.data_dir, args.max_length)
+    dataset.load_data("./data/pattern/meta_path_l1_new.txt", "./data/pattern/meta_path_l1_new_cnt.txt")
+
+    for batch in dataset.next_batch(dataset.X_train, dataset.y_train, batch_size=args.batch_size):
+        paths, labels = batch
+
+    args.num_metapath = dataset.nn_num
+    args.num_bias = dataset.bias_num
+    args.num_entity = dataset.author_num
 
     train_model(dataset, args)
 
@@ -49,9 +55,10 @@ def train_model(dataset, args):
         'embed_size': args.embed_size,
         'num_entity': args.num_entity,
         'num_metapath': args.num_metapath,
-        'max_length': args.max_length,
-        'classifier_first_dim': args.classifier_first_dim,
-        'classifier_second_dim': args.classifier_second_dim
+        'num_bias': args.num_bias,
+        # 'max_length': args.max_length,
+        # 'classifier_first_dim': args.classifier_first_dim,
+        # 'classifier_second_dim': args.classifier_second_dim
     }
 
     execution_engine = ModuleNet(**kwargs)
@@ -170,7 +177,6 @@ def load_model(path, verbose=True):
   state = checkpoint['state']
   kwargs['verbose'] = verbose
   model = ModuleNet(**kwargs)
-  cur_state = model.state_dict()
   model.load_state_dict(state)
   return model, kwargs
 

@@ -107,13 +107,13 @@ class Data:
 
 
 #
-data = Data()
+# data = Data()
 # X, y = meta.combine_data(["../_reduced_dataset/filter_venue_since_2005/pattern/meta-path_pattern_l1",
 #                            "../_reduced_dataset/filter_venue_since_2005/pattern/meta-path_pattern_l2",
 #                            "../_reduced_dataset/filter_venue_since_2005/pattern/meta-path_pattern_l3"])
-data.load_data("../data/pattern/meta_path_l1_new.txt", "../data/pattern/meta_path_l1_new_cnt.txt")
-data.split_dataset()
-print(data.X_train)
+# data.load_data("../data/pattern/meta_path_l1_new.txt", "../data/pattern/meta_path_l1_new_cnt.txt")
+# data.split_dataset()
+# print(data.X_train)
 
 
 #
