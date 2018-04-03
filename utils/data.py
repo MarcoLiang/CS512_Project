@@ -13,10 +13,10 @@ class Data:
         self.y_test = None
         self.X_valid = None
         self.y_valid = None
-        self.author_set = set()
-        self.pattern_set = set()
         self.author_num = None
-        self.pattern_num = None
+        self.nn_num = None
+        self.bias_num = None
+        self.N = None
 
     #
     # def combine_data(self, datasets):
@@ -49,19 +49,47 @@ class Data:
     #     self.author_num = len(self.author_set)
     #     self.pattern_num = len(self.pattern_set)
 
+    def load_data(self, dataset_dir, dataset_cnt_dir):
+        print("Loading Data...")
+        with codecs.open(dataset_cnt_dir, 'r', 'utf-8') as cntfile:
+            for line in cntfile:
+                toks = line.strip().split("\t")
+                toks = list(map(int, toks))
+                self.author_num, self.nn_num, self.bias_num, self.N = toks
+
+        self.X = []
+        self.y = np.zeros((self.N, 1))
+
+        with codecs.open(dataset_dir, 'r', 'utf-8') as cntfile:
+            for i, line in enumerate(cntfile):
+                toks = line.strip().split("\t")
+                toks = list(map(int, toks))
+                x = np.array(toks[:-1])
+                self.X.append(x)
+                self.y[i] = toks[-1]
+        self.X = np.array(self.X)
+
+
+    def shuffle(self):
+        indices = np.random.permutation(len(self.X_train))
+        self.X_train = self.X_train[indices]
+        self.y_train = self.y_train[indices]
+
     def split_dataset(self, ratio=[0.7, 0.15, 0.15], shuffle=True):
         '''
         :param ratio(list): the ratio of train, test and valit. e.g. [0.7, 0.15, 0.15]
         :return: three datasets
         '''
-        N = self.X.shape[0]
+        print("Spliting data...")
+        n = len(self.y)
         if shuffle:
-            indices = np.random.permutation(N)
+            indices = np.random.permutation(n)
         else:
-            indices = np.arange(N)
-        train_idx = indices[0 : int(np.floor(ratio[0] * N))]
-        test_idx = indices[int(np.ceil(ratio[0] * N)) : int(np.floor((ratio[0] + ratio[1]) * N))]
-        valid_idx = indices[int(np.ceil((ratio[0] + ratio[1]) * N)):]
+            indices = np.arange(n)
+        train_idx = indices[0 : int(np.floor(ratio[0] * n))]
+        test_idx = indices[int(np.ceil(ratio[0] * n)) : int(np.floor((ratio[0] + ratio[1]) * n))]
+        valid_idx = indices[int(np.ceil((ratio[0] + ratio[1]) * n)):]
+        print(train_idx)
         self.X_train = self.X[train_idx]
         self.y_train = self.y[train_idx]
         self.X_test = self.X[test_idx]
@@ -74,18 +102,18 @@ class Data:
             yield X[i:i + batch_size], y[i:i + batch_size]
 
 
-    def data_load(self, data_file, shuffle = True, split_ratio = [0.7, 0.15, 0.15]):
-        dataset = dir + "/meta-path_pattern_l"
-        self.split_dataset(split_ratio, shuffle)
 
 
 
 
 #
-# data = Data()
+data = Data()
 # X, y = meta.combine_data(["../_reduced_dataset/filter_venue_since_2005/pattern/meta-path_pattern_l1",
 #                            "../_reduced_dataset/filter_venue_since_2005/pattern/meta-path_pattern_l2",
 #                            "../_reduced_dataset/filter_venue_since_2005/pattern/meta-path_pattern_l3"])
+data.load_data("../data/pattern/meta_path_l1_new.txt", "../data/pattern/meta_path_l1_new_cnt.txt")
+data.split_dataset()
+print(data.X_train)
 
 
 #
