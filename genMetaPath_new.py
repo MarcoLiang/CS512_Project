@@ -27,6 +27,7 @@ class MetaPathGenerator:
         self.author_focus = dict()
         self.nn_list = []
         self.label_by = label_by
+        self.N = None
 
     def read_data(self, dirpath):
         with codecs.open(dirpath + "/id_author.txt", 'r', 'utf-8') as adictfile:
@@ -106,6 +107,7 @@ class MetaPathGenerator:
         [paper1 = 2, paper2 = 3] means paper1 was cited by paper2
 
         '''
+        self.N += 2
         bias_offset = len(self.id_paper) # [paper0, paper1,...,paper_k = offset - 1, conf0 = offset]
         # entities list
         entities_fwd = []
@@ -221,7 +223,7 @@ class MetaPathGenerator:
                             stack.push(Node(a_id, self.author_type, node.step + 1))
         out_file_pattern_full.close()
         out_file_stat = open(dir_out + '/meta_path_l1_new_cnt.txt', 'w')
-        header = [len(self.id_author), len(self.nn_list), len(self.id_paper) + len(self.id_conf)]
+        header = [len(self.id_author), len(self.nn_list), len(self.id_paper) + len(self.id_conf), self.N]
         out_file_stat.write('\t'.join(list(map(str, header))))
 
 class Stack:

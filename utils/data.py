@@ -58,15 +58,21 @@ class Data:
                 self.author_num, self.nn_num, self.bias_num, self.N = toks
 
         self.X = []
-        self.y = np.zeros((self.N, 1))
+        self.y = np.zeros((int(self.N / 2), 1))
 
         with codecs.open(dataset_dir, 'r', 'utf-8') as cntfile:
+            data_pair = []
             for i, line in enumerate(cntfile):
                 toks = line.strip().split("\t")
                 toks = list(map(int, toks))
                 x = np.array(toks[:-1])
-                self.X.append(x)
-                self.y[i] = toks[-1]
+                if i % 2 == 0:
+                    data_pair.append(x)
+                else:
+                    data_pair.append(x)
+                    self.X.append(data_pair)
+                    data_pair = []
+                self.y[int(i / 2)] = toks[-1]
         self.X = np.array(self.X)
 
 
@@ -89,7 +95,6 @@ class Data:
         train_idx = indices[0 : int(np.floor(ratio[0] * n))]
         test_idx = indices[int(np.ceil(ratio[0] * n)) : int(np.floor((ratio[0] + ratio[1]) * n))]
         valid_idx = indices[int(np.ceil((ratio[0] + ratio[1]) * n)):]
-        print(train_idx)
         self.X_train = self.X[train_idx]
         self.y_train = self.y[train_idx]
         self.X_test = self.X[test_idx]
@@ -108,34 +113,14 @@ class Data:
 
 #
 # data = Data()
-# X, y = meta.combine_data(["../_reduced_dataset/filter_venue_since_2005/pattern/meta-path_pattern_l1",
-#                            "../_reduced_dataset/filter_venue_since_2005/pattern/meta-path_pattern_l2",
-#                            "../_reduced_dataset/filter_venue_since_2005/pattern/meta-path_pattern_l3"])
 # data.load_data("../data/pattern/meta_path_l1_new.txt", "../data/pattern/meta_path_l1_new_cnt.txt")
+# print(data.X)
 # data.split_dataset()
+# print("======")
 # print(data.X_train)
-
-
-#
-# dir = "../_reduced_dataset/filter_venue_since_2005/pattern"
-# data.data_load(dir, 3)
+# print("======")
+# data.shuffle()
 # print(data.X_train)
-# for d in data.X_train:
-#     print(d)
-#     print('==============')
-# print(type(data.y[0]))
-# print(type(data.X[0]))
-# print(data.author_num)
-# print(data.pattern_num)
-# for X_batch, y_batch in data.next_batch(data.X_train, data.y_train):
-#     print(X_batch)
-#     print(y_batch)
-
-
-
-
-# print(type(X[0]))
-# print(y)
 
 
 
