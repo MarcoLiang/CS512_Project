@@ -65,7 +65,8 @@ class Data:
             for i, line in enumerate(cntfile):
                 toks = line.strip().split("\t")
                 toks = list(map(int, toks))
-                x = np.array(toks[:-1])
+                # x = np.array(toks[:-1])
+                x = toks[:-1]
                 if i % 2 == 0:
                     data_pair.append(x)
                 else:
