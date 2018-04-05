@@ -27,7 +27,7 @@ class MetaPathGenerator:
         self.author_focus = dict()
         self.nn_list = []
         self.label_by = label_by
-        self.N = None
+        self.N = 0
 
     def read_data(self, dirpath):
         with codecs.open(dirpath + "/id_author.txt", 'r', 'utf-8') as adictfile:
@@ -162,9 +162,8 @@ class MetaPathGenerator:
     def check_label(self, meta_path):
         a1 = self.id_author[retrieve_id(meta_path[0])]
         a2 = self.id_author[retrieve_id(meta_path[-1])]
-        label = None
         if self.label_by == 'group':
-           label =  int(self.author_group[a1] == self.author_group[a2])
+           label = int(self.author_group[a1] == self.author_group[a2])
         else:
             label = int(self.author_focus[a1] == self.author_focus[a2])
         return label
