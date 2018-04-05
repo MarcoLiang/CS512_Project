@@ -27,7 +27,7 @@ class MetaPathGenerator:
         self.author_focus = dict()
         self.nn_list = []
         self.label_by = label_by
-        self.N = None
+        self.N = 0
 
     def read_data(self, dirpath):
         with codecs.open(dirpath + "/id_author.txt", 'r', 'utf-8') as adictfile:
