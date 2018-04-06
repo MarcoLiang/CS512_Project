@@ -162,9 +162,8 @@ class MetaPathGenerator:
     def check_label(self, meta_path):
         a1 = self.id_author[retrieve_id(meta_path[0])]
         a2 = self.id_author[retrieve_id(meta_path[-1])]
-        label = None
         if self.label_by == 'group':
-           label =  int(self.author_group[a1] == self.author_group[a2])
+           label = int(self.author_group[a1] == self.author_group[a2])
         else:
             label = int(self.author_focus[a1] == self.author_focus[a2])
         return label
