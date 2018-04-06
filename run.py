@@ -11,7 +11,7 @@ import torch.nn.functional as F
 import torch.optim as optim
 
 from utils.data import Data
-from model.model2 import ModuleNet
+from model.model3 import ModuleNet
 
 # data options
 # parser.add_argument('--max_length', default=1)
@@ -29,7 +29,7 @@ parser.add_argument('--num_epoch', default=100000)
 
 # Output options
 parser.add_argument('--checkpoint_path', default='./model/trained_model/checkpoint.pt')
-parser.add_argument('--check_every', default=1)
+parser.add_argument('--check_every', default=2)
 parser.add_argument('--record_loss_every', default=100)
 
 
@@ -115,17 +115,18 @@ def train_model(dataset, args):
                 best_state = get_state(execution_engine)
 
             checkpoint = {
-                'args': args.__dict__,
+                'args': args,
                 'kwargs': kwargs,
                 'state': best_state,
+                'stats': stats,
             }
             for k, v in stats.items():
                 checkpoint[k] = v
             print('Saving checkpoint to %s' % args.checkpoint_path)
             torch.save(checkpoint, args.checkpoint_path)
-            del checkpoint['state']
-            with open(args.checkpoint_path + '.json', 'w') as f:
-                json.dump(checkpoint, f)
+            # del checkpoint['state']
+            # with open(args.checkpoint_path + '.json', 'w') as f:
+            #     json.dump(checkpoint, f)
 
     print("training is done!")
     print("best validate accuracy:{}".format(stats['best_val_acc']))
@@ -231,17 +232,18 @@ def go_on(dataset, path, args):
                 best_state = get_state(execution_engine)
 
             checkpoint = {
-                'args': args.__dict__,
+                'args': args,
                 'kwargs': kwargs,
                 'state': best_state,
+                'stats':stats,
             }
             for k, v in stats.items():
                 checkpoint[k] = v
             print('Saving checkpoint to %s' % args.checkpoint_path)
             torch.save(checkpoint, args.checkpoint_path)
-            del checkpoint['state']
-            with open(args.checkpoint_path + '.json', 'w') as f:
-                json.dump(checkpoint, f)
+            # del checkpoint['state']
+            # with open(args.checkpoint_path + '.json', 'w') as f:
+            #     json.dump(checkpoint, f)
 
     print("training is done!")
     print("best validate accuracy:{}".format(stats['best_val_acc']))
@@ -250,16 +252,16 @@ def go_on(dataset, path, args):
 if __name__ == '__main__':
     args = parser.parse_args()
 
-    # main(args)
+    main(args)
 
     # load data
-    dataset = Data()
-    # dataset.data_load(args.data_dir, args.max_length)
-    dataset.load_data("./data/pattern/meta_path_l1_new.txt", "./data/pattern/meta_path_l1_new_cnt.txt")
-    dataset.split_dataset()
-
-    args.num_module = dataset.nn_num
-    args.num_bias = dataset.bias_num
-    args.num_entity = dataset.author_num
-
-    go_on(dataset, args.checkpoint_path, args)
+    # dataset = Data()
+    # # dataset.data_load(args.data_dir, args.max_length)
+    # dataset.load_data("./data/pattern/meta_path_l1_new.txt", "./data/pattern/meta_path_l1_new_cnt.txt")
+    # dataset.split_dataset()
+    #
+    # args.num_module = dataset.nn_num
+    # args.num_bias = dataset.bias_num
+    # args.num_entity = dataset.author_num
+    #
+    # go_on(dataset, args.checkpoint_path, args)
