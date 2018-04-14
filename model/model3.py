@@ -22,7 +22,7 @@ class ModuleBlock(nn.Module):
         self.weight.data.uniform_(-stdv, stdv)
 
     def forward(self, input, bias):
-        return F.linear(input, self.weight, bias)
+        return F.relu(F.linear(input, self.weight, bias), inplace=True)
 
     def __repr__(self):
         return self.__class__.__name__ + '(' \
