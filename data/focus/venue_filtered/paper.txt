@@ -618,7 +618,7 @@
 618	Stubby: a transformation-based optimizer for MapReduce workflows
 619	Instant loading for main memory databases
 620	Evaluating very large datalog queries on social networks
-2533	Mining closed relational graphs with connectivity constraints
+621	Mining closed relational graphs with connectivity constraints
 622	An analysis of peer-to-peer file-sharing system queries
 623	FORUM: a flexible data integration system based on data semantics
 624	Cluster-based query expansion
@@ -2530,833 +2530,833 @@
 2530	The impact of visual appearance on user response in online display advertising
 2531	Novel Approach for Reengineering Relational Databases into XML
 2532	Multiple-signal duplicate detection for search evaluation
-2534	Query-Aware Partitioning for Monitoring Massive Network Data Streams
-2535	Sequential Change Detection on Data Streams
-2536	Survey on web spam detection: principles and algorithms
-2537	Network-based problem detection for distributed systems
-2538	Predicting Multiple Metrics for Queries: Better Decisions Enabled by Machine Learning
-2539	Exploring traversal strategy for web forum crawling
-2540	On Querying and Exploring Activities on a User&#146;s Desktop
-2541	Neighbor-based pattern detection for windows over streaming data
-2542	A boosting approach to improving pseudo-relevance feedback
-2543	Tru-Alarm: Trustworthiness Analysis of Sensor Networks in Cyber-Physical Systems
-2544	Ranking document clusters using markov random fields
-2545	Taxonomy-Oriented recommendation towards recommendation with stage
-2546	Automatic partitioning of database applications
-2547	SaveRF: Towards Efficient Relevance Feedback Search
-2548	Multi-stage classification
-2549	The circular two-phase commit protocol
-2550	The Database Architecture Jigsaw Puzzle
-2551	Human mobility, social ties, and link prediction
-2552	Approximation algorithms for co-clustering
-2553	MARGIN: Maximal Frequent Subgraph Mining
-2554	Locality-sensitive operators for parallel main-memory database clusters
-2555	WebIQ: Learning from the Web to Match Deep-Web Query Interfaces
-2556	On novelty in publish/subscribe delivery
-2557	Continuous monitoring of nearest neighbors on land surface
-2558	Finding relevant patterns in bursty sequences
-2559	Efficient creation and incremental maintenance of the HOPI index for complex XML document collections
-2560	Graph queries in a next-generation Datalog system
-2561	Approximation Techniques for Indexing the Earth Mover&#146;s Distance in Multimedia Databases
-2562	Efficient allocation algorithms for OLAP over imprecise data
-2563	Bayesian network based sentence retrieval model
-2564	Efficient skyline computation over low-cardinality domains
-2565	Sync kit: a persistent client-side database caching toolkit for data intensive websites
-2566	Predicting positive and negative links in signed social networks by transfer learning
-2567	Reducing the Frequent Pattern Set
-2568	CatchSync: catching synchronized behavior in large directed graphs
-2569	Enforcing Vocabulary k-Anonymity by Semantic Similarity Based Clustering
-2570	Nested mappings: schema mapping reloaded
-2571	Ensembles for unsupervised outlier detection: challenges and research questions a position paper
-2572	K-AP: Generating Specified K Clusters by Efficient Affinity Propagation
-2573	Ranking with multiple hyperplanes
-2574	Querying and visualizing gridded datasets for e-science
-2575	Increasing buffer-locality for multiple index based scans through intelligent placement and index scan speed control
-2576	Human-assisted graph search: it's okay to ask questions
-2577	A unified approach for schema matching, coreference and canonicalization
-2578	Intelligent management of virtualized resources for database systems in cloud environment
-2579	gApprox: Mining Frequent Approximate Patterns from a Massive Network
-2580	Who should share what?: item-level social influence prediction for users and posts ranking
-2581	Optimizing State-Intensive Non-Blocking Queries Using Run-time Adaptation
-2582	On the expressiveness of probabilistic XML models
-2583	Designing Random Sample Synopses with Outliers
-2584	Feature based informative model for discriminating favorite items from unrated ones
-2585	WARP: time warping for periodicity detection
-2586	A unified framework for approximate dictionary-based entity extraction
-2587	On reducing classifier granularity in mining concept-drifting data streams
-2588	Unified Solution to Nonnegative Data Factorization Problems
-2589	Generalized Précis Queries for Logical Database Subset Creation
-2590	Page-level template detection via isotonic smoothing
-2591	Query similarity by projecting the query-flow graph
-2592	Supporting multiple information-seeking strategies in a single system framework
-2593	A Data Structure for Sponsored Search
-2594	Ranking community answers via analogical reasoning
-2595	Web resource geographic location classification and detection
-2596	The ontological key: automatically understanding and integrating forms to access the deep Web
-2597	On MBR Approximation of Histories for Historical Queries: Expectations and Limitations
-2598	Understanding user's query intent with wikipedia
-2599	A Divisive Hierarchical Structural Clustering Algorithm for Networks
-2600	GraphSig: A Scalable Approach to Mining Significant Subgraphs in Large Graph Databases
-2601	On the Inverse Classification Problem and its Applications
-2602	Asking the right questions: model-driven optimization using probes
-2603	Pattern Mining in Frequent Dynamic Subgraphs
-2604	Hyper-local, directions-based ranking of places
-2605	Transfer learning for behavioral targeting
-2606	Detecting Link Spam Using Temporal Information
-2607	A browser for browsing the past web
-2608	P3C: A Robust Projected Clustering Algorithm
-2609	CoHadoop: flexible data placement and its exploitation in Hadoop
-2610	Hierarchical Text Categorization in a Transductive Setting
-2611	DIVERSUM: Towards diversified summarisation of entities in knowledge graphs
-2612	Efficient semi-streaming algorithms for local triangle counting in massive graphs
-2613	Stop word and related problems in web interface integration
-2614	Adaptive product normalization: using online learning for record linkage in comparison shopping
-2615	Workload-aware indexing of continuously moving objects
-2616	Mining Web Structures Using Multi-Dimensional Data Mining Model
-2617	Reliable QoS monitoring based on client feedback
-2618	Experiments in Trec 2007 Blog Opinion Task at CAS-ICT
-2619	SystemML: Declarative machine learning on MapReduce
-2620	Enhanced Business Intelligence using EROCS
-2621	Lifted-Rollout for Approximate Policy Iteration of Markov Decision Process
-2622	Auto-WEKA: combined selection and hyperparameter optimization of classification algorithms
-2623	Dual Labeling: Answering Graph Reachability Queries in Constant Time
-2624	Efficient caching for constrained skyline queries
-2625	An optimal linear time algorithm for quasi-monotonic segmentation
-2626	Another Outlier Bites the Dust: Computing Meaningful Aggregates in Sensor Networks
-2627	Detecting, categorizing and clustering entity mentions in Chinese text
-2628	High-performance dynamic pattern matching over disordered streams
-2629	Boosting multi-kernel locality-sensitive hashing for scalable image retrieval
-2630	Efficient indexing and querying over syntactically annotated trees
-2631	AxPRE Summaries: Exploring the (Semi-)Structure of XML Web Collections
-2632	Hilda: A High-Level Language for Data-DrivenWeb Applications
-2633	Genre-based decomposition of email class noise
-2634	Web2Talkshow: transforming web content into TV-program-like content based on the creation of dialogue
-2635	The ERC webdam on foundations of web data management
-2636	York University at TREC 2008: Blog Track
-2637	Identity management on converged networks: a reality check
-2638	Query-time entity resolution
-2639	Relevance feedback at the INEX 2004 workshop
-2640	Hits on the web: how does it compare?
-2641	An adaptive sensor mining framework for pervasive computing applications
-2642	A framework to predict the quality of answers with non-textual features
-2643	Information Extraction from Web Pages Using Presentation Regularities and Domain Knowledge
-2644	Adaptive aggregation on chip multiprocessors
-2645	Safety guarantee of continuous join queries over punctuated data streams
-2646	Spatio-temporal dynamics of online memes: a study of geo-tagged tweets
-2647	Learning Attribute-to-Feature Mappings for Cold-Start Recommendations
-2648	Ranking outliers using symmetric neighborhood relationship
-2649	An evaluation of checkpoint recovery for massively multiplayer online games
-2650	Knowledge Transfer among Heterogeneous Information Networks
-2651	Kernel Conditional Quantile Estimation via Reduction Revisited
-2652	Minimum Enclosing Spheres Formulations for Support Vector Ordinal Regression
-2653	Spotting fake reviewer groups in consumer reviews
-2654	Latent space domain transfer between high dimensional overlapping distributions
-2655	Towards heterogeneous temporal clinical event pattern discovery: a convolutional approach
-2656	Clustersheddy: load shedding using moving clusters over spatio-temporal data streams
-2657	Finding effectors in social networks
-2658	To join or not to join: the illusion of privacy in social networks with mixed public and private user profiles
-2659	Unsupervised query segmentation using only query logs
-2660	Authentication of moving kNN queries
-2661	Feature selection for ranking
-2662	SimFusion: measuring similarity using unified relationship matrix
-2663	SQL to XQuery Translation in the AquaLogic Data Services Platform
-2664	Cleaning uncertain data with quality guarantees
-2665	Supervised Learning by Training on Aggregate Outputs
-2666	NGS: a framework for multi-domain query answering
-2667	Constructing indoor navigation systems from digital building information
-2668	Modeling and querying vague spatial objects using shapelets
-2669	Quantifying the Hidden Factors Impacting the Audience of Advertisements Posted on Facebook
-2670	A Fixed Parameter Tractable Integer Program for Finding the Maximum Order Preserving Submatrix
-2671	GigaTensor: scaling tensor analysis up by 100 times - algorithms and discoveries
-2672	FF-Anonymity: When Quasi-identifiers Are Missing
-2673	Mining Allocating Patterns in One-Sum Weighted Items
-2674	Equip tourists with knowledge mined from travelogues
-2675	Enhancing diversity, coverage and balance for summarization through structure learning
-2676	Inverted linear quadtree: Efficient top k spatial keyword search
-2677	Measuring credibility of users in an e-learning environment
-2678	Adaptive event detection with time-varying poisson processes
-2679	Grafting-light: fast, incremental feature selection and structure learning of Markov random fields
-2680	Probabilistic contextual skylines
-2681	Integrating the IAC neural network in ontology mapping
-2682	Hashtag recommendation for hyperlinked tweets
-2683	Join queries on uncertain data: Semantics and efficient processing
-2684	Keyword query cleaning
-2685	T-Music: A melody composer based on frequent pattern mining
-2686	Index interactions in physical design tuning: modeling, analysis, and applications
-2687	Supervised probabilistic principal component analysis
-2688	Characterizing and Exploiting Reference Locality in Data Stream Applications
-2689	Query language support for incomplete information in the MayBMS system
-2690	Identifying graphs from noisy and incomplete data
-2691	Active Learning with Generalized Queries
-2692	XQuery implementation in a relational database system
-2693	Laws for Rewriting Queries Containing Division Operators
-2694	ViEWNet: Visual Exploration of Region-Wide Traffic Networks
-2695	DataGarage: warehousing massive performance data on commodity servers
-2696	Comparing apples and oranges: normalized pagerank for evolving graphs
-2697	Finding maximal frequent itemsets over online data streams adaptively
-2698	Supervised semi-definite embedding for email data cleaning and visualization
-2699	T-Warehouse: Visual OLAP analysis on trajectory data
-2700	Representative & Informative Query Selection for Learning to Rank using Submodular Functions
-2701	Rule extraction from linear support vector machines
-2702	Adaptive Multimedia Mining on Distributed Stream Processing Systems
-2703	Selecting good expansion terms for pseudo-relevance feedback
-2704	TREC 2007 ciQA Task: University of Maryland.
-2705	Analysis of Relationship between Blood Stream Infection and Clinical Background in Patients' Lactobacillus Therapy by Data Mining
-2706	Finding and analyzing database user sessions
-2707	Privacy - preserving top-k queries
-2708	Query clustering based on bid landscape for sponsored search auction optimization
-2709	Obtaining best parameter values for accurate classification
-2710	Maximum Margin Clustering on Data Manifolds
-2711	How to influence my customers?: the impact of electronic market design
-2712	Modeling and analysis of cross-session search tasks
-2713	Monitoring Top-k Query inWireless Sensor Networks
-2714	Improving Grouped-Entity Resolution Using Quasi-Cliques
-2715	Representative skylines using threshold-based preference distributions
-2716	Ranking method specialized for content descriptions of classical music
-2717	The language observatory project (LOP)
-2718	Query topic detection for reformulation
-2719	A Study on Efficient Access Control for XML Ducuments
-2720	Conditional random fields for transmembrane helix prediction
-2721	ProvenanceCurious: a tool to infer data provenance from scripts
-2722	Generative modeling of persons and documents for expert search
-2723	Efficient skyline querying with variable user preferences on nominal attributes
-2724	Dealing proactively with data corruption: Challenges and opportunities
-2725	Answering queries from statistics and probabilistic views
-2726	V-SMART-join: a scalable mapreduce framework for all-pair similarity joins of multisets and vectors
-2727	People like us: mining scholarly data for comparable researchers
-2728	SeMiTri: a framework for semantic annotation of heterogeneous trajectories
-2729	Distinct Counting with a Self-Learning Bitmap
-2730	Dynamic Materialized Views
-2731	Exploring social annotations for the semantic web
-2732	Scalable multi-dimensional user intent identification using tree structured distributions
-2733	Report on EuroHCIR 2013: the 3rd european workshop on human-computer interaction and information retrieval
-2734	A simple and efficient estimation method for stream expression cardinalities
-2735	Semi-supervised classification with hybrid generative/discriminative methods
-2736	Query translation for XPath-based security views
-2737	Performance profiling with EndoScope, an acquisitional software monitoring framework
-2738	A Markov chain model for integrating behavioral targeting into contextual advertising
-2739	IPAC: an interactive approach to access control for semi-structured data
-2740	Formal Models for Expert Finding on DBLP Bibliography Data
-2741	Micro-blogging Sentiment Detection by Collaborative Online Learning
-2742	Web page rank prediction with markov models
-2743	A trust management framework for service-oriented environments
-2744	Incorporating Duration Information for Trajectory Classification
-2745	Locally Constrained Support Vector Clustering
-2746	Mining risk patterns in medical data
-2747	RelaxImage: a cross-media meta-search engine for searching images from Web based on query relaxation
-2748	Maximum Margin Clustering with Multivariate Loss Function
-2749	Selecting a characteristic set of reviews
-2750	PUB: A Class Description Technique Based on Partial Coverage of Subspace
-2751	High-Performance Unsupervised Relation Extraction from Large Corpora
-2752	Control Theory: a Foundational Technique for Self Managing Databases
-2753	A Block Mixture Model for Pattern Discovery in Preference Data
-2754	A general framework for adaptive and online detection of web attacks
-2755	DSTree: A Tree Structure for the Mining of Frequent Sets from Data Streams
-2756	Emerging topic detection for organizations from microblogs
-2757	Summarization of online image collections via implicit feedback
-2758	Beyond Models: Forecasting Complex Network Processes Directly from Data
-2759	Discriminative factor alignment across heterogeneous feature space
-2760	Top-k Set Similarity Joins
-2761	Timeline generation: tracking individuals on twitter
-2762	EOS 2 : unstoppable stateful PHP
-2763	Matching resumes and jobs based on relevance models
-2764	Personalized interactive faceted search
-2765	HOT SAX: efficiently finding the most unusual time series subsequence
-2766	Towards rich query interpretation: walking back and forth for mining query templates
-2767	Deriving probabilistic databases with inference ensembles
-2768	Interaction-aware prediction of business intelligence workload completion times
-2769	XML Index Recommendation with Tight Optimizer Coupling
-2770	Refined experts: improving classification in large taxonomies
-2771	FiVaTech: Page-Level Web Data Extraction from Template Pages
-2772	Brand awareness and the evaluation of search results
-2773	Online Search Evaluation with Interleaving
-2774	Conquering the Divide: Continuous Clustering of Distributed Data Streams
-2775	Semi-automatic schema integration in Clio
-2776	Detecting group review spam
-2777	Bridging the application and DBMS profiling divide for database application developers
-2778	Flexible database generators
-2779	GPU-Accelerated Feature Selection for Outlier Detection Using the Local Kernel Density Ratio
-2780	iRobot: an intelligent crawler for web forums
-2781	Raising the baseline for high-precision text classifiers
-2782	Keyword-propagation-based information enriching and noise removal for web news videos
-2783	Mobility Data Warehousing and Mining
-2784	Context-sensitive information retrieval using implicit feedback
-2785	Recommendation Diversification Using Explanations
-2786	ReStore: reusing results of MapReduce jobs
-2787	Processing XPath Queries in PC-Clusters Using XML Data Partitioning
-2788	XStream: a Signal-Oriented Data Stream Management System
-2789	One-pass wavelet synopses for maximum-error metrics
-2790	EigenDiagnostics: Spotting Connection Patterns and Outliers in Large Graphs
-2791	Tractable database design through bounded treewidth
-2792	Branch Code: A Labeling Scheme for Efficient Query Answering on Trees
-2793	Maximizing acceptance probability for active friending in online social networks
-2794	Adaptive Top-k Algorithm in SLCA-Based XML Keyword Search
-2795	Semantic stream query optimization exploiting dynamic metadata
-2796	Larger is better: seed selection in link-based anti-spamming algorithms
-2797	Conditional heavy hitters: detecting interesting correlations in data streams
-2798	DBMSs with Native XML Support: Towards Faster, Richer, and Smarter Data Management
-2799	Detecting inconsistencies in distributed data
-2800	Similarity Searching: Towards Bulk-Loading Peer-to-Peer Networks
-2801	AQAX: a system for approximate XML query answers
-2802	Location-based Spatial Queries with Data Sharing in Mobile Environments
-2803	Analyze influenza virus sequences using binary encoding approach
-2804	Automatic extraction of dynamic record sections from search engine result pages
-2805	XQuery Join Graph Isolation: Celebrating 30+ Years of XQuery Processing Technology
-2806	Mirex and Taily at TREC 2013
-2807	Depth estimation for ranking query optimization
-2808	Novelty-based Incremental Document Clustering for On-line Documents
-2809	XRPC: interoperable and efficient distributed XQuery
-2810	A fast kernel-based multilevel algorithm for graph clustering
-2811	Trust Negotiation as an Authorization Service forWeb Services
-2812	FDCluster: Mining Frequent Closed Discriminative Bicluster without Candidate Maintenance in Multiple Microarray Datasets
-2813	Discovering users' specific geo intention in web search
-2814	Privacy-preserving Naïve Bayes classification
-2815	User grouping behavior in online forums
-2816	The social honeypot project: protecting online communities from spammers
-2817	Combining link and content for community detection: a discriminative approach
-2818	An introduction to SIGKDD and a reflection on the term 'data mining'
-2819	Efficient Clustering of Uncertain Data
-2820	Timestamp-based result cache invalidation for web search engines
-2821	BOXes: efficient maintenance of order-based labeling for dynamic XML data
-2822	Click chain model in web search
-2823	AutoLag: automatic discovery of lag correlations in stream data
-2824	On mining cross-graph quasi-cliques
-2825	Crowdsourcing algorithms for entity resolution
-2826	Customizable parallel execution of scientific stream queries
-2827	Accelerating Active Learning with Transfer Learning
-2828	A Security Punctuation Framework for Enforcing Access Control on Streaming Data
-2829	How much can behavioral targeting help online advertising
-2830	Using Wikipedia at the TREC QA Track
-2831	Generalizing PageRank: damping functions for link-based ranking algorithms
-2832	Report on the SIGIR 2009 workshop on the future of IR evaluation
-2833	On keys, foreign keys and nullable attributes in relational mapping systems
-2834	Conflicting XML updates
-2835	Wavelet synopsis for data streams: minimizing non-euclidean error
-2836	Change-Point Detection in Time-Series Data Based on Subspace Identification
-2837	University of Glasgow at TREC 2014: Experiments with Terrier in Contextual Suggestion, Temporal Summarisation and Web Tracks
-2838	Blog track research at TREC
-2839	Exploring the use of labels to shortcut search trails
-2840	Reusable test collections through experimental design
-2841	Fast object search on road networks
-2842	Curvature Maxima-based Trajectories Mining
-2843	Caching search engine results over incremental indices
-2844	On Multidimensional k-Anonymity with Local Recoding Generalization
-2845	Multi-view transfer learning with a large margin approach
-2846	InteMon: intelligent system monitoring on large clusters
-2847	SMDM: enhancing enterprise-wide master data management using semantic web technologies
-2848	Viewing online searching within a learning paradigm
-2849	Keyword-aware optimal route search
-2850	A Practical Approach to Classify Evolving Data Streams: Training with Limited Amount of Labeled Data
-2851	A revival of integrity constraints for data cleaning
-2852	Diagnosing Estimation Errors in Page Counts Using Execution Feedback
-2853	Embedding-based subsequence matching with gaps---range---tolerances: a Query-By-Humming application
-2854	Finding and approximating top-k answers in keyword proximity search
-2855	Diversifying web search results
-2856	Dynamically Modeling Patient's Health State from Electronic Medical Records: A Time Series Approach
-2857	On-line discovery of hot motion paths
-2858	Efficient Feature Selection in the Presence of Multiple Feature Classes
-2859	P-TAG: large scale automatic generation of personalized annotation tags for the web
-2860	Proactive caching for spatial queries in mobile environments
-2861	Space-Constrained Gram-Based Indexing for Efficient Approximate String Search
-2862	Algorithm for stochastic multiple-choice knapsack problem and application to keywords bidding
-2863	Optimizing Hierarchical Access in OLAP Environment
-2864	PETRANET: a Power Efficient Transaction Management Technique for Real-Time Mobile Ad-hoc Network Databases
-2865	Latent concept expansion using markov random fields
-2866	Efficient Algorithm for Computing Link-Based Similarity in Real World Networks
-2867	Routing Questions to the Right Users in Online Communities
-2868	Finding related micro-blogs based on wordnet
-2869	Maintaining bounded-size sample synopses of evolving datasets
-2870	Sketching streams through the net: distributed approximate query tracking
-2871	Clustering pair-wise dissimilarity data into partially ordered sets
-2872	Physically Independent Stream Merging
-2873	A novel probabilistic pruning approach to speed up similarity queries in uncertain databases
-2874	Updating collection representations for federated search
-2875	Social influence analysis in large-scale networks
-2876	A probabilistic approach to spatiotemporal theme pattern mining on weblogs
-2877	Abstract Process Data Warehousing
-2878	Dynamic buffer management with extensible replacement policies
-2879	Structured search result differentiation
-2880	Efficient Kernel Discriminant Analysis via Spectral Regression
-2881	NoFTL: database systems on FTL-less flash storage
-2882	Measuring constraint-set utility for partitional clustering algorithms
-2883	Diversifying landmark image search results by learning interested views from community photos
-2884	GPLAG: detection of software plagiarism by program dependence graph analysis
-2885	Nestedness and segmented nestedness
-2886	RiTE: Providing On-Demand Data for Right-Time Data Warehousing
-2887	Summarizing the differences from microblogs
-2888	Identification of Causal Variables for Building Energy Fault Detection by Semi-supervised LDA and Decision Boundary Analysis
-2889	Knowledge transferring via implicit link analysis
-2890	Text Categorization with Considering Temporal Patterns of Term Usages
-2891	Discovering Contexts and Contextual Outliers Using Random Walks in Graphs
-2892	Classification of imbalanced marketing data with balanced random sets
-2893	Segmentation of Time Series by the Clustering and Genetic Algorithms
-2894	Finding Predictive Runs with LAPS
-2895	Fast data analytics with FPGAs
-2896	Anatomy: simple and effective privacy preservation
-2897	Industry-scale duplicate detection
-2898	Web services and service-oriented architectures
-2899	Indexing multi-dimensional uncertain data with arbitrary probability density functions
-2900	Mining directed social network from message board
-2901	Efficient document retrieval in main memory
-2902	Search war: a game for improving web search
-2903	Combining Multiple Resources, Evidences and Criteria for Genomic Information Retrieval
-2904	Text representation: from vector to tensor
-2905	ModelGen: model independent schema translation
-2906	WebTables: exploring the power of tables on the web
-2907	P2P-based web text information retrieval
-2908	DBToaster: a SQL compiler for high-performance delta processing in main-memory databases
-2909	Fitting score distribution for blog opinion retrieval
-2910	Scalable k-means++
-2911	Privacy Preserving Publishing on Multiple Quasi-identifiers
-2912	SAO: A Stream Index for Answering Linear Optimization Queries
-2913	An Online Approach to Physical Design Tuning
-2914	Privacy-enhancing personalized web search
-2915	Indexing mobile objects using dual transformations
-2916	Application of Graph-based Data Mining to Metabolic Pathways
-2917	Geometrically Inspired Itemset Mining
-2918	Formulating distance functions via the kernel trick
-2919	Designing efficient sampling techniques to detect webpage updates
-2920	Investigation of partial query proximity in web search
-2921	Evaluation in (XML) information retrieval: expected precision-recall with user modelling (EPRUM)
-2922	Addressing cold-start in app recommendation: latent user models constructed from twitter followers
-2923	Secure Distributed k-Anonymous Pattern Mining
-2924	Adapting ranking functions to user preference
-2925	Image Hub Explorer: Evaluating Representations and Metrics for Content-Based Image Retrieval and Object Recognition
-2926	Mining, Indexing, and Similarity Search in Graphs and Complex Structures
-2927	Lazy-Adaptive Tree: an optimized index structure for flash devices
-2928	MultiRelational k-Anonymity
-2929	Computing resource prediction for mapreduce applications using decision tree
-2930	On burstiness-aware search for document sequences
-2931	Interactive SQL query suggestion: Making databases user-friendly
-2932	Supporting efficient top-k queries in type-ahead search
-2933	Piggyback Optimization of XML Data Dissemination
-2934	Exploiting Domain Knowledge to Improve Biological Significance of Biclusters with Key Missing Genes
-2935	A RBF classifier with supervised center selection and weighted norm
-2936	A scalable algorithm for maximizing range sum in spatial databases
-2937	A generic framework for efficient subspace clustering of high-dimensional data
-2938	R3: a real-time route recommendation system
-2939	Robust ranking models via risk-sensitive optimization
-2940	ReadAlong: reading articles and comments together
-2941	Online Bulk Deletion
-2942	I/O efficient: computing SCCs in massive graphs
-2943	Online piece-wise linear approximation of numerical streams with precision guarantees
-2944	iVA-File: Efficiently Indexing Sparse Wide Tables in Community Systems
-2945	Mining tourist preferences with twice-learning
-2946	Improved Privacy-Preserving Bayesian Network Parameter Learning on Vertically Partitioned Data
-2947	Streaming feature selection using alpha-investing
-2948	Caching query-biased snippets for efficient retrieval
-2949	Nonsmooth Bilevel Programming for Hyperparameter Selection
-2950	Exhibit: lightweight structured data publishing
-2951	Class-based graph anonymization for social network data
-2952	Confidence-Aware Join Algorithms
-2953	Spatial Range Querying for Gaussian-Based Imprecise Query Objects
-2954	Latent Dirichlet Co-Clustering
-2955	POIKILO: a tool for evaluating the results of diversification models and algorithms
-2956	Finding closed frequent item sets by intersecting transactions
-2957	P3C: A New Algorithm for the Simple Temporal Problem
-2958	Efficient maintenance of common keys in archives of continuous query results from deep websites
-2959	TCP Congestion Window Controlling Algorithms on iSCSI Sequential Read Access
-2960	Optimal random perturbation at multiple privacy levels
-2961	In the mood for affective search with web stereotypes
-2962	ManyAspects: a system for highlighting diverse concepts in documents
-2963	Semantic Kernels for Text Classification Based on Topological Measures of Feature Similarity
-2964	Cascading tree sheets and recombinant HTML: better encapsulation and retargeting of web content
-2965	INSCY: Indexing Subspace Clusters with In-Process-Removal of Redundancy
-2966	Hierarchical topic segmentation of websites
-2967	ICEDB: Intermittently-Connected Continuous Query Processing
-2968	On social event organization
-2969	A framework for determining necessary query set sizes to evaluate web search effectiveness
-2970	ValuePick: Towards a Value-Oriented Dual-Goal Recommender System
-2971	Predicting query execution time: Are optimizer cost models really unusable?
-2972	Assessing the scenic route: measuring the value of search trails in web logs
-2973	Email data cleaning
-2974	Report on the sixth workshop on exploiting semantic annotations in information retrieval (ESAIR'13)
-2975	Utilizing Bio-Mechanical Characteristics For User-Independent Gesture Recognition
-2976	Indexing Uncertain Categorical Data
-2977	Evaluating new search engine configurations with pre-existing judgments and clicks
-2978	Summarizing email conversations with clue words
-2979	Vectorizing and querying large XML repositories
-2980	Effective Anomaly Detection in Sensor Networks Data Streams
-2981	IMDS: intelligent malware detection system
-2982	Adaptive near-duplicate detection via similarity learning
-2983	MonetDB/DataCell: online analytics in a streaming column-store
-2984	Adaptive Parallel Graph Mining for CMP Architectures
-2985	Learning methods for lung tumor markerless gating in image-guided radiotherapy
-2986	Incorporating site-level knowledge for incremental crawling of web forums: a list-wise strategy
-2987	Semantic lexicon adaptation for use in query interpretation
-2988	Transferring Instances for Model-Based Reinforcement Learning
-2989	Archival HTTP redirection retrieval policies
-2990	A demo search engine for products
-2991	Data fusion: resolving data conflicts for integration
-2992	Temporal Outlier Detection in Vehicle Traffic Data
-2993	Predicting bounce rates in sponsored search advertisements
-2994	SCENE: a scalable two-stage personalized news recommendation system
-2995	Computing Compressed Multidimensional Skyline Cubes Efficiently
-2996	G-ToPSS: fast filtering of graph-based metadata
-2997	XML Structural Summaries
-2998	Race: finding and ranking compact connected trees for keyword proximity search over xml documents
-2999	Web page language identification based on URLs
-3000	Approximation algorithms for clustering uncertain data
-3001	Measuring two-event structural correlations on graphs
-3002	Bounding and Estimating Association Rule Support from Clusters on Binary Data
-3003	Adaptive Parallelization of Queries over Dependent Web Service Calls
-3004	A Case Study in Sequential Pattern Mining for IT-Operational Risk
-3005	CLEF 2013: information access evaluation meets multilinguality, multimodality, and visualization
-3006	Personalized recommendation on dynamic content using predictive bilinear models
-3007	TraClass : trajectory classification using hierarchical region-based and trajectory-based clustering
-3008	CASIS: a system for concept-aware social image search
-3009	Efficient Mining of Closed Repetitive Gapped Subsequences from a Sequence Database
-3010	A Flexible Query Graph Based Model for the Efficient Execution of Continuous Queries
-3011	Towards effective browsing of large scale social annotations
-3012	Mining frequent itemsets from uncertain data
-3013	Counting triangles and the curse of the last reducer
-3014	Indexing confusion networks for morph-based spoken document retrieval
-3015	Query dependent ranking using K-nearest neighbor
-3016	Bifold constraint-based mining by simultaneous monotone and anti-monotone checking
-3017	Optimization of analytic window functions
-3018	Statistical models of music-listening sessions in social media
-3019	Object-level ranking: bringing order to Web objects
-3020	Making SENSE: socially enhanced search and exploration
-3021	Cluster Analysis of Time-Series Medical Data Based on the Trajectory Representation and Multiscale Comparison Techniques
-3022	Ontology-Aware Search on XML-based Electronic Medical Records
-3023	Process spaceship: discovering and exploring process views from event logs in data spaces
-3024	Unsupervised trajectory sampling
-3025	Discovering Excitatory Networks from Discrete Event Streams with Applications to Neuronal Spike Train Analysis
-3026	Entity extraction, linking, classification, and tagging for social media: a wikipedia-based approach
-3027	GString: A Novel Approach for Efficient Search in Graph Databases
-3028	A multiresolution symbolic representation of time series
-3029	Memory efficient minimum substring partitioning
-3030	Verifying and Mining Frequent Patterns from Large Windows over Data Streams
-3031	Sequential Latent Dirichlet Allocation: Discover Underlying Topic Structures within a Document
-3032	Adaptive Blocking: Learning to Scale Up Record Linkage
-3033	A statistical approach towards robust progress estimation
-3034	Finding Fastest Paths on A Road Network with Speed Patterns
-3035	Network Anomaly Detection Using a Commute Distance Based Approach
-3036	Predicting user interests from contextual information
-3037	Fast random graph generation
-3038	P2P logging and timestamping for reconciliation
-3039	Genealogical trees on the web: a search engine user perspective
-3040	Applying Probabilistic Thematic Clustering for Classification in the TREC 2005 Genomics Track
-3041	XMorph: A shape-polymorphic, domain-specific XML data transformation language
-3042	BordaConsensus: a new consensus function for soft cluster ensembles
-3043	TOFA: Trace Oriented Feature Analysis in Text Categorization
-3044	Cross-lingual query suggestion using query logs of different languages
-3045	Hybrid semantic tagging for information extraction
-3046	Succinct representation of flexible and privacy-preserving access rights
-3047	PRIS in TREC 2008 Blog Track
-3048	On the complexity of division and set joins in the relational algebra
-3049	York University at TREC 2005: SPAM Track
-3050	Local Correlation Tracking in Time Series
-3051	Picture this: preferences for image search
-3052	Optimizing debt collections using constrained reinforcement learning
-3053	York University at TREC 2009: Chemical Track
-3054	SEM: mining spatial events from the web
-3055	Trust analysis with clustering
-3056	Algorithms for discovering bucket orders from data
-3057	Feature Selection in the Tensor Product Feature Space
-3058	Correlation maps: a compressed access method for exploiting soft functional dependencies
-3059	A utility-theoretic ranking method for semi-automated text classification
-3060	Graphs over time: densification laws, shrinking diameters and possible explanations
-3061	A content based approach for discovering missing anchor text for web search
-3062	Conditional Models for Non-smooth Ranking Loss Functions
-3063	IBM SpamGuru on the TREC 2005 Spam Track
-3064	Latent association analysis of document pairs
-3065	A comparison of retrieval-based hierarchical clustering approaches to person name disambiguation
-3066	On pruning for top-k ranking in uncertain databases
-3067	GRAPE: a system for disambiguating and tagging people names in web search
-3068	SlidingWindow based Multi-Join Algorithms over Distributed Data Streams
-3069	Deferentially Private Tagging Recommendation Based on Topic Model
-3070	A study of the dirichlet priors for term frequency normalisation
-3071	Efficient answering of set containment queries for skewed item distributions
-3072	Query Rewrites with Views for XML in DB2
-3073	A general framework for geo-social query processing
-3074	CADS: continuous authentication on data streams
-3075	SemCrypt - Ensuring Privacy of Electronic Documents Through Semantic-Based Encrypted Query Processing
-3076	Key-key-value stores for efficiently processing graph data in the cloud
-3077	Ranking Query Results using Context-Aware Preferences
-3078	Extending BM25 with multiple query operators
-3079	Stabbing the sky: efficient skyline computation over sliding windows
-3080	Nearest Surrounder Queries
-3081	Juru at TREC 2005: Query Prediction in the Terabyte and the Robust tracks
-3082	RTM: Laws and a Recursive Generator for Weighted Time-Evolving Graphs
-3083	Cooperative scans: dynamic bandwidth sharing in a DBMS
-3084	Keyword extraction for social snippets
-3085	Tracing the Path: New Model and Algorithms for Collaborative Filtering
-3086	Focused clustering and outlier detection in large attributed graphs
-3087	Evaluation as a service for information retrieval
-3088	SEDA: a system for search, exploration, discovery, and analysis of XML Data
-3089	CURE for cubes: cubing using a ROLAP engine
-3090	Privacy-aware mobile services over road networks
-3091	Tuning database configuration parameters with iTuned
-3092	SQL/MapReduce: a practical approach to self-describing, polymorphic, and parallelizable user-defined functions
-3093	Adapting Relational Database Engine to Accommodate Moving Objects in SpADE
-3094	Compiled Query Execution Engine using JVM
-3095	Mining evidences for named entity disambiguation
-3096	How schema independent are schema free query interfaces
-3097	Classification of software behaviors for failure detection: a discriminative pattern mining approach
-3098	Application networking on peer-to-peer networks
-3099	Extracting key-substring-group features for text classification
-3100	Live visual relevance feedback for query formulation
-3101	Why Stacked Models Perform Effective Collective Classification
-3102	Towards robust indexing for ranked queries
-3103	Access Methods for Markovian Streams
-3104	A structural cluster kernel for learning on graphs
-3105	Learning consensus opinion: mining data from a labeling game
-3106	Mining large graphs: Algorithms, inference, and discoveries
-3107	Maximum profit mining and its application in software development
-3108	Definition, detection, and recovery of single-page failures, a fourth class of database failures
-3109	Graph indexing: tree + delta <= graph
-3110	Unsupervised Class Separation of Multivariate Data through Cumulative Variance-Based Ranking
-3111	LB_Keogh supports exact indexing of shapes under rotation invariance with arbitrary representations and distance measures
-3112	Risk Mining in Hospital Information Systems
-3113	On dimensionality reduction of massive graphs for indexing and retrieval
-3114	Interactive route search in the presence of order constraints
-3115	Neutralized Empirical Risk Minimization with Generalization Neutrality Bound
-3116	Residual Matrix and Statistical Independence in a Contingency Table
-3117	Index-based Most Similar Trajectory Search
-3118	Making Unstructured Data SPARQL Using Semantic Indexing in Oracle Database
-3119	Deep web entity monitoring
-3120	Control-Based Load Shedding in Data Stream Management Systems
-3121	Link recommendation for promoting information diffusion in social networks
-3122	Reachability analysis and modeling of dynamic event networks
-3123	Exploring Groups from Heterogeneous Data via Sparse Learning
-3124	Combining Metric Features in Large Collections
-3125	Spatial data mining to support pandemic preparedness
-3126	Thread detection in dynamic text message streams
-3127	Automatic extraction of top-k lists from the web
-3128	Toward self-correcting search engines: using underperforming queries to improve search
-3129	Online mining of data streams: applications, techniques and progress
-3130	Latent semantic analysis for multiple-type interrelated data objects
-3131	An early warning system for unrecognized drug side effects discovery
-3132	Modeling multiple time series for anomaly detection
-3133	Scalable collaborative filtering using cluster-based smoothing
-3134	A bi-clustering framework for categorical data
-3135	TCAM-conscious Algorithms for Data Streams
-3136	Concept Recognition, Information Retrieval, and Machine Learning in Genomics Question-Answering
-3137	Optimizing I/O for big array analytics
-3138	Keyphrase Extraction Using Semantic Networks Structure Analysis
-3139	Knowledge Transfer and Opinion Detection in the TREC2006 Blog Track
-3140	Distributed data management in 2020
-3141	LORA: link obfuscation by randomization in graphs
-3142	Modeling and querying possible repairs in duplicate detection
-3143	Content-based filtering in on-line social networks
-3144	Online pairing of VoIP conversations
-3145	Detecting online commercial intention (OCI)
-3146	Scalable continuous query processing by tracking hotspots
-3147	Quicklink selection for navigational query results
-3148	Efficient rewriting of XPath queries using Query Set Specifications
-3149	System Co-Design and Data Management for Flash Devices
-3150	Clustering with Multiple Graphs
-3151	Detecting outliers using transduction and statistical testing
-3152	Understanding of Internal Clustering Validation Measures
-3153	SQPR: Stream query planning with reuse
-3154	Scalable ad-hoc entity extraction from text collections
-3155	Natural Language Specification and Violation Reporting of Business Rules over ER-modeled Databases
-3156	Online maintenance of very large random samples on flash storage
-3157	Boosting Kernel Models for Regression
-3158	The bang for the buck: fair competitive viral marketing from the host perspective
-3159	Partial ensemble classifiers selection for better ranking
-3160	Reliable diversity-based spatial crowdsourcing by moving workers
-3161	Conservative or liberal? Personalized differential privacy
-3162	Detecting Similarity of Transferring Datasets Based on Features of Classification Rules
-3163	Automatic labeling of multinomial topic models
-3164	Query result clustering for object-level search
-3165	Fast algorithms for time series mining
-3166	Universal Resource Lifecycle Management
-3167	A rule evaluation support method with learning models based on objective rule evaluation indexes
-3168	AttentionAttractor: efficient video stream similarity query processing in real time
-3169	Using Data Mining to Estimate Missing Sensor Data
-3170	Semi-Supervised Kernel Regression
-3171	Semi-automatic Categorization of Videos on VideoLectures.net
-3172	A Multi-View Deep Learning Approach for Cross Domain User Modeling in Recommendation Systems
-3173	Making logistic regression a core data mining tool with TR-IRLS
-3174	Efficient structural joins with on-the-fly indexing
-3175	Geographic privacy-aware knowledge discovery and delivery
-3176	Where to Go on Your Next Trip?: Optimizing Travel Destinations Based on User Preferences
-3177	PageChaser: A Tool for the Automatic Correction of Broken Web Links
-3178	RACE: a scalable and elastic parallel system for discovering repeats in very long sequences
-3179	Constructing Ensembles for Better Ranking
-3180	A Self-Organizing Search Engine for RSS Syndicated Web Contents
-3181	C-SPARQL: SPARQL for continuous querying
-3182	Towards Entity Correctness, Completeness and Emergence for Entity Recognition
-3183	Towards a task-based search and recommender systems
-3184	Autonomous resource provisioning for multi-service web applications
-3185	Evaluating similarity measures: a large-scale study in the orkut social network
-3186	University of Glasgow at TREC 2005: Experiments in Terabyte and Enterprise Tracks with Terrier
-3187	Leveraging D-Separation for Relational Data Sets
-3188	Interactive Inference of Join Queries
-3189	Summingbird: a framework for integrating batch and online MapReduce computations
-3190	Community mining from multi-relational networks
-3191	An audit environment for outsourcing of frequent itemset mining
-3192	Increasing the Expressivity of Conditional Functional Dependencies without Extra Complexity
-3193	MaxFirst for MaxBRkNN
-3194	Term Filtering with Bounded Error
-3195	Product retrieval for grocery stores
-3196	CanTree: a tree structure for efficient incremental mining of frequent patterns
-3197	Better than the real thing?: iterative pseudo-query processing using cluster-based language models
-3198	What&#146;s Different: Distributed, Continuous Monitoring of Duplicate-Resilient Aggregates on Data Streams
-3199	OXPath: A language for scalable data extraction, automation, and crawling on the deep web
-3200	Online System Problem Detection by Mining Patterns of Console Logs
-3201	Supporting Keyword Columns with Ontology-based Referential Constraints in DBMS
-3202	Web Query Recommendation via Sequential Query Prediction
-3203	Path prediction and predictive range querying in road network databases
-3204	HCIR 2013: the seventh international symposium on human-computer interaction and information retrieval
-3205	Entity matching: how similar is similar
-3206	Large scale P2P distribution of open-source software
-3207	Stochastic processes and temporal data mining
-3208	How query cost affects search behavior
-3209	A general optimization framework for smoothing language models on graph structures
-3210	Efficient and domain-invariant competitor mining
-3211	Recursive Computation of Regions and Connectivity in Networks
-3212	Column-oriented storage techniques for MapReduce
-3213	Effective computation of biased quantiles over data streams
-3214	Unsupervised Clustering In Streaming Data
-3215	Short comings of latent models in supervised settings
-3216	Index maintenance for time-travel text search
-3217	Active feedback in ad hoc information retrieval
-3218	Using graph-based metrics with empirical risk minimization to speed up active learning on networked data
-3219	Inferring a Serialization Order for Distributed Transactions
-3220	Deleting index entries from compliance storage
-3221	SIGIR's 30th anniversary: an analysis of trends in IR research and the topology of its community
-3222	Towards a Complete Event Type Taxonomy
-3223	Abstraction Augmented Markov Models
-3224	Processing private queries over untrusted data cloud through privacy homomorphism
-3225	Dependable cardinality forecasts for XQuery
-3226	Network Simplification with Minimal Loss of Connectivity
-3227	Clustering event logs using iterative partitioning
-3228	Open source search: a data mining platform
-3229	Skyline-join in distributed databases
-3230	LCA-based selection for XML document collections
-3231	A particle-and-density based evolutionary clustering method for dynamic networks
-3232	Discovering Skylines of Subgroup Sets
-3233	Personalized query expansion for the web
-3234	Trie-join: efficient trie-based string similarity joins with edit-distance constraints
-3235	CPU and cache efficient management of memory-resident databases
-3236	Effective and efficient distributed model-based clustering
-3237	Processing Event-Monitoring Queries in Sensor Networks
-3238	TagLearner: A P2P Classifier Learning System from Collaboratively Tagged Text Documents
-3239	Named entity mining from click-through data using weakly supervised latent dirichlet allocation
-3240	Laconic schema mappings: computing the core with SQL queries
-3241	Collective annotation of Wikipedia entities in web text
-3242	Summarizing itemset patterns using probabilistic models
-3243	How to define searching sessions on web search engines
-3244	Efficient fuzzy type-ahead search in TASTIER
-3245	Optimal algorithms for crawling a hidden database in the web
-3246	On Suspending and Resuming Dataflows
-3247	An Inflationary Fixed Point Operator in XQuery
-3248	Improving relevance judgment of web search results with image excerpts
-3249	NUITS: a novel user interface for efficient keyword search over databases
-3250	A simple and efficient sampling method for estimating AP and NDCG
-3251	Approximating StreamingWindow Joins Under CPU Limitations
-3252	Automatically learning document taxonomies for hierarchical classification
-3253	Fine-grained named entity recognition and relation extraction for question answering
-3254	HiSbase: histogram-based P2P main memory data management
-3255	Distributed query sampling: a quality-conscious approach
-3256	Automating the Design and Construction of Query Forms
-3257	Message from the SISAP'08 program committee co-chairs
-3258	Defection detection: predicting search engine switching
-3259	Exploring real mobility data with M-atlas
-3260	Taily: shard selection using the tail of score distributions
-3261	An efficient approach to suggesting topically related web queries using hidden topic model
-3262	BrowseRank: letting web users vote for page importance
-3263	Do user preferences and evaluation measures line up
-3264	Xplus: a SQL-tuning-aware query optimizer
-3265	Summarizing itemset patterns: a profile-based approach
-3266	Integration of semantic-based bipartite graph representation and mutual refinement strategy for biomedical literature clustering
-3267	Mining adjacent markets from a large-scale ads video collection for image advertising
-3268	Distributed SLCA-based XML keyword search by map-reduce
-3269	How to choose combinations in a join of search results
-3270	A Rule-Based Classification Algorithm for Uncertain Data
-3271	Mining Frequent Itemsets from Noisy Data
-3272	MobiMix: Protecting location privacy with mix-zones over road networks
-3273	On Potential Validity of Document-Centric XML Documents
-3274	Deriving marketing intelligence from online discussion
-3275	Temporally Coherent Role-Topic Models TCRTM: Deinterlacing Overlapping Activity Patterns
-3276	Expressive query specification through form customization
-3277	Mining of Frequent Itemsets from Streams of Uncertain Data
-3278	Approximate quantiles and the order of the stream
-3279	Direct Discriminative Pattern Mining for Effective Classification
-3280	Modeling and Predicting the Helpfulness of Online Reviews
-3281	Extraction and mining of an academic social network
-3282	Classification and novel class detection of data streams in a dynamic feature space
-3283	Enhancing cluster labeling using wikipedia
-3284	Selecting Stars: The k Most Representative Skyline Operator
-3285	Hop doubling label indexing for point-to-point distance querying on scale-free networks
-3286	Top-k Spatial Joins of Probabilistic Objects
-3287	Exploring in the weblog space by detecting informative and affective articles
-3288	Publishing Sensitive Transactions for Itemset Utility
-3289	Content-aware click modeling
-3290	Cleaning inconsistencies in information extraction via prioritized repairs
-3291	MedSearch: a specialized search engine for medical information
-3292	Index Pruning and Result Reranking: Effects on Ad-Hoc Retrieval and Named Page Finding.
-3293	Explore or exploit?: effective strategies for disambiguating large databases
-3294	Ranking definitions with supervised learning methods
-3295	To tune or not to tune?: a lightweight physical design alerter
-3296	Mining Heavy Subgraphs in Time-Evolving Networks
-3297	AnswerArt: contextualized question answering
-3298	Improving database performance on simultaneous multithreading processors
-3299	A unified framework for monitoring data streams in real time
-3300	Differencing Provenance in Scientific Workflows
-3301	Efficiently Computing Inclusion Dependencies for Schema Discovery
-3302	Thresholding Strategies for Text Classifiers: TREC-2005 Biomedical Triage Task Experiments
-3303	MindFinder: image search by interactive sketching and tagging
-3304	Analyzing and predicting question quality in community question answering services
-3305	AutoTag: a collaborative approach to automated tag assignment for weblog posts
-3306	Embellishing text search queries to protect user privacy
-3307	Using Burstiness to Improve Clustering of Topics in News Streams
-3308	A Framework for Regional Association Rule Mining in Spatial Datasets
-3309	Complement union for data integration
-3310	Approximate Aggregations in Trajectory Data Warehouses
-3311	FiST: scalable XML document filtering by sequencing twig patterns
-3312	Evaluating Learning Algorithms Composed by a Constructive Meta-Learning Scheme for a Rule Evaluation Support Method
-3313	X-LiSA: cross-lingual semantic annotation
-3314	Temporal query substitution for ad search
-3315	Top-k publish-subscribe for social annotation of news
-3316	Feature extraction from mass spectra for classification of pathological states
-3317	Mining adaptively frequent closed unlabeled rooted trees in data streams
-3318	Which "Apple" are you talking about ?
-3319	LB-Index: A Multi-Resolution Index Structure for Images
-3320	As Strong as the Weakest Link: Mining Diverse Cliques in Weighted Graphs
-3321	Vogue: a novel variable order-gap state machine for modeling sequences
-3322	Mining event periodicity from incomplete observations
-3323	SVM in oracle database 10g: removing the barriers to widespread adoption of support vector machines
-3324	Discriminative Frequent Pattern Analysis for Effective Classification
-3325	Scalable query result caching for web applications
-3326	Online hierarchical clustering in a data warehouse environment
-3327	Approximating Aggregation Queries in Peer-to-Peer Networks
-3328	The volume and evolution of web page templates
-3329	Efficiently ordering subgoals with access constraints
-3330	Scrutinizing frequent pattern discovery performance
-3331	Unifying user-based and item-based collaborative filtering approaches by similarity fusion
-3332	Evaluating clustering in subspace projections of high dimensional data
-3333	Actively Building Private Recommender Networks for Evolving Reliable Relationships
-3334	Monitoring k-nearest neighbor queries over moving objects
-3335	Holistic Query Transformations for Dynamic Web Applications
-3336	Adaptive self-tuning memory in DB2
-3337	Relational learning via collective matrix factorization
-3338	Learning from Aggregate Views
-3339	On the comparison of microdata disclosure control algorithms
-3340	Skyline probability over uncertain preferences
-3341	Understanding task-driven information flow in collaborative networks
-3342	A scalable, predictable join operator for highly concurrent data warehouses
-3343	Score-safe term-dependency processing with hybrid indexes
-3344	Expressiveness of XSDs: from practice to theory, there and back again
-3345	Discovering spatio-temporal causal interactions in traffic data streams
-3346	Concurrency control and recovery for balanced B-link trees
-3347	Towards materialized view selection for distributed databases
-3348	Automated creation of a forms-based database query interface
-3349	Start Globally, Optimize Locally, Predict Globally: Improving Performance on Imbalanced Data
-3350	Efficient error-tolerant query autocompletion
-3351	Comparisons of K-Anonymization and Randomization Schemes under Linking Attacks
-3352	A Content and Device Management Method for Multiple Contents Browsing with Multiple Devices
-3353	Binary XML storage and query processing in Oracle 11g
-3354	Bid optimization for broad match ad auctions
-3355	Weighted Additive Criterion for Linear Dimension Reduction
-3356	A New Local Distance-Based Outlier Detection Approach for Scattered Real-World Data
-3357	Consistent bipartite graph co-partitioning for star-structured high-order heterogeneous data co-clustering
-3358	Mining Large Networks with Subgraph Counting
-3359	Space Efficient String Mining under Frequency Constraints
-3360	Leadership discovery when data correlatively evolve
-3361	Toward personalized care management of patients at risk: the diabetes case study
-3362	Learned-Norm Pooling for Deep Feedforward and Recurrent Neural Networks
-3363	Inferring query intent from reformulations and clicks
+2533	Query-Aware Partitioning for Monitoring Massive Network Data Streams
+2534	Sequential Change Detection on Data Streams
+2535	Survey on web spam detection: principles and algorithms
+2536	Network-based problem detection for distributed systems
+2537	Predicting Multiple Metrics for Queries: Better Decisions Enabled by Machine Learning
+2538	Exploring traversal strategy for web forum crawling
+2539	On Querying and Exploring Activities on a User&#146;s Desktop
+2540	Neighbor-based pattern detection for windows over streaming data
+2541	A boosting approach to improving pseudo-relevance feedback
+2542	Tru-Alarm: Trustworthiness Analysis of Sensor Networks in Cyber-Physical Systems
+2543	Ranking document clusters using markov random fields
+2544	Taxonomy-Oriented recommendation towards recommendation with stage
+2545	Automatic partitioning of database applications
+2546	SaveRF: Towards Efficient Relevance Feedback Search
+2547	Multi-stage classification
+2548	The circular two-phase commit protocol
+2549	The Database Architecture Jigsaw Puzzle
+2550	Human mobility, social ties, and link prediction
+2551	Approximation algorithms for co-clustering
+2552	MARGIN: Maximal Frequent Subgraph Mining
+2553	Locality-sensitive operators for parallel main-memory database clusters
+2554	WebIQ: Learning from the Web to Match Deep-Web Query Interfaces
+2555	On novelty in publish/subscribe delivery
+2556	Continuous monitoring of nearest neighbors on land surface
+2557	Finding relevant patterns in bursty sequences
+2558	Efficient creation and incremental maintenance of the HOPI index for complex XML document collections
+2559	Graph queries in a next-generation Datalog system
+2560	Approximation Techniques for Indexing the Earth Mover&#146;s Distance in Multimedia Databases
+2561	Efficient allocation algorithms for OLAP over imprecise data
+2562	Bayesian network based sentence retrieval model
+2563	Efficient skyline computation over low-cardinality domains
+2564	Sync kit: a persistent client-side database caching toolkit for data intensive websites
+2565	Predicting positive and negative links in signed social networks by transfer learning
+2566	Reducing the Frequent Pattern Set
+2567	CatchSync: catching synchronized behavior in large directed graphs
+2568	Enforcing Vocabulary k-Anonymity by Semantic Similarity Based Clustering
+2569	Nested mappings: schema mapping reloaded
+2570	Ensembles for unsupervised outlier detection: challenges and research questions a position paper
+2571	K-AP: Generating Specified K Clusters by Efficient Affinity Propagation
+2572	Ranking with multiple hyperplanes
+2573	Querying and visualizing gridded datasets for e-science
+2574	Increasing buffer-locality for multiple index based scans through intelligent placement and index scan speed control
+2575	Human-assisted graph search: it's okay to ask questions
+2576	A unified approach for schema matching, coreference and canonicalization
+2577	Intelligent management of virtualized resources for database systems in cloud environment
+2578	gApprox: Mining Frequent Approximate Patterns from a Massive Network
+2579	Who should share what?: item-level social influence prediction for users and posts ranking
+2580	Optimizing State-Intensive Non-Blocking Queries Using Run-time Adaptation
+2581	On the expressiveness of probabilistic XML models
+2582	Designing Random Sample Synopses with Outliers
+2583	Feature based informative model for discriminating favorite items from unrated ones
+2584	WARP: time warping for periodicity detection
+2585	A unified framework for approximate dictionary-based entity extraction
+2586	On reducing classifier granularity in mining concept-drifting data streams
+2587	Unified Solution to Nonnegative Data Factorization Problems
+2588	Generalized Précis Queries for Logical Database Subset Creation
+2589	Page-level template detection via isotonic smoothing
+2590	Query similarity by projecting the query-flow graph
+2591	Supporting multiple information-seeking strategies in a single system framework
+2592	A Data Structure for Sponsored Search
+2593	Ranking community answers via analogical reasoning
+2594	Web resource geographic location classification and detection
+2595	The ontological key: automatically understanding and integrating forms to access the deep Web
+2596	On MBR Approximation of Histories for Historical Queries: Expectations and Limitations
+2597	Understanding user's query intent with wikipedia
+2598	A Divisive Hierarchical Structural Clustering Algorithm for Networks
+2599	GraphSig: A Scalable Approach to Mining Significant Subgraphs in Large Graph Databases
+2600	On the Inverse Classification Problem and its Applications
+2601	Asking the right questions: model-driven optimization using probes
+2602	Pattern Mining in Frequent Dynamic Subgraphs
+2603	Hyper-local, directions-based ranking of places
+2604	Transfer learning for behavioral targeting
+2605	Detecting Link Spam Using Temporal Information
+2606	A browser for browsing the past web
+2607	P3C: A Robust Projected Clustering Algorithm
+2608	CoHadoop: flexible data placement and its exploitation in Hadoop
+2609	Hierarchical Text Categorization in a Transductive Setting
+2610	DIVERSUM: Towards diversified summarisation of entities in knowledge graphs
+2611	Efficient semi-streaming algorithms for local triangle counting in massive graphs
+2612	Stop word and related problems in web interface integration
+2613	Adaptive product normalization: using online learning for record linkage in comparison shopping
+2614	Workload-aware indexing of continuously moving objects
+2615	Mining Web Structures Using Multi-Dimensional Data Mining Model
+2616	Reliable QoS monitoring based on client feedback
+2617	Experiments in Trec 2007 Blog Opinion Task at CAS-ICT
+2618	SystemML: Declarative machine learning on MapReduce
+2619	Enhanced Business Intelligence using EROCS
+2620	Lifted-Rollout for Approximate Policy Iteration of Markov Decision Process
+2621	Auto-WEKA: combined selection and hyperparameter optimization of classification algorithms
+2622	Dual Labeling: Answering Graph Reachability Queries in Constant Time
+2623	Efficient caching for constrained skyline queries
+2624	An optimal linear time algorithm for quasi-monotonic segmentation
+2625	Another Outlier Bites the Dust: Computing Meaningful Aggregates in Sensor Networks
+2626	Detecting, categorizing and clustering entity mentions in Chinese text
+2627	High-performance dynamic pattern matching over disordered streams
+2628	Boosting multi-kernel locality-sensitive hashing for scalable image retrieval
+2629	Efficient indexing and querying over syntactically annotated trees
+2630	AxPRE Summaries: Exploring the (Semi-)Structure of XML Web Collections
+2631	Hilda: A High-Level Language for Data-DrivenWeb Applications
+2632	Genre-based decomposition of email class noise
+2633	Web2Talkshow: transforming web content into TV-program-like content based on the creation of dialogue
+2634	The ERC webdam on foundations of web data management
+2635	York University at TREC 2008: Blog Track
+2636	Identity management on converged networks: a reality check
+2637	Query-time entity resolution
+2638	Relevance feedback at the INEX 2004 workshop
+2639	Hits on the web: how does it compare?
+2640	An adaptive sensor mining framework for pervasive computing applications
+2641	A framework to predict the quality of answers with non-textual features
+2642	Information Extraction from Web Pages Using Presentation Regularities and Domain Knowledge
+2643	Adaptive aggregation on chip multiprocessors
+2644	Safety guarantee of continuous join queries over punctuated data streams
+2645	Spatio-temporal dynamics of online memes: a study of geo-tagged tweets
+2646	Learning Attribute-to-Feature Mappings for Cold-Start Recommendations
+2647	Ranking outliers using symmetric neighborhood relationship
+2648	An evaluation of checkpoint recovery for massively multiplayer online games
+2649	Knowledge Transfer among Heterogeneous Information Networks
+2650	Kernel Conditional Quantile Estimation via Reduction Revisited
+2651	Minimum Enclosing Spheres Formulations for Support Vector Ordinal Regression
+2652	Spotting fake reviewer groups in consumer reviews
+2653	Latent space domain transfer between high dimensional overlapping distributions
+2654	Towards heterogeneous temporal clinical event pattern discovery: a convolutional approach
+2655	Clustersheddy: load shedding using moving clusters over spatio-temporal data streams
+2656	Finding effectors in social networks
+2657	To join or not to join: the illusion of privacy in social networks with mixed public and private user profiles
+2658	Unsupervised query segmentation using only query logs
+2659	Authentication of moving kNN queries
+2660	Feature selection for ranking
+2661	SimFusion: measuring similarity using unified relationship matrix
+2662	SQL to XQuery Translation in the AquaLogic Data Services Platform
+2663	Cleaning uncertain data with quality guarantees
+2664	Supervised Learning by Training on Aggregate Outputs
+2665	NGS: a framework for multi-domain query answering
+2666	Constructing indoor navigation systems from digital building information
+2667	Modeling and querying vague spatial objects using shapelets
+2668	Quantifying the Hidden Factors Impacting the Audience of Advertisements Posted on Facebook
+2669	A Fixed Parameter Tractable Integer Program for Finding the Maximum Order Preserving Submatrix
+2670	GigaTensor: scaling tensor analysis up by 100 times - algorithms and discoveries
+2671	FF-Anonymity: When Quasi-identifiers Are Missing
+2672	Mining Allocating Patterns in One-Sum Weighted Items
+2673	Equip tourists with knowledge mined from travelogues
+2674	Enhancing diversity, coverage and balance for summarization through structure learning
+2675	Inverted linear quadtree: Efficient top k spatial keyword search
+2676	Measuring credibility of users in an e-learning environment
+2677	Adaptive event detection with time-varying poisson processes
+2678	Grafting-light: fast, incremental feature selection and structure learning of Markov random fields
+2679	Probabilistic contextual skylines
+2680	Integrating the IAC neural network in ontology mapping
+2681	Hashtag recommendation for hyperlinked tweets
+2682	Join queries on uncertain data: Semantics and efficient processing
+2683	Keyword query cleaning
+2684	T-Music: A melody composer based on frequent pattern mining
+2685	Index interactions in physical design tuning: modeling, analysis, and applications
+2686	Supervised probabilistic principal component analysis
+2687	Characterizing and Exploiting Reference Locality in Data Stream Applications
+2688	Query language support for incomplete information in the MayBMS system
+2689	Identifying graphs from noisy and incomplete data
+2690	Active Learning with Generalized Queries
+2691	XQuery implementation in a relational database system
+2692	Laws for Rewriting Queries Containing Division Operators
+2693	ViEWNet: Visual Exploration of Region-Wide Traffic Networks
+2694	DataGarage: warehousing massive performance data on commodity servers
+2695	Comparing apples and oranges: normalized pagerank for evolving graphs
+2696	Finding maximal frequent itemsets over online data streams adaptively
+2697	Supervised semi-definite embedding for email data cleaning and visualization
+2698	T-Warehouse: Visual OLAP analysis on trajectory data
+2699	Representative & Informative Query Selection for Learning to Rank using Submodular Functions
+2700	Rule extraction from linear support vector machines
+2701	Adaptive Multimedia Mining on Distributed Stream Processing Systems
+2702	Selecting good expansion terms for pseudo-relevance feedback
+2703	TREC 2007 ciQA Task: University of Maryland.
+2704	Analysis of Relationship between Blood Stream Infection and Clinical Background in Patients' Lactobacillus Therapy by Data Mining
+2705	Finding and analyzing database user sessions
+2706	Privacy - preserving top-k queries
+2707	Query clustering based on bid landscape for sponsored search auction optimization
+2708	Obtaining best parameter values for accurate classification
+2709	Maximum Margin Clustering on Data Manifolds
+2710	How to influence my customers?: the impact of electronic market design
+2711	Modeling and analysis of cross-session search tasks
+2712	Monitoring Top-k Query inWireless Sensor Networks
+2713	Improving Grouped-Entity Resolution Using Quasi-Cliques
+2714	Representative skylines using threshold-based preference distributions
+2715	Ranking method specialized for content descriptions of classical music
+2716	The language observatory project (LOP)
+2717	Query topic detection for reformulation
+2718	A Study on Efficient Access Control for XML Ducuments
+2719	Conditional random fields for transmembrane helix prediction
+2720	ProvenanceCurious: a tool to infer data provenance from scripts
+2721	Generative modeling of persons and documents for expert search
+2722	Efficient skyline querying with variable user preferences on nominal attributes
+2723	Dealing proactively with data corruption: Challenges and opportunities
+2724	Answering queries from statistics and probabilistic views
+2725	V-SMART-join: a scalable mapreduce framework for all-pair similarity joins of multisets and vectors
+2726	People like us: mining scholarly data for comparable researchers
+2727	SeMiTri: a framework for semantic annotation of heterogeneous trajectories
+2728	Distinct Counting with a Self-Learning Bitmap
+2729	Dynamic Materialized Views
+2730	Exploring social annotations for the semantic web
+2731	Scalable multi-dimensional user intent identification using tree structured distributions
+2732	Report on EuroHCIR 2013: the 3rd european workshop on human-computer interaction and information retrieval
+2733	A simple and efficient estimation method for stream expression cardinalities
+2734	Semi-supervised classification with hybrid generative/discriminative methods
+2735	Query translation for XPath-based security views
+2736	Performance profiling with EndoScope, an acquisitional software monitoring framework
+2737	A Markov chain model for integrating behavioral targeting into contextual advertising
+2738	IPAC: an interactive approach to access control for semi-structured data
+2739	Formal Models for Expert Finding on DBLP Bibliography Data
+2740	Micro-blogging Sentiment Detection by Collaborative Online Learning
+2741	Web page rank prediction with markov models
+2742	A trust management framework for service-oriented environments
+2743	Incorporating Duration Information for Trajectory Classification
+2744	Locally Constrained Support Vector Clustering
+2745	Mining risk patterns in medical data
+2746	RelaxImage: a cross-media meta-search engine for searching images from Web based on query relaxation
+2747	Maximum Margin Clustering with Multivariate Loss Function
+2748	Selecting a characteristic set of reviews
+2749	PUB: A Class Description Technique Based on Partial Coverage of Subspace
+2750	High-Performance Unsupervised Relation Extraction from Large Corpora
+2751	Control Theory: a Foundational Technique for Self Managing Databases
+2752	A Block Mixture Model for Pattern Discovery in Preference Data
+2753	A general framework for adaptive and online detection of web attacks
+2754	DSTree: A Tree Structure for the Mining of Frequent Sets from Data Streams
+2755	Emerging topic detection for organizations from microblogs
+2756	Summarization of online image collections via implicit feedback
+2757	Beyond Models: Forecasting Complex Network Processes Directly from Data
+2758	Discriminative factor alignment across heterogeneous feature space
+2759	Top-k Set Similarity Joins
+2760	Timeline generation: tracking individuals on twitter
+2761	EOS 2 : unstoppable stateful PHP
+2762	Matching resumes and jobs based on relevance models
+2763	Personalized interactive faceted search
+2764	HOT SAX: efficiently finding the most unusual time series subsequence
+2765	Towards rich query interpretation: walking back and forth for mining query templates
+2766	Deriving probabilistic databases with inference ensembles
+2767	Interaction-aware prediction of business intelligence workload completion times
+2768	XML Index Recommendation with Tight Optimizer Coupling
+2769	Refined experts: improving classification in large taxonomies
+2770	FiVaTech: Page-Level Web Data Extraction from Template Pages
+2771	Brand awareness and the evaluation of search results
+2772	Online Search Evaluation with Interleaving
+2773	Conquering the Divide: Continuous Clustering of Distributed Data Streams
+2774	Semi-automatic schema integration in Clio
+2775	Detecting group review spam
+2776	Bridging the application and DBMS profiling divide for database application developers
+2777	Flexible database generators
+2778	GPU-Accelerated Feature Selection for Outlier Detection Using the Local Kernel Density Ratio
+2779	iRobot: an intelligent crawler for web forums
+2780	Raising the baseline for high-precision text classifiers
+2781	Keyword-propagation-based information enriching and noise removal for web news videos
+2782	Mobility Data Warehousing and Mining
+2783	Context-sensitive information retrieval using implicit feedback
+2784	Recommendation Diversification Using Explanations
+2785	ReStore: reusing results of MapReduce jobs
+2786	Processing XPath Queries in PC-Clusters Using XML Data Partitioning
+2787	XStream: a Signal-Oriented Data Stream Management System
+2788	One-pass wavelet synopses for maximum-error metrics
+2789	EigenDiagnostics: Spotting Connection Patterns and Outliers in Large Graphs
+2790	Tractable database design through bounded treewidth
+2791	Branch Code: A Labeling Scheme for Efficient Query Answering on Trees
+2792	Maximizing acceptance probability for active friending in online social networks
+2793	Adaptive Top-k Algorithm in SLCA-Based XML Keyword Search
+2794	Semantic stream query optimization exploiting dynamic metadata
+2795	Larger is better: seed selection in link-based anti-spamming algorithms
+2796	Conditional heavy hitters: detecting interesting correlations in data streams
+2797	DBMSs with Native XML Support: Towards Faster, Richer, and Smarter Data Management
+2798	Detecting inconsistencies in distributed data
+2799	Similarity Searching: Towards Bulk-Loading Peer-to-Peer Networks
+2800	AQAX: a system for approximate XML query answers
+2801	Location-based Spatial Queries with Data Sharing in Mobile Environments
+2802	Analyze influenza virus sequences using binary encoding approach
+2803	Automatic extraction of dynamic record sections from search engine result pages
+2804	XQuery Join Graph Isolation: Celebrating 30+ Years of XQuery Processing Technology
+2805	Mirex and Taily at TREC 2013
+2806	Depth estimation for ranking query optimization
+2807	Novelty-based Incremental Document Clustering for On-line Documents
+2808	XRPC: interoperable and efficient distributed XQuery
+2809	A fast kernel-based multilevel algorithm for graph clustering
+2810	Trust Negotiation as an Authorization Service forWeb Services
+2811	FDCluster: Mining Frequent Closed Discriminative Bicluster without Candidate Maintenance in Multiple Microarray Datasets
+2812	Discovering users' specific geo intention in web search
+2813	Privacy-preserving Naïve Bayes classification
+2814	User grouping behavior in online forums
+2815	The social honeypot project: protecting online communities from spammers
+2816	Combining link and content for community detection: a discriminative approach
+2817	An introduction to SIGKDD and a reflection on the term 'data mining'
+2818	Efficient Clustering of Uncertain Data
+2819	Timestamp-based result cache invalidation for web search engines
+2820	BOXes: efficient maintenance of order-based labeling for dynamic XML data
+2821	Click chain model in web search
+2822	AutoLag: automatic discovery of lag correlations in stream data
+2823	On mining cross-graph quasi-cliques
+2824	Crowdsourcing algorithms for entity resolution
+2825	Customizable parallel execution of scientific stream queries
+2826	Accelerating Active Learning with Transfer Learning
+2827	A Security Punctuation Framework for Enforcing Access Control on Streaming Data
+2828	How much can behavioral targeting help online advertising
+2829	Using Wikipedia at the TREC QA Track
+2830	Generalizing PageRank: damping functions for link-based ranking algorithms
+2831	Report on the SIGIR 2009 workshop on the future of IR evaluation
+2832	On keys, foreign keys and nullable attributes in relational mapping systems
+2833	Conflicting XML updates
+2834	Wavelet synopsis for data streams: minimizing non-euclidean error
+2835	Change-Point Detection in Time-Series Data Based on Subspace Identification
+2836	University of Glasgow at TREC 2014: Experiments with Terrier in Contextual Suggestion, Temporal Summarisation and Web Tracks
+2837	Blog track research at TREC
+2838	Exploring the use of labels to shortcut search trails
+2839	Reusable test collections through experimental design
+2840	Fast object search on road networks
+2841	Curvature Maxima-based Trajectories Mining
+2842	Caching search engine results over incremental indices
+2843	On Multidimensional k-Anonymity with Local Recoding Generalization
+2844	Multi-view transfer learning with a large margin approach
+2845	InteMon: intelligent system monitoring on large clusters
+2846	SMDM: enhancing enterprise-wide master data management using semantic web technologies
+2847	Viewing online searching within a learning paradigm
+2848	Keyword-aware optimal route search
+2849	A Practical Approach to Classify Evolving Data Streams: Training with Limited Amount of Labeled Data
+2850	A revival of integrity constraints for data cleaning
+2851	Diagnosing Estimation Errors in Page Counts Using Execution Feedback
+2852	Embedding-based subsequence matching with gaps---range---tolerances: a Query-By-Humming application
+2853	Finding and approximating top-k answers in keyword proximity search
+2854	Diversifying web search results
+2855	Dynamically Modeling Patient's Health State from Electronic Medical Records: A Time Series Approach
+2856	On-line discovery of hot motion paths
+2857	Efficient Feature Selection in the Presence of Multiple Feature Classes
+2858	P-TAG: large scale automatic generation of personalized annotation tags for the web
+2859	Proactive caching for spatial queries in mobile environments
+2860	Space-Constrained Gram-Based Indexing for Efficient Approximate String Search
+2861	Algorithm for stochastic multiple-choice knapsack problem and application to keywords bidding
+2862	Optimizing Hierarchical Access in OLAP Environment
+2863	PETRANET: a Power Efficient Transaction Management Technique for Real-Time Mobile Ad-hoc Network Databases
+2864	Latent concept expansion using markov random fields
+2865	Efficient Algorithm for Computing Link-Based Similarity in Real World Networks
+2866	Routing Questions to the Right Users in Online Communities
+2867	Finding related micro-blogs based on wordnet
+2868	Maintaining bounded-size sample synopses of evolving datasets
+2869	Sketching streams through the net: distributed approximate query tracking
+2870	Clustering pair-wise dissimilarity data into partially ordered sets
+2871	Physically Independent Stream Merging
+2872	A novel probabilistic pruning approach to speed up similarity queries in uncertain databases
+2873	Updating collection representations for federated search
+2874	Social influence analysis in large-scale networks
+2875	A probabilistic approach to spatiotemporal theme pattern mining on weblogs
+2876	Abstract Process Data Warehousing
+2877	Dynamic buffer management with extensible replacement policies
+2878	Structured search result differentiation
+2879	Efficient Kernel Discriminant Analysis via Spectral Regression
+2880	NoFTL: database systems on FTL-less flash storage
+2881	Measuring constraint-set utility for partitional clustering algorithms
+2882	Diversifying landmark image search results by learning interested views from community photos
+2883	GPLAG: detection of software plagiarism by program dependence graph analysis
+2884	Nestedness and segmented nestedness
+2885	RiTE: Providing On-Demand Data for Right-Time Data Warehousing
+2886	Summarizing the differences from microblogs
+2887	Identification of Causal Variables for Building Energy Fault Detection by Semi-supervised LDA and Decision Boundary Analysis
+2888	Knowledge transferring via implicit link analysis
+2889	Text Categorization with Considering Temporal Patterns of Term Usages
+2890	Discovering Contexts and Contextual Outliers Using Random Walks in Graphs
+2891	Classification of imbalanced marketing data with balanced random sets
+2892	Segmentation of Time Series by the Clustering and Genetic Algorithms
+2893	Finding Predictive Runs with LAPS
+2894	Fast data analytics with FPGAs
+2895	Anatomy: simple and effective privacy preservation
+2896	Industry-scale duplicate detection
+2897	Web services and service-oriented architectures
+2898	Indexing multi-dimensional uncertain data with arbitrary probability density functions
+2899	Mining directed social network from message board
+2900	Efficient document retrieval in main memory
+2901	Search war: a game for improving web search
+2902	Combining Multiple Resources, Evidences and Criteria for Genomic Information Retrieval
+2903	Text representation: from vector to tensor
+2904	ModelGen: model independent schema translation
+2905	WebTables: exploring the power of tables on the web
+2906	P2P-based web text information retrieval
+2907	DBToaster: a SQL compiler for high-performance delta processing in main-memory databases
+2908	Fitting score distribution for blog opinion retrieval
+2909	Scalable k-means++
+2910	Privacy Preserving Publishing on Multiple Quasi-identifiers
+2911	SAO: A Stream Index for Answering Linear Optimization Queries
+2912	An Online Approach to Physical Design Tuning
+2913	Privacy-enhancing personalized web search
+2914	Indexing mobile objects using dual transformations
+2915	Application of Graph-based Data Mining to Metabolic Pathways
+2916	Geometrically Inspired Itemset Mining
+2917	Formulating distance functions via the kernel trick
+2918	Designing efficient sampling techniques to detect webpage updates
+2919	Investigation of partial query proximity in web search
+2920	Evaluation in (XML) information retrieval: expected precision-recall with user modelling (EPRUM)
+2921	Addressing cold-start in app recommendation: latent user models constructed from twitter followers
+2922	Secure Distributed k-Anonymous Pattern Mining
+2923	Adapting ranking functions to user preference
+2924	Image Hub Explorer: Evaluating Representations and Metrics for Content-Based Image Retrieval and Object Recognition
+2925	Mining, Indexing, and Similarity Search in Graphs and Complex Structures
+2926	Lazy-Adaptive Tree: an optimized index structure for flash devices
+2927	MultiRelational k-Anonymity
+2928	Computing resource prediction for mapreduce applications using decision tree
+2929	On burstiness-aware search for document sequences
+2930	Interactive SQL query suggestion: Making databases user-friendly
+2931	Supporting efficient top-k queries in type-ahead search
+2932	Piggyback Optimization of XML Data Dissemination
+2933	Exploiting Domain Knowledge to Improve Biological Significance of Biclusters with Key Missing Genes
+2934	A RBF classifier with supervised center selection and weighted norm
+2935	A scalable algorithm for maximizing range sum in spatial databases
+2936	A generic framework for efficient subspace clustering of high-dimensional data
+2937	R3: a real-time route recommendation system
+2938	Robust ranking models via risk-sensitive optimization
+2939	ReadAlong: reading articles and comments together
+2940	Online Bulk Deletion
+2941	I/O efficient: computing SCCs in massive graphs
+2942	Online piece-wise linear approximation of numerical streams with precision guarantees
+2943	iVA-File: Efficiently Indexing Sparse Wide Tables in Community Systems
+2944	Mining tourist preferences with twice-learning
+2945	Improved Privacy-Preserving Bayesian Network Parameter Learning on Vertically Partitioned Data
+2946	Streaming feature selection using alpha-investing
+2947	Caching query-biased snippets for efficient retrieval
+2948	Nonsmooth Bilevel Programming for Hyperparameter Selection
+2949	Exhibit: lightweight structured data publishing
+2950	Class-based graph anonymization for social network data
+2951	Confidence-Aware Join Algorithms
+2952	Spatial Range Querying for Gaussian-Based Imprecise Query Objects
+2953	Latent Dirichlet Co-Clustering
+2954	POIKILO: a tool for evaluating the results of diversification models and algorithms
+2955	Finding closed frequent item sets by intersecting transactions
+2956	P3C: A New Algorithm for the Simple Temporal Problem
+2957	Efficient maintenance of common keys in archives of continuous query results from deep websites
+2958	TCP Congestion Window Controlling Algorithms on iSCSI Sequential Read Access
+2959	Optimal random perturbation at multiple privacy levels
+2960	In the mood for affective search with web stereotypes
+2961	ManyAspects: a system for highlighting diverse concepts in documents
+2962	Semantic Kernels for Text Classification Based on Topological Measures of Feature Similarity
+2963	Cascading tree sheets and recombinant HTML: better encapsulation and retargeting of web content
+2964	INSCY: Indexing Subspace Clusters with In-Process-Removal of Redundancy
+2965	Hierarchical topic segmentation of websites
+2966	ICEDB: Intermittently-Connected Continuous Query Processing
+2967	On social event organization
+2968	A framework for determining necessary query set sizes to evaluate web search effectiveness
+2969	ValuePick: Towards a Value-Oriented Dual-Goal Recommender System
+2970	Predicting query execution time: Are optimizer cost models really unusable?
+2971	Assessing the scenic route: measuring the value of search trails in web logs
+2972	Email data cleaning
+2973	Report on the sixth workshop on exploiting semantic annotations in information retrieval (ESAIR'13)
+2974	Utilizing Bio-Mechanical Characteristics For User-Independent Gesture Recognition
+2975	Indexing Uncertain Categorical Data
+2976	Evaluating new search engine configurations with pre-existing judgments and clicks
+2977	Summarizing email conversations with clue words
+2978	Vectorizing and querying large XML repositories
+2979	Effective Anomaly Detection in Sensor Networks Data Streams
+2980	IMDS: intelligent malware detection system
+2981	Adaptive near-duplicate detection via similarity learning
+2982	MonetDB/DataCell: online analytics in a streaming column-store
+2983	Adaptive Parallel Graph Mining for CMP Architectures
+2984	Learning methods for lung tumor markerless gating in image-guided radiotherapy
+2985	Incorporating site-level knowledge for incremental crawling of web forums: a list-wise strategy
+2986	Semantic lexicon adaptation for use in query interpretation
+2987	Transferring Instances for Model-Based Reinforcement Learning
+2988	Archival HTTP redirection retrieval policies
+2989	A demo search engine for products
+2990	Data fusion: resolving data conflicts for integration
+2991	Temporal Outlier Detection in Vehicle Traffic Data
+2992	Predicting bounce rates in sponsored search advertisements
+2993	SCENE: a scalable two-stage personalized news recommendation system
+2994	Computing Compressed Multidimensional Skyline Cubes Efficiently
+2995	G-ToPSS: fast filtering of graph-based metadata
+2996	XML Structural Summaries
+2997	Race: finding and ranking compact connected trees for keyword proximity search over xml documents
+2998	Web page language identification based on URLs
+2999	Approximation algorithms for clustering uncertain data
+3000	Measuring two-event structural correlations on graphs
+3001	Bounding and Estimating Association Rule Support from Clusters on Binary Data
+3002	Adaptive Parallelization of Queries over Dependent Web Service Calls
+3003	A Case Study in Sequential Pattern Mining for IT-Operational Risk
+3004	CLEF 2013: information access evaluation meets multilinguality, multimodality, and visualization
+3005	Personalized recommendation on dynamic content using predictive bilinear models
+3006	TraClass : trajectory classification using hierarchical region-based and trajectory-based clustering
+3007	CASIS: a system for concept-aware social image search
+3008	Efficient Mining of Closed Repetitive Gapped Subsequences from a Sequence Database
+3009	A Flexible Query Graph Based Model for the Efficient Execution of Continuous Queries
+3010	Towards effective browsing of large scale social annotations
+3011	Mining frequent itemsets from uncertain data
+3012	Counting triangles and the curse of the last reducer
+3013	Indexing confusion networks for morph-based spoken document retrieval
+3014	Query dependent ranking using K-nearest neighbor
+3015	Bifold constraint-based mining by simultaneous monotone and anti-monotone checking
+3016	Optimization of analytic window functions
+3017	Statistical models of music-listening sessions in social media
+3018	Object-level ranking: bringing order to Web objects
+3019	Making SENSE: socially enhanced search and exploration
+3020	Cluster Analysis of Time-Series Medical Data Based on the Trajectory Representation and Multiscale Comparison Techniques
+3021	Ontology-Aware Search on XML-based Electronic Medical Records
+3022	Process spaceship: discovering and exploring process views from event logs in data spaces
+3023	Unsupervised trajectory sampling
+3024	Discovering Excitatory Networks from Discrete Event Streams with Applications to Neuronal Spike Train Analysis
+3025	Entity extraction, linking, classification, and tagging for social media: a wikipedia-based approach
+3026	GString: A Novel Approach for Efficient Search in Graph Databases
+3027	A multiresolution symbolic representation of time series
+3028	Memory efficient minimum substring partitioning
+3029	Verifying and Mining Frequent Patterns from Large Windows over Data Streams
+3030	Sequential Latent Dirichlet Allocation: Discover Underlying Topic Structures within a Document
+3031	Adaptive Blocking: Learning to Scale Up Record Linkage
+3032	A statistical approach towards robust progress estimation
+3033	Finding Fastest Paths on A Road Network with Speed Patterns
+3034	Network Anomaly Detection Using a Commute Distance Based Approach
+3035	Predicting user interests from contextual information
+3036	Fast random graph generation
+3037	P2P logging and timestamping for reconciliation
+3038	Genealogical trees on the web: a search engine user perspective
+3039	Applying Probabilistic Thematic Clustering for Classification in the TREC 2005 Genomics Track
+3040	XMorph: A shape-polymorphic, domain-specific XML data transformation language
+3041	BordaConsensus: a new consensus function for soft cluster ensembles
+3042	TOFA: Trace Oriented Feature Analysis in Text Categorization
+3043	Cross-lingual query suggestion using query logs of different languages
+3044	Hybrid semantic tagging for information extraction
+3045	Succinct representation of flexible and privacy-preserving access rights
+3046	PRIS in TREC 2008 Blog Track
+3047	On the complexity of division and set joins in the relational algebra
+3048	York University at TREC 2005: SPAM Track
+3049	Local Correlation Tracking in Time Series
+3050	Picture this: preferences for image search
+3051	Optimizing debt collections using constrained reinforcement learning
+3052	York University at TREC 2009: Chemical Track
+3053	SEM: mining spatial events from the web
+3054	Trust analysis with clustering
+3055	Algorithms for discovering bucket orders from data
+3056	Feature Selection in the Tensor Product Feature Space
+3057	Correlation maps: a compressed access method for exploiting soft functional dependencies
+3058	A utility-theoretic ranking method for semi-automated text classification
+3059	Graphs over time: densification laws, shrinking diameters and possible explanations
+3060	A content based approach for discovering missing anchor text for web search
+3061	Conditional Models for Non-smooth Ranking Loss Functions
+3062	IBM SpamGuru on the TREC 2005 Spam Track
+3063	Latent association analysis of document pairs
+3064	A comparison of retrieval-based hierarchical clustering approaches to person name disambiguation
+3065	On pruning for top-k ranking in uncertain databases
+3066	GRAPE: a system for disambiguating and tagging people names in web search
+3067	SlidingWindow based Multi-Join Algorithms over Distributed Data Streams
+3068	Deferentially Private Tagging Recommendation Based on Topic Model
+3069	A study of the dirichlet priors for term frequency normalisation
+3070	Efficient answering of set containment queries for skewed item distributions
+3071	Query Rewrites with Views for XML in DB2
+3072	A general framework for geo-social query processing
+3073	CADS: continuous authentication on data streams
+3074	SemCrypt - Ensuring Privacy of Electronic Documents Through Semantic-Based Encrypted Query Processing
+3075	Key-key-value stores for efficiently processing graph data in the cloud
+3076	Ranking Query Results using Context-Aware Preferences
+3077	Extending BM25 with multiple query operators
+3078	Stabbing the sky: efficient skyline computation over sliding windows
+3079	Nearest Surrounder Queries
+3080	Juru at TREC 2005: Query Prediction in the Terabyte and the Robust tracks
+3081	RTM: Laws and a Recursive Generator for Weighted Time-Evolving Graphs
+3082	Cooperative scans: dynamic bandwidth sharing in a DBMS
+3083	Keyword extraction for social snippets
+3084	Tracing the Path: New Model and Algorithms for Collaborative Filtering
+3085	Focused clustering and outlier detection in large attributed graphs
+3086	Evaluation as a service for information retrieval
+3087	SEDA: a system for search, exploration, discovery, and analysis of XML Data
+3088	CURE for cubes: cubing using a ROLAP engine
+3089	Privacy-aware mobile services over road networks
+3090	Tuning database configuration parameters with iTuned
+3091	SQL/MapReduce: a practical approach to self-describing, polymorphic, and parallelizable user-defined functions
+3092	Adapting Relational Database Engine to Accommodate Moving Objects in SpADE
+3093	Compiled Query Execution Engine using JVM
+3094	Mining evidences for named entity disambiguation
+3095	How schema independent are schema free query interfaces
+3096	Classification of software behaviors for failure detection: a discriminative pattern mining approach
+3097	Application networking on peer-to-peer networks
+3098	Extracting key-substring-group features for text classification
+3099	Live visual relevance feedback for query formulation
+3100	Why Stacked Models Perform Effective Collective Classification
+3101	Towards robust indexing for ranked queries
+3102	Access Methods for Markovian Streams
+3103	A structural cluster kernel for learning on graphs
+3104	Learning consensus opinion: mining data from a labeling game
+3105	Mining large graphs: Algorithms, inference, and discoveries
+3106	Maximum profit mining and its application in software development
+3107	Definition, detection, and recovery of single-page failures, a fourth class of database failures
+3108	Graph indexing: tree + delta <= graph
+3109	Unsupervised Class Separation of Multivariate Data through Cumulative Variance-Based Ranking
+3110	LB_Keogh supports exact indexing of shapes under rotation invariance with arbitrary representations and distance measures
+3111	Risk Mining in Hospital Information Systems
+3112	On dimensionality reduction of massive graphs for indexing and retrieval
+3113	Interactive route search in the presence of order constraints
+3114	Neutralized Empirical Risk Minimization with Generalization Neutrality Bound
+3115	Residual Matrix and Statistical Independence in a Contingency Table
+3116	Index-based Most Similar Trajectory Search
+3117	Making Unstructured Data SPARQL Using Semantic Indexing in Oracle Database
+3118	Deep web entity monitoring
+3119	Control-Based Load Shedding in Data Stream Management Systems
+3120	Link recommendation for promoting information diffusion in social networks
+3121	Reachability analysis and modeling of dynamic event networks
+3122	Exploring Groups from Heterogeneous Data via Sparse Learning
+3123	Combining Metric Features in Large Collections
+3124	Spatial data mining to support pandemic preparedness
+3125	Thread detection in dynamic text message streams
+3126	Automatic extraction of top-k lists from the web
+3127	Toward self-correcting search engines: using underperforming queries to improve search
+3128	Online mining of data streams: applications, techniques and progress
+3129	Latent semantic analysis for multiple-type interrelated data objects
+3130	An early warning system for unrecognized drug side effects discovery
+3131	Modeling multiple time series for anomaly detection
+3132	Scalable collaborative filtering using cluster-based smoothing
+3133	A bi-clustering framework for categorical data
+3134	TCAM-conscious Algorithms for Data Streams
+3135	Concept Recognition, Information Retrieval, and Machine Learning in Genomics Question-Answering
+3136	Optimizing I/O for big array analytics
+3137	Keyphrase Extraction Using Semantic Networks Structure Analysis
+3138	Knowledge Transfer and Opinion Detection in the TREC2006 Blog Track
+3139	Distributed data management in 2020
+3140	LORA: link obfuscation by randomization in graphs
+3141	Modeling and querying possible repairs in duplicate detection
+3142	Content-based filtering in on-line social networks
+3143	Online pairing of VoIP conversations
+3144	Detecting online commercial intention (OCI)
+3145	Scalable continuous query processing by tracking hotspots
+3146	Quicklink selection for navigational query results
+3147	Efficient rewriting of XPath queries using Query Set Specifications
+3148	System Co-Design and Data Management for Flash Devices
+3149	Clustering with Multiple Graphs
+3150	Detecting outliers using transduction and statistical testing
+3151	Understanding of Internal Clustering Validation Measures
+3152	SQPR: Stream query planning with reuse
+3153	Scalable ad-hoc entity extraction from text collections
+3154	Natural Language Specification and Violation Reporting of Business Rules over ER-modeled Databases
+3155	Online maintenance of very large random samples on flash storage
+3156	Boosting Kernel Models for Regression
+3157	The bang for the buck: fair competitive viral marketing from the host perspective
+3158	Partial ensemble classifiers selection for better ranking
+3159	Reliable diversity-based spatial crowdsourcing by moving workers
+3160	Conservative or liberal? Personalized differential privacy
+3161	Detecting Similarity of Transferring Datasets Based on Features of Classification Rules
+3162	Automatic labeling of multinomial topic models
+3163	Query result clustering for object-level search
+3164	Fast algorithms for time series mining
+3165	Universal Resource Lifecycle Management
+3166	A rule evaluation support method with learning models based on objective rule evaluation indexes
+3167	AttentionAttractor: efficient video stream similarity query processing in real time
+3168	Using Data Mining to Estimate Missing Sensor Data
+3169	Semi-Supervised Kernel Regression
+3170	Semi-automatic Categorization of Videos on VideoLectures.net
+3171	A Multi-View Deep Learning Approach for Cross Domain User Modeling in Recommendation Systems
+3172	Making logistic regression a core data mining tool with TR-IRLS
+3173	Efficient structural joins with on-the-fly indexing
+3174	Geographic privacy-aware knowledge discovery and delivery
+3175	Where to Go on Your Next Trip?: Optimizing Travel Destinations Based on User Preferences
+3176	PageChaser: A Tool for the Automatic Correction of Broken Web Links
+3177	RACE: a scalable and elastic parallel system for discovering repeats in very long sequences
+3178	Constructing Ensembles for Better Ranking
+3179	A Self-Organizing Search Engine for RSS Syndicated Web Contents
+3180	C-SPARQL: SPARQL for continuous querying
+3181	Towards Entity Correctness, Completeness and Emergence for Entity Recognition
+3182	Towards a task-based search and recommender systems
+3183	Autonomous resource provisioning for multi-service web applications
+3184	Evaluating similarity measures: a large-scale study in the orkut social network
+3185	University of Glasgow at TREC 2005: Experiments in Terabyte and Enterprise Tracks with Terrier
+3186	Leveraging D-Separation for Relational Data Sets
+3187	Interactive Inference of Join Queries
+3188	Summingbird: a framework for integrating batch and online MapReduce computations
+3189	Community mining from multi-relational networks
+3190	An audit environment for outsourcing of frequent itemset mining
+3191	Increasing the Expressivity of Conditional Functional Dependencies without Extra Complexity
+3192	MaxFirst for MaxBRkNN
+3193	Term Filtering with Bounded Error
+3194	Product retrieval for grocery stores
+3195	CanTree: a tree structure for efficient incremental mining of frequent patterns
+3196	Better than the real thing?: iterative pseudo-query processing using cluster-based language models
+3197	What&#146;s Different: Distributed, Continuous Monitoring of Duplicate-Resilient Aggregates on Data Streams
+3198	OXPath: A language for scalable data extraction, automation, and crawling on the deep web
+3199	Online System Problem Detection by Mining Patterns of Console Logs
+3200	Supporting Keyword Columns with Ontology-based Referential Constraints in DBMS
+3201	Web Query Recommendation via Sequential Query Prediction
+3202	Path prediction and predictive range querying in road network databases
+3203	HCIR 2013: the seventh international symposium on human-computer interaction and information retrieval
+3204	Entity matching: how similar is similar
+3205	Large scale P2P distribution of open-source software
+3206	Stochastic processes and temporal data mining
+3207	How query cost affects search behavior
+3208	A general optimization framework for smoothing language models on graph structures
+3209	Efficient and domain-invariant competitor mining
+3210	Recursive Computation of Regions and Connectivity in Networks
+3211	Column-oriented storage techniques for MapReduce
+3212	Effective computation of biased quantiles over data streams
+3213	Unsupervised Clustering In Streaming Data
+3214	Short comings of latent models in supervised settings
+3215	Index maintenance for time-travel text search
+3216	Active feedback in ad hoc information retrieval
+3217	Using graph-based metrics with empirical risk minimization to speed up active learning on networked data
+3218	Inferring a Serialization Order for Distributed Transactions
+3219	Deleting index entries from compliance storage
+3220	SIGIR's 30th anniversary: an analysis of trends in IR research and the topology of its community
+3221	Towards a Complete Event Type Taxonomy
+3222	Abstraction Augmented Markov Models
+3223	Processing private queries over untrusted data cloud through privacy homomorphism
+3224	Dependable cardinality forecasts for XQuery
+3225	Network Simplification with Minimal Loss of Connectivity
+3226	Clustering event logs using iterative partitioning
+3227	Open source search: a data mining platform
+3228	Skyline-join in distributed databases
+3229	LCA-based selection for XML document collections
+3230	A particle-and-density based evolutionary clustering method for dynamic networks
+3231	Discovering Skylines of Subgroup Sets
+3232	Personalized query expansion for the web
+3233	Trie-join: efficient trie-based string similarity joins with edit-distance constraints
+3234	CPU and cache efficient management of memory-resident databases
+3235	Effective and efficient distributed model-based clustering
+3236	Processing Event-Monitoring Queries in Sensor Networks
+3237	TagLearner: A P2P Classifier Learning System from Collaboratively Tagged Text Documents
+3238	Named entity mining from click-through data using weakly supervised latent dirichlet allocation
+3239	Laconic schema mappings: computing the core with SQL queries
+3240	Collective annotation of Wikipedia entities in web text
+3241	Summarizing itemset patterns using probabilistic models
+3242	How to define searching sessions on web search engines
+3243	Efficient fuzzy type-ahead search in TASTIER
+3244	Optimal algorithms for crawling a hidden database in the web
+3245	On Suspending and Resuming Dataflows
+3246	An Inflationary Fixed Point Operator in XQuery
+3247	Improving relevance judgment of web search results with image excerpts
+3248	NUITS: a novel user interface for efficient keyword search over databases
+3249	A simple and efficient sampling method for estimating AP and NDCG
+3250	Approximating StreamingWindow Joins Under CPU Limitations
+3251	Automatically learning document taxonomies for hierarchical classification
+3252	Fine-grained named entity recognition and relation extraction for question answering
+3253	HiSbase: histogram-based P2P main memory data management
+3254	Distributed query sampling: a quality-conscious approach
+3255	Automating the Design and Construction of Query Forms
+3256	Message from the SISAP'08 program committee co-chairs
+3257	Defection detection: predicting search engine switching
+3258	Exploring real mobility data with M-atlas
+3259	Taily: shard selection using the tail of score distributions
+3260	An efficient approach to suggesting topically related web queries using hidden topic model
+3261	BrowseRank: letting web users vote for page importance
+3262	Do user preferences and evaluation measures line up
+3263	Xplus: a SQL-tuning-aware query optimizer
+3264	Summarizing itemset patterns: a profile-based approach
+3265	Integration of semantic-based bipartite graph representation and mutual refinement strategy for biomedical literature clustering
+3266	Mining adjacent markets from a large-scale ads video collection for image advertising
+3267	Distributed SLCA-based XML keyword search by map-reduce
+3268	How to choose combinations in a join of search results
+3269	A Rule-Based Classification Algorithm for Uncertain Data
+3270	Mining Frequent Itemsets from Noisy Data
+3271	MobiMix: Protecting location privacy with mix-zones over road networks
+3272	On Potential Validity of Document-Centric XML Documents
+3273	Deriving marketing intelligence from online discussion
+3274	Temporally Coherent Role-Topic Models TCRTM: Deinterlacing Overlapping Activity Patterns
+3275	Expressive query specification through form customization
+3276	Mining of Frequent Itemsets from Streams of Uncertain Data
+3277	Approximate quantiles and the order of the stream
+3278	Direct Discriminative Pattern Mining for Effective Classification
+3279	Modeling and Predicting the Helpfulness of Online Reviews
+3280	Extraction and mining of an academic social network
+3281	Classification and novel class detection of data streams in a dynamic feature space
+3282	Enhancing cluster labeling using wikipedia
+3283	Selecting Stars: The k Most Representative Skyline Operator
+3284	Hop doubling label indexing for point-to-point distance querying on scale-free networks
+3285	Top-k Spatial Joins of Probabilistic Objects
+3286	Exploring in the weblog space by detecting informative and affective articles
+3287	Publishing Sensitive Transactions for Itemset Utility
+3288	Content-aware click modeling
+3289	Cleaning inconsistencies in information extraction via prioritized repairs
+3290	MedSearch: a specialized search engine for medical information
+3291	Index Pruning and Result Reranking: Effects on Ad-Hoc Retrieval and Named Page Finding.
+3292	Explore or exploit?: effective strategies for disambiguating large databases
+3293	Ranking definitions with supervised learning methods
+3294	To tune or not to tune?: a lightweight physical design alerter
+3295	Mining Heavy Subgraphs in Time-Evolving Networks
+3296	AnswerArt: contextualized question answering
+3297	Improving database performance on simultaneous multithreading processors
+3298	A unified framework for monitoring data streams in real time
+3299	Differencing Provenance in Scientific Workflows
+3300	Efficiently Computing Inclusion Dependencies for Schema Discovery
+3301	Thresholding Strategies for Text Classifiers: TREC-2005 Biomedical Triage Task Experiments
+3302	MindFinder: image search by interactive sketching and tagging
+3303	Analyzing and predicting question quality in community question answering services
+3304	AutoTag: a collaborative approach to automated tag assignment for weblog posts
+3305	Embellishing text search queries to protect user privacy
+3306	Using Burstiness to Improve Clustering of Topics in News Streams
+3307	A Framework for Regional Association Rule Mining in Spatial Datasets
+3308	Complement union for data integration
+3309	Approximate Aggregations in Trajectory Data Warehouses
+3310	FiST: scalable XML document filtering by sequencing twig patterns
+3311	Evaluating Learning Algorithms Composed by a Constructive Meta-Learning Scheme for a Rule Evaluation Support Method
+3312	X-LiSA: cross-lingual semantic annotation
+3313	Temporal query substitution for ad search
+3314	Top-k publish-subscribe for social annotation of news
+3315	Feature extraction from mass spectra for classification of pathological states
+3316	Mining adaptively frequent closed unlabeled rooted trees in data streams
+3317	Which "Apple" are you talking about ?
+3318	LB-Index: A Multi-Resolution Index Structure for Images
+3319	As Strong as the Weakest Link: Mining Diverse Cliques in Weighted Graphs
+3320	Vogue: a novel variable order-gap state machine for modeling sequences
+3321	Mining event periodicity from incomplete observations
+3322	SVM in oracle database 10g: removing the barriers to widespread adoption of support vector machines
+3323	Discriminative Frequent Pattern Analysis for Effective Classification
+3324	Scalable query result caching for web applications
+3325	Online hierarchical clustering in a data warehouse environment
+3326	Approximating Aggregation Queries in Peer-to-Peer Networks
+3327	The volume and evolution of web page templates
+3328	Efficiently ordering subgoals with access constraints
+3329	Scrutinizing frequent pattern discovery performance
+3330	Unifying user-based and item-based collaborative filtering approaches by similarity fusion
+3331	Evaluating clustering in subspace projections of high dimensional data
+3332	Actively Building Private Recommender Networks for Evolving Reliable Relationships
+3333	Monitoring k-nearest neighbor queries over moving objects
+3334	Holistic Query Transformations for Dynamic Web Applications
+3335	Adaptive self-tuning memory in DB2
+3336	Relational learning via collective matrix factorization
+3337	Learning from Aggregate Views
+3338	On the comparison of microdata disclosure control algorithms
+3339	Skyline probability over uncertain preferences
+3340	Understanding task-driven information flow in collaborative networks
+3341	A scalable, predictable join operator for highly concurrent data warehouses
+3342	Score-safe term-dependency processing with hybrid indexes
+3343	Expressiveness of XSDs: from practice to theory, there and back again
+3344	Discovering spatio-temporal causal interactions in traffic data streams
+3345	Concurrency control and recovery for balanced B-link trees
+3346	Towards materialized view selection for distributed databases
+3347	Automated creation of a forms-based database query interface
+3348	Start Globally, Optimize Locally, Predict Globally: Improving Performance on Imbalanced Data
+3349	Efficient error-tolerant query autocompletion
+3350	Comparisons of K-Anonymization and Randomization Schemes under Linking Attacks
+3351	A Content and Device Management Method for Multiple Contents Browsing with Multiple Devices
+3352	Binary XML storage and query processing in Oracle 11g
+3353	Bid optimization for broad match ad auctions
+3354	Weighted Additive Criterion for Linear Dimension Reduction
+3355	A New Local Distance-Based Outlier Detection Approach for Scattered Real-World Data
+3356	Consistent bipartite graph co-partitioning for star-structured high-order heterogeneous data co-clustering
+3357	Mining Large Networks with Subgraph Counting
+3358	Space Efficient String Mining under Frequency Constraints
+3359	Leadership discovery when data correlatively evolve
+3360	Toward personalized care management of patients at risk: the diabetes case study
+3361	Learned-Norm Pooling for Deep Feedforward and Recurrent Neural Networks
+3362	Inferring query intent from reformulations and clicks
