@@ -1,0 +1,16 @@
+1	vinternational acm sigir conference on research and development in information retrieval
+2	vinternational conference on data mining
+3	vvery large data bases
+4	vknowledge discovery and data mining
+5	vinternational conference on data engineering
+6	vextending database technology
+7	vinternational world wide web conferences
+8	vsymposium on principles of database systems
+9	vWorld Wide Web
+10	vSigmod Record
+11	vasia-pacific web conference
+12	vdatabase systems for advanced applications
+13	vtext retrieval conference
+14	veuropean conference on principles of data mining and knowledge discovery
+15	vProceedings of The Vldb Endowment
+16	vpacific-asia conference on knowledge discovery and data mining
