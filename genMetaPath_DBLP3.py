@@ -16,7 +16,8 @@ class MetaPathGenerator:
     def __init__(self, max_path_length, type_num=3, label_by = 'focus'):
         self.id_author = dict() # author_id(int) -> author_name(str)
         # self.author_id = dict() # author_name(str) -> author_id(int)
-        self.a_id_train = None # numpy array
+        self.a_id_train = None # set
+        self.a_id_test = None # set
         self.id_conf = dict() # paper_id(int) -> conf_id(int)
         self.id_paper = dict() # paper_id(int) -> paper_title(str)
         self.paper_author = dict() # paper_id(int) -> author_id(int)
@@ -46,7 +47,8 @@ class MetaPathGenerator:
                     self.id_author[int(toks[0])] = toks[1]
                     # self.author_id[toks[1]] = int(toks[0])
                     lst.append(int(toks[0]))
-        self.a_id_train = set(random.sample(lst, k=len(self.id_author) // 3))
+        self.a_id_train = set(random.sample(lst, k=int(len(self.id_author) * 0.7)))
+        self.a_id_test = set(lst) - self.a_id_train
 
         with codecs.open(dirpath + "/paper.txt", 'r', 'utf-8') as adictfile:
             for line in adictfile:
@@ -125,6 +127,18 @@ class MetaPathGenerator:
             # print('t{}'.format(self.paper_type))
             return self.paper_type
 
+    def write_test_set(self, dir):
+        file = open(dir + '/DBLP_test.txt', 'w')
+        for a_id in self.a_id_test:
+            toks = [a_id, self.id_author[a_id], self.author_focus[self.id_author[a_id]]]
+            toks_str = '\t'.join(list(map(str, toks))) + '\n'
+            file.write(toks_str)
+
+        file.close()
+        # file = open(dir + '/DBLP_test.txt', 'w')
+        # file.write('xxx')
+
+
     def write_pattern_path(self, meta_path, file, inTest):
         '''
         authro_id_out = author_id(local) - 1
@@ -169,7 +183,7 @@ class MetaPathGenerator:
         if inTest:
             path_fwd[-1] = -1
         path_fwd_str = '\t'.join(list(map(str, path_fwd)))
-        print(path_fwd_str + '\t')
+        # print(path_fwd_str + '\t')
         file.write(path_fwd_str + '\n')
 
     def meta_path_type(self, meta_path):
@@ -229,9 +243,9 @@ class MetaPathGenerator:
                         if not node.id in meta_path[:node.step]:
                             stack.push(Node(a_id, node.step + 1, 0))
         DBLP_train.close()
-        out_file_stat = open(dir_out_train + '/meta_path_l1_new_cnt.txt', 'w')
+        DBLP_stat = open(dir_out_train + '/DBLP_stat.txt', 'w')
         header = [len(self.id_author), len(self.nn_list), len(self.id_paper) + len(self.id_conf), self.N]
-        out_file_stat.write('\t'.join(list(map(str, header))))
+        DBLP_stat.write('\t'.join(list(map(str, header))))
 
 class Stack:
     def __init__(self):
@@ -260,15 +274,17 @@ class Node:
 
 def main():
     dir_input = "data/focus/venue_filtered_unique_id"
-    dir_output = "data/pattern"
+    dir_output = "data/classify_task/pattern"
     meta = MetaPathGenerator(5, 3, "focus")
     meta.read_data(dir_input)
     # print(meta.author_focus)
     print('Generating Meta-Path using files in {0}, label by {1}'.format(dir_input, meta.label_by))
     meta.generate_metapath(dir_output, dir_output)
     print('====================================================')
-    print('Mata-Path (training set) stored in {}: meta_path_DBLP.txt: '.format('data/classify_task'))
-    print('num_of_author, num_of_edges(nn), num_of_bias stored in {}: meta_path_l1_new_cnt.txt'.format(dir_output) )
+    print('Training set stored in {}: DBLP_train.txt: '.format('data/classify_task'))
+    meta.write_test_set(dir_output)
+    print('Training set stored in {}: DBLP_test.txt: '.format('data/classify_task'))
+    # print('num_of_author, num_of_edges(nn), num_of_bias stored in {}: meta_path_l1_new_cnt.txt'.format(dir_output) )
 
 if __name__ == "__main__":
     main()
