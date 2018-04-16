@@ -4,7 +4,7 @@ import numpy as np
 from itertools import repeat
 
 class Data:
-    def __init__(self):
+    def __init__(self, dir, split_ratio=[0.7, 0.3], shuffle=True):
         self.X = None
         self.y = None
         self.X_train = None
@@ -17,6 +17,9 @@ class Data:
         self.nn_num = None
         self.bias_num = None
         self.N = None
+
+        self.load_data(dir)
+        self.split_dataset(split_ratio, shuffle)
 
     def load_data(self, dataset_dir):
         print("Loading Data...")
@@ -52,13 +55,12 @@ class Data:
             self.X_test = np.array(X)
             self.y_test = np.array(y)
 
-
     def shuffle(self):
         indices = np.random.permutation(len(self.X_train))
         self.X_train = self.X_train[indices]
         self.y_train = self.y_train[indices]
 
-    def split_dataset(self, ratio=[0.7, 0.3], shuffle=True):
+    def split_dataset(self, ratio, shuffle):
         '''
         :param ratio(list): the ratio of train, valit. e.g. [0.7, 0.3]
         :return: three datasets
@@ -81,20 +83,18 @@ class Data:
         for i in np.arange(0, X.shape[0], batch_size):
             yield X[i:i + batch_size], y[i:i + batch_size]
 
-
-
-
-
-
-
-
-
-
-# data = Data()
-# data.load_data("../data/classify_task/pattern")
+#
+#
+#
+#
+#
+#
+#
+#
+# dir = "../data/classify_task/pattern"
+# data = Data(dir)
 # print(data.X.shape)
 # print(data.y.shape)
-# data.split_dataset()
 # print(data.X_train.shape)
 # print(data.X_valid.shape)
 # print(data.X_test.shape)
