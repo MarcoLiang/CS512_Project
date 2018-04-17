@@ -5,14 +5,12 @@ from itertools import repeat
 
 class Data:
     def __init__(self, dir, split_ratio=[0.8, 0.2], shuffle=True):
-        self.X = None
-        self.y = None
+        # self.X = None
+        # self.y = None
         self.X_train = None
         self.y_train = None
         self.X_test = None
         self.y_test = None
-        self.X_valid = None
-        self.y_valid = None
         self.author_num = None
         self.nn_num = None
         self.bias_num = None
@@ -28,21 +26,18 @@ class Data:
                 toks = line.strip().split("\t")
                 toks = list(map(int, toks))
                 self.author_num, self.nn_num, self.bias_num, self.N = toks
-
-        self.X = []
-        self.y = []
+        self.X_train = []
+        self.y_train = []
 
         with codecs.open(dataset_dir + '/DBLP_train.txt', 'r', 'utf-8') as cntfile:
             for i, line in enumerate(cntfile):
                 toks = line.strip().split("\t")
                 toks = list(map(int, toks))
                 # x = np.array(toks[:-1])
-                x = toks[:-2]
-
-                self.X.append(x)
-                self.y.append(toks[-2:])
-        self.X = np.array(self.X)
-        self.y = np.array(self.y)-1
+                self.X_train.append(toks[:-2])
+                self.y_train.append(toks[-2:])
+        self.X_train = np.array(self.X_train)
+        self.y_train = np.array(self.y_train)-1
 
         with codecs.open(dataset_dir + '/DBLP_test.txt', 'r', 'utf-8') as testset:
             X = []
@@ -56,9 +51,9 @@ class Data:
             self.y_test = np.array(y)-1
 
     def shuffle(self):
-        indices = np.random.permutation(len(self.X))
-        self.X = self.X[indices]
-        self.y = self.y[indices]
+        indices = np.random.permutation(len(self.X_train))
+        self.X_train = self.X_train[indices]
+        self.y_train = self.y_train[indices]
 
     def split_dataset(self, ratio, shuffle):
         '''
