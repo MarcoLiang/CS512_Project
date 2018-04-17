@@ -133,10 +133,16 @@ class MetaPathGenerator:
             toks = [a_id, self.id_author[a_id], self.author_focus[self.id_author[a_id]]]
             toks_str = '\t'.join(list(map(str, toks))) + '\n'
             file.write(toks_str)
-
         file.close()
         # file = open(dir + '/DBLP_test.txt', 'w')
         # file.write('xxx')
+    def write_train_set(self, dir):
+        file = open(dir + '/DBLP_train_author.txt', 'w')
+        for a_id in self.a_id_test:
+            toks = [a_id, self.id_author[a_id], self.author_focus[self.id_author[a_id]]]
+            toks_str = '\t'.join(list(map(str, toks))) + '\n'
+            file.write(toks_str)
+        file.close()
 
 
     def write_pattern_path(self, meta_path, file, inTest):
@@ -283,6 +289,7 @@ def main():
     print('====================================================')
     print('Training set stored in {}: DBLP_train.txt: '.format('data/classify_task'))
     meta.write_test_set(dir_output)
+    meta.write_train_set(dir_output)
     print('Training set stored in {}: DBLP_test.txt: '.format('data/classify_task'))
     # print('num_of_author, num_of_edges(nn), num_of_bias stored in {}: meta_path_l1_new_cnt.txt'.format(dir_output) )
 
