@@ -10,7 +10,7 @@ author_id = dict()
 
 
 # id file has format <id"\t"name>
-def load_id_file(file_path, mode='m2v'):
+def load_id_file(id_path, mode='m2v'):
     if mode == 'm2v':
         with codecs.open(id_path, 'r', 'utf-8') as f:
             for line in f.readlines():
@@ -44,7 +44,7 @@ def load_id_file(file_path, mode='m2v'):
 
 def load_pre_trained_emb(emb_path, mode='m2v'):
     word_vectors = KeyedVectors.load_word2vec_format(emb_path, binary=True)
-    emb_matrix = np.zeros([len(author_id) + 1, word_vectors.vector_size])
+    emb_matrix = np.zeros([len(author_id), word_vectors.vector_size])
     cnt = 0
     for i, v in enumerate(word_vectors.index2word):
         if v not in author_id:

@@ -56,9 +56,9 @@ class Data:
             self.y_test = np.array(y)-1
 
     def shuffle(self):
-        indices = np.random.permutation(len(self.X_train))
-        self.X_train = self.X_train[indices]
-        self.y_train = self.y_train[indices]
+        indices = np.random.permutation(len(self.X))
+        self.X = self.X[indices]
+        self.y = self.y[indices]
 
     def split_dataset(self, ratio, shuffle):
         '''

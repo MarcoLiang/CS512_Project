@@ -7,7 +7,7 @@ import torch.autograd as autograd
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
-from utils.load_embedding import load_pre_trained_emb
+from utils.load_embedding import *
 
 
 class ModuleBlock(nn.Module):
@@ -34,8 +34,10 @@ class ModuleBlock(nn.Module):
 class ModuleNet(nn.Module):
     def __init__(self, alpha,
                  num_module,
+                 embed,
                  embed_size,
                  embed_path,
+                 id_path,
                  classifier_hidden_dim,
                  classifier_output_dim,
                  verbose=True):
@@ -43,10 +45,11 @@ class ModuleNet(nn.Module):
 
         self.alpha = alpha
 
+        load_id_file(id_path, embed)
         embed = load_pre_trained_emb(embed_path)
-        self.entity_embeds = nn.Embedding(embed.shape[0], embed.shape[1])
-        self.entity_embeds.weight.data.copy_(torch.from_numpy(embed))
-        self.entity_embeds.weight.requires_grad=False
+        self.entity_embeds = torch.from_numpy(embed)
+        # self.entity_embeds.weight.data.copy_(torch.from_numpy(embed))
+        # self.entity_embeds.weight.requires_grad=False
 
         self.function_modules = {}
         for id in range(num_module):
@@ -58,11 +61,10 @@ class ModuleNet(nn.Module):
                                         nn.Linear(classifier_hidden_dim, classifier_output_dim, bias=True))
 
     def look_up_entity_embed(self, id):
-        lookup_tensor = torch.LongTensor([id]).cuda()
-        return self.entity_embeds(autograd.Variable(lookup_tensor))
+        return self.entity_embeds[id].view(1,-1)
 
     def update_entity_embed(self, id, new):
-        self.entity_embeds.weight.data[id] = new
+        self.entity_embeds[id] = new
 
     def forward_path(self, path):
         x = self.look_up_entity_embed(path[0])

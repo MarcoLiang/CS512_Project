@@ -20,8 +20,10 @@ parser.add_argument('--data_dir', default="./data/classify_task/pattern")
 
 # module options
 parser.add_argument('--alpha', default=3)
+parser.add_argument('--embed', default='esim')
 parser.add_argument('--embed_size', default=128)
-parser.add_argument('--embed_path', default="./embedding_file/m2v/dblp_reduced_focus.cac.w1000.l100")
+parser.add_argument('--embed_path', default="./embedding_file/esim/vec_dim_128.dat")
+parser.add_argument('--id_path', default="./data/focus/venue_filtered_unique_id")
 parser.add_argument('--classifier_hidden_dim', default=32)
 parser.add_argument('--classifier_output_dim', default=4)
 
@@ -45,8 +47,10 @@ def train_model(dataset, args):
     args.num_module = dataset.nn_num
     kwargs = {
         'alpha': args.alpha,
+        'embed': args.embed,
         'embed_size': args.embed_size,
         'embed_path': args.embed_path,
+        'id_path': args.id_path,
         'num_module': args.num_module,
         'classifier_hidden_dim': args.classifier_hidden_dim,
         'classifier_output_dim': args.classifier_output_dim
