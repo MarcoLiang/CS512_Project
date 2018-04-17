@@ -66,24 +66,24 @@ class Data:
         self.X = self.X[indices]
         self.y = self.y[indices]
 
-    def split_dataset(self, ratio, shuffle):
-        '''
-        :param ratio(list): the ratio of train, valit. e.g. [0.7, 0.3]
-        :return: three datasets
-        '''
-        print("Spliting data...")
-        n = len(self.y)
-        if shuffle:
-            indices = np.random.permutation(n)
-        else:
-            indices = np.arange(n)
-        train_idx = indices[0 : int(np.floor(ratio[0] * n))]
-        valid_idx = indices[int(np.ceil(ratio[0] * n)) : ]
-
-        self.X_train = self.X[train_idx]
-        self.y_train = self.y[train_idx]
-        self.X_valid = self.X[valid_idx]
-        self.y_valid = self.y[valid_idx]
+    # def split_dataset(self, ratio, shuffle):
+    #     '''
+    #     :param ratio(list): the ratio of train, valit. e.g. [0.7, 0.3]
+    #     :return: three datasets
+    #     '''
+    #     print("Spliting data...")
+    #     n = len(self.y)
+    #     if shuffle:
+    #         indices = np.random.permutation(n)
+    #     else:
+    #         indices = np.arange(n)
+    #     train_idx = indices[0 : int(np.floor(ratio[0] * n))]
+    #     valid_idx = indices[int(np.ceil(ratio[0] * n)) : ]
+    #
+    #     self.X_train = self.X[train_idx]
+    #     self.y_train = self.y[train_idx]
+    #     self.X_valid = self.X[valid_idx]
+    #     self.y_valid = self.y[valid_idx]
 
     def next_batch(self, X, y, batch_size=1):
         for i in np.arange(0, X.shape[0], batch_size):
