@@ -34,7 +34,7 @@ parser.add_argument('--num_epoch', default=100000)
 # Output options
 parser.add_argument('--checkpoint_path', default='./model/trained_model_classification/checkpoint.pt')
 parser.add_argument('--check_every', default=1)
-parser.add_argument('--record_loss_every', default=10000)
+parser.add_argument('--record_loss_every', default=20000)
 
 
 def main(args):
@@ -91,9 +91,6 @@ def train_model(dataset, args):
                     loss = loss_fn(scores, label_var)
                     loss_aver += loss.data[0]
                     loss.backward()
-                    # for param in execution_engine.parameters():
-                    #     print(param.data)
-                    #     print(param.grad.data.sum())
                     optimizer.step()
 
                     if t % args.record_loss_every == 0:
@@ -153,7 +150,7 @@ def check_accuracy(dataset, model, batch_size):
     for batch in dataset.next_batch(dataset.X_test, dataset.y_test, batch_size=batch_size):
         ids, labels = batch
         scores = model.predict(ids)
-        preds = np.argmax(scores.data.numpy(), axis=1)
+        preds = np.argmax(scores.data.cpu().numpy(), axis=1)
         # preds = (scores.data > 0.5).cpu().float()
         num_correct += np.sum(preds == labels)
         num_samples += len(labels)
