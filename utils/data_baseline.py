@@ -19,7 +19,7 @@ class Data:
         self.N = None
 
         self.load_data(dir)
-        # self.split_dataset(split_ratio, shuffle)
+        self.split_dataset(split_ratio, shuffle)
 
     def load_data(self, dataset_dir):
         print("Loading Data...")
@@ -29,20 +29,17 @@ class Data:
                 toks = list(map(int, toks))
                 self.author_num, self.nn_num, self.bias_num, self.N = toks
 
-        self.X = []
-        self.y = []
 
-        with codecs.open(dataset_dir + '/DBLP_train.txt', 'r', 'utf-8') as cntfile:
-            for i, line in enumerate(cntfile):
+        with codecs.open(dataset_dir + '/DBLP_train_baseline.txt', 'r', 'utf-8') as trainset:
+            X = []
+            y = []
+            for line in trainset:
                 toks = line.strip().split("\t")
-                toks = list(map(int, toks))
-                # x = np.array(toks[:-1])
-                x = toks[:-2]
+                X.append(int(toks[0]))
+                y.append(int(toks[-1]))
 
-                self.X.append(x)
-                self.y.append(toks[-2:])
-        self.X = np.array(self.X)
-        self.y = np.array(self.y)-1
+            self.X = np.array(X)
+            self.y = np.array(y) - 1
 
         with codecs.open(dataset_dir + '/DBLP_test.txt', 'r', 'utf-8') as testset:
             X = []
@@ -54,6 +51,17 @@ class Data:
 
             self.X_test = np.array(X)
             self.y_test = np.array(y)-1
+
+        with codecs.open(dataset_dir + '/DBLP_train_baseline.txt', 'r', 'utf-8') as testset:
+            X = []
+            y = []
+            for line in testset:
+                toks = line.strip().split("\t")
+                X.append(int(toks[0]))
+                y.append(int(toks[-1]))
+
+            self.X_authors = np.array(X)
+            self.y_authors = np.array(y)-1
 
     def shuffle(self):
         indices = np.random.permutation(len(self.X))
@@ -93,8 +101,8 @@ class Data:
 #
 dir = "../data/classify_task/pattern"
 data = Data(dir)
-print(data.X_authors)
-print(data.y_authors)
+print(data.X_train)
+print(data.y_train)
 
 # print(data.y.shape)
 # print(data.X_train.shape)
