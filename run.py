@@ -10,93 +10,94 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 
-from utils.data import Data
-from model.model3 import ModuleNet
+from utils.data3 import Data
+from model.model4 import ModuleNet
 
 # data options
 # parser.add_argument('--max_length', default=1)
 parser.add_argument('--batch_size', default=512)
-# parser.add_argument('--data_dir', default="./data/pattern/meta_path_l1_new.txt")
+parser.add_argument('--data_dir', default="./data/classify_task/pattern")
 
 # module options
+parser.add_argument('--alpha', default=3)
 parser.add_argument('--embed_size', default=128)
-# parser.add_argument('--classifier_first_dim', default=128)
-# parser.add_argument('--classifier_second_dim', default=32)
+parser.add_argument('--embed_path', default="./embedding_file/m2v/dblp_reduced_focus.cac.w1000.l100")
+parser.add_argument('--classifier_hidden_dim', default=32)
+parser.add_argument('--classifier_output_dim', default=4)
 
 # Optimization options
 parser.add_argument('--learning_rate', default=5e-4)
 parser.add_argument('--num_epoch', default=100000)
 
 # Output options
-parser.add_argument('--checkpoint_path', default='./model/trained_model/checkpoint.pt')
+parser.add_argument('--checkpoint_path', default='./model/trained_model_classification/checkpoint.pt')
 parser.add_argument('--check_every', default=2)
 parser.add_argument('--record_loss_every', default=100)
 
 
 def main(args):
     # load data
-    dataset = Data()
-    # dataset.data_load(args.data_dir, args.max_length)
-    dataset.load_data("./data/pattern/meta_path_l1_new.txt", "./data/pattern/meta_path_l1_new_cnt.txt")
-    dataset.split_dataset()
-
-    args.num_module = dataset.nn_num
-    args.num_bias = dataset.bias_num
-    args.num_entity = dataset.author_num
-
+    dataset = Data(args.data_dir)
     train_model(dataset, args)
 
 
 def train_model(dataset, args):
-
+    args.num_module = dataset.nn_num
     kwargs = {
+        'alpha': args.alpha,
         'embed_size': args.embed_size,
-        'num_entity': args.num_entity,
+        'embed_path': args.embed_path,
         'num_module': args.num_module,
-        'num_bias': args.num_bias,
-        # 'max_length': args.max_length,
-        # 'classifier_first_dim': args.classifier_first_dim,
-        # 'classifier_second_dim': args.classifier_second_dim
+        'classifier_hidden_dim': args.classifier_hidden_dim,
+        'classifier_output_dim': args.classifier_output_dim
     }
 
     execution_engine = ModuleNet(**kwargs)
     execution_engine.cuda()
     execution_engine.train()
     optimizer = torch.optim.Adam(execution_engine.parameters(), lr=args.learning_rate)
-    loss_fn = torch.nn.BCELoss().cuda()
+    loss_fn = torch.nn.CrossEntropyLoss().cuda()
 
     stats = {
-        'train_losses': [], 'train_losses_ts': [],
+        'train_losses': [], 'train_losses_ts': [], 'train_losses_ms': [],
         'train_accs': [], 'val_accs': [], 'val_accs_es': [],
         'best_val_acc': -1, 'model_e': 0,
     }
 
     t = 0
+    m = 0
     epoch = 0
     while epoch < args.num_epoch:
         dataset.shuffle()
         epoch += 1
         print('Starting epoch %d' % epoch)
         loss_aver = 0
-        for batch in dataset.next_batch(dataset.X_train, dataset.y_train, batch_size=args.batch_size):
-            t += 1
+        for batch in dataset.next_batch(dataset.X, dataset.y, batch_size=args.batch_size):
             paths, labels = batch
-            labels_var = Variable(torch.FloatTensor(labels).cuda())
-            optimizer.zero_grad()
-            scores = execution_engine(paths)
-            loss = loss_fn(scores, labels_var.view(-1, 1))
-            loss_aver += loss.data[0]
-            loss.backward()
-            # for param in execution_engine.parameters():
-            #     print(param.data)
-            #     print(param.grad.data.sum())
-            optimizer.step()
+            for i in range(args.batch_size):
+                path, label = paths[i], labels[i, -1]
+                if label == -1:
+                    m += 1
+                    execution_engine.forward_path(path)
+                else:
+                    t += 1
+                    label_var = Variable(torch.FloatTensor(label).cuda())
+                    optimizer.zero_grad()
+                    scores = execution_engine(path)
+                    loss = loss_fn(scores, label_var.view(-1, 1))
+                    loss_aver += loss.data[0]
+                    loss.backward()
+                    # for param in execution_engine.parameters():
+                    #     print(param.data)
+                    #     print(param.grad.data.sum())
+                    optimizer.step()
 
             if t % args.record_loss_every == 0:
                 loss_aver /= args.record_loss_every
-                print(t, loss_aver)
+                print(t, m, loss_aver)
                 stats['train_losses'].append(loss_aver)
                 stats['train_losses_ts'].append(t)
+                stats['train_losses_ms'].append(m)
                 loss_aver = 0
 
         if epoch % args.check_every == 0:
@@ -145,13 +146,14 @@ def check_accuracy(dataset, model, batch_size):
     model.eval()
 
     num_correct, num_samples = 0, 0
-    for batch in dataset.next_batch(dataset.X_valid, dataset.y_valid, batch_size=batch_size):
-        paths, labels = batch
-        labels_var = torch.FloatTensor(labels)
-        scores = model(paths)
-        preds = (scores.data > 0.5).cpu().float()
-        num_correct += (preds == labels_var).sum()
-        num_samples += preds.size(0)
+    for batch in dataset.next_batch(dataset.X_test, dataset.y_test, batch_size=batch_size):
+        ids, labels = batch
+        labels = labels[:, -1]
+        scores = model.predict(ids)
+        preds = np.argmax(scores.data.numpy(), axis=1)
+        # preds = (scores.data > 0.5).cpu().float()
+        num_correct += np.sum(preds == labels)
+        num_samples += len(labels)
     valid_acc = float(num_correct) / num_samples
 
     model.train()
