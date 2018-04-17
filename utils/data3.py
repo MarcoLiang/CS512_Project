@@ -4,7 +4,7 @@ import numpy as np
 from itertools import repeat
 
 class Data:
-    def __init__(self, dir, split_ratio=[0.7, 0.3], shuffle=True):
+    def __init__(self, dir, split_ratio=[0.8, 0.2], shuffle=True):
         self.X = None
         self.y = None
         self.X_train = None
@@ -19,7 +19,7 @@ class Data:
         self.N = None
 
         self.load_data(dir)
-        self.split_dataset(split_ratio, shuffle)
+        # self.split_dataset(split_ratio, shuffle)
 
     def load_data(self, dataset_dir):
         print("Loading Data...")
@@ -42,7 +42,7 @@ class Data:
                 self.X.append(x)
                 self.y.append(toks[-2:])
         self.X = np.array(self.X)
-        self.y = np.array(self.y)
+        self.y = np.array(self.y)-1
 
         with codecs.open(dataset_dir + '/DBLP_test.txt', 'r', 'utf-8') as testset:
             X = []
@@ -53,12 +53,12 @@ class Data:
                 y.append(int(toks[-1]))
 
             self.X_test = np.array(X)
-            self.y_test = np.array(y)
+            self.y_test = np.array(y)-1
 
     def shuffle(self):
-        indices = np.random.permutation(len(self.X_train))
-        self.X_train = self.X_train[indices]
-        self.y_train = self.y_train[indices]
+        indices = np.random.permutation(len(self.X))
+        self.X = self.X[indices]
+        self.y = self.y[indices]
 
     def split_dataset(self, ratio, shuffle):
         '''

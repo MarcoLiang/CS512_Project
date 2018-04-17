@@ -9,8 +9,12 @@ import torch.nn as nn
 
 
 # id file has format <id"\t"name>
+<<<<<<< HEAD
 def load_id_file(file_path, mode='m2v'):
     author_id = dict()
+=======
+def load_id_file(id_path, mode='m2v'):
+>>>>>>> 5f452e4f2c193b0826f3aaaac6928ec02ed6dd2b
     if mode == 'm2v':
         with codecs.open(id_path, 'r', 'utf-8') as f:
             for line in f.readlines():
