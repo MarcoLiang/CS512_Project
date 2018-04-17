@@ -50,52 +50,17 @@ class Data:
             self.X_test = np.array(X)
             self.y_test = np.array(y)-1
 
-        with codecs.open(dataset_dir + '/DBLP_train_baseline.txt', 'r', 'utf-8') as testset:
-            X = []
-            y = []
-            for line in testset:
-                toks = line.strip().split("\t")
-                X.append(int(toks[0]))
-                y.append(int(toks[-1]))
-
-            self.X_authors = np.array(X)
-            self.y_authors = np.array(y)-1
-
     def shuffle(self):
         indices = np.random.permutation(len(self.X))
-        self.X = self.X[indices]
-        self.y = self.y[indices]
+        self.X_train = self.X[indices]
+        self.y_train = self.y[indices]
 
-    # def split_dataset(self, ratio, shuffle):
-    #     '''
-    #     :param ratio(list): the ratio of train, valit. e.g. [0.7, 0.3]
-    #     :return: three datasets
-    #     '''
-    #     print("Spliting data...")
-    #     n = len(self.y)
-    #     if shuffle:
-    #         indices = np.random.permutation(n)
-    #     else:
-    #         indices = np.arange(n)
-    #     train_idx = indices[0 : int(np.floor(ratio[0] * n))]
-    #     valid_idx = indices[int(np.ceil(ratio[0] * n)) : ]
-    #
-    #     self.X_train = self.X[train_idx]
-    #     self.y_train = self.y[train_idx]
-    #     self.X_valid = self.X[valid_idx]
-    #     self.y_valid = self.y[valid_idx]
 
     def next_batch(self, X, y, batch_size=1):
         for i in np.arange(0, X.shape[0], batch_size):
             yield X[i:i + batch_size], y[i:i + batch_size]
 
-#
-#
-#
-#
-#
-#
-#
+
 #
 # dir = "../data/classify_task/pattern"
 # data = Data(dir)
