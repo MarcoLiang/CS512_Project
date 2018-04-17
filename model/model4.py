@@ -34,7 +34,7 @@ class ModuleBlock(nn.Module):
 class ModuleNet(nn.Module):
     def __init__(self, alpha,
                  num_module,
-                 embed,
+                 embed_mode,
                  embed_size,
                  embed_path,
                  id_path,
@@ -45,9 +45,8 @@ class ModuleNet(nn.Module):
 
         self.alpha = alpha
 
-        load_id_file(id_path, embed)
-        embed = load_pre_trained_emb(embed_path)
-        self.entity_embeds = torch.from_numpy(embed)
+        embed = embedding_loader(id_path, embed_path, embed_mode)
+        self.entity_embeds = Variable(torch.from_numpy(embed).float().cuda(), requires_grad=False)
         # self.entity_embeds.weight.data.copy_(torch.from_numpy(embed))
         # self.entity_embeds.weight.requires_grad=False
 
@@ -64,7 +63,7 @@ class ModuleNet(nn.Module):
         return self.entity_embeds[id].view(1,-1)
 
     def update_entity_embed(self, id, new):
-        self.entity_embeds[id] = new
+        self.entity_embeds.data[id] = new.data
 
     def forward_path(self, path):
         x = self.look_up_entity_embed(path[0])
