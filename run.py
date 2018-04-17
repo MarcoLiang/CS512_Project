@@ -76,7 +76,7 @@ def train_model(dataset, args):
         epoch += 1
         print('Starting epoch %d' % epoch)
         loss_aver = 0
-        for batch in dataset.next_batch(dataset.X, dataset.y, batch_size=args.batch_size):
+        for batch in dataset.next_batch(dataset.X_train, dataset.y_train, batch_size=args.batch_size):
             paths, labels = batch
             for i in range(len(labels)):
                 path, label = paths[i], labels[i, -1]

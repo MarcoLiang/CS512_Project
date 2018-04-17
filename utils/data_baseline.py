@@ -51,9 +51,9 @@ class Data:
             self.y_test = np.array(y)-1
 
     def shuffle(self):
-        indices = np.random.permutation(len(self.X))
-        self.X_train = self.X[indices]
-        self.y_train = self.y[indices]
+        indices = np.random.permutation(len(self.X_train))
+        self.X_train = self.X_train[indices]
+        self.y_train = self.y_train[indices]
 
 
     def next_batch(self, X, y, batch_size=1):
