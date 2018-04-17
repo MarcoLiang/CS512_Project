@@ -5,8 +5,6 @@ from itertools import repeat
 
 class Data:
     def __init__(self, dir, split_ratio=[0.8, 0.2], shuffle=True):
-        self.X = None
-        self.y = None
         self.X_train = None
         self.y_train = None
         self.X_test = None
@@ -19,10 +17,10 @@ class Data:
         self.N = None
 
         self.load_data(dir)
-        self.split_dataset(split_ratio, shuffle)
+        # self.split_dataset(split_ratio, shuffle)
 
     def load_data(self, dataset_dir):
-        print("Loading Data...")
+        print("Loading Data (baseline)...")
         with open(dataset_dir + '/DBLP_stat.txt') as f:
             for line in f:
                 toks = line.strip().split("\t")
@@ -38,8 +36,8 @@ class Data:
                 X.append(int(toks[0]))
                 y.append(int(toks[-1]))
 
-            self.X = np.array(X)
-            self.y = np.array(y) - 1
+            self.X_train = np.array(X)
+            self.y_train = np.array(y) - 1
 
         with codecs.open(dataset_dir + '/DBLP_test.txt', 'r', 'utf-8') as testset:
             X = []
