@@ -85,9 +85,9 @@ def train_model(dataset, args):
                     execution_engine.forward_path(path)
                 else:
                     t += 1
-                    label_var = Variable(torch.FloatTensor(label).cuda())
+                    label_var = Variable(torch.LongTensor([int(label)]).cuda())
                     optimizer.zero_grad()
-                    scores = execution_engine(path)
+                    scores = execution_engine([path])
                     loss = loss_fn(scores, label_var.view(-1, 1))
                     loss_aver += loss.data[0]
                     loss.backward()
