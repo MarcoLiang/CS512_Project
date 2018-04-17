@@ -7,12 +7,11 @@ import torch
 import torch.nn as nn
 
 
-
 # id file has format <id"\t"name>
 def load_id_file(file_path, mode='m2v'):
     author_id = dict()
     if mode == 'm2v':
-        with codecs.open(id_path, 'r', 'utf-8') as f:
+        with codecs.open(file_path, 'r', 'utf-8') as f:
             for line in f.readlines():
                 line = line.strip().split("\t")
                 if "a" + line[1] in author_id:
@@ -20,21 +19,21 @@ def load_id_file(file_path, mode='m2v'):
                 author_id["a" + line[1].replace(' ', '')] = int(line[0])
         f.close()
     elif mode == 'esim':
-        with codecs.open(id_path + '/id_author.txt', 'r', 'utf-8') as f:
+        with codecs.open(file_path + '/id_author.txt', 'r', 'utf-8') as f:
             for line in f.readlines():
                 line = line.strip().split("\t")
-                if  line[1] in author_id:
+                if line[1] in author_id:
                     print("Warning: duplicate author {}".format(line[1]))
                 author_id[line[1].replace(' ', '_')] = int(line[0])
         f.close()
-        with codecs.open(id_path + '/id_conf.txt', 'r', 'utf-8') as f:
+        with codecs.open(file_path + '/id_conf.txt', 'r', 'utf-8') as f:
             for line in f.readlines():
                 line = line.strip().split("\t")
                 if line[1] in author_id:
                     print("Warning: duplicate conf {}".format(line[1]))
                 author_id[line[1].replace(' ', '_')] = int(line[0])
         f.close()
-        with codecs.open(id_path + '/paper.txt', 'r', 'utf-8') as f:
+        with codecs.open(file_path + '/paper.txt', 'r', 'utf-8') as f:
             for line in f.readlines():
                 line = line.strip().split("\t")
                 if line[1] in author_id:
@@ -42,6 +41,7 @@ def load_id_file(file_path, mode='m2v'):
                 author_id[line[1].replace(' ', '_')] = int(line[0])
         f.close()
     return author_id
+
 
 def embedding_loader(id_path, emb_path, mode='m2v'):
     author_id = load_id_file(id_path, mode)
@@ -56,10 +56,10 @@ def embedding_loader(id_path, emb_path, mode='m2v'):
         emb_matrix[author_id[v]] = word_vectors.vectors[i]
     return emb_matrix
 
-if __name__ == "__main__":
-    id_path = "/Users/ruiyangwang/Desktop/ResearchProject/CS512_Project/data/focus/venue_filtered_unique_id"
-    emb_path = "/Users/ruiyangwang/Desktop/ResearchProject/ESim/results/vec.dat"
-    m = embedding_loader(id_path, emb_path, "esim")
-    torch_emb = nn.Embedding(m.shape[0], m.shape[1])
-    torch_emb.weight.data.copy_(torch.from_numpy(m))
-    print("Done")
+# if __name__ == "__main__":
+# id_path = "/Users/ruiyangwang/Desktop/ResearchProject/CS512_Project/data/focus/venue_filtered_unique_id"
+# emb_path = "/Users/ruiyangwang/Desktop/ResearchProject/ESim/results/vec.dat"
+# m = embedding_loader(id_path, emb_path, "esim")
+# torch_emb = nn.Embedding(m.shape[0], m.shape[1])
+# torch_emb.weight.data.copy_(torch.from_numpy(m))
+# print("Done")
