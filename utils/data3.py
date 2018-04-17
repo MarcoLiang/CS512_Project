@@ -91,10 +91,10 @@ class Data:
 #
 #
 #
-dir = "../data/classify_task/pattern"
-data = Data(dir)
-print(data.X_authors)
-print(data.y_authors)
+# dir = "../data/classify_task/pattern"
+# data = Data(dir)
+# print(data.X_authors)
+# print(data.y_authors)
 
 # print(data.y.shape)
 # print(data.X_train.shape)

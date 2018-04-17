@@ -33,8 +33,8 @@ parser.add_argument('--num_epoch', default=100000)
 
 # Output options
 parser.add_argument('--checkpoint_path', default='./model/trained_model_classification/checkpoint.pt')
-parser.add_argument('--check_every', default=2)
-parser.add_argument('--record_loss_every', default=100)
+parser.add_argument('--check_every', default=1)
+parser.add_argument('--record_loss_every', default=10000)
 
 
 def main(args):
@@ -47,7 +47,7 @@ def train_model(dataset, args):
     args.num_module = dataset.nn_num
     kwargs = {
         'alpha': args.alpha,
-        'embed': args.embed,
+        'embed_mode': args.embed,
         'embed_size': args.embed_size,
         'embed_path': args.embed_path,
         'id_path': args.id_path,
@@ -78,9 +78,9 @@ def train_model(dataset, args):
         loss_aver = 0
         for batch in dataset.next_batch(dataset.X, dataset.y, batch_size=args.batch_size):
             paths, labels = batch
-            for i in range(args.batch_size):
+            for i in range(len(labels)):
                 path, label = paths[i], labels[i, -1]
-                if label == -1:
+                if label == -2:
                     m += 1
                     execution_engine.forward_path(path)
                 else:
@@ -88,7 +88,7 @@ def train_model(dataset, args):
                     label_var = Variable(torch.LongTensor([int(label)]).cuda())
                     optimizer.zero_grad()
                     scores = execution_engine([path])
-                    loss = loss_fn(scores, label_var.view(-1, 1))
+                    loss = loss_fn(scores, label_var)
                     loss_aver += loss.data[0]
                     loss.backward()
                     # for param in execution_engine.parameters():
@@ -96,13 +96,13 @@ def train_model(dataset, args):
                     #     print(param.grad.data.sum())
                     optimizer.step()
 
-            if t % args.record_loss_every == 0:
-                loss_aver /= args.record_loss_every
-                print(t, m, loss_aver)
-                stats['train_losses'].append(loss_aver)
-                stats['train_losses_ts'].append(t)
-                stats['train_losses_ms'].append(m)
-                loss_aver = 0
+                    if t % args.record_loss_every == 0:
+                        loss_aver /= args.record_loss_every
+                        print(t, m, loss_aver)
+                        stats['train_losses'].append(loss_aver)
+                        stats['train_losses_ts'].append(t)
+                        stats['train_losses_ms'].append(m)
+                        loss_aver = 0
 
         if epoch % args.check_every == 0:
             print('Checking training/validation accuracy ... ')
@@ -152,7 +152,6 @@ def check_accuracy(dataset, model, batch_size):
     num_correct, num_samples = 0, 0
     for batch in dataset.next_batch(dataset.X_test, dataset.y_test, batch_size=batch_size):
         ids, labels = batch
-        labels = labels[:, -1]
         scores = model.predict(ids)
         preds = np.argmax(scores.data.numpy(), axis=1)
         # preds = (scores.data > 0.5).cpu().float()
