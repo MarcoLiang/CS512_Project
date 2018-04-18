@@ -137,8 +137,8 @@ class MetaPathGenerator:
         # file = open(dir + '/DBLP_test.txt', 'w')
         # file.write('xxx')
     def write_train_set(self, dir):
-        file = open(dir + '/DBLP_train_author.txt', 'w')
-        for a_id in self.a_id_test:
+        file = open(dir + '/DBLP_train_baseline.txt', 'w')
+        for a_id in self.a_id_train:
             toks = [a_id, self.id_author[a_id], self.author_focus[self.id_author[a_id]]]
             toks_str = '\t'.join(list(map(str, toks))) + '\n'
             file.write(toks_str)
