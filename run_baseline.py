@@ -10,12 +10,12 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 
-from utils.data3 import Data
+from utils.data_baseline import Data
 from utils.load_embedding import *
 
 # data options
-parser.add_argument('--batch_size', default=512)
-parser.add_argument('--data_dir', default="./data/classify_task/pattern")
+parser.add_argument('--batch_size', default=128)
+parser.add_argument('--data_dir', default="./data/classify_task/pattern_50_50")
 
 # module options
 parser.add_argument('--embed', default='esim')
@@ -31,8 +31,8 @@ parser.add_argument('--num_epoch', default=100000)
 
 # Output options
 parser.add_argument('--checkpoint_path', default='./model/baseline_model_classification/checkpoint.pt')
-parser.add_argument('--check_every', default=1)
-parser.add_argument('--record_loss_every', default=100)
+parser.add_argument('--check_every', default=10)
+parser.add_argument('--record_loss_every', default=1)
 
 
 class BaselineMLP(nn.Module):
@@ -46,7 +46,7 @@ class BaselineMLP(nn.Module):
         super(BaselineMLP, self).__init__()
 
         embed = embedding_loader(id_path, embed_path, embed_mode)
-        self.entity_embeds = Variable(torch.from_numpy(embed).float().cuda(), requires_grad=False)
+        self.entity_embeds = Variable(torch.from_numpy(embed).float(), requires_grad=False)
 
         self.classifier = nn.Sequential(nn.Linear(embed_size, classifier_hidden_dim, bias=True),
                                         nn.ReLU(inplace=True),
@@ -81,10 +81,10 @@ def train_model(dataset, args):
     }
 
     execution_engine = BaselineMLP(**kwargs)
-    execution_engine.cuda()
+    execution_engine#.cuda()
     execution_engine.train()
     optimizer = torch.optim.Adam(execution_engine.parameters(), lr=args.learning_rate)
-    loss_fn = torch.nn.CrossEntropyLoss().cuda()
+    loss_fn = torch.nn.CrossEntropyLoss()#.cuda()
 
     stats = {
         'train_losses': [], 'train_losses_ts': [],
@@ -97,12 +97,13 @@ def train_model(dataset, args):
     while epoch < args.num_epoch:
         dataset.shuffle()
         epoch += 1
-        print('Starting epoch %d' % epoch)
+        # print('Starting epoch %d' % epoch)
         loss_aver = 0
         for batch in dataset.next_batch(dataset.X_train, dataset.y_train, batch_size=args.batch_size):
             t += 1
             ids, labels = batch
-            label_var = Variable(torch.LongTensor(labels).cuda())
+            label_var = Variable(torch.LongTensor(labels))
+            # label_var = Variable(torch.LongTensor(labels).cuda())
             optimizer.zero_grad()
             scores = execution_engine(ids)
             loss = loss_fn(scores, label_var)
@@ -112,7 +113,7 @@ def train_model(dataset, args):
 
             if t % args.record_loss_every == 0:
                 loss_aver /= args.record_loss_every
-                print(t, loss_aver)
+                # print(t, loss_aver)
                 stats['train_losses'].append(loss_aver)
                 stats['train_losses_ts'].append(t)
                 loss_aver = 0
