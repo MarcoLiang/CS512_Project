@@ -15,7 +15,7 @@ from utils.load_embedding import *
 
 # data options
 parser.add_argument('--batch_size', default=128)
-parser.add_argument('--data_dir', default="./data/classify_task/pattern_50_50")
+parser.add_argument('--data_dir', default="./data/classify_task/pattern_30_70")
 
 # module options
 parser.add_argument('--embed', default='esim')
@@ -81,7 +81,7 @@ def train_model(dataset, args):
     }
 
     execution_engine = BaselineMLP(**kwargs)
-    execution_engine#.cuda()
+    # execution_engine.cuda()
     execution_engine.train()
     optimizer = torch.optim.Adam(execution_engine.parameters(), lr=args.learning_rate)
     loss_fn = torch.nn.CrossEntropyLoss()#.cuda()

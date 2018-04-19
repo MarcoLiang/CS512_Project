@@ -14,9 +14,8 @@ from utils.data3 import Data
 from model.model4 import ModuleNet
 
 # data options
-# parser.add_argument('--max_length', default=1)
 parser.add_argument('--batch_size', default=512)
-parser.add_argument('--data_dir', default="./data/classify_task/pattern")
+parser.add_argument('--data_dir', default="./data/classify_task/pattern_30_70")
 
 # module options
 parser.add_argument('--alpha', default=3)
@@ -32,7 +31,7 @@ parser.add_argument('--learning_rate', default=5e-4)
 parser.add_argument('--num_epoch', default=100000)
 
 # Output options
-parser.add_argument('--checkpoint_path', default='./model/trained_model_classification/checkpoint.pt')
+parser.add_argument('--checkpoint_path', default='./model/trained_model_classification_30_70/checkpoint.pt')
 parser.add_argument('--check_every', default=1)
 parser.add_argument('--record_loss_every', default=20000)
 
@@ -81,6 +80,8 @@ def train_model(dataset, args):
             for i in range(len(labels)):
                 path, label = paths[i], labels[i, -1]
                 if label == -2:
+                    if np.random.random() > 0.2:
+                        continue
                     m += 1
                     execution_engine.forward_path(path)
                 else:
@@ -103,9 +104,6 @@ def train_model(dataset, args):
 
         if epoch % args.check_every == 0:
             print('Checking training/validation accuracy ... ')
-            # train_acc, val_acc = check_accuracy(dataset, execution_engine, args.batch_size)
-            # print('train accuracy is', train_acc)
-            # stats['train_accs'].append(train_acc)
             val_acc = check_accuracy(dataset, execution_engine, args.batch_size)
             print('val accuracy is ', val_acc)
             stats['val_accs'].append(val_acc)
@@ -126,9 +124,6 @@ def train_model(dataset, args):
                 checkpoint[k] = v
             print('Saving checkpoint to %s' % args.checkpoint_path)
             torch.save(checkpoint, args.checkpoint_path)
-            # del checkpoint['state']
-            # with open(args.checkpoint_path + '.json', 'w') as f:
-            #     json.dump(checkpoint, f)
 
     print("training is done!")
     print("best validate accuracy:{}".format(stats['best_val_acc']))
@@ -151,13 +146,13 @@ def check_accuracy(dataset, model, batch_size):
         ids, labels = batch
         scores = model.predict(ids)
         preds = np.argmax(scores.data.cpu().numpy(), axis=1)
-        # preds = (scores.data > 0.5).cpu().float()
+        # print(preds)
+        # print(labels)
         num_correct += np.sum(preds == labels)
         num_samples += len(labels)
     valid_acc = float(num_correct) / num_samples
 
     model.train()
-    # return train_acc, valid_acc
     return valid_acc
 
 
@@ -253,7 +248,6 @@ def go_on(dataset, path, args):
 
 if __name__ == '__main__':
     args = parser.parse_args()
-
     main(args)
 
     # load data
