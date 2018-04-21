@@ -1,0 +1,622 @@
+0	Wai Gen Yee	1
+4	Evaggelia Pitoura	1
+5	Ying Li	2
+6	Svetha Venkatesh	3
+12	Isabel F. Cruz	1
+13	Fabio Crestani	4
+15	Pengyi Zhang	4
+16	Brendan Kitts	2
+17	Steven M. Beitzel	4
+19	Kun-Lung Wu	1
+23	Ming-Hung Hsu	4
+27	Naoki Abe	2
+28	S. S. Ravi	2
+32	Xin Luna Dong	1
+34	Hong Su	1
+40	Mark Baillie	4
+41	Ian Ruthven	4
+42	Luo Si	4
+43	Jian Lin	4
+44	Luis Gravano	1
+45	Maarten Marx	1
+46	Ben Kao	2
+48	Dengfeng Gao	1
+51	Ralf Schenkel	4
+52	Calton Pu	1
+53	Ke Wang	2
+54	Carlo Zaniolo	1
+58	Louiqa Raschid	1
+59	Lise Getoor	2
+60	Anish Das Sarma	1
+61	Omar Benjelloun	1
+65	Hiroshi Nakagawa	4
+70	Hector Gonzalez	2
+73	Jamie Callan	4
+74	Chaitanya Mishra	1
+76	Jun Wang	4
+79	Benjamin C. M. Fung	2
+83	Alexandre Termier	2
+85	Xiaoxin Yin	2
+86	Chao Liu	2
+88	Cyrus Shahabi	1
+90	Gabriella Kazai	4
+91	Fei Wang	3
+92	Gustavo Alonso	1
+93	Jun Huan	2
+94	Min Wang	1
+98	Gene Golovchinsky	4
+99	Christian S. Jensen	1
+100	Elena Ferrari	1
+102	Nikos Mamoulis	1
+103	Mokrane Bouzeghoub	1
+104	Samuel Madden	1
+105	Naren Ramakrishnan	2
+106	Gui-Rong Xue	4
+111	Aditya Kumar Sehgal	4
+112	Jeffrey D. Ullman	1
+114	Chang Liu	4
+115	Naphtali Rishe	1
+118	Ian Davidson	2
+122	Hongtao Xu	4
+123	Xiangdong Zhou	4
+127	Mirek Riedewald	1
+128	Mark Sanderson	4
+131	Moira C. Norrie	1
+132	Zhenglu Yang	3
+134	Wei Lu	2
+135	Felix Naumann	2
+137	Hong Cheng	2
+138	Jeremy Kubica	2
+139	Andrew W. Moore	3
+141	Panos K. Chrysanthis	1
+142	Michail Vlachos	2
+143	Mark James Carman	3
+151	Nicolas Wack	4
+152	Yannis Velegrakis	1
+153	Julio Gonzalo	4
+154	Alessandro Moschitti	4
+155	Kyu-Young Whang	1
+158	Chao Zhou	2
+159	Atsuyoshi Nakamura	2
+163	Victor Vianu	1
+165	Murali Ramanathan	2
+169	Jeffrey Xu Yu	1
+170	Hong Zhang	2
+171	Ping Wu	1
+177	Carolyn J. Crouch	4
+179	Inderjit S. Dhillon	2
+180	Young-In Song	4
+182	Gilad Mishne	4
+184	Jun Yan	2
+190	Toon Calders	2
+191	Jan Paredaens	1
+192	Qiang Yang	3
+195	Takayuki Nakata	2
+198	Marcos Antonio Vaz Salles	1
+200	Graham Cormode	2
+201	Haggai Roitman	1
+202	Ben He	4
+210	Jimeng Sun	2
+213	Wynne Hsu	2
+214	Wen-Syan Li	1
+216	James Cheney	1
+219	Mirco Nanni	2
+221	Benjamin Arai	1
+223	Moshe Tennenholtz	3
+224	Avrim Blum	3
+225	Aynur A. Dayanik	4
+227	David Madigan	2
+232	Anand Rajaraman	1
+235	Tak W. Yan	1
+237	Nicolas Anciaux	1
+241	Diane Kelly	4
+242	Jaime Arguello	4
+243	Endong Xun	4
+244	Jianliang Xu	1
+245	Krisztian Balog	4
+246	Ryen W. White	4
+248	Hai Wang	2
+252	Junjie Wu	2
+253	Boulos Harb	2
+254	Katia P. Sycara	3
+258	Paolo Merialdo	1
+262	Jing Jiang	4
+265	Floris Geerts	1
+267	Nivio Ziviani	4
+272	Tim Pohle	4
+275	Wolfgang Nejdl	4
+277	Meishan Hu	4
+278	Xiaofei He	4
+279	Lipyeow Lim	1
+280	Neoklis Polyzotis	1
+281	Wouter Weerkamp	4
+283	Saket S. R. Mengle	4
+284	Flip Korn	1
+286	Katsumi Tanaka	4
+287	Baoli Li	4
+288	Wenjie Li	4
+289	Jinchuan Chen	1
+292	Sergio Greco	1
+294	Dafna Shahaf	3
+295	Usama M. Fayyad	2
+298	Jie Bao	3
+301	Heng Huang	2
+302	Chris H. Q. Ding	2
+305	Ling Liu	1
+306	Jianzhong Li	1
+307	Duo Zhang	4
+312	Elke A. Rundensteiner	1
+313	Emre Velipasaoglu	4
+314	Claudiu S. Firan	4
+316	Yi Chen	1
+317	Ashraf Aboulnaga	1
+320	Alistair Moffat	4
+322	Souripriya Das	1
+324	Yiping Ke	2
+328	Dina Demner-Fushman	4
+329	Jeff G. Schneider	3
+332	Masashi Sugiyama	3
+333	Zhi-Hua Zhou	3
+334	David B. Skillicorn	2
+335	Yoram Singer	3
+337	V. Finley Lacatusu	4
+338	Patrice Bellot	4
+339	Antoine Doucet	4
+341	Sherif Sakr	1
+342	Carson Kai-Sang Leung	2
+344	Gang Li	2
+345	Daxin Jiang	2
+346	Ming Hua	1
+349	Michael Stonebraker	1
+351	Eljas Soisalon-Soininen	1
+352	C. Mohan	1
+354	Maheshkumar Sabhnani	2
+356	Matthias Renz	2
+358	Gemma C. Garriga	2
+359	Esa Junttila	2
+362	Milad Shokouhi	4
+364	Alexandra Poulovassilis	1
+366	Jian Xu	2
+367	Georgia Koloniari	1
+368	Bracha Shapira	4
+371	Shinjae Yoo	4
+378	Shlomo Argamon	4
+380	Nina Phan	4
+381	Nicoleta Preda	1
+383	Longin Jan Latecki	2
+385	Alvaro A. A. Fernandes	1
+391	Atsuyuki Morishima	1
+393	Justin J. Levandoski	1
+394	Mohamed E. Khalefa	1
+395	Federica Mandreoli	4
+396	Riccardo Martoglia	4
+399	Ravishankar Ramamurthy	1
+400	Salvatore Orlando	2
+401	Amin Mantrach	2
+402	Tingjian Ge	1
+404	Eunyee Koh	4
+408	Michael J. Carey	1
+409	Andreas Dengel	4
+410	Surajit Chaudhuri	1
+411	Yi-Cheng Tu	1
+412	Azin Ashkan	4
+414	Ali Ghodsi	3
+416	Gu Xu	4
+424	Shenghuo Zhu	4
+427	Gary Geunbae Lee	4
+428	Jun Sakuma	2
+429	Kristian Kersting	3
+431	Robert H. Warren	4
+432	Frank Wm. Tompa	1
+433	Yosi Mass	4
+434	Sang-Wook Kim	2
+435	Zhiwei Li	4
+436	Lei Zhang	4
+437	Dimitris Papadias	1
+440	Alessandro Raffio	1
+448	Julia Stoyanovich	1
+449	Khuzaima Daudjee	1
+450	Michael Cavaretta	2
+451	Dragos D. Margineantu	3
+455	Fei Huang	4
+456	Stephan Vogel	4
+459	Rong Pan	3
+460	Anand Ranganathan	1
+462	Haris Georgiadis	1
+466	Dijun Luo	2
+467	Nam Nguyen	2
+471	Pierre Senellart	1
+472	Vandana Pursnani Janeja	2
+473	Feifei Li	1
+474	Flavio Junqueira	4
+475	Debapriyo Majumdar	4
+477	Jerry Kiernan	1
+478	Till Westmann	1
+480	Eric Nyberg	4
+482	Salvatore Ruggieri	2
+489	Natasa Milic-Frayling	4
+491	Sang-goo Lee	4
+493	Srivatsan Laxman	2
+495	Xiaowen Ding	4
+497	Haixun Wang	2
+498	Benjamin Piwowarski	4
+503	Giuseppe Santucci	1
+505	Stefano Mizzaro	4
+508	German Shegalov	1
+512	Shivnath Babu	1
+516	Zohra Bellahsene	1
+521	Mohamed Y. Eltabakh	1
+525	Guoliang Li	4
+527	Djoerd Hiemstra	4
+531	Ming Yang	2
+532	Zhengyou Zhang	3
+533	Diane J. Cook	3
+536	Dennis DeCoste	2
+537	Jian-Ming Xu	4
+538	Bernd Amann	1
+544	Heikki Keskustalo	4
+547	Yannis E. Ioannidis	1
+549	Tamraparni Dasu	2
+550	Luping Ding	1
+553	Zachary G. Ives	1
+555	Dunja Mladenic	2
+556	Sanjay Chawla	2
+557	Xinsong Xia	4
+562	Dino Pedreschi	2
+564	Wee Sun Lee	4
+565	Colm O'Riordan	4
+566	Mikhail J. Atallah	1
+568	Marco Brambilla	1
+570	Niall M. Adams	2
+571	Changshui Zhang	3
+572	Olivier Verscheure	2
+575	Kris West	4
+576	J. Stephen Downie	4
+578	Javier Artiles	4
+580	S. Muthukrishnan	1
+582	Windsor W. Hsu	1
+585	Hideo Joho	4
+588	Larry Kerschberg	1
+589	Masatoshi Yoshikawa	1
+590	Bao-Gang Hu	2
+591	Jong-Hyeok Lee	4
+592	Jiaheng Lu	2
+593	Ting Chen	1
+597	Corinna Cortes	2
+599	D. L. Thomas	4
+602	Gang Wu	2
+603	Melliyal Annamalai	1
+605	James A. Hendler	3
+620	Ying Chen	1
+621	Evangelos E. Milios	3
+624	Jungyun Seo	4
+625	Cheng Luo	1
+627	Min-Yen Kan	4
+628	A. Prasad Sistla	1
+630	Carlos Ordonez	2
+631	Kwong-Sak Leung	2
+634	H. V. Jagadish	1
+635	Paul N. Bennett	4
+636	David R. Karger	4
+637	Ralf Bierig	4
+638	Thomas Schwentick	1
+639	Ming Zhou	4
+640	Debora Donato	4
+642	Neema Moraveji	4
+643	Hua Lu	1
+645	Kevin Small	3
+647	Dimitris Sacharidis	2
+648	Sharma Chakravarthy	1
+649	Arno J. Knobbe	2
+650	Andrew McCallum	3
+651	Eugene J. Shekita	1
+653	Maurice van Keulen	1
+654	Ander de Keijzer	1
+655	Hong-Jiang Zhang	4
+656	Thomas Finley	3
+661	Le Gruenwald	1
+662	Yehoshua Sagiv	1
+664	Steve Chien	3
+670	Huajing Li	4
+671	Barry Smyth	4
+672	Shengliang Xu	4
+673	Wee Keong Ng	2
+675	Paul A. Viola	3
+676	Mukund Narasimhan	4
+677	Trevor Hastie	2
+678	Kenneth Ward Church	4
+679	Xingyao Ye	4
+680	Jing Dai	2
+684	Xing Wei	4
+685	Baile Shi	2
+688	Eytan Adar	4
+690	Raz Tamir	2
+691	Jeff Z. Pan	3
+693	P. S. Sastry	2
+694	Ramasamy Uthurusamy	2
+697	Jian Yang	1
+701	Todd J. Green	1
+702	Steven Reece	3
+703	Joon Ho Lee	4
+707	Thomas S. Huang	3
+709	Boris Katz	4
+712	Murali Mani	1
+713	Bistra N. Dilkina	3
+714	Sheng Zhong	2
+717	Sebastian Richly	1
+719	Philippe Bonnet	1
+720	Philip Bohannon	1
+722	Mohamed Farid Elhawary	2
+723	Daria Sorokina	2
+727	Ken Q. Pu	1
+731	Miguel A. Rueda-Morales	4
+732	Stelios Paparizos	1
+733	Jerry Scripps	2
+735	Bin He	1
+737	Fillia Makedon	2
+738	Seth Hettich	2
+739	Shailesh Kumar	3
+740	David Campbell	1
+742	Dean Jacobs	1
+748	Donghui Zhang	1
+750	Torben Bach Pedersen	1
+751	Tore Risch	1
+755	Munirathnam Srikanth	4
+757	Jianping Zhang	2
+758	Emmanuel Viennet	2
+759	Jiuyong Li	2
+760	Antonia Kyriakopoulou	4
+761	Theodore Kalamboukis	4
+762	Christopher B. Jones	4
+767	Yang Song	4
+768	Ziming Zhuang	4
+771	Xiaojun Quan	4
+772	Badrish Chandramouli	1
+773	Rifat Ozcan	4
+774	Xiubo Geng	4
+775	Anil Nori	1
+776	Greg Pass	4
+781	Sadok Ben Yahia	2
+782	Jean-Marc Petit	1
+783	Arbee L. P. Chen	1
+786	Joost N. Kok	2
+787	Benoit Dumoulin	4
+790	Keng-Pei Lin	2
+791	Gady Agam	4
+792	Baoping Zhang	4
+795	Marco Cristo	4
+799	Julia Luxenburger	4
+801	Esther Pacitti	1
+804	Ulf Brefeld	3
+806	Anguel Novoselsky	1
+808	Paul J. Chase	4
+809	Fergus Toolan	4
+811	Yuval Merhav	4
+812	Michael Hay	2
+813	In Ryu	1
+814	Haoying Fu	4
+816	Sugato Basu	2
+817	Daniel Keren	2
+818	Yannis Theodoridis	1
+819	Mona Mojdeh	4
+820	Zahir Tari	1
+824	Zhiyuan Chen	1
+825	Dmitry Pavlov	2
+827	Yuxin Peng	4
+829	Erik Elgersma	4
+830	Ambuj K. Singh	1
+831	Shuai Ma	1
+833	Wenyuan Li	2
+838	Maxine Frank	4
+840	Paolo Boldi	4
+842	Alin Dobra	1
+844	Alexey Pryakhin	2
+845	Ning An	1
+846	Chris Staff	4
+849	Takeshi Okadome	4
+850	Jong Wook Kim	4
+851	Dietrich Klakow	4
+852	P. Anandan	3
+854	Christos Doulkeridis	1
+855	Chen Wang	2
+859	Feng Zhao	3
+862	Fredric C. Gey	4
+869	Xiaohui Gu	1
+873	Gregory Piatetsky-Shapiro	2
+875	Bin Jiang	1
+876	Kerry Rodden	4
+877	Mingli Wu	4
+878	Eren Manavoglu	4
+882	Jason I. Hong	4
+885	Fabio A. Schreiber	1
+886	Vijayalakshmi Atluri	1
+889	Yuan Ni	1
+892	Tadashi Nomoto	4
+894	Albrecht Zimmermann	2
+895	Ardian Kristanto Poernomo	2
+897	Jovan Pehcevski	4
+898	Manoj Syamala	1
+899	Tony Veale	3
+900	Tamer Kahveci	1
+901	Ismail Hakki Toroslu	1
+903	Tony Abou-Assaleh	4
+905	Frank A. Smadja	4
+906	Antti Ukkonen	2
+907	Tong Zhang	3
+908	Maurizio Lenzerini	1
+909	Yihong Gong	4
+912	Moshe Koppel	3
+915	Dikan Xing	4
+917	David D. Jensen	2
+918	David S. Vogel	2
+921	Diane Tang	2
+922	Douglas Turnbull	4
+923	Abhijit Pol	1
+926	Adam Bosworth	1
+927	Harumi A. Kuno	1
+929	Norbert Ritter	1
+931	Thomas Behr	1
+932	Peter Baumann	1
+933	Bogdan Alexe	1
+939	Steven Schockaert	4
+940	Udayan Khurana	4
+941	Sri Devi Ravana	4
+942	Qing Yu	4
+943	Pawel Terlecki	2
+944	Fidel Cacheda	4
+945	Giansalvatore Mecca	1
+947	Alejandro A. Vaisman	1
+950	Yuefeng Li	2
+953	Kamalakar Karlapalem	1
+956	Shanshan Wang	2
+958	Quang Hieu Vu	1
+959	Jennifer G. Dy	3
+960	Lior Rokach	2
+962	Nathalie Hernandez	4
+965	Erik Buchmann	2
+968	Xiangyu Jin	4
+969	James C. French	4
+970	Catherine Berrut	4
+976	W. Nick Street	2
+977	Cheng-Ru Lin	2
+979	Ayse Basar Bener	1
+980	Arie Shoshani	1
+981	Eric Lo	1
+982	Tom Rowlands	4
+983	Kenneth R. Wood	4
+985	Damien Sereni	1
+986	Pavel Avgustinov	1
+987	Paolo Avesani	4
+988	Yun Zhou	4
+991	Ajay Gupta	1
+992	Junqiang Liu	2
+993	Chiranjib Bhattacharyya	3
+994	Hojun Jaygarl	4
+995	Ping-Jung Wu	4
+1000	Holger Bast	4
+1002	Kathleen F. McCoy	3
+1007	Edward Cutrell	4
+1008	Richard J. Lipton	1
+1009	Atsushi Fujii	4
+1011	David A. Bell	2
+1013	Torsten Grabs	1
+1014	Yongjing Lin	4
+1015	Liping Jing	4
+1016	Eugen Popovici	4
+1017	Ioannis Tsamardinos	3
+1018	Marco Gori	3
+1020	Yihua Wu	1
+1023	Roger Weber	1
+1024	Benjamin W. Wah	3
+1026	Richard F. Helm	2
+1027	Miguel E. Ruiz	4
+1030	Val Tannen	1
+1031	Willem Jonker	1
+1033	Donna Harman	4
+1034	Adam Silberstein	1
+1036	Walid Rjaibi	1
+1037	Dolf Trieschnigg	4
+1039	John W. S. Liu	1
+1042	Andy Laucius	4
+1044	Fabio Casati	1
+1045	Ralf Rantzau	1
+1046	Yunhua Hu	4
+1052	Anat Eyal	1
+1053	Simon Kamenkovich	1
+1054	Shimei Pan	3
+1056	Benyu Zhang	4
+1057	Jui-Chi Ho	4
+1058	Mehdi Benzine	1
+1061	Atsushi Iwasaki	3
+1063	Dirk Van Gucht	1
+1064	Jens-Peter Dittrich	1
+1065	Marden S. Neubert	4
+1066	Hiroshi Motoda	2
+1069	Akitsugu Watanabe	1
+1072	Amy McGovern	3
+1074	Djemel Ziou	3
+1075	Zografoula Vagena	1
+1077	Georgiana Ifrim	2
+1078	Maya Ramanath	1
+1081	Marc Toussaint	3
+1082	Utkarsh Srivastava	1
+1083	Christian A. Lang	1
+1084	April Rasala Lehman	4
+1085	Fan Yang	4
+1087	Wei Lai	4
+1089	Michael D. Morse	2
+1091	Xiaojun Yuan	4
+1093	Guang Feng	4
+1094	Michelangelo Ceci	2
+1098	Songbo Tan	4
+1099	Frank Hutter	3
+1100	Kevin Leyton-Brown	3
+1102	Daniel Lemire	3
+1106	Soyeon Park	4
+1107	John Cieslewicz	1
+1108	Wen Jin	2
+1110	Natalie S. Glance	2
+1113	David R. Musicant	2
+1118	Ming Mao	4
+1119	Kai Yu	4
+1120	Lyublena Antova	1
+1123	Sathyakama Sandilya	2
+1127	Peter M. G. Apers	1
+1128	Christine Parent	1
+1130	Gregory Druck	3
+1131	Sriram Mohan	1
+1132	Dragomir Yankov	2
+1143	Joshua Spiegel	1
+1145	Daniel Boley	2
+1146	Thomas P. Minka	4
+1147	Luca Cabibbo	1
+1150	Victor Naroditskiy	3
+1152	Lin Li	3
+1154	Zhiyong Huang	1
+1157	Geoffrey J. McLachlan	2
+1158	Tzung-Pei Hong	2
+1159	David E. Goldberg	3
+1161	Luis von Ahn	2
+1162	Navneet Panda	2
+1164	Hang Cui	4
+1166	Rong Liu	2
+1167	Jie Zhang	3
+1172	Stephan Bloehdorn	3
+1177	Patrick Pantel	4
+1178	Matthew E. Taylor	3
+1179	Peter Stone	3
+1180	Balaji Padmanabhan	2
+1182	Monika Rauch Henzinger	4
+1183	Siau-Cheng Khoo	2
+1186	Mohammad El-Hajj	2
+1187	Xiaoyong Chai	3
+1188	Guo Li	2
+1189	Reza Akbarinia	1
+1192	Richard Segal	3
+1193	Jia-Huai You	3
+1194	Weiping Wang	1
+1196	Shai Fine	4
+1197	Marcin Zukowski	1
+1198	Niels Nes	1
+1199	Chi-Hung Chi	4
+1202	Chenxi Lin	4
+1205	Lawrence Hunter	3
+1206	Junyi Xie	1
+1211	Ping Sun	2
+1213	Alexander Tuzhilin	2
+1214	Ellen Spertus	4
+1215	David Hannah	4
+1216	Matthew J. Rattigan	2
+1218	Kilian Stoffel	2
+1220	Vijay Krishnan	4
+1222	Gregor Leban	2
+1225	Amanda Spink	4
+1226	Shuyuan He	4
+1227	Ionut Emil Iacob	1
+1233	Christopher D. Carothers	2
+1236	Guizhen Yang	2
+1238	Geoffrey J. Gordon	3
+1239	Zhouxuan Teng	2
+1240	Wenliang Du	2
+1242	Marcus Hutter	3
+1243	Johannes Fischer	2
