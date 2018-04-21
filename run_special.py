@@ -16,14 +16,15 @@ from model.embedding_model import train_embedding
 
 
 # data options
-parser.add_argument('--batch_size', default=512)
-parser.add_argument('--data_dir', default="./data/classify_task/pattern_30_70")
+parser.add_argument('--batch_size', default=1024)
+parser.add_argument('--data_dir', default="./data/classify_task_170W/pattern_50_50")
 
 # training embed options
 parser.add_argument('--batch_size_for_embed', default=64)
 parser.add_argument('--num_epoch_for_embed', default=100)
 
 # module options
+parser.add_argument('--threshold', default=0.6)
 parser.add_argument('--alpha', default=3)
 parser.add_argument('--embed_size', default=128)
 parser.add_argument('--classifier_hidden_dim', default=32)
@@ -51,12 +52,21 @@ def train_model(args):
         'classifier_output_dim': args.classifier_output_dim
     }
 
-    embed, classifier = train_embedding(**embed_kwargs)
-
     dataset = Data(args.data_dir)
+    entity2label = dict(zip(dataset.X_test, dataset.y_test))
+    num_test = len(dataset.y_test)
+    num_train = len(dataset.y_train)
+    num_node = dataset.bias_num + dataset.author_num
+    print('num of node', num_node)
+    print('num of author in training set', dataset.author_num-num_test)
+    print('num of author in test ser', num_test)
+    print('num of pathes in training set', num_train)
 
+    # embed, classifier = train_embedding(**embed_kwargs)
+    embed = nn.Embedding(num_node, args.embed_size)
+    print('Creating embedding...', num_node, args.embed_size)
 
-    alpha = len(dataset.y_train)/len(dataset.y_test)
+    # args.alpha = len(dataset.y_train)/len(dataset.y_test)
 
     args.num_module = dataset.nn_num
     kwargs = {
@@ -74,6 +84,9 @@ def train_model(args):
     optimizer = torch.optim.Adam(execution_engine.parameters(), lr=args.learning_rate)
     loss_fn = torch.nn.CrossEntropyLoss().cuda()
 
+    # for i in execution_engine.parameters():
+    #     print(i)
+
     stats = {
         'train_losses': [], 'train_losses_ts': [], 'train_losses_ms': [],
         'train_accs': [], 'val_accs': [], 'val_accs_es': [],
@@ -90,23 +103,36 @@ def train_model(args):
         print('Starting epoch %d' % epoch)
         loss_aver = 0
         num_correct, num_samples = 0, 0
+        entity2preds = dict(zip(dataset.X_test, np.zeros((num_test, args.classifier_output_dim))))
         for batch in dataset.next_batch(dataset.X_train, dataset.y_train, batch_size=args.batch_size):
             t += 1
             paths, labels = batch
             labels = labels[:,-1]
             p = labels!=-2
-            paths = paths[p]
-            labels = labels[p]
-            label_var = Variable(torch.LongTensor(labels).cuda())
+            paths1 = paths[p]
+            labels1 = labels[p]
+            label_var = Variable(torch.LongTensor(labels1).cuda())
             optimizer.zero_grad()
-            scores = execution_engine(paths)
+            scores = execution_engine(paths1)
             loss = loss_fn(scores, label_var)
             loss_aver += loss.data[0]
             loss.backward()
             optimizer.step()
-            preds = np.argmax(scores.data.cpu().numpy(), axis=1)
-            num_correct += np.sum(preds == labels)
-            num_samples += len(labels)
+
+            q = labels==-2
+            paths2 = paths[q]
+            test = [path[-1] for path in paths2]
+            labels2 = np.array([entity2label[i] for i in test])
+            scores = F.softmax(execution_engine(paths2), dim=1)
+            scores = scores.data.cpu().numpy()
+            preds = np.argmax(scores, axis=1)
+            num_correct += np.sum(preds == labels2)
+
+            for i in range(len(labels2)):
+                pred = preds[i]
+                if scores[i][pred] > args.threshold:
+                    entity2preds[test[i]][pred] += 1
+
             # for i in range(len(labels)):
             #     path, label = paths[i], labels[i, -1]
             #     if label == -2:
@@ -134,8 +160,15 @@ def train_model(args):
                 stats['train_losses_ms'].append(m)
                 loss_aver = 0
 
-        acc = float(num_correct) / num_samples
+
+
+        acc = float(num_correct) / num_train
         print('accuracy is ', acc)
+        en_preds = np.array([np.argmax(entity2preds[i]) for i in dataset.X_test])
+        en_correct = np.sum(en_preds==dataset.y_test)
+        en_acc = float(en_correct) / num_test
+        print('ensemble acc is ', en_acc)
+
 
         # if epoch % args.check_every == 0:
         #     print('Checking training/validation accuracy ... ')
