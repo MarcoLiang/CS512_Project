@@ -45,7 +45,7 @@ def load_id_file(file_path, mode='m2v'):
 
 def embedding_loader(id_path, emb_path, mode='m2v'):
     emb_matrix = None
-    if mode == 'm2v':
+    if mode == 'm2v' or mode == 'esim':
         word_vectors = KeyedVectors.load_word2vec_format(emb_path, binary=True)
         author_id = load_id_file(id_path, mode)
         emb_matrix = np.zeros([len(author_id), word_vectors.vector_size])

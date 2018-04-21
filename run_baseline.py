@@ -15,19 +15,21 @@ from utils.load_embedding import *
 
 # data options
 parser.add_argument('--batch_size', default=128)
-parser.add_argument('--data_dir', default="./data/classify_task_170W/pattern_70_30")
+parser.add_argument('--data_dir', default="./data/classify_task_170W/pattern_30_70")
 
 # module options
-parser.add_argument('--embed', default='dw')
 parser.add_argument('--embed_size', default=128)
-parser.add_argument('--embed_path', default="./embedding_file/deepwalk/focus_embedding")
+# parser.add_argument('--embed', default='dw')
+# parser.add_argument('--embed_path', default="./embedding_file/deepwalk/focus_embedding")
+parser.add_argument('--embed', default='esim')
+parser.add_argument('--embed_path', default="./embedding_file/esim/vec_dim_128.dat")
 parser.add_argument('--id_path', default="./data/focus/venue_filtered_unique_id")
 parser.add_argument('--classifier_hidden_dim', default=32)
 parser.add_argument('--classifier_output_dim', default=4)
 
 # Optimization options
 parser.add_argument('--learning_rate', default=5e-4)
-parser.add_argument('--num_epoch', default=100000)
+parser.add_argument('--num_epoch', default=1000)
 
 # Output options
 parser.add_argument('--checkpoint_path', default='./model/baseline_model_classification/checkpoint.pt')
