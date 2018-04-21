@@ -44,22 +44,30 @@ def load_id_file(file_path, mode='m2v'):
 
 
 def embedding_loader(id_path, emb_path, mode='m2v'):
-    author_id = load_id_file(id_path, mode)
-    word_vectors = KeyedVectors.load_word2vec_format(emb_path, binary=True)
-    emb_matrix = np.zeros([len(author_id), word_vectors.vector_size])
-    cnt = 0
-    for i, v in enumerate(word_vectors.index2word):
-        if v not in author_id:
-            print(v)
-            continue
-        cnt += 1
-        emb_matrix[author_id[v]] = word_vectors.vectors[i]
+    emb_matrix = None
+    if mode == 'm2v':
+        word_vectors = KeyedVectors.load_word2vec_format(emb_path, binary=True)
+        author_id = load_id_file(id_path, mode)
+        emb_matrix = np.zeros([len(author_id), word_vectors.vector_size])
+        cnt = 0
+        for i, v in enumerate(word_vectors.index2word):
+            if v not in author_id:
+                print(v)
+                continue
+            cnt += 1
+            emb_matrix[author_id[v]] = word_vectors.vectors[i]
+    elif mode == 'dw':
+        word_vectors = KeyedVectors.load_word2vec_format(emb_path, binary=False)
+        emb_matrix = np.zeros([len(word_vectors.index2word), word_vectors.vector_size])
+        for i, v in enumerate(word_vectors.index2word):
+            emb_matrix[int(v)] = word_vectors.vectors[i]
     return emb_matrix
 
+
 # if __name__ == "__main__":
-# id_path = "/Users/ruiyangwang/Desktop/ResearchProject/CS512_Project/data/focus/venue_filtered_unique_id"
-# emb_path = "/Users/ruiyangwang/Desktop/ResearchProject/ESim/results/vec.dat"
-# m = embedding_loader(id_path, emb_path, "esim")
+#     id_path = "/Users/ruiyangwang/Desktop/ResearchProject/CS512_Project/data/focus/venue_filtered_unique_id"
+#     emb_path = "/Users/ruiyangwang/Desktop/ResearchProject/deepwalk-master/results/focus_embedding"
+#     m = embedding_loader(id_path, emb_path, "dw")
 # torch_emb = nn.Embedding(m.shape[0], m.shape[1])
 # torch_emb.weight.data.copy_(torch.from_numpy(m))
 # print("Done")
