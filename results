@@ -2,4 +2,7 @@ dw: 5050:0.73 3070:0.736 7030:0.732
 esim: 5050:0.723 3070:0.733 7030:0.70
 
 ours:
-170W normalized randominitembed: 3070:0.64(0.45) 5050:0.65(0.3) 7030:0.668(0.20)
+to tune:
+170W    rate    normalized  init_embedding   ensembele_mode
+
+170W normalized randominitembed

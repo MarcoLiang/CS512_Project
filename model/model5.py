@@ -78,7 +78,7 @@ class ModuleNet(nn.Module):
             x = module(x, bias)
         module = self.function_modules[path[i+2]]
         x = module(x, flag=False)
-        x = F.normalize(x)
+        # x = F.normalize(x)
         # w = 1/(length*self.alpha)
         # w=0.5
         # output = (1-w) * bias + w * x
