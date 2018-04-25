@@ -1,16 +1,18 @@
-1244	international acm sigir conference on research and development in information retrieval
-1245	international conference on data mining
-1246	very large data bases
-1247	knowledge discovery and data mining
-1248	international conference on data engineering
-1249	extending database technology
-1250	international world wide web conferences
-1251	symposium on principles of database systems
-1252	World Wide Web
-1253	Sigmod Record
-1254	asia-pacific web conference
-1255	database systems for advanced applications
-1256	text retrieval conference
-1257	european conference on principles of data mining and knowledge discovery
-1258	Proceedings of The Vldb Endowment
-1259	pacific-asia conference on knowledge discovery and data mining
+1721	database systems for advanced applications
+1722	asia-pacific web conference
+1723	knowledge discovery and data mining
+1724	text retrieval conference
+1725	very large data bases
+1726	european conference on principles of data mining and knowledge discovery
+1727	pacific-asia conference on knowledge discovery and data mining
+1728	international conference on data engineering
+1729	international world wide web conferences
+1730	international conference on data mining
+1731	Proceedings of The Vldb Endowment
+1732	extending database technology
+1733	World Wide Web
+1734	international acm sigir conference on research and development in information retrieval
+1735	Sigmod Record
+1736	Sigir Forum
+1737	symposium on principles of database systems
+1738	The Vldb Journal
