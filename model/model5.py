@@ -16,14 +16,19 @@ class ModuleBlock(nn.Module):
         self.in_features = in_features
         self.out_features = out_features
         self.weight = nn.Parameter(torch.Tensor(out_features, in_features))
+        self.bias = nn.Parameter(torch.Tensor(out_features))
         self.reset_parameters()
 
     def reset_parameters(self):
         stdv = 1. / math.sqrt(self.weight.size(1))
         self.weight.data.uniform_(-stdv, stdv)
+        self.bias.data.uniform_(-stdv, stdv)
 
-    def forward(self, input, bias):
-        return F.relu(F.linear(input, self.weight, bias), inplace=True)
+    def forward(self, input, bias=None, flag=True):
+        if flag:
+            return F.relu(F.linear(input, self.weight, bias), inplace=True)
+        else:
+            return F.relu(F.linear(input, self.weight, self.bias), inplace=True)
 
     def __repr__(self):
         return self.__class__.__name__ + '(' \
@@ -66,10 +71,14 @@ class ModuleNet(nn.Module):
     def forward_path(self, path):
         x = self.look_up_embed(path[0])
         length = len(path)
-        for i in range(1, length, 2):
+        for i in range(1, length-2, 2):
             module = self.function_modules[path[i]]
+            # x = module(x)
             bias = self.look_up_embed(path[i+1])
             x = module(x, bias)
+        module = self.function_modules[path[i+2]]
+        x = module(x, flag=False)
+        # x = F.normalize(x)
         # w = 1/(length*self.alpha)
         # w=0.5
         # output = (1-w) * bias + w * x

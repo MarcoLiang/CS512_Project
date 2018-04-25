@@ -9,23 +9,27 @@ import torch.autograd as autograd
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
-
+from utils.load_embedding import *
 from utils.data3 import Data
 from model.model5 import ModuleNet
 from model.embedding_model import train_embedding
 
 
 # data options
-parser.add_argument('--batch_size', default=512)
-parser.add_argument('--data_dir', default="./data/classify_task/pattern_30_70")
+parser.add_argument('--batch_size', default=2048)
+parser.add_argument('--data_dir', default="./data/classify_task_170W/pattern_70_30")
 
 # training embed options
 parser.add_argument('--batch_size_for_embed', default=64)
 parser.add_argument('--num_epoch_for_embed', default=100)
 
 # module options
+parser.add_argument('--threshold', default=0.8)
 parser.add_argument('--alpha', default=3)
 parser.add_argument('--embed_size', default=128)
+parser.add_argument('--embed', default='dw')
+parser.add_argument('--embed_path', default="./embedding_file/deepwalk/focus_embedding")
+parser.add_argument('--id_path', default="./data/focus/venue_filtered_unique_id")
 parser.add_argument('--classifier_hidden_dim', default=32)
 parser.add_argument('--classifier_output_dim', default=4)
 
@@ -34,12 +38,14 @@ parser.add_argument('--learning_rate', default=5e-4)
 parser.add_argument('--num_epoch', default=100000)
 
 # Output options
-parser.add_argument('--checkpoint_path', default='./model/no_embedding_model_classification/checkpoint.pt')
+parser.add_argument('--save_path', default='./model/no_embedding_model_classification/')
 parser.add_argument('--check_every', default=1)
 parser.add_argument('--record_loss_every', default=100)
 
 
 def train_model(args):
+    args.checkpoint_path = args.save_path+'checkpoint.pt'
+    args.log_path = args.save_path+'log.txt'
 
     embed_kwargs = {
         'data_dir': args.data_dir,
@@ -51,12 +57,25 @@ def train_model(args):
         'classifier_output_dim': args.classifier_output_dim
     }
 
-    embed, classifier = train_embedding(**embed_kwargs)
-
     dataset = Data(args.data_dir)
+    entity2label = dict(zip(dataset.X_test, dataset.y_test))
+    num_test = len(dataset.y_test)
+    num_train = len(dataset.y_train)
+    num_node = dataset.bias_num + dataset.author_num
+    print('num of node', num_node)
+    print('num of author in training set', dataset.author_num-num_test)
+    print('num of author in test ser', num_test)
+    print('num of pathes in training set', num_train)
 
+    embed = nn.Embedding(num_node, args.embed_size)
+    embed.weight.data.copy_(torch.from_numpy(embedding_loader(args.id_path, args.embed_path, args.embed)))
 
-    alpha = len(dataset.y_train)/len(dataset.y_test)
+    # embed, classifier = train_embedding(**embed_kwargs)
+
+    # embed = nn.Embedding(num_node, args.embed_size)
+    print('Creating embedding...', num_node, args.embed_size)
+
+    # args.alpha = len(dataset.y_train)/len(dataset.y_test)
 
     args.num_module = dataset.nn_num
     kwargs = {
@@ -74,39 +93,74 @@ def train_model(args):
     optimizer = torch.optim.Adam(execution_engine.parameters(), lr=args.learning_rate)
     loss_fn = torch.nn.CrossEntropyLoss().cuda()
 
+    # for i in execution_engine.parameters():
+    #     print(i)
+
     stats = {
         'train_losses': [], 'train_losses_ts': [], 'train_losses_ms': [],
         'train_accs': [], 'val_accs': [], 'val_accs_es': [],
         'best_val_acc': -1, 'model_e': 0,
     }
 
+    log = open(args.log_path, 'w')
     t = 0
     m = 0
     epoch = 0
     print("Starting training our model...")
     while epoch < args.num_epoch:
+
         dataset.shuffle()
         epoch += 1
         print('Starting epoch %d' % epoch)
         loss_aver = 0
-        num_correct, num_samples = 0, 0
+        num_correct1, num_correct2 = 0, 0
+        num_sample1, num_sample2 = 0, 0
+        entity2preds1 = dict(zip(dataset.X_test, np.zeros((num_test, args.classifier_output_dim))))
+        entity2preds2 = dict(zip(dataset.X_test, np.zeros((num_test, args.classifier_output_dim))))
+        entity2preds3 = dict(zip(dataset.X_test, np.zeros((num_test, args.classifier_output_dim))))
+        entity2preds4 = dict(zip(dataset.X_test, np.zeros((num_test, args.classifier_output_dim))))
+
         for batch in dataset.next_batch(dataset.X_train, dataset.y_train, batch_size=args.batch_size):
+
             t += 1
             paths, labels = batch
             labels = labels[:,-1]
             p = labels!=-2
-            paths = paths[p]
-            labels = labels[p]
-            label_var = Variable(torch.LongTensor(labels).cuda())
+            paths1 = paths[p]
+            labels1 = labels[p]
+            label_var = Variable(torch.LongTensor(labels1).cuda())
             optimizer.zero_grad()
-            scores = execution_engine(paths)
+            scores = execution_engine(paths1)
             loss = loss_fn(scores, label_var)
             loss_aver += loss.data[0]
             loss.backward()
             optimizer.step()
-            preds = np.argmax(scores.data.cpu().numpy(), axis=1)
-            num_correct += np.sum(preds == labels)
-            num_samples += len(labels)
+            scores = scores.data.cpu().numpy()
+            preds = np.argmax(scores, axis=1)
+            num_correct1 += np.sum(preds == labels1)
+            num_sample1 += len(labels1)
+
+            q = labels==-2
+            paths2 = paths[q]
+            test = [path[-1] for path in paths2]
+            labels2 = np.array([entity2label[i] for i in test])
+            scores = F.softmax(execution_engine(paths2), dim=1)
+            scores = scores.data.cpu().numpy()
+            preds = np.argmax(scores, axis=1)
+            num_correct2 += np.sum(preds == labels2)
+            num_sample2 += len(labels2)
+
+            for i in range(len(labels2)):
+                entity2preds1[test[i]] += np.log(scores[i])
+                pred = preds[i]
+                if scores[i][pred] > args.threshold:
+                    entity2preds2[test[i]][pred] += 1
+                elif scores[i][pred] > 0.25:
+                    entity2preds4[test[i]][pred] += 1
+                entity2preds3[test[i]][pred] += 1
+
+            # num_test = len(dataset.y_test)
+
             # for i in range(len(labels)):
             #     path, label = paths[i], labels[i, -1]
             #     if label == -2:
@@ -134,8 +188,53 @@ def train_model(args):
                 stats['train_losses_ms'].append(m)
                 loss_aver = 0
 
-        acc = float(num_correct) / num_samples
-        print('accuracy is ', acc)
+        train_acc = float(num_correct1) / num_sample1
+        print('train path accuracy is ', train_acc)
+        test_acc = float(num_correct2) / num_sample2
+        print('test path accuracy is ', test_acc)
+
+        for i, entity2preds in enumerate([entity2preds1,entity2preds2,entity2preds3,entity2preds4]):
+            print('ensemble mode', i)
+            en_results = np.array([entity2preds[i] for i in dataset.X_test])
+            max_votes = np.max(en_results, axis=1)
+            votes = np.sum(en_results, axis=1)
+            votes_rate = max_votes/votes
+            np.nan_to_num(votes_rate, copy=False)
+            en_preds = np.argmax(en_results, axis=1)
+            en_correct = en_preds==dataset.y_test
+            en_acc = float(np.sum(en_correct)) / num_test
+            print('ensemble acc is ', en_acc)
+            vrc = votes_rate[en_correct]
+            vrc_mean = np.mean(vrc)
+            vrc_min = np.min(vrc)
+            vrc_max = np.max(vrc)
+            vrw = votes_rate[np.invert(en_correct)]
+            vrw_mean = np.mean(vrw)
+            vrw_min = np.min(vrw)
+            vrw_max = np.max(vrw)
+            print('vote rate for correct mean={} min={} max={}'.format(vrc_mean, vrc_min, vrc_max))
+            print('vote rate for wrong mean={} min={} max={}'.format(vrw_mean, vrw_min, vrw_max))
+
+        # threshold = 0.9
+        # sure_answers = votes_rate>threshold
+        # sure_ids = dataset.X_test[sure_answers]
+        # sure_preds = np.argmax(en_results[sure_answers])
+        # ids2preds = dict(zip(sure_ids, sure_preds))
+        # for i, path in enumerate(dataset.X_train):
+        #     last = path[-1]
+        #     if last in sure_ids:
+        #         dataset.y_train[i][-1] = ids2preds[last]
+
+
+        # log.write('epoch:{}\ntrain path acc={}\ttest path acc={}\tensemble acc={}'
+        #           '\nvote rate for correct mean={} max={} min={}'
+        #           '\nvote rate for wrong mean={} max={} min={}\n'
+        #           .format(epoch, train_acc, test_acc, en_acc, vrc_mean, vrc_max, vrc_min, vrw_mean,vrw_max, vrw_min))
+        # log.write('id\tresults\t\t\t\tlabel\tcorrect\tvote rate\n')
+        # log_info = np.concatenate((dataset.X_test.reshape(num_test,1), en_results, dataset.y_test.reshape(num_test,1), en_correct.reshape(num_test,1), votes_rate.reshape(num_test,1)), axis=1)
+        # log_info = sorted(log_info, key=lambda x:x[-2])
+        # for i in range(num_test):
+        #     log.write('\t'.join([str(j) for j in log_info[i]])+'\n')
 
         # if epoch % args.check_every == 0:
         #     print('Checking training/validation accuracy ... ')
@@ -282,7 +381,6 @@ def go_on(dataset, path, args):
 
 if __name__ == '__main__':
     args = parser.parse_args()
-
     train_model(args)
 
     # load data

@@ -15,11 +15,13 @@ from utils.load_embedding import *
 
 # data options
 parser.add_argument('--batch_size', default=128)
-parser.add_argument('--data_dir', default="./data/classify_task/pattern_30_70")
+parser.add_argument('--data_dir', default="./data/classify_task_170W/pattern_30_70")
 
 # module options
-parser.add_argument('--embed', default='esim')
 parser.add_argument('--embed_size', default=128)
+# parser.add_argument('--embed', default='dw')
+# parser.add_argument('--embed_path', default="./embedding_file/deepwalk/focus_embedding")
+parser.add_argument('--embed', default='esim')
 parser.add_argument('--embed_path', default="./embedding_file/esim/vec_dim_128.dat")
 parser.add_argument('--id_path', default="./data/focus/venue_filtered_unique_id")
 parser.add_argument('--classifier_hidden_dim', default=32)
@@ -27,7 +29,7 @@ parser.add_argument('--classifier_output_dim', default=4)
 
 # Optimization options
 parser.add_argument('--learning_rate', default=5e-4)
-parser.add_argument('--num_epoch', default=100000)
+parser.add_argument('--num_epoch', default=1000)
 
 # Output options
 parser.add_argument('--checkpoint_path', default='./model/baseline_model_classification/checkpoint.pt')
@@ -56,11 +58,11 @@ class BaselineMLP(nn.Module):
         return self.entity_embeds[id].view(1,-1)
 
     def forward(self, batch):
-        output = []
+        input = []
         for id in batch:
-            data_output = self.look_up_entity_embed(id)
-            output.append(self.classifier(data_output))
-        output = torch.cat(output, 0)
+            input.append(self.look_up_entity_embed(id))
+        inputs = torch.cat(input, 0)
+        output = self.classifier(inputs)
         return output
 
 
@@ -92,31 +94,21 @@ def train_model(dataset, args):
         'best_val_acc': -1, 'model_e': 0,
     }
 
-    t = 0
     epoch = 0
     while epoch < args.num_epoch:
         dataset.shuffle()
         epoch += 1
         # print('Starting epoch %d' % epoch)
-        loss_aver = 0
-        for batch in dataset.next_batch(dataset.X_train, dataset.y_train, batch_size=args.batch_size):
-            t += 1
-            ids, labels = batch
-            label_var = Variable(torch.LongTensor(labels))
-            # label_var = Variable(torch.LongTensor(labels).cuda())
-            optimizer.zero_grad()
-            scores = execution_engine(ids)
-            loss = loss_fn(scores, label_var)
-            loss_aver += loss.data[0]
-            loss.backward()
-            optimizer.step()
+        # loss_aver = 0
 
-            if t % args.record_loss_every == 0:
-                loss_aver /= args.record_loss_every
-                # print(t, loss_aver)
-                stats['train_losses'].append(loss_aver)
-                stats['train_losses_ts'].append(t)
-                loss_aver = 0
+        ids, labels = dataset.X_train, dataset.y_train
+        label_var = Variable(torch.LongTensor(labels))
+        optimizer.zero_grad()
+        scores = execution_engine(ids)
+        loss = loss_fn(scores, label_var)
+        # loss_aver += loss.data[0]
+        loss.backward()
+        optimizer.step()
 
         if epoch % args.check_every == 0:
             print('Checking training/validation accuracy ... ')
@@ -156,16 +148,11 @@ def get_state(m):
 
 def check_accuracy(dataset, model, batch_size):
     model.eval()
-
-    num_correct, num_samples = 0, 0
-    for batch in dataset.next_batch(dataset.X_test, dataset.y_test, batch_size=batch_size):
-        ids, labels = batch
-        scores = model(ids)
-        preds = np.argmax(scores.data.numpy(), axis=1)
-        num_correct += np.sum(preds == labels)
-        num_samples += len(labels)
-    valid_acc = float(num_correct) / num_samples
-
+    ids, labels = dataset.X_test, dataset.y_test
+    scores = model(ids)
+    preds = np.argmax(scores.data.numpy(), axis=1)
+    num_correct = np.sum(preds == labels)
+    valid_acc = float(num_correct) / len(dataset.y_test)
     model.train()
     return valid_acc
 
