@@ -10,19 +10,19 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 
-from utils.data_baseline import Data
+from utils.data_baseline import BaselineData
 from utils.load_embedding import *
 
 # data options
 parser.add_argument('--batch_size', default=128)
-parser.add_argument('--data_dir', default="./data/classify_task_170W/pattern_30_70")
+parser.add_argument('--data_dir', default="./data/classify_task/pattern_10_90")
 
 # module options
 parser.add_argument('--embed_size', default=128)
 # parser.add_argument('--embed', default='dw')
 # parser.add_argument('--embed_path', default="./embedding_file/deepwalk/focus_embedding")
 parser.add_argument('--embed', default='esim')
-parser.add_argument('--embed_path', default="./embedding_file/esim/vec_dim_128.dat")
+parser.add_argument('--embed_path', default="./embedding_file/esim/vec_128_new.dat")
 parser.add_argument('--id_path', default="./data/focus/venue_filtered_unique_id")
 parser.add_argument('--classifier_hidden_dim', default=32)
 parser.add_argument('--classifier_output_dim', default=4)
@@ -38,20 +38,20 @@ parser.add_argument('--record_loss_every', default=1)
 
 
 class BaselineMLP(nn.Module):
-    def __init__(self, embed_mode,
+    def __init__(self, embed,
                  embed_size,
-                 embed_path,
-                 id_path,
                  classifier_hidden_dim,
                  classifier_output_dim,
                  verbose=True):
         super(BaselineMLP, self).__init__()
 
-        embed = embedding_loader(id_path, embed_path, embed_mode)
+        self.dropout_rate = 0.5
+
         self.entity_embeds = Variable(torch.from_numpy(embed).float(), requires_grad=False)
 
         self.classifier = nn.Sequential(nn.Linear(embed_size, classifier_hidden_dim, bias=True),
                                         nn.ReLU(inplace=True),
+                                        # nn.Dropout(p=self.dropout_rate, inplace=True),
                                         nn.Linear(classifier_hidden_dim, classifier_output_dim, bias=True))
 
     def look_up_entity_embed(self, id):
@@ -62,22 +62,23 @@ class BaselineMLP(nn.Module):
         for id in batch:
             input.append(self.look_up_entity_embed(id))
         inputs = torch.cat(input, 0)
+        # inputs = self.entity_embeds[batch]
         output = self.classifier(inputs)
         return output
 
 
 def main(args):
     # load data
-    dataset = Data(args.data_dir)
+    dataset = BaselineData(args.data_dir)
     train_model(dataset, args)
 
 def train_model(dataset, args):
 
+    embed = embedding_loader(args.id_path, args.embed_path, args.embed)
+
     kwargs = {
-        'embed_mode': args.embed,
+        'embed': embed,
         'embed_size': args.embed_size,
-        'embed_path': args.embed_path,
-        'id_path': args.id_path,
         'classifier_hidden_dim': args.classifier_hidden_dim,
         'classifier_output_dim': args.classifier_output_dim
     }

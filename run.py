@@ -1,28 +1,33 @@
 import argparse
-parser = argparse.ArgumentParser()
 import json
 import numpy as np
 import torch
-torch.backends.cudnn.enabled = True
 from torch.autograd import Variable
 import torch.autograd as autograd
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
-
 from utils.data3 import Data
 from model.model4 import ModuleNet
+from model.embedding_model import train_embedding
+parser = argparse.ArgumentParser()
+torch.backends.cudnn.enabled = True
 
 # data options
-parser.add_argument('--batch_size', default=512)
-parser.add_argument('--data_dir', default="./data/classify_task/pattern_30_70")
+parser.add_argument('--batch_size', default=1024)
+parser.add_argument('--data_dir', default="./data/classify_task_170W/pattern_70_30")
+
+# training embed options
+parser.add_argument('--batch_size_for_embed', default=128)
+parser.add_argument('--num_epoch_for_embed', default=100)
 
 # module options
 parser.add_argument('--alpha', default=3)
-parser.add_argument('--embed', default='esim')
 parser.add_argument('--embed_size', default=128)
-parser.add_argument('--embed_path', default="./embedding_file/esim/vec_dim_128.dat")
-parser.add_argument('--id_path', default="./data/focus/venue_filtered_unique_id")
+parser.add_argument('--embed', default='dw')
+parser.add_argument('--embed_path', default="./embedding_file/deepwalk/focus_embedding")
+# parser.add_argument('--embed', default='esim')
+# parser.add_argument('--embed_path', default="./embedding_file/esim/vec_dim_128.dat")
 parser.add_argument('--classifier_hidden_dim', default=32)
 parser.add_argument('--classifier_output_dim', default=4)
 
@@ -31,25 +36,53 @@ parser.add_argument('--learning_rate', default=5e-4)
 parser.add_argument('--num_epoch', default=100000)
 
 # Output options
-parser.add_argument('--checkpoint_path', default='./model/trained_model_classification_30_70/checkpoint.pt')
+parser.add_argument('--checkpoint_path', default='./model/trained_model_classification_70_30/checkpoint.pt')
 parser.add_argument('--check_every', default=1)
 parser.add_argument('--record_loss_every', default=20000)
 
 
-def main(args):
+def train_model(args):
     # load data
     dataset = Data(args.data_dir)
-    train_model(dataset, args)
-
-
-def train_model(dataset, args):
     args.num_module = dataset.nn_num
+    num_test = len(dataset.y_test)
+    num_train = len(dataset.y_train)
+    num_node = dataset.bias_num + dataset.author_num
+    no_label = dataset.y_train[:, -1] == -2
+    has_label = np.invert(no_label)
+    num_of_no_label_train = np.sum(no_label)
+    num_of_has_label_train = num_train - num_of_no_label_train
+
+    print('num of node', num_node)
+    print('num of author in training set', dataset.author_num - num_test)
+    print('num of author in test ser', num_test)
+    print('num of pathes in training set', num_train)
+    print('num of pathes in training set with labeled end', num_of_has_label_train)
+    print('num of pathes in training set without labeled end', num_of_no_label_train)
+
+    embed_kwargs = {
+        'data_dir': args.data_dir,
+        'learning_rate': args.learning_rate,
+        'embed_size': args.embed_size,
+        'batch_size': args.batch_size_for_embed,
+        'num_epoch': args.num_epoch_for_embed,
+        'classifier_hidden_dim': args.classifier_hidden_dim,
+        'classifier_output_dim': args.classifier_output_dim
+    }
+
+    # embed = nn.Embedding(num_node, args.embed_size)
+    # embed.weight.data.copy_(torch.from_numpy(embedding_loader(args.id_path, args.embed_path, args.embed)))
+
+    embed, _ = train_embedding(**embed_kwargs)
+    embed = embed.weight.data.cpu().numpy()
+
+    # embed = nn.Embedding(num_node, args.embed_size)
+    print('Creating embedding...', num_node, args.embed_size)
+
     kwargs = {
         'alpha': args.alpha,
-        'embed_mode': args.embed,
+        'embedding': embed,
         'embed_size': args.embed_size,
-        'embed_path': args.embed_path,
-        'id_path': args.id_path,
         'num_module': args.num_module,
         'classifier_hidden_dim': args.classifier_hidden_dim,
         'classifier_output_dim': args.classifier_output_dim
@@ -70,18 +103,21 @@ def train_model(dataset, args):
     t = 0
     m = 0
     epoch = 0
+    print("Starting training our model...")
     while epoch < args.num_epoch:
+
         dataset.shuffle()
         epoch += 1
         print('Starting epoch %d' % epoch)
         loss_aver = 0
+
         for batch in dataset.next_batch(dataset.X_train, dataset.y_train, batch_size=args.batch_size):
             paths, labels = batch
             for i in range(len(labels)):
                 path, label = paths[i], labels[i, -1]
                 if label == -2:
-                    if np.random.random() > 0.2:
-                        continue
+                    # if np.random.random() > 0.5:
+                    #     continue
                     m += 1
                     execution_engine.forward_path(path)
                 else:
@@ -248,7 +284,7 @@ def go_on(dataset, path, args):
 
 if __name__ == '__main__':
     args = parser.parse_args()
-    main(args)
+    train_model(args)
 
     # load data
     # dataset = Data()

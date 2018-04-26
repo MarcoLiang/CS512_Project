@@ -3,7 +3,7 @@ from collections import OrderedDict
 import numpy as np
 from itertools import repeat
 
-class Data:
+class BaselineData:
     def __init__(self, dir, split_ratio=[0.8, 0.2], shuffle=True):
         self.X_train = None
         self.y_train = None

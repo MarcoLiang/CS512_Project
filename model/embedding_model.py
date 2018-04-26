@@ -10,7 +10,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 
-from utils.data_baseline import Data
+from utils.data_baseline import BaselineData
 
 
 class EmbeddingTrainer(nn.Module):
@@ -39,7 +39,7 @@ class EmbeddingTrainer(nn.Module):
 def train_embedding(data_dir, learning_rate, batch_size, embed_size, classifier_hidden_dim, classifier_output_dim, num_epoch):
     print("Starting training embedding...")
 
-    dataset = Data(data_dir)
+    dataset = BaselineData(data_dir)
     num_entity = dataset.author_num + dataset.bias_num
 
     kwargs = {

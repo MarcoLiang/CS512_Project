@@ -1,7 +1,11 @@
-dw: 5050:0.73 3070:0.736 7030:0.732
-esim: 5050:0.723 3070:0.733 7030:0.70
+dw: 5050:0.73 3070:0.736 7030:0.74
+esim:1090:73 7030:0.77 9010:76
 
 ours:
+random embed:0.63
+label embed:0.64
+deepwalk: 0.71
+
 to tune:
 170W    rate    normalized  init_embedding   ensembele_mode
 
