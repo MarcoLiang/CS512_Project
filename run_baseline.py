@@ -70,6 +70,13 @@ class BaselineMLP(nn.Module):
 def main(args):
     # load data
     dataset = BaselineData(args.data_dir)
+    l = dataset.y_train!=2
+    dataset.X_train = dataset.X_train[l]
+    dataset.y_train = dataset.y_train[l]
+    l = dataset.y_test != 2
+    dataset.X_test = dataset.X_test[l]
+    dataset.y_test = dataset.y_test[l]
+
     train_model(dataset, args)
 
 def train_model(dataset, args):

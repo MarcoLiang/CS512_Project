@@ -9,6 +9,8 @@ import torch.nn.functional as F
 import torch.optim as optim
 from utils.data3 import Data
 from model.model4 import ModuleNet
+from run_baseline import BaselineMLP
+from utils.data_baseline import BaselineData
 from utils.load_embedding import *
 from model.embedding_model import train_embedding
 parser = argparse.ArgumentParser()
@@ -16,7 +18,7 @@ torch.backends.cudnn.enabled = True
 
 # data options
 parser.add_argument('--batch_size', default=10000)
-parser.add_argument('--data_dir', default="./data/classify_task/pattern_70_30")
+parser.add_argument('--data_dir', default="./data/classify_task/pattern_90_10")
 
 # training embed options
 parser.add_argument('--batch_size_for_embed', default=128)
@@ -38,15 +40,69 @@ parser.add_argument('--learning_rate', default=5e-4)
 parser.add_argument('--num_epoch', default=100)
 
 # Output options
-parser.add_argument('--checkpoint_path', default='./model/trained_model_classification_70_30/checkpoint.pt')
+parser.add_argument('--checkpoint_path', default='./model/trained_model_classification_90_10/checkpoint.pt')
 parser.add_argument('--check_every', default=1)
 parser.add_argument('--record_loss_every', default=10000)
+
+
+def train_embedding(dataset, embed, args):
+
+    kwargs = {
+        'embed': embed,
+        'embed_size': args.embed_size,
+        'classifier_hidden_dim': args.classifier_hidden_dim,
+        'classifier_output_dim': args.classifier_output_dim
+    }
+
+    baseline_model = BaselineMLP(**kwargs)
+    baseline_model.train()
+    optimizer = torch.optim.Adam(baseline_model.parameters(), lr=args.learning_rate)
+    loss_fn = torch.nn.CrossEntropyLoss()
+
+    epoch = 0
+    best_test_acc = 0
+    best_train_acc = 0
+    num_train = len(dataset.y_train)
+    num_test = len(dataset.y_test)
+    while epoch < 1000:
+        dataset.shuffle()
+        epoch += 1
+
+        baseline_model.train()
+        ids, labels = dataset.X_train, dataset.y_train
+        label_var = Variable(torch.LongTensor(labels))
+        optimizer.zero_grad()
+        scores = baseline_model(ids)
+        loss = loss_fn(scores, label_var)
+        loss.backward()
+        optimizer.step()
+
+        baseline_model.eval()
+        ids, labels = dataset.X_test, dataset.y_test
+        scores = baseline_model(ids)
+        preds = np.argmax(scores.data.numpy(), axis=1)
+        num_correct = np.sum(preds == labels)
+        valid_acc = float(num_correct) / num_test
+        best_test_acc = max(best_test_acc, valid_acc)
+
+        ids, labels = dataset.X_train, dataset.y_train
+        scores = baseline_model(ids)
+        preds = np.argmax(scores.data.numpy(), axis=1)
+        num_correct = np.sum(preds == labels)
+        train_acc = float(num_correct) / num_train
+        best_train_acc = max(best_train_acc, train_acc)
+
+    return best_train_acc, best_test_acc
 
 
 def train_model(args):
     # load data
     dataset = Data(args.data_dir)
+    baseline_dataset = BaselineData(args.data_dir)
     args.num_module = dataset.nn_num
+    # start_has_label = dataset.y_train[:,0] != -2
+    # dataset.X_train = dataset.X_train[start_has_label]
+    # dataset.y_train = dataset.y_train[start_has_label]
     num_test = len(dataset.y_test)
     num_train = len(dataset.y_train)
     num_node = dataset.bias_num + dataset.author_num
@@ -54,6 +110,18 @@ def train_model(args):
     has_label = np.invert(no_label)
     num_of_no_label_train = np.sum(no_label)
     num_of_has_label_train = num_train - num_of_no_label_train
+    if num_of_has_label_train>num_of_no_label_train:
+        ratio_for_has_label = num_of_no_label_train/num_of_has_label_train
+        ratio_for_no_label = 1
+    else:
+        ratio_for_no_label = num_of_has_label_train / num_of_no_label_train
+        ratio_for_has_label = 1
+    unique_label, label_counts = np.unique(dataset.y_train[has_label][:, -1], return_counts=True)
+    min_count = np.min(label_counts)
+    ratio_label = min_count/label_counts
+    print('train label {}\tcounts {}'.format(unique_label, label_counts))
+    unique_label, label_counts = np.unique(dataset.y_test, return_counts=True)
+    print('test label {}\tcounts {}'.format(unique_label, label_counts))
 
     print('num of node', num_node)
     print('num of author in training set', dataset.author_num - num_test)
@@ -72,15 +140,15 @@ def train_model(args):
         'classifier_output_dim': args.classifier_output_dim
     }
 
-    embed = nn.Embedding(num_node, args.embed_size)
-    embed.weight.data.copy_(torch.from_numpy(embedding_loader(args.id_path, args.embed_path, args.embed)))
+    # embed = nn.Embedding(num_node, args.embed_size)
+    # embed.weight.data.copy_(torch.from_numpy(embedding_loader(args.id_path, args.embed_path, args.embed)))
 
     # embed, _ = train_embedding(**embed_kwargs)
     # embed = embed.weight.data.cpu().numpy()
 
     # embed = nn.Embedding(num_node, args.embed_size)
 
-    # embed = embedding_loader(args.id_path, args.embed_path, args.embed)
+    embed = embedding_loader(args.id_path, args.embed_path, args.embed)
     print('Creating embedding...', num_node, args.embed_size)
 
     kwargs = {
@@ -98,11 +166,11 @@ def train_model(args):
     optimizer = torch.optim.Adam(execution_engine.parameters(), lr=args.learning_rate)
     loss_fn = torch.nn.CrossEntropyLoss().cuda()
 
-    stats = {
-        'train_losses': [], 'train_losses_ts': [], 'train_losses_ms': [],
-        'train_accs': [], 'val_accs': [], 'val_accs_es': [],
-        'best_val_acc': -1, 'model_e': 0,
-    }
+    # stats = {
+    #     'train_losses': [], 'train_losses_ts': [], 'train_losses_ms': [],
+    #     'train_accs': [], 'val_accs': [], 'val_accs_es': [],
+    #     'best_val_acc': -1, 'model_e': 0,
+    # }
 
     t = 0
     m = 0
@@ -115,19 +183,23 @@ def train_model(args):
         print('Starting epoch %d' % epoch)
         loss_aver = 0
 
+        counts_for_label = np.zeros(4)
+
         for batch in dataset.next_batch(dataset.X_train, dataset.y_train, batch_size=args.batch_size):
             paths, labels = batch
             for i in range(len(labels)):
                 path, label = paths[i], labels[i, -1]
                 if label == -2:
-                    # if np.random.random() > 0.5:
-                    #     continue
+                    if np.random.random() > ratio_for_no_label:
+                        continue
                     m += 1
                     execution_engine.forward_path(path)
                 else:
-                    if np.random.random() > 0.4:
+                    # if np.random.random() > ratio_label[label]:
+                    if np.random.random() > ratio_for_has_label:
                         continue
                     t += 1
+                    counts_for_label[label] += 1
                     label_var = Variable(torch.LongTensor([int(label)]).cuda())
                     optimizer.zero_grad()
                     scores = execution_engine([path])
@@ -137,13 +209,18 @@ def train_model(args):
                     optimizer.step()
 
                     if t % args.record_loss_every == 0:
+                        print('counts for each label', counts_for_label)
                         loss_aver /= args.record_loss_every
-                        acc = check_accuracy(dataset, execution_engine, 64)
+                        acc = check_accuracy(dataset, execution_engine)
                         print(t, m, loss_aver, acc)
-                        stats['train_losses'].append(loss_aver)
-                        stats['train_losses_ts'].append(t)
-                        stats['train_losses_ms'].append(m)
+                        embedding = execution_engine.entity_embeds.data.cpu().numpy()
+                        best_train_acc, best_test_acc = train_embedding(baseline_dataset, embedding, args)
+                        print('embed: train acc', best_train_acc, 'test acc', best_test_acc)
+                        # stats['train_losses'].append(loss_aver)
+                        # stats['train_losses_ts'].append(t)
+                        # stats['train_losses_ms'].append(m)
                         loss_aver = 0
+                        counts_for_label = np.zeros(4)
 
         # if epoch % args.check_every == 0:
         #     print('Checking training/validation accuracy ... ')
@@ -181,20 +258,23 @@ def get_state(m):
   return state
 
 
-def check_accuracy(dataset, model, batch_size):
+def check_accuracy(dataset, model):
     model.eval()
 
-    num_correct, num_samples = 0, 0
-    for batch in dataset.next_batch(dataset.X_test, dataset.y_test, batch_size=batch_size):
-        ids, labels = batch
-        scores = model.predict(ids.tolist())
-        preds = np.argmax(scores.data.cpu().numpy(), axis=1)
-        # print(preds)
-        # print(labels)
-        num_correct += np.sum(preds == labels)
-        num_samples += len(labels)
+    ids = dataset.X_test
+    labels = dataset.y_test
+    scores = model.predict(ids.tolist())
+    preds = np.argmax(scores.data.cpu().numpy(), axis=1)
+    correct = preds[preds == labels]
+    # print(preds)
+    # print(labels)
+    num_correct = np.sum(preds == labels)
+    num_samples = len(labels)
     valid_acc = float(num_correct) / num_samples
-
+    labels, counts = np.unique(preds, return_counts=True)
+    print('prediced labels', labels, 'counts', counts)
+    labels, counts = np.unique(correct, return_counts=True)
+    print('correct labels', labels, 'counts', counts)
     model.train()
     return valid_acc
 

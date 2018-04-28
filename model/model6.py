@@ -40,8 +40,8 @@ class ModuleNet(nn.Module):
         self.alpha = alpha
         self.dropout_rate = 0.3
 
-        # self.entity_embeds = embedding
-        self.entity_embeds = Variable(torch.from_numpy(embedding).float(), requires_grad=False).cuda()
+        self.entity_embeds = embedding
+        # self.entity_embeds = Variable(torch.from_numpy(embedding).float(), requires_grad=False).cuda()
 
         self.classifier = nn.Sequential(nn.Linear(embed_size, classifier_hidden_dim, bias=True),
                                         nn.ReLU(inplace=True),
@@ -54,25 +54,25 @@ class ModuleNet(nn.Module):
             self.add_module(str(id), module)
             self.function_modules[id] = module
 
-    # def look_up_embed(self, id):
-    #     lookup_tensor = torch.LongTensor([id]).cuda()
-    #     return self.entity_embeds(autograd.Variable(lookup_tensor))
-    #
-    # def look_up_embeds(self, ids):
-    #     lookup_tensor = torch.LongTensor(ids).cuda()
-    #     return self.entity_embeds(autograd.Variable(lookup_tensor))
-    #
-    # def update_embed(self, id, new):
-    #     self.entity_embeds.weight.data[id] = new.data
-
     def look_up_embed(self, id):
-        return self.entity_embeds[id].view(1,-1)
+        lookup_tensor = torch.LongTensor([id]).cuda()
+        return self.entity_embeds(autograd.Variable(lookup_tensor))
 
     def look_up_embeds(self, ids):
-        return self.entity_embeds[ids]
+        lookup_tensor = torch.LongTensor(ids).cuda()
+        return self.entity_embeds(autograd.Variable(lookup_tensor))
 
     def update_embed(self, id, new):
-        self.entity_embeds.data[id] = new.data
+        self.entity_embeds.weight.data[id] = new.data
+
+    # def look_up_embed(self, id):
+    #     return self.entity_embeds[id].view(1,-1)
+    #
+    # def look_up_embeds(self, ids):
+    #     return self.entity_embeds[ids]
+    #
+    # def update_embed(self, id, new):
+    #     self.entity_embeds.data[id] = new.data
 
     def forward_path(self, path):
         x = self.look_up_embed(path[0])
@@ -85,7 +85,10 @@ class ModuleNet(nn.Module):
         # x = F.dropout(x, p=self.dropout_rate, training=self.training)
         # x = F.normalize(x)
         # w = 1/(length*self.alpha)
-        self.update_embed(path[-1], x)
+        # self.update_embed(path[-1], x)
+        w = 0.5
+        output = (1 - w) * bias + w * x
+        self.update_embed(path[-1], output)
         return x
 
     def predict(self, ids):
