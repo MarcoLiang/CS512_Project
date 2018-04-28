@@ -15,14 +15,14 @@ from utils.load_embedding import *
 
 # data options
 parser.add_argument('--batch_size', default=128)
-parser.add_argument('--data_dir', default="./data/classify_task/pattern_10_90")
+parser.add_argument('--data_dir', default="./data/classify_task/pattern_90_10")
 
 # module options
 parser.add_argument('--embed_size', default=128)
-# parser.add_argument('--embed', default='dw')
-# parser.add_argument('--embed_path', default="./embedding_file/deepwalk/focus_embedding")
-parser.add_argument('--embed', default='esim')
-parser.add_argument('--embed_path', default="./embedding_file/esim/vec_128_new.dat")
+parser.add_argument('--embed', default='dw')
+parser.add_argument('--embed_path', default="./embedding_file/deepwalk/focus_embedding_new")
+# parser.add_argument('--embed', default='esim')
+# parser.add_argument('--embed_path', default="./embedding_file/esim/vec_128_new.dat")
 parser.add_argument('--id_path', default="./data/focus/venue_filtered_unique_id")
 parser.add_argument('--classifier_hidden_dim', default=32)
 parser.add_argument('--classifier_output_dim', default=4)

@@ -28,10 +28,10 @@ parser.add_argument('--num_epoch_for_embed', default=100)
 parser.add_argument('--threshold', default=0.9)
 parser.add_argument('--alpha', default=3)
 parser.add_argument('--embed_size', default=128)
-# parser.add_argument('--embed', default='dw')
-# parser.add_argument('--embed_path', default="./embedding_file/deepwalk/focus_embedding")
-parser.add_argument('--embed', default='esim')
-parser.add_argument('--embed_path', default="./embedding_file/esim/vec_128_new.dat")
+parser.add_argument('--embed', default='dw')
+parser.add_argument('--embed_path', default="./embedding_file/deepwalk/focus_embedding_new")
+# parser.add_argument('--embed', default='esim')
+# parser.add_argument('--embed_path', default="./embedding_file/esim/vec_128_new.dat")
 parser.add_argument('--id_path', default="./data/focus/venue_filtered_unique_id")
 parser.add_argument('--classifier_hidden_dim', default=64)
 parser.add_argument('--classifier_output_dim', default=4)
@@ -192,6 +192,8 @@ def train_model(args):
     m = 0
     epoch = 0
     # embedding_data = execution_engine.entity_embeds.weight.data
+
+    print('='*80)
     print("Starting training our model...")
     while epoch < args.num_epoch:
 
@@ -258,14 +260,17 @@ def train_model(args):
 
         execution_engine.eval()
 
-        for batch in dataset.next_batch(no_label_X_train, no_label_y_train, batch_size=1024*100):
-            paths, origin_label = batch
-            test = [path[-1] for path in paths]
-            labels = np.array([entity2label[i] for i in test])
-            scores = F.softmax(execution_engine(paths), dim=1)
-            scores = scores.data.cpu().numpy()
-            preds = np.argmax(scores, axis=1)
-            num_correct2 += np.sum(preds == labels)
+        # print('='*80)
+        # print('start evaluate pathes...')
+        #
+        # for batch in dataset.next_batch(no_label_X_train, no_label_y_train, batch_size=1024*10):
+        #     paths, origin_label = batch
+        #     test = [path[-1] for path in paths]
+        #     labels = np.array([entity2label[i] for i in test])
+        #     scores = F.softmax(execution_engine(paths), dim=1)
+        #     scores = scores.data.cpu().numpy()
+        #     preds = np.argmax(scores, axis=1)
+        #     num_correct2 += np.sum(preds == labels)
 
             # wrong = preds != labels
             # start_labels = origin_label[wrong][:, 0]
@@ -310,8 +315,8 @@ def train_model(args):
 
         train_acc = float(num_correct1) / (4*num_real_train)
         print('train path accuracy is ', train_acc)
-        test_acc = float(num_correct2) / num_of_no_label_train
-        print('test path accuracy is ', test_acc)
+        # test_acc = float(num_correct2) / num_of_no_label_train
+        # print('test path accuracy is ', test_acc)
 
         # for i, entity2preds in enumerate([entity2preds1,entity2preds2,entity2preds3,entity2preds4]):
         #     print('ensemble mode', i)
@@ -379,8 +384,8 @@ def train_model(args):
         #     print('Saving checkpoint to %s' % args.checkpoint_path)
         #     torch.save(checkpoint, args.checkpoint_path)
 
-        # embedding = execution_engine.entity_embeds.weight.data.cpu().numpy()
-        # train_embedding(baseline_dataset, embedding, args)
+        embedding = execution_engine.entity_embeds.weight.data.cpu().numpy()
+        train_embedding(baseline_dataset, embedding, args)
 
     print("training is done!")
     # print("best validate accuracy:{}".format(stats['best_val_acc']))

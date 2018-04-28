@@ -9,13 +9,14 @@ import torch.nn.functional as F
 import torch.optim as optim
 from utils.data3 import Data
 from model.model4 import ModuleNet
+from utils.load_embedding import *
 from model.embedding_model import train_embedding
 parser = argparse.ArgumentParser()
 torch.backends.cudnn.enabled = True
 
 # data options
-parser.add_argument('--batch_size', default=1024)
-parser.add_argument('--data_dir', default="./data/classify_task_170W/pattern_70_30")
+parser.add_argument('--batch_size', default=10000)
+parser.add_argument('--data_dir', default="./data/classify_task/pattern_70_30")
 
 # training embed options
 parser.add_argument('--batch_size_for_embed', default=128)
@@ -25,20 +26,21 @@ parser.add_argument('--num_epoch_for_embed', default=100)
 parser.add_argument('--alpha', default=3)
 parser.add_argument('--embed_size', default=128)
 parser.add_argument('--embed', default='dw')
-parser.add_argument('--embed_path', default="./embedding_file/deepwalk/focus_embedding")
+parser.add_argument('--embed_path', default="./embedding_file/deepwalk/focus_embedding_new")
 # parser.add_argument('--embed', default='esim')
 # parser.add_argument('--embed_path', default="./embedding_file/esim/vec_dim_128.dat")
-parser.add_argument('--classifier_hidden_dim', default=32)
+parser.add_argument('--id_path', default="./data/focus/venue_filtered_unique_id")
+parser.add_argument('--classifier_hidden_dim', default=64)
 parser.add_argument('--classifier_output_dim', default=4)
 
 # Optimization options
 parser.add_argument('--learning_rate', default=5e-4)
-parser.add_argument('--num_epoch', default=100000)
+parser.add_argument('--num_epoch', default=100)
 
 # Output options
 parser.add_argument('--checkpoint_path', default='./model/trained_model_classification_70_30/checkpoint.pt')
 parser.add_argument('--check_every', default=1)
-parser.add_argument('--record_loss_every', default=20000)
+parser.add_argument('--record_loss_every', default=10000)
 
 
 def train_model(args):
@@ -70,13 +72,15 @@ def train_model(args):
         'classifier_output_dim': args.classifier_output_dim
     }
 
-    # embed = nn.Embedding(num_node, args.embed_size)
-    # embed.weight.data.copy_(torch.from_numpy(embedding_loader(args.id_path, args.embed_path, args.embed)))
+    embed = nn.Embedding(num_node, args.embed_size)
+    embed.weight.data.copy_(torch.from_numpy(embedding_loader(args.id_path, args.embed_path, args.embed)))
 
-    embed, _ = train_embedding(**embed_kwargs)
-    embed = embed.weight.data.cpu().numpy()
+    # embed, _ = train_embedding(**embed_kwargs)
+    # embed = embed.weight.data.cpu().numpy()
 
     # embed = nn.Embedding(num_node, args.embed_size)
+
+    # embed = embedding_loader(args.id_path, args.embed_path, args.embed)
     print('Creating embedding...', num_node, args.embed_size)
 
     kwargs = {
@@ -121,6 +125,8 @@ def train_model(args):
                     m += 1
                     execution_engine.forward_path(path)
                 else:
+                    if np.random.random() > 0.4:
+                        continue
                     t += 1
                     label_var = Variable(torch.LongTensor([int(label)]).cuda())
                     optimizer.zero_grad()
@@ -132,34 +138,35 @@ def train_model(args):
 
                     if t % args.record_loss_every == 0:
                         loss_aver /= args.record_loss_every
-                        print(t, m, loss_aver)
+                        acc = check_accuracy(dataset, execution_engine, 64)
+                        print(t, m, loss_aver, acc)
                         stats['train_losses'].append(loss_aver)
                         stats['train_losses_ts'].append(t)
                         stats['train_losses_ms'].append(m)
                         loss_aver = 0
 
-        if epoch % args.check_every == 0:
-            print('Checking training/validation accuracy ... ')
-            val_acc = check_accuracy(dataset, execution_engine, args.batch_size)
-            print('val accuracy is ', val_acc)
-            stats['val_accs'].append(val_acc)
-            stats['val_accs_es'].append(epoch)
-
-            if val_acc > stats['best_val_acc']:
-                stats['best_val_acc'] = val_acc
-                stats['model_e'] = epoch
-                best_state = get_state(execution_engine)
-
-            checkpoint = {
-                'args': args,
-                'kwargs': kwargs,
-                'state': best_state,
-                'stats': stats,
-            }
-            for k, v in stats.items():
-                checkpoint[k] = v
-            print('Saving checkpoint to %s' % args.checkpoint_path)
-            torch.save(checkpoint, args.checkpoint_path)
+        # if epoch % args.check_every == 0:
+        #     print('Checking training/validation accuracy ... ')
+        #     val_acc = check_accuracy(dataset, execution_engine, 64)
+        #     print('val accuracy is ', val_acc)
+        #     stats['val_accs'].append(val_acc)
+        #     stats['val_accs_es'].append(epoch)
+        #
+        #     if val_acc > stats['best_val_acc']:
+        #         stats['best_val_acc'] = val_acc
+        #         stats['model_e'] = epoch
+        #         best_state = get_state(execution_engine)
+        #
+        #     checkpoint = {
+        #         'args': args,
+        #         'kwargs': kwargs,
+        #         'state': best_state,
+        #         'stats': stats,
+        #     }
+        #     for k, v in stats.items():
+        #         checkpoint[k] = v
+        #     print('Saving checkpoint to %s' % args.checkpoint_path)
+        #     torch.save(checkpoint, args.checkpoint_path)
 
     print("training is done!")
     print("best validate accuracy:{}".format(stats['best_val_acc']))
@@ -180,7 +187,7 @@ def check_accuracy(dataset, model, batch_size):
     num_correct, num_samples = 0, 0
     for batch in dataset.next_batch(dataset.X_test, dataset.y_test, batch_size=batch_size):
         ids, labels = batch
-        scores = model.predict(ids)
+        scores = model.predict(ids.tolist())
         preds = np.argmax(scores.data.cpu().numpy(), axis=1)
         # print(preds)
         # print(labels)
