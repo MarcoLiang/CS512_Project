@@ -18,7 +18,7 @@ torch.backends.cudnn.enabled = True
 
 # data options
 parser.add_argument('--batch_size', default=1024)
-parser.add_argument('--data_dir', default="./data/classify_task/pattern_70_30")
+parser.add_argument('--data_dir', default="./data/classify_task/pattern_90_10")
 
 # training embed options
 parser.add_argument('--batch_size_for_embed', default=64)
@@ -43,7 +43,7 @@ parser.add_argument('--num_epoch', default=100)
 # Output options
 parser.add_argument('--save_path', default='./model/no_embedding_model_classification/')
 parser.add_argument('--check_every', default=1)
-parser.add_argument('--record_loss_every', default=100)
+parser.add_argument('--record_loss_every', default=10)
 
 
 def train_embedding(dataset, embed, args):
@@ -67,7 +67,7 @@ def train_embedding(dataset, embed, args):
     best_train_acc = 0
     num_train = len(dataset.y_train)
     num_test = len(dataset.y_test)
-    while epoch < 100:
+    while epoch < 1000:
         dataset.shuffle()
         epoch += 1
 
@@ -144,10 +144,10 @@ def train_model(args):
     #     'classifier_output_dim': args.classifier_output_dim
     # }
 
-    # embed = embedding_loader(args.id_path, args.embed_path, args.embed)
+    embed = embedding_loader(args.id_path, args.embed_path, args.embed)
 
-    embed = nn.Embedding(num_node, args.embed_size)
-    embed.weight.data.copy_(torch.from_numpy(embedding_loader(args.id_path, args.embed_path, args.embed)))
+    # embed = nn.Embedding(num_node, args.embed_size)
+    # embed.weight.data.copy_(torch.from_numpy(embedding_loader(args.id_path, args.embed_path, args.embed)))
 
     # embed, classifier = train_embedding(**embed_kwargs)
 
@@ -157,11 +157,12 @@ def train_model(args):
     # args.alpha = len(dataset.y_train)/len(dataset.y_test)
     # args.beta = 0.01
     # num_real_train = int(args.beta*num_of_has_label_train)
-    num_real_train = 102400
+    num_real_train = 10240
 
     args.num_module = dataset.nn_num
     kwargs = {
         'alpha': args.alpha,
+        'num_author':dataset.author_num,
         'embedding': embed,
         'embed_size': args.embed_size,
         'num_module': args.num_module,
@@ -208,11 +209,11 @@ def train_model(args):
         # random_choice = np.append(start_with_label, start_without_label)
         # random_choice.sort()
 
-        random_choice = [np.random.choice(indices, size=num_real_train) for indices in label_indices]
-        random_choice = np.concatenate(random_choice)
-        random_choice.sort()
+        # random_choice = [np.random.choice(indices, size=num_real_train) for indices in label_indices]
+        # random_choice = np.concatenate(random_choice)
+        # random_choice.sort()
 
-        # random_choice = np.random.choice(range(num_of_has_label_train), size=num_real_train)
+        random_choice = np.random.choice(range(num_of_has_label_train), size=num_real_train)
 
         X_train = dataset.X_train[random_choice]
         y_train = dataset.y_train[random_choice]
@@ -223,10 +224,10 @@ def train_model(args):
         num_correct1, num_correct2 = 0, 0
         wrong_has_label, wrong_no_label, right_has_label, right_no_label = 0, 0, 0, 0
 
-        # entity2preds1 = dict(zip(dataset.X_test, np.zeros((num_test, args.classifier_output_dim))))
-        # entity2preds2 = dict(zip(dataset.X_test, np.zeros((num_test, args.classifier_output_dim))))
-        # entity2preds3 = dict(zip(dataset.X_test, np.zeros((num_test, args.classifier_output_dim))))
-        # entity2preds4 = dict(zip(dataset.X_test, np.zeros((num_test, args.classifier_output_dim))))
+        entity2preds1 = dict(zip(dataset.X_test, np.zeros((num_test, args.classifier_output_dim))))
+        entity2preds2 = dict(zip(dataset.X_test, np.zeros((num_test, args.classifier_output_dim))))
+        entity2preds3 = dict(zip(dataset.X_test, np.zeros((num_test, args.classifier_output_dim))))
+        entity2preds4 = dict(zip(dataset.X_test, np.zeros((num_test, args.classifier_output_dim))))
 
         execution_engine.train()
 
@@ -260,85 +261,69 @@ def train_model(args):
 
         execution_engine.eval()
 
-        # print('='*80)
-        # print('start evaluate pathes...')
-        #
-        # for batch in dataset.next_batch(no_label_X_train, no_label_y_train, batch_size=1024*10):
-        #     paths, origin_label = batch
-        #     test = [path[-1] for path in paths]
-        #     labels = np.array([entity2label[i] for i in test])
-        #     scores = F.softmax(execution_engine(paths), dim=1)
-        #     scores = scores.data.cpu().numpy()
-        #     preds = np.argmax(scores, axis=1)
-        #     num_correct2 += np.sum(preds == labels)
+        print('='*80)
+        print('start evaluate pathes...')
 
-            # wrong = preds != labels
-            # start_labels = origin_label[wrong][:, 0]
-            # wrong_has_label += np.sum(start_labels!=-2)
-            # wrong_no_label += np.sum(start_labels==-2)
-            # right = preds == labels
-            # start_labels = origin_label[right][:, 0]
-            # right_has_label += np.sum(start_labels != -2)
-            # right_no_label += np.sum(start_labels == -2)
+        random_choice = np.random.choice(range(num_of_no_label_train), size=num_real_train*10)
 
-            # for i in range(len(labels)):
-            #     entity2preds1[test[i]] += np.log(scores[i])
-            #     pred = preds[i]
-            #     if scores[i][pred] > args.threshold:
-            #         entity2preds2[test[i]][pred] += 1
-            #     elif scores[i][pred] > 0.25:
-            #         entity2preds4[test[i]][pred] += 1
-            #     entity2preds3[test[i]][pred] += 1
+        for batch in dataset.next_batch(no_label_X_train[random_choice], no_label_y_train[random_choice], batch_size=1024*10):
+            paths, origin_label = batch
+            test = [path[-1] for path in paths]
+            labels = np.array([entity2label[i] for i in test])
+            scores = F.softmax(execution_engine(paths), dim=1)
+            scores = scores.data.cpu().numpy()
+            preds = np.argmax(scores, axis=1)
+            num_correct2 += np.sum(preds == labels)
 
-            # for i in range(len(labels)):
-            #     path, label = paths[i], labels[i, -1]
-            #     if label == -2:
-            #         continue
-            #         if np.random.random() > alpha:
-            #             continue
-            #         m += 1
-            #         execution_engine.forward_path(path)
-            #     else:
-            #         t += 1
-            #         label_var = Variable(torch.LongTensor([int(label)]).cuda())
-            #         optimizer.zero_grad()
-            #         scores = execution_engine([path])
-            #         loss = loss_fn(scores, label_var)
-            #         loss_aver += loss.data[0]
-            #         loss.backward()
-            #         optimizer.step()
+            wrong = preds != labels
+            start_labels = origin_label[wrong][:, 0]
+            wrong_has_label += np.sum(start_labels!=-2)
+            wrong_no_label += np.sum(start_labels==-2)
+            right = preds == labels
+            start_labels = origin_label[right][:, 0]
+            right_has_label += np.sum(start_labels != -2)
+            right_no_label += np.sum(start_labels == -2)
 
-        # print('wrong has label', wrong_has_label)
-        # print('wrong no label', wrong_no_label)
-        # print('right has label', right_has_label)
-        # print('right no label', right_no_label)
+            for i in range(len(labels)):
+                entity2preds1[test[i]] += np.log(scores[i])
+                pred = preds[i]
+                if scores[i][pred] > args.threshold:
+                    entity2preds2[test[i]][pred] += 1
+                elif scores[i][pred] > 0.25:
+                    entity2preds4[test[i]][pred] += 1
+                entity2preds3[test[i]][pred] += 1
 
-        train_acc = float(num_correct1) / (4*num_real_train)
+        print('wrong has label', wrong_has_label)
+        print('wrong no label', wrong_no_label)
+        print('right has label', right_has_label)
+        print('right no label', right_no_label)
+
+        train_acc = float(num_correct1) / num_real_train
         print('train path accuracy is ', train_acc)
-        # test_acc = float(num_correct2) / num_of_no_label_train
-        # print('test path accuracy is ', test_acc)
+        test_acc = float(num_correct2) / (num_real_train*10)
+        print('test path accuracy is ', test_acc)
 
-        # for i, entity2preds in enumerate([entity2preds1,entity2preds2,entity2preds3,entity2preds4]):
-        #     print('ensemble mode', i)
-        #     en_results = np.array([entity2preds[i] for i in dataset.X_test])
-        #     max_votes = np.max(en_results, axis=1)
-        #     votes = np.sum(en_results, axis=1)
-        #     votes_rate = max_votes/votes
-        #     np.nan_to_num(votes_rate, copy=False)
-        #     en_preds = np.argmax(en_results, axis=1)
-        #     en_correct = en_preds==dataset.y_test
-        #     en_acc = float(np.sum(en_correct)) / num_test
-        #     print('ensemble acc is ', en_acc)
-        #     vrc = votes_rate[en_correct]
-        #     vrc_mean = np.mean(vrc)
-        #     vrc_min = np.min(vrc)
-        #     vrc_max = np.max(vrc)
-        #     vrw = votes_rate[np.invert(en_correct)]
-        #     vrw_mean = np.mean(vrw)
-        #     vrw_min = np.min(vrw)
-        #     vrw_max = np.max(vrw)
-        #     print('vote rate for correct mean={} min={} max={}'.format(vrc_mean, vrc_min, vrc_max))
-        #     print('vote rate for wrong mean={} min={} max={}'.format(vrw_mean, vrw_min, vrw_max))
+        for i, entity2preds in enumerate([entity2preds1,entity2preds2,entity2preds3,entity2preds4]):
+            print('ensemble mode', i)
+            en_results = np.array([entity2preds[i] for i in dataset.X_test])
+            max_votes = np.max(en_results, axis=1)
+            votes = np.sum(en_results, axis=1)
+            votes_rate = max_votes/votes
+            np.nan_to_num(votes_rate, copy=False)
+            en_preds = np.argmax(en_results, axis=1)
+            en_correct = en_preds==dataset.y_test
+            en_acc = float(np.sum(en_correct)) / num_test
+            print('ensemble acc is ', en_acc)
+            vrc = votes_rate[en_correct]
+            vrc_mean = np.mean(vrc)
+            vrc_min = np.min(vrc)
+            vrc_max = np.max(vrc)
+            vrw = votes_rate[np.invert(en_correct)]
+            vrw_mean = np.mean(vrw)
+            vrw_min = np.min(vrw)
+            vrw_max = np.max(vrw)
+            print('vote rate for correct mean={} min={} max={}'.format(vrc_mean, vrc_min, vrc_max))
+            print('vote rate for wrong mean={} min={} max={}'.format(vrw_mean, vrw_min, vrw_max))
 
         # threshold = 0.9
         # sure_answers = votes_rate>threshold
@@ -384,7 +369,7 @@ def train_model(args):
         #     print('Saving checkpoint to %s' % args.checkpoint_path)
         #     torch.save(checkpoint, args.checkpoint_path)
 
-        embedding = execution_engine.entity_embeds.weight.data.cpu().numpy()
+        embedding = execution_engine.author_embeds.weight.data.cpu().numpy()
         train_embedding(baseline_dataset, embedding, args)
 
     print("training is done!")

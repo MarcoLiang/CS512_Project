@@ -42,7 +42,7 @@ parser.add_argument('--num_epoch', default=100)
 # Output options
 parser.add_argument('--checkpoint_path', default='./model/trained_model_classification_90_10/checkpoint.pt')
 parser.add_argument('--check_every', default=1)
-parser.add_argument('--record_loss_every', default=10000)
+parser.add_argument('--record_loss_every', default=1000)
 
 
 def train_embedding(dataset, embed, args):
@@ -154,6 +154,8 @@ def train_model(args):
     kwargs = {
         'alpha': args.alpha,
         'embedding': embed,
+        'num_author': dataset.author_num,
+        'num_node': num_node,
         'embed_size': args.embed_size,
         'num_module': args.num_module,
         'classifier_hidden_dim': args.classifier_hidden_dim,
@@ -213,7 +215,7 @@ def train_model(args):
                         loss_aver /= args.record_loss_every
                         acc = check_accuracy(dataset, execution_engine)
                         print(t, m, loss_aver, acc)
-                        embedding = execution_engine.entity_embeds.data.cpu().numpy()
+                        embedding = execution_engine.author_embeds.weight.data.cpu().numpy()
                         best_train_acc, best_test_acc = train_embedding(baseline_dataset, embedding, args)
                         print('embed: train acc', best_train_acc, 'test acc', best_test_acc)
                         # stats['train_losses'].append(loss_aver)

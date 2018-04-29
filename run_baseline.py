@@ -51,6 +51,7 @@ class BaselineMLP(nn.Module):
 
         self.classifier = nn.Sequential(nn.Linear(embed_size, classifier_hidden_dim, bias=True),
                                         nn.ReLU(inplace=True),
+                                        # nn.Tanh(),
                                         # nn.Dropout(p=self.dropout_rate, inplace=True),
                                         nn.Linear(classifier_hidden_dim, classifier_output_dim, bias=True))
 
@@ -70,12 +71,6 @@ class BaselineMLP(nn.Module):
 def main(args):
     # load data
     dataset = BaselineData(args.data_dir)
-    l = dataset.y_train!=2
-    dataset.X_train = dataset.X_train[l]
-    dataset.y_train = dataset.y_train[l]
-    l = dataset.y_test != 2
-    dataset.X_test = dataset.X_test[l]
-    dataset.y_test = dataset.y_test[l]
 
     train_model(dataset, args)
 
