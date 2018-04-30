@@ -17,7 +17,7 @@ parser = argparse.ArgumentParser()
 torch.backends.cudnn.enabled = True
 
 # data options
-parser.add_argument('--batch_size', default=1024)
+parser.add_argument('--batch_size', default=128)
 parser.add_argument('--data_dir', default="./data/classify_task/pattern_90_10")
 
 # training embed options
@@ -25,7 +25,7 @@ parser.add_argument('--batch_size_for_embed', default=64)
 parser.add_argument('--num_epoch_for_embed', default=100)
 
 # module options
-parser.add_argument('--threshold', default=0.9)
+parser.add_argument('--threshold', default=0.8)
 parser.add_argument('--alpha', default=3)
 parser.add_argument('--embed_size', default=128)
 parser.add_argument('--embed', default='dw')
@@ -38,12 +38,12 @@ parser.add_argument('--classifier_output_dim', default=4)
 
 # Optimization options
 parser.add_argument('--learning_rate', default=5e-4)
-parser.add_argument('--num_epoch', default=100)
+parser.add_argument('--num_epoch', default=100000)
 
 # Output options
 parser.add_argument('--save_path', default='./model/no_embedding_model_classification/')
 parser.add_argument('--check_every', default=1)
-parser.add_argument('--record_loss_every', default=10)
+parser.add_argument('--record_loss_every', default=80)
 
 
 def train_embedding(dataset, embed, args):
@@ -55,7 +55,7 @@ def train_embedding(dataset, embed, args):
         'classifier_output_dim': args.classifier_output_dim
     }
 
-    baseline_model = BaselineMLP(**kwargs)
+    baseline_model = BaselineMLP(**kwargs).cuda()
     baseline_model.train()
     optimizer = torch.optim.Adam(baseline_model.parameters(), lr=args.learning_rate)
     loss_fn = torch.nn.CrossEntropyLoss()
@@ -67,13 +67,13 @@ def train_embedding(dataset, embed, args):
     best_train_acc = 0
     num_train = len(dataset.y_train)
     num_test = len(dataset.y_test)
-    while epoch < 1000:
+    while epoch < 2000:
         dataset.shuffle()
         epoch += 1
 
         baseline_model.train()
         ids, labels = dataset.X_train, dataset.y_train
-        label_var = Variable(torch.LongTensor(labels))
+        label_var = Variable(torch.LongTensor(labels)).cuda()
         optimizer.zero_grad()
         scores = baseline_model(ids)
         loss = loss_fn(scores, label_var)
@@ -83,14 +83,14 @@ def train_embedding(dataset, embed, args):
         baseline_model.eval()
         ids, labels = dataset.X_test, dataset.y_test
         scores = baseline_model(ids)
-        preds = np.argmax(scores.data.numpy(), axis=1)
+        preds = np.argmax(scores.data.cpu().numpy(), axis=1)
         num_correct = np.sum(preds == labels)
         valid_acc = float(num_correct) / num_test
         best_test_acc = max(best_test_acc, valid_acc)
 
         ids, labels = dataset.X_train, dataset.y_train
         scores = baseline_model(ids)
-        preds = np.argmax(scores.data.numpy(), axis=1)
+        preds = np.argmax(scores.data.cpu().numpy(), axis=1)
         num_correct = np.sum(preds == labels)
         train_acc = float(num_correct) / num_train
         best_train_acc = max(best_train_acc, train_acc)
@@ -107,7 +107,7 @@ def train_model(args):
     # log = open(args.log_path, 'w')
 
 
-    baseline_dataset = BaselineData(args.data_dir)
+    # baseline_dataset = BaselineData(args.data_dir)
 
     dataset = Data(args.data_dir)
     entity2label = dict(zip(dataset.X_test, dataset.y_test))
@@ -119,20 +119,60 @@ def train_model(args):
     print('num of author in test ser', num_test)
     print('num of pathes in training set', num_train)
 
-    no_label = dataset.y_train[:,-1] == -2
+    # no_label = dataset.y_train[:,-1] == -2
+    # num_of_no_label_train = np.sum(no_label)
+    # num_of_has_label_train = num_train-num_of_no_label_train
+    # print('num of pathes in training set with labeled end', num_of_has_label_train)
+    # print('num of pathes in training set without labeled end', num_of_no_label_train)
+    # no_label_X_train = dataset.X_train[no_label]
+    # no_label_y_train = dataset.y_train[no_label]
+    # has_label = np.invert(no_label)
+    # dataset.X_train = dataset.X_train[has_label]
+    # dataset.y_train = dataset.y_train[has_label]
+    # unique_label, label_counts = np.unique(dataset.y_train[:,-1], return_counts=True)
+    # print('label {}\tcounts {}'.format(unique_label, label_counts))
+    # label_indices = [np.where(dataset.y_train[:,-1]==label)[0] for label in unique_label]
+
+    no_label = dataset.y_train[:,0] == -2
     num_of_no_label_train = np.sum(no_label)
     num_of_has_label_train = num_train-num_of_no_label_train
-    print('num of pathes in training set with labeled end', num_of_has_label_train)
-    print('num of pathes in training set without labeled end', num_of_no_label_train)
+    print('num of pathes in training set with labeled start', num_of_has_label_train)
+    print('num of pathes in training set without labeled start', num_of_no_label_train)
     no_label_X_train = dataset.X_train[no_label]
     no_label_y_train = dataset.y_train[no_label]
     has_label = np.invert(no_label)
     dataset.X_train = dataset.X_train[has_label]
     dataset.y_train = dataset.y_train[has_label]
-    unique_label, label_counts = np.unique(dataset.y_train[:,-1], return_counts=True)
+    has_label_X_train = dataset.X_train
+    has_label_y_train = dataset.y_train
+    unique_label, label_counts = np.unique(dataset.y_train[:,0], return_counts=True)
     print('label {}\tcounts {}'.format(unique_label, label_counts))
-    label_indices = [np.where(dataset.y_train[:,-1]==label)[0] for label in unique_label]
+    # label_indices = [np.where(dataset.y_train[:,-1]==label)[0] for label in unique_label]
 
+    five_path = []
+    seven_path = []
+    nine_path = []
+    for i, path in enumerate(no_label_X_train):
+        if len(path) == 5:
+            five_path.append(i)
+        elif len(path) == 7:
+            seven_path.append(i)
+        elif len(path) == 9:
+            nine_path.append(i)
+
+    five_path_train = []
+    seven_path_train = []
+    nine_path_train = []
+    for i, path in enumerate(dataset.X_train):
+        if len(path) == 5:
+            five_path_train.append(i)
+        elif len(path) == 7:
+            seven_path_train.append(i)
+        elif len(path) == 9:
+            nine_path_train.append(i)
+
+    print('train: 5:{}, 7:{}, 9:{}'.format(len(five_path_train), len(seven_path_train), len(nine_path_train)))
+    print('test: 5:{}, 7:{}, 9:{}'.format(len(five_path), len(seven_path), len(nine_path)))
 
     # embed_kwargs = {
     #     'data_dir': args.data_dir,
@@ -152,12 +192,18 @@ def train_model(args):
     # embed, classifier = train_embedding(**embed_kwargs)
 
     # embed = nn.Embedding(num_node, args.embed_size)
+
+
     print('Creating embedding...', num_node, args.embed_size)
 
     # args.alpha = len(dataset.y_train)/len(dataset.y_test)
     # args.beta = 0.01
     # num_real_train = int(args.beta*num_of_has_label_train)
+    num_for_weight = 10240
     num_real_train = 10240
+    num_for_train = num_for_weight*3
+    num_for_test = 1024*1000
+    batch_size_for_test = 10240
 
     args.num_module = dataset.nn_num
     kwargs = {
@@ -198,7 +244,7 @@ def train_model(args):
     print("Starting training our model...")
     while epoch < args.num_epoch:
 
-        dataset.shuffle()
+        # dataset.shuffle()
 
         # start_with_label = dataset.y_train[:,0]!=-2
         # start_without_label = np.invert(start_with_label)
@@ -213,12 +259,19 @@ def train_model(args):
         # random_choice = np.concatenate(random_choice)
         # random_choice.sort()
 
-        random_choice = np.random.choice(range(num_of_has_label_train), size=num_real_train)
 
-        X_train = dataset.X_train[random_choice]
-        y_train = dataset.y_train[random_choice]
+        # random_choice = np.random.choice(range(num_of_has_label_train), size=num_real_train)
+        # X_train = dataset.X_train[random_choice]
+        # y_train = dataset.y_train[random_choice]
+
+        five_choice = np.random.choice(five_path_train, size=500)
+        seven_choice = np.random.choice(seven_path_train, size=1000)
+        nine_choice = np.random.choice(nine_path_train, size=2000)
+        random_choice = np.concatenate([five_choice,seven_choice,nine_choice])
+        np.random.shuffle(random_choice)
 
         epoch += 1
+        print('='*80)
         print('Starting epoch %d' % epoch)
         loss_aver = 0
         num_correct1, num_correct2 = 0, 0
@@ -227,14 +280,14 @@ def train_model(args):
         entity2preds1 = dict(zip(dataset.X_test, np.zeros((num_test, args.classifier_output_dim))))
         entity2preds2 = dict(zip(dataset.X_test, np.zeros((num_test, args.classifier_output_dim))))
         entity2preds3 = dict(zip(dataset.X_test, np.zeros((num_test, args.classifier_output_dim))))
-        entity2preds4 = dict(zip(dataset.X_test, np.zeros((num_test, args.classifier_output_dim))))
 
         execution_engine.train()
 
-        for batch in dataset.next_batch(X_train, y_train, batch_size=args.batch_size):
+        for batch in dataset.next_batch(dataset.X_train[random_choice], dataset.y_train[random_choice], batch_size=args.batch_size):
             t += 1
             paths, origin_label = batch
-            labels = origin_label[:,-1]
+            # labels = origin_label[:,-1]
+            labels = origin_label[:, 0]
             label_var = Variable(torch.LongTensor(labels).cuda())
             optimizer.zero_grad()
             scores = execution_engine(paths)
@@ -242,88 +295,136 @@ def train_model(args):
             loss_aver += loss.data[0]
             loss.backward()
             optimizer.step()
-            scores = scores.data.cpu().numpy()
-            preds = np.argmax(scores, axis=1)
-            num_correct1 += np.sum(preds == labels)
+            # scores = scores.data.cpu().numpy()
+            # preds = np.argmax(scores, axis=1)
+            # num_correct1 += np.sum(preds == labels)
 
             if t % args.record_loss_every == 0:
                 loss_aver /= args.record_loss_every
-                print(t, m, loss_aver)
+                print(t, m, 'loss:', loss_aver)
                 # stats['train_losses'].append(loss_aver)
                 # stats['train_losses_ts'].append(t)
                 # stats['train_losses_ms'].append(m)
                 loss_aver = 0
 
-        # delta = (execution_engine.entity_embeds.weight.data - embedding_data).cpu().numpy()
-        # delta = np.sum(delta)/num_node
-        # print('delta of embedding is', delta)
-        # print(execution_engine.entity_embeds.weight.data)
-
         execution_engine.eval()
 
-        print('='*80)
-        print('start evaluate pathes...')
+        print('=' * 80)
+        print('start evaluate training pathes...')
 
-        random_choice = np.random.choice(range(num_of_no_label_train), size=num_real_train*10)
+        # random_choice = np.random.choice(range(num_of_has_label_train), size=num_for_weight)
+        five_choice = np.random.choice(five_path_train, size=num_for_weight)
+        seven_choice = np.random.choice(seven_path_train, size=num_for_weight)
+        nine_choice = np.random.choice(nine_path_train, size=num_for_weight)
+        random_choice = np.concatenate([five_choice, seven_choice, nine_choice])
+        X_train = has_label_X_train[random_choice]
+        y_train = has_label_y_train[random_choice]
+        correct_path = []
+        wrong_path = []
 
-        for batch in dataset.next_batch(no_label_X_train[random_choice], no_label_y_train[random_choice], batch_size=1024*10):
+        for batch in dataset.next_batch(X_train, y_train, batch_size=batch_size_for_test):
             paths, origin_label = batch
-            test = [path[-1] for path in paths]
+            # labels = origin_label[:,-1]
+            labels = origin_label[:, 0]
+            scores = execution_engine(paths)
+            scores = scores.data.cpu().numpy()
+            preds = np.argmax(scores, axis=1)
+            correct = preds == labels
+            num_correct1 += np.sum(correct)
+            correct_path += paths[correct].tolist()
+            wrong_path += paths[np.invert(correct)].tolist()
+
+        correct_length, correct_leng_count = np.unique([len(i) for i in correct_path], return_counts=True)
+        print('correct length and counts', correct_length, correct_leng_count)
+        wrong_length, wrong_leng_count = np.unique([len(i) for i in wrong_path], return_counts=True)
+        print('wrong length and counts', wrong_length, wrong_leng_count)
+        correct_ratio = correct_leng_count / (correct_leng_count+wrong_leng_count)
+        random_choice_weight = correct_ratio / np.sum(correct_ratio)
+        print('correct rate', correct_ratio, 'choice weight', random_choice_weight)
+
+        print('=' * 80)
+        print('start evaluate test pathes...')
+        # five_choice, seven_choice, nine_choice = num_for_test * random_choice_weight
+        # five_choice = np.random.choice(five_path, size=int(five_choice))
+        # seven_choice = np.random.choice(seven_path, size=int(seven_choice))
+        # nine_choice = np.random.choice(nine_path, size=int(nine_choice))
+        # random_choice = np.concatenate([five_choice,seven_choice,nine_choice])
+
+        random_choice = np.random.choice(range(num_of_no_label_train), size=num_for_test)
+
+        # nine_choice = np.random.choice(nine_path, size=30000)
+        # random_choice = np.concatenate([five_path,seven_path,nine_choice])
+
+        correct_path = []
+        wrong_path = []
+
+        for batch in dataset.next_batch(no_label_X_train[random_choice], no_label_y_train[random_choice], batch_size=batch_size_for_test):
+            paths, origin_label = batch
+            # test = [path[-1] for path in paths]
+            test = [path[0] for path in paths]
             labels = np.array([entity2label[i] for i in test])
             scores = F.softmax(execution_engine(paths), dim=1)
             scores = scores.data.cpu().numpy()
             preds = np.argmax(scores, axis=1)
-            num_correct2 += np.sum(preds == labels)
+            correct = preds == labels
+            num_correct2 += np.sum(correct)
 
-            wrong = preds != labels
-            start_labels = origin_label[wrong][:, 0]
-            wrong_has_label += np.sum(start_labels!=-2)
-            wrong_no_label += np.sum(start_labels==-2)
-            right = preds == labels
-            start_labels = origin_label[right][:, 0]
-            right_has_label += np.sum(start_labels != -2)
-            right_no_label += np.sum(start_labels == -2)
+            # wrong = preds != labels
+            # start_labels = origin_label[wrong][:, 0]
+            # wrong_has_label += np.sum(start_labels!=-2)
+            # wrong_no_label += np.sum(start_labels==-2)
+            # right = preds == labels
+            # start_labels = origin_label[right][:, 0]
+            # right_has_label += np.sum(start_labels != -2)
+            # right_no_label += np.sum(start_labels == -2)
+
+            correct_path+=paths[correct].tolist()
+            wrong_path+=paths[np.invert(correct)].tolist()
 
             for i in range(len(labels)):
                 entity2preds1[test[i]] += np.log(scores[i])
                 pred = preds[i]
                 if scores[i][pred] > args.threshold:
                     entity2preds2[test[i]][pred] += 1
-                elif scores[i][pred] > 0.25:
-                    entity2preds4[test[i]][pred] += 1
                 entity2preds3[test[i]][pred] += 1
 
-        print('wrong has label', wrong_has_label)
-        print('wrong no label', wrong_no_label)
-        print('right has label', right_has_label)
-        print('right no label', right_no_label)
+        # print('wrong has label', wrong_has_label)
+        # print('wrong no label', wrong_no_label)
+        # print('right has label', right_has_label)
+        # print('right no label', right_no_label)
 
-        train_acc = float(num_correct1) / num_real_train
+        correct_length, correct_leng_count = np.unique([len(i) for i in correct_path], return_counts=True)
+        print('correct length and counts', correct_length, correct_leng_count)
+        wrong_length, wrong_leng_count = np.unique([len(i) for i in wrong_path], return_counts=True)
+        print('wrong length and counts', wrong_length, wrong_leng_count)
+        correct_ratio = correct_leng_count / (correct_leng_count + wrong_leng_count)
+        print('correct rate', correct_ratio)
+
+        train_acc = float(num_correct1) / num_for_train
         print('train path accuracy is ', train_acc)
-        test_acc = float(num_correct2) / (num_real_train*10)
+        test_acc = float(num_correct2) / len(random_choice)
         print('test path accuracy is ', test_acc)
 
-        for i, entity2preds in enumerate([entity2preds1,entity2preds2,entity2preds3,entity2preds4]):
-            print('ensemble mode', i)
+        for i, entity2preds in enumerate([entity2preds1,entity2preds2,entity2preds3]):
             en_results = np.array([entity2preds[i] for i in dataset.X_test])
-            max_votes = np.max(en_results, axis=1)
-            votes = np.sum(en_results, axis=1)
-            votes_rate = max_votes/votes
-            np.nan_to_num(votes_rate, copy=False)
             en_preds = np.argmax(en_results, axis=1)
-            en_correct = en_preds==dataset.y_test
+            en_correct = en_preds == dataset.y_test
             en_acc = float(np.sum(en_correct)) / num_test
-            print('ensemble acc is ', en_acc)
-            vrc = votes_rate[en_correct]
-            vrc_mean = np.mean(vrc)
-            vrc_min = np.min(vrc)
-            vrc_max = np.max(vrc)
-            vrw = votes_rate[np.invert(en_correct)]
-            vrw_mean = np.mean(vrw)
-            vrw_min = np.min(vrw)
-            vrw_max = np.max(vrw)
-            print('vote rate for correct mean={} min={} max={}'.format(vrc_mean, vrc_min, vrc_max))
-            print('vote rate for wrong mean={} min={} max={}'.format(vrw_mean, vrw_min, vrw_max))
+            print('ensemble mode {}: acc={}'.format(i, en_acc))
+            # max_votes = np.max(en_results, axis=1)
+            # votes = np.sum(en_results, axis=1)
+            # votes_rate = max_votes/votes
+            # np.nan_to_num(votes_rate, copy=False)
+            # vrc = votes_rate[en_correct]
+            # vrc_mean = np.mean(vrc)
+            # vrc_min = np.min(vrc)
+            # vrc_max = np.max(vrc)
+            # vrw = votes_rate[np.invert(en_correct)]
+            # vrw_mean = np.mean(vrw)
+            # vrw_min = np.min(vrw)
+            # vrw_max = np.max(vrw)
+            # print('vote rate for correct mean={} min={} max={}'.format(vrc_mean, vrc_min, vrc_max))
+            # print('vote rate for wrong mean={} min={} max={}'.format(vrw_mean, vrw_min, vrw_max))
 
         # threshold = 0.9
         # sure_answers = votes_rate>threshold
@@ -369,8 +470,8 @@ def train_model(args):
         #     print('Saving checkpoint to %s' % args.checkpoint_path)
         #     torch.save(checkpoint, args.checkpoint_path)
 
-        embedding = execution_engine.author_embeds.weight.data.cpu().numpy()
-        train_embedding(baseline_dataset, embedding, args)
+        # embedding = execution_engine.author_embeds.weight.data.cpu().numpy()
+        # train_embedding(baseline_dataset, embedding, args)
 
     print("training is done!")
     # print("best validate accuracy:{}".format(stats['best_val_acc']))

@@ -118,12 +118,12 @@ class ModuleNet(nn.Module):
         self.author_embeds.weight.data.copy_(torch.from_numpy(embedding[:num_author]))
         self.node_embeds = Variable(torch.from_numpy(embedding).float(), requires_grad=False).cuda()
 
-        # self.classifier = nn.Sequential(nn.Linear(embed_size, classifier_hidden_dim, bias=True),
-        #                                 nn.Tanh(),
-        #                                 # nn.Dropout(p=self.dropout_rate, inplace=True),
-        #                                 nn.Linear(classifier_hidden_dim, classifier_output_dim, bias=True))
+        self.classifier = nn.Sequential(nn.Linear(embed_size, classifier_hidden_dim, bias=True),
+                                        nn.Tanh(),
+                                        # nn.Dropout(p=self.dropout_rate, inplace=True),
+                                        nn.Linear(classifier_hidden_dim, classifier_output_dim, bias=True))
 
-        self.classifier = nn.Sequential(nn.Linear(embed_size, classifier_output_dim, bias=True))
+        # self.classifier = nn.Sequential(nn.Linear(embed_size, classifier_output_dim, bias=True))
 
         self.combiner = Combiner(embed_size, embed_size)
 
@@ -170,7 +170,7 @@ class ModuleNet(nn.Module):
     def forward_path(self, path):
         x = self.look_up_embed(path[0])
         length = len(path)
-        for i in range(1, length, 2):
+        for i in range(1, length-2, 2):
             module = self.function_modules[path[i]]
             bias = self.look_up_node_embed(path[i+1])
             x = module(x, bias)
@@ -187,6 +187,7 @@ class ModuleNet(nn.Module):
         old = self.author_embeds.weight.data[path[-1]]
         old = Variable(old, requires_grad=False).cuda()
         x = self.combiner(x, old)
+        self.update_embed(path[-1], x)
         return x
 
     def predict(self, ids):

@@ -42,7 +42,7 @@ parser.add_argument('--num_epoch', default=100)
 # Output options
 parser.add_argument('--checkpoint_path', default='./model/trained_model_classification_90_10/checkpoint.pt')
 parser.add_argument('--check_every', default=1)
-parser.add_argument('--record_loss_every', default=1000)
+parser.add_argument('--record_loss_every', default=5000)
 
 
 def train_embedding(dataset, embed, args):
@@ -54,23 +54,23 @@ def train_embedding(dataset, embed, args):
         'classifier_output_dim': args.classifier_output_dim
     }
 
-    baseline_model = BaselineMLP(**kwargs)
+    baseline_model = BaselineMLP(**kwargs).cuda()
     baseline_model.train()
     optimizer = torch.optim.Adam(baseline_model.parameters(), lr=args.learning_rate)
-    loss_fn = torch.nn.CrossEntropyLoss()
+    loss_fn = torch.nn.CrossEntropyLoss().cuda()
 
     epoch = 0
     best_test_acc = 0
     best_train_acc = 0
     num_train = len(dataset.y_train)
     num_test = len(dataset.y_test)
-    while epoch < 1000:
+    while epoch < 2000:
         dataset.shuffle()
         epoch += 1
 
         baseline_model.train()
         ids, labels = dataset.X_train, dataset.y_train
-        label_var = Variable(torch.LongTensor(labels))
+        label_var = Variable(torch.LongTensor(labels)).cuda()
         optimizer.zero_grad()
         scores = baseline_model(ids)
         loss = loss_fn(scores, label_var)
@@ -80,14 +80,14 @@ def train_embedding(dataset, embed, args):
         baseline_model.eval()
         ids, labels = dataset.X_test, dataset.y_test
         scores = baseline_model(ids)
-        preds = np.argmax(scores.data.numpy(), axis=1)
+        preds = np.argmax(scores.data.cpu().numpy(), axis=1)
         num_correct = np.sum(preds == labels)
         valid_acc = float(num_correct) / num_test
         best_test_acc = max(best_test_acc, valid_acc)
 
         ids, labels = dataset.X_train, dataset.y_train
         scores = baseline_model(ids)
-        preds = np.argmax(scores.data.numpy(), axis=1)
+        preds = np.argmax(scores.data.cpu().numpy(), axis=1)
         num_correct = np.sum(preds == labels)
         train_acc = float(num_correct) / num_train
         best_train_acc = max(best_train_acc, train_acc)

@@ -26,9 +26,8 @@ class ModuleBlock(nn.Module):
         self.out_features = out_features
         self.weight = nn.Parameter(torch.Tensor(out_features, in_features))
         # self.bias = nn.Parameter(torch.Tensor(out_features))
-        self.bias_filter = nn.Sequential(nn.Linear(in_features, out_features, bias=True),
+        self.bias_filter = nn.Sequential(nn.Linear(2*in_features, out_features, bias=True),
                                          nn.Tanh())
-                                        # nn.ReLU(inplace=True),
                                         # nn.Dropout(p=self.dropout_rate, inplace=True),
                                         # nn.Linear(in_features, out_features, bias=True))
         self.reset_parameters()
@@ -44,6 +43,11 @@ class ModuleBlock(nn.Module):
             # return F.linear(input, self.weight, self.bias_filter(bias))
         else:
             return F.relu(F.linear(input, self.weight, self.bias), inplace=True)
+        # if flag:
+        #     output = F.linear(input, self.weight, self.bias_filter(bias))
+        # else:
+        #     output = F.linear(input, self.weight, bias)
+        # return output
 
     def __repr__(self):
         return self.__class__.__name__ + '(' \
@@ -52,7 +56,7 @@ class ModuleBlock(nn.Module):
 
 
 class ModuleNet(nn.Module):
-    def __init__(self, alpha,
+    def __init__(self, w,
                  num_node,
                  num_author,
                  num_module,
@@ -63,10 +67,10 @@ class ModuleNet(nn.Module):
                  verbose=True):
         super(ModuleNet, self).__init__()
 
-        self.alpha = alpha
         self.dropout_rate = 0.3
         self.num_author = num_author
         self.num_node = num_node
+        self.w = w
 
         # self.entity_embeds = embedding
         # self.entity_embeds = Variable(torch.from_numpy(embedding).float(), requires_grad=False).cuda()
@@ -74,9 +78,11 @@ class ModuleNet(nn.Module):
         self.author_embeds = nn.Embedding(num_author, embed_size)
         self.author_embeds.weight.data.copy_(torch.from_numpy(embedding[:num_author]))
         self.node_embeds = Variable(torch.from_numpy(embedding).float(), requires_grad=False).cuda()
+        word_embeds = np.load('./embedding_file/w2v/w2vembed_128.npy')
+        self.word_embeds = Variable(torch.from_numpy(word_embeds).float(), requires_grad=False).cuda()
 
         # self.classifier = nn.Sequential(nn.Linear(embed_size, classifier_hidden_dim, bias=True),
-        #                                 nn.ReLU(inplace=True),
+        #                                 nn.Tanh(),
         #                                 # nn.Dropout(p=self.dropout_rate, inplace=True),
         #                                 nn.Linear(classifier_hidden_dim, classifier_output_dim, bias=True))
 
@@ -115,6 +121,9 @@ class ModuleNet(nn.Module):
     def look_up_node_embed(self, id):
         return self.node_embeds[id].view(1,-1)
 
+    def look_up_word_embed(self, id):
+        return self.word_embeds[id-self.num_author].view(1,-1)
+
     def look_up_embeds(self, ids):
         lookup_tensor = torch.LongTensor(ids).cuda()
         return self.author_embeds(autograd.Variable(lookup_tensor))
@@ -125,23 +134,24 @@ class ModuleNet(nn.Module):
     def forward_path(self, path):
         x = self.look_up_embed(path[0])
         length = len(path)
-        for i in range(1, length, 2):
+        for i in range(1, length-2, 2):
             module = self.function_modules[path[i]]
-            # x = module(x)
             bias = self.look_up_node_embed(path[i+1])
-            # x = F.relu(module(x, bias), inplace=True)
+            # bias1 = self.look_up_node_embed(path[i + 1])
+            # bias2 = self.look_up_word_embed(path[i + 1])
+            # bias = torch.cat([bias1, bias2], 1)
+            # x = module(x, bias, flag=True)
             x = F.tanh(module(x, bias))
             # x = F.dropout(x, p=self.dropout_rate, training=self.training)
         module = self.function_modules[path[-2]]
         bias = self.look_up_node_embed(path[-1])
         x = module(x, bias)
-        # x = module(x, flag=False)
+        # x = module(x, bias, flag=False)
         # x = F.dropout(x, p=self.dropout_rate, training=self.training)
         # x = F.normalize(x)
         # w = 1/(length*self.alpha)
-        w=0.1
-        old = bias
-        output = (1-w) * old + w * x
+        old = self.look_up_embed(path[-1])
+        output = (1-self.w) * old + self.w * x
         self.update_embed(path[-1], output)
         return x
 

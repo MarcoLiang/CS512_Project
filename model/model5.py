@@ -11,13 +11,17 @@ from utils.load_embedding import *
 
 
 class ModuleBlock(nn.Module):
-    def __init__(self, in_features, out_features):
+    def __init__(self, input_size, hidden_size):
         super(ModuleBlock, self).__init__()
-        self.filter = nn.Linear(2*in_features, out_features, bias=True)
+        self.GRU = nn.GRUCell(input_size=input_size, hidden_size=hidden_size, bias=True)
+        self.filter = nn.Linear(2*input_size, hidden_size, bias=True)
 
-    def forward(self, input, bias):
-        input = torch.cat([input, bias], 1)
-        return self.filter(input)
+    def forward(self, input, bias, flag):
+        if flag:
+            output = self.GRU(input, self.filter(bias))
+        else:
+            output = self.GRU(input, bias)
+        return output
 
 # class ModuleBlock(nn.Module):
 #     def __init__(self, in_features, out_features):
@@ -44,7 +48,6 @@ class ModuleBlock(nn.Module):
 #             + 'in_features=' + str(self.in_features) \
 #             + ', out_features=' + str(self.out_features)
 
-
 class ModuleNet(nn.Module):
     def __init__(self, alpha,
                  num_author,
@@ -57,13 +60,16 @@ class ModuleNet(nn.Module):
         super(ModuleNet, self).__init__()
 
         self.dropout_rate = 0
+        self.num_author = num_author
 
         # self.entity_embeds = embedding
         # self.entity_embeds = Variable(torch.from_numpy(embedding).float(), requires_grad=False).cuda()
 
-        self.author_embeds = nn.Embedding(num_author, embed_size)
-        self.author_embeds.weight.data.copy_(torch.from_numpy(embedding[:num_author]))
+        # self.author_embeds = nn.Embedding(num_author, embed_size)
+        # self.author_embeds.weight.data.copy_(torch.from_numpy(embedding[:num_author]))
         self.node_embeds = Variable(torch.from_numpy(embedding).float(), requires_grad=False).cuda()
+        word_embeds = np.load('./embedding_file/w2v/w2vembed_128.npy')
+        self.word_embeds = Variable(torch.from_numpy(word_embeds).float(), requires_grad=False).cuda()
 
         self.classifier = nn.Sequential(nn.Linear(embed_size, classifier_hidden_dim, bias=True),
                                         # nn.ReLU(inplace=True),
@@ -107,6 +113,9 @@ class ModuleNet(nn.Module):
     def look_up_node_embed(self, id):
         return self.node_embeds[id].view(1,-1)
 
+    def look_up_word_embed(self, id):
+        return self.word_embeds[id-self.num_author].view(1,-1)
+
     def look_up_embeds(self, ids):
         lookup_tensor = torch.LongTensor(ids).cuda()
         return self.author_embeds(autograd.Variable(lookup_tensor))
@@ -116,13 +125,19 @@ class ModuleNet(nn.Module):
 
 
     def forward_path(self, path):
-        x = self.look_up_embed(path[0])
+        # x = self.look_up_embed(path[0])
+        x = self.look_up_node_embed(path[0])
         length = len(path)
-        for i in range(1, length, 2):
+        for i in range(1, length-2, 2):
             module = self.function_modules[path[i]]
-            bias = self.look_up_node_embed(path[i+1])
-            x = F.tanh(module(x, bias))
+            bias1 = self.look_up_node_embed(path[i+1])
+            bias2 = self.look_up_word_embed(path[i+1])
+            bias = torch.cat([bias1, bias2], 1)
+            x = module(x, bias, flag=True)
             # x = F.dropout(x, p=self.dropout_rate, training=self.training)
+        module = self.function_modules[path[-2]]
+        bias = self.look_up_node_embed(path[-1])
+        x = module(x, bias, flag=False)
         # module = self.function_modules[path[-2]]
         # bias = self.look_up_embed(path[-1])
         # x = F.tanh(module(x, bias))

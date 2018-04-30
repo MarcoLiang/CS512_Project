@@ -8,7 +8,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 from utils.data3 import Data
-from model.model4 import ModuleNet
+from model.good_model import ModuleNet
 from run_baseline import BaselineMLP
 from utils.data_baseline import BaselineData
 from utils.load_embedding import *
@@ -17,7 +17,7 @@ parser = argparse.ArgumentParser()
 torch.backends.cudnn.enabled = True
 
 # data options
-parser.add_argument('--batch_size', default=10000)
+parser.add_argument('--batch_size', default=100000)
 parser.add_argument('--data_dir', default="./data/classify_task/pattern_90_10")
 
 # training embed options
@@ -37,7 +37,7 @@ parser.add_argument('--classifier_output_dim', default=4)
 
 # Optimization options
 parser.add_argument('--learning_rate', default=5e-4)
-parser.add_argument('--num_epoch', default=100)
+parser.add_argument('--num_epoch', default=100000)
 
 # Output options
 parser.add_argument('--checkpoint_path', default='./model/trained_model_classification_90_10/checkpoint.pt')
@@ -46,7 +46,6 @@ parser.add_argument('--record_loss_every', default=1000)
 
 
 def train_embedding(dataset, embed, args):
-
     kwargs = {
         'embed': embed,
         'embed_size': args.embed_size,
@@ -54,23 +53,23 @@ def train_embedding(dataset, embed, args):
         'classifier_output_dim': args.classifier_output_dim
     }
 
-    baseline_model = BaselineMLP(**kwargs)
+    baseline_model = BaselineMLP(**kwargs).cuda()
     baseline_model.train()
     optimizer = torch.optim.Adam(baseline_model.parameters(), lr=args.learning_rate)
-    loss_fn = torch.nn.CrossEntropyLoss()
+    loss_fn = torch.nn.CrossEntropyLoss().cuda()
 
     epoch = 0
     best_test_acc = 0
     best_train_acc = 0
     num_train = len(dataset.y_train)
     num_test = len(dataset.y_test)
-    while epoch < 1000:
+    while epoch < 1500:
         dataset.shuffle()
         epoch += 1
 
         baseline_model.train()
         ids, labels = dataset.X_train, dataset.y_train
-        label_var = Variable(torch.LongTensor(labels))
+        label_var = Variable(torch.LongTensor(labels)).cuda()
         optimizer.zero_grad()
         scores = baseline_model(ids)
         loss = loss_fn(scores, label_var)
@@ -80,14 +79,14 @@ def train_embedding(dataset, embed, args):
         baseline_model.eval()
         ids, labels = dataset.X_test, dataset.y_test
         scores = baseline_model(ids)
-        preds = np.argmax(scores.data.numpy(), axis=1)
+        preds = np.argmax(scores.data.cpu().numpy(), axis=1)
         num_correct = np.sum(preds == labels)
         valid_acc = float(num_correct) / num_test
         best_test_acc = max(best_test_acc, valid_acc)
 
         ids, labels = dataset.X_train, dataset.y_train
         scores = baseline_model(ids)
-        preds = np.argmax(scores.data.numpy(), axis=1)
+        preds = np.argmax(scores.data.cpu().numpy(), axis=1)
         num_correct = np.sum(preds == labels)
         train_acc = float(num_correct) / num_train
         best_train_acc = max(best_train_acc, train_acc)
@@ -140,6 +139,10 @@ def train_model(args):
         'classifier_output_dim': args.classifier_output_dim
     }
 
+    decay_rate = 0.95
+    decay_time = 10000
+    w = 0.5
+
     # embed = nn.Embedding(num_node, args.embed_size)
     # embed.weight.data.copy_(torch.from_numpy(embedding_loader(args.id_path, args.embed_path, args.embed)))
 
@@ -152,7 +155,7 @@ def train_model(args):
     print('Creating embedding...', num_node, args.embed_size)
 
     kwargs = {
-        'alpha': args.alpha,
+        'w': w,
         'embedding': embed,
         'num_author': dataset.author_num,
         'num_node': num_node,
@@ -214,15 +217,17 @@ def train_model(args):
                         print('counts for each label', counts_for_label)
                         loss_aver /= args.record_loss_every
                         acc = check_accuracy(dataset, execution_engine)
-                        print(t, m, loss_aver, acc)
                         embedding = execution_engine.author_embeds.weight.data.cpu().numpy()
                         best_train_acc, best_test_acc = train_embedding(baseline_dataset, embedding, args)
-                        print('embed: train acc', best_train_acc, 'test acc', best_test_acc)
+                        print('{} {} loss={} acc={} embed: train={} test={}'.format(t,m,loss_aver,acc,best_train_acc,best_test_acc))
                         # stats['train_losses'].append(loss_aver)
                         # stats['train_losses_ts'].append(t)
                         # stats['train_losses_ms'].append(m)
                         loss_aver = 0
                         counts_for_label = np.zeros(4)
+
+                    if t % decay_time == 0:
+                        execution_engine.w = execution_engine.w*decay_rate
 
         # if epoch % args.check_every == 0:
         #     print('Checking training/validation accuracy ... ')
@@ -248,7 +253,7 @@ def train_model(args):
         #     torch.save(checkpoint, args.checkpoint_path)
 
     print("training is done!")
-    print("best validate accuracy:{}".format(stats['best_val_acc']))
+    # print("best validate accuracy:{}".format(stats['best_val_acc']))
 
 
 def get_state(m):

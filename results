@@ -12,3 +12,6 @@ to tune:
 170W normalized randominitembed
 
 tand > relu
+
+test good for a little change (relu->tanh, length-2)
+test model4 without combiner

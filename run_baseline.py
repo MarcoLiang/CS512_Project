@@ -47,11 +47,11 @@ class BaselineMLP(nn.Module):
 
         self.dropout_rate = 0.5
 
-        self.entity_embeds = Variable(torch.from_numpy(embed).float(), requires_grad=False)
+        self.entity_embeds = Variable(torch.from_numpy(embed).float(), requires_grad=False).cuda()
 
         self.classifier = nn.Sequential(nn.Linear(embed_size, classifier_hidden_dim, bias=True),
-                                        nn.ReLU(inplace=True),
-                                        # nn.Tanh(),
+                                        # nn.ReLU(inplace=True),
+                                        nn.Tanh(),
                                         # nn.Dropout(p=self.dropout_rate, inplace=True),
                                         nn.Linear(classifier_hidden_dim, classifier_output_dim, bias=True))
 
