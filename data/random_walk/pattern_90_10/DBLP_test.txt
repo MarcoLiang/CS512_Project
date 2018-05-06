@@ -1,0 +1,18 @@
+97	Lei Zhang	4
+2	Wynne Hsu	2
+161	Yoshiharu Ishikawa	1
+68	Jianzhong Li	1
+136	Cyrus Shahabi	1
+170	Frans Coenen	2
+141	Elio Masciari	1
+173	Badrish Chandramouli	1
+47	Peter M. G. Apers	1
+49	Adam Silberstein	1
+115	W. Bruce Croft	4
+119	Ralph Krieger	2
+125	Wei Zhou	4
+55	Stephen Robertson	4
+56	Lior Rokach	2
+121	Byron Choi	1
+91	Milad Shokouhi	4
+93	Kian-Lee Tan	1

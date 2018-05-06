@@ -1,0 +1,158 @@
+0	Ge Yu	1
+1	Xiaochun Yang	1
+3	Satu Elisa Schaeffer	2
+4	Jamie Callan	4
+5	Masatoshi Yoshikawa	1
+6	Dina Bitton	1
+7	Laura M. Haas	1
+8	Sadok Ben Yahia	2
+9	Albert Bifet	2
+10	Bernhard Pfahringer	2
+11	Ambuj K. Singh	1
+12	Giuseppe Manco	2
+13	Wei Wang	2
+14	Hiroshi Nakagawa	4
+15	Cheng Luo	1
+16	Chris H. Q. Ding	2
+17	Boi Faltings	3
+18	Jie Tang	4
+19	Dimitrios Gunopulos	2
+20	Charles L. A. Clarke	4
+21	Koen Vanhoof	2
+22	Michalis Vazirgiannis	2
+23	Jinchuan Chen	1
+24	Leman Akoglu	2
+25	Christos Faloutsos	2
+26	Li Yang	2
+27	Ruofei Zhang	2
+28	Miao Wen	4
+29	Xiangji Huang	4
+30	Junghoo Cho	4
+31	Shirish Krishnaj Shevade	2
+32	D. Sculley	4
+33	Yan Qu	4
+34	Jun Zhang	1
+35	Yoshua Bengio	3
+36	Feida Zhu	2
+37	Jing Jiang	4
+38	Young-Koo Lee	2
+39	Yangbo Zhu	4
+40	Sourav S. Bhowmick	2
+41	Jimmy J. Lin	4
+42	Heng Huang	2
+43	Yuhong Guo	3
+44	Hua Lu	1
+45	Jiaheng Lu	2
+46	Jun Guo	3
+48	Roger Zimmermann	1
+50	Ioannis Tsamardinos	3
+51	Jennifer Widom	1
+52	Craig Macdonald	4
+53	Iadh Ounis	4
+54	Hugo Zaragoza	4
+57	Hiroyuki Kitagawa	2
+58	Olga Vechtomova	4
+59	Haixun Wang	2
+60	Akshay Java	3
+61	Dino Pedreschi	2
+62	Yong Yu	4
+63	Maheedhar Kolla	4
+64	Jianliang Xu	1
+65	Hang Cui	4
+66	Tat-Seng Chua	4
+67	Min-Yen Kan	4
+69	Carson Kai-Sang Leung	2
+70	Tamer Elsayed	4
+71	Anirban Dasgupta	2
+72	Roi Blanco	4
+73	Wang-Chien Lee	1
+74	Djoerd Hiemstra	4
+75	Jun Sakuma	2
+76	Josiane Xavier Parreira	4
+77	Aoying Zhou	2
+78	Xuan Zhou	1
+79	Reza Akbarinia	1
+80	Paul Thomas	4
+81	Can Wang	4
+82	Liping Jing	4
+83	Pascal Poupart	3
+84	Hui Fang	4
+85	ChengXiang Zhai	4
+86	Ian Soboroff	4
+87	Arjen P. de Vries	4
+88	Miguel E. Ruiz	4
+89	Jianqiang Wang	4
+90	Mizuho Iwaihara	1
+92	Hyung-Jeong Yang	2
+94	Gemma C. Garriga	2
+95	Dong-Chul Park	2
+96	Russell Greiner	3
+98	Nikos Mamoulis	1
+99	Matthias Renz	2
+100	Gang Wang	2
+101	Geoffrey J. Gordon	3
+102	Alexander Hinneburg	2
+103	Sharma Chakravarthy	1
+104	Maya Ramanath	1
+105	Zhenglu Yang	3
+106	Jeffrey Xu Yu	1
+107	Mark Baillie	4
+108	Ian Ruthven	4
+109	Songbo Tan	4
+110	Chitta Baral	3
+111	Wei Lu	2
+112	Hongyan Liu	2
+113	Tao Wang	3
+114	Trevor Strohman	4
+116	Dijun Luo	2
+117	Yasuhiro Fujiwara	2
+118	Ira Assent	2
+120	Cyril Goutte	4
+122	Bingsheng He	1
+123	Victoria S. Uren	4
+124	Ying Zhang	4
+126	Clement T. Yu	1
+127	Sang-goo Lee	4
+128	Alberto H. F. Laender	4
+129	Nobuhiro Yugami	3
+130	Charles X. Ling	3
+131	Zhi-Hua Zhou	3
+132	Brendan Kitts	2
+133	Fei Huang	4
+134	Jiang Bian	4
+135	Nitesh V. Chawla	2
+137	Jiawei Han	2
+138	Sabine Bergler	3
+139	Krisztian Balog	4
+140	Farzin Maghoul	4
+142	Carlo Zaniolo	1
+143	Bonnie Webber	4
+144	Jacques Savoy	4
+145	Katsumi Tanaka	4
+146	Valter Crescenzi	4
+147	Paolo Merialdo	1
+148	Hisashi Kashima	2
+149	Ian MacKinnon	4
+150	Albrecht Zimmermann	2
+151	Gui-Rong Xue	4
+152	Chris Buckley	4
+153	Miles Efron	4
+154	Qing Yu	4
+155	Jiuyong Li	2
+156	Andreas Dengel	4
+157	Eric Lo	1
+158	Marc Najork	4
+159	Stelios Paparizos	1
+160	Le Gruenwald	1
+162	Aditya Kumar Sehgal	4
+163	Christian Borgelt	2
+164	Kristian Kersting	3
+165	Sang-Wook Kim	2
+166	Yuefeng Li	2
+167	Michelangelo Ceci	2
+168	Gregor Leban	2
+169	Bin Zhao	2
+171	Wee Siong Ng	1
+172	Wolfgang Nejdl	4
+174	Fred Popowich	3
+175	Aixin Sun	4
