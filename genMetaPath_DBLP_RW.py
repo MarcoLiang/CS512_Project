@@ -114,18 +114,11 @@ class MetaPathGenerator:
     def get_entity_type(self, entity_id):
         author_num = len(self.id_author)
         conf_num = len(self.id_conf)
-        # print(entity_id)
-        # print(author_num)
-        # print(conf_num)
         if entity_id < author_num:
-            # print('t{}'.format(self.author_type))
             return self.author_type
-
         elif entity_id < author_num + conf_num:
-            # print('t{}'.format(self.conf_type))
             return self.conf_type
         else:
-            # print('t{}'.format(self.paper_type))
             return self.paper_type
 
     def write_test_set(self, dir):
@@ -135,8 +128,6 @@ class MetaPathGenerator:
             toks_str = '\t'.join(list(map(str, toks))) + '\n'
             file.write(toks_str)
         file.close()
-        # file = open(dir + '/DBLP_test.txt', 'w')
-        # file.write('xxx')
     def write_train_set(self, dir):
         file = open(dir + '/DBLP_train_baseline.txt', 'w')
         for a_id in self.a_id_train:
@@ -223,13 +214,16 @@ class MetaPathGenerator:
         marked_author = set() # store the id of marked author
         DBLP_train = open(dir_out_train + '/DBLP_train.txt', 'w')
         for author_id in self.id_author.keys():
+            print('Generating meta-path for author:{}'.format(author_id))
             path_cnt = 0
             stack = Stack()
             marked_author.add(author_id)
             meta_path = []
-            stack.push(Node(author_id, 0, 0))
+            # stack.push(Node(author_id, 0, 0))
 
-            while not stack.isEmpty() and path_cnt < self.path_per_author:
+            while path_cnt < self.path_per_author:
+                if stack.isEmpty():
+                    stack.push(Node(author_id, 0, 0))
                 node = stack.pop()
 
                 entity_type = self.get_entity_type(node.id)
