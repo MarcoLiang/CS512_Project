@@ -1,200 +1,200 @@
-1739	Computing the Split Points for Learning Decision Tree in MapReduce
-1740	Memory-Aware BWT by segmenting sequences to support subsequence search
-1741	A path-based approach for efficient structural join with not-predicates
-1742	Stochastic local clustering for massive graphs
-1743	Combination of Evidence for Effective Web Search
-1744	A Method for Fine-Grained Document Alignment Using Structural Information
-1745	Panel: One Platform for Mining Structured & Unstructured Data: Dream or Reality?
-1746	OMC-IDS: at the cross-roads of OLAP mining and intrusion detection
-1747	Active learning with evolving streaming data
-1748	Discriminative Subnetworks with Regularized Spectral Learning for Global-State Network Data
-1749	A Generative Bayesian Model for Item and User Recommendation in Social Rating Networks with Trust Relationships
-1750	Constrained-hLDA for Topic Discovery in Chinese Microblogs
-1751	Probabilistic matrix factorization leveraging contexts for unsupervised relation extraction
-1752	Semi-supervised Clustering on Heterogeneous Information Networks
-1753	Maximum consistency preferential random walks
-1754	Hypergraph learning with hyperedge expansion
-1755	Instant social graph search
-1756	Heterogeneous Stream Processing and Crowdsourcing for Traffic Monitoring: Highlights
-1757	Efficiency vs. Effectiveness in Terabyte-Scale Information Retrieval.
-1758	Features for art painting classification based on vector quantization of MPEG-7 descriptors
-1759	Named entity recognition and identification for finding the owner of a home page
-1760	ASAWA: An Automatic Partition Key Selection Strategy
-1761	Experiments with Language Models for Known-Item Finding of E-mail Messages.
-1762	Quantifying reciprocity in large weighted communication networks
-1763	A new formal description model of network attacking and defence knowledge of oil and gas field SCADA system
-1764	Automatic keywords generation for contextual advertising
-1765	York University at TREC 2005: HARD Track
-1766	Minimizing Explanations of Why-Not Questions
-1767	RankMass Crawler: A Crawler with High PageRank Coverage Guarantee.
-1768	Gaussian Process Multi-task Learning Using Joint Feature Selection
-1769	Efficient Querying of Correlated Uncertain Data with Cached Results
-1770	Relaxed Online SVMs in the TREC Spam Filtering Track.
-1771	Trade area analysis using user generated mobile location data
-1772	Higher order contractive auto-encoder
-1773	An Integrated Model for User Attribute Discovery: A Case Study on Political Affiliation Identification
-1774	Collaborative similarity measure for intra graph clustering
-1775	New exact concise representation of rare correlated patterns: application to intrusion detection
-1776	Stuctured Queries for Legal Search.
-1777	wNeighbors: a method for finding k nearest neighbors in weighted regions
-1778	SINBAD: towards structure-independent querying of common neighbors in XML databases
-1779	WTF: the who to follow service at Twitter
-1780	Unsupervised feature selection via unified trace ratio formulation and K-means clustering (TRACK)
-1781	Understanding user spatial behaviors for location-based recommendations
-1782	Bi-directional Representation Learning for Multi-label Classification
-1783	A Skylining Approach to Optimize Influence and Cost in Location Selection
-1784	Emotion Recognition of Pop Music Based on Maximum Entropy with Priors
-1785	Data Overload: What Can We Do?
-1786	Multi-category item recommendation using neighborhood associations in trust networks
-1787	A grid-based index and queries for large-scale geo-tagged video collections
-1788	Making Sense of Suppressions and Failures in Sensor Data: A Bayesian Approach.
-1789	Permutation testing improves Bayesian network learning
-1790	CrowdFill: a system for collecting structured data from the crowd
-1791	Learning to infer social ties in large networks
-1792	University of Glasgow at TREC 2009: Experiments with Terrier
-1793	Microsoft Cambridge at TREC 14: Enterprise Track.
-1794	Adapted Features and Instance Selection for Improving Co-training
-1795	A Probabilistic Model for Diversifying Recommendation Lists
-1796	Using Subjective Adjectives in Opinion Retrieval from Blogs.
-1797	A Random Method for Quantifying Changing Distributions in Data Streams
-1798	The BlogVox Opinion Retrieval System
-1799	AUDIO : an integrity auditing framework of outlier-mining-as-a-service systems
-1800	Collaborative filtering via temporal euclidean embedding
-1801	Experiments for HARD and Enterprise Tracks.
-1802	Quality aware privacy protection for location-based services
-1803	Semi-supervised Gaussian Process Ordinal Regression
-1804	Using Syntactic and Semantic Relation Analysis in Question Answering.
-1805	HITCleaner: A Light-Weight Online Data Cleaning System
-1806	Fast tree-based mining of frequent itemsets from uncertain data
-1807	BEST of KAUST at TREC 2011: Building Effective Search in Twitter.
-1808	Aggregating information from the crowd and the network
-1809	Web usage mining with semantic analysis
-1810	User churn in focused question answering sites: characterizations and prediction
-1811	Mining Correlation Patterns among Appliances in Smart Home Environment
-1812	Multi-label Classification with Output Kernels
-1813	Shortest Path Computation over Disk-Resident Large Graphs Based on Extended Bulk Synchronous Parallel Methods
-1814	Ensemble clustering for result diversification
-1815	Privacy preserving semi-supervised learning for labeled graphs
-1816	The ACE theorem for querying the web of data
-1817	Estimate unlabeled-data-distribution for semi-supervised PU learning
-1818	Harnessing the Wisdom of Crowds for Corpus Annotation through CAPTCHA
-1819	Protecting sensitive relationships against inference attacks in social networks
-1820	Fast and Exact Mining of Probabilistic Data Streams
-1821	Overview of the TREC 2013 Contextual Suggestion Track
-1822	Efficient mining of contrast patterns on large scale imbalanced real-life data
-1823	Unsupervised feature weighting based on local feature relatedness
-1824	Iterative Model Refinement of Recommender MDPs Based on Expert Feedback
-1825	Optimized Adaptive Hybrid Indexing for In-memory Column Stores
-1826	An Axiomatic Approach to IR--UIUC TREC 2005 Robust Track Experiments.
-1827	Overview of the TREC 2006 Enterprise Track.
-1828	Scalable mining of frequent tri-concepts from folksonomies
-1829	Exploring Traits of Adjectives to Predict Polarity Opinion in Blogs and Semantic Filters in Genomics.
-1830	Iterative algorithm for inferring entity types from enumerative descriptions
-1831	Inferring the demographics of search users: social data meets search queries
-1832	EEG-MINE: Mining and Understanding Epilepsy Data
-1833	ACRec: a co-authorship based random walk model for academic collaboration recommendation
-1834	Staffing Open Collaborative Projects Based on the Degree of Acquaintance
-1835	Query Allocation in Wireless Sensor Networks with Multiple Base Stations
-1836	Closed sets for labeled data
-1837	Multiscale bilinear recurrent neural network for prediction of MPEG video traffic
-1838	Using classifier-based nominal imputation to improve machine learning
-1839	Optimizing Pipelined Execution for Distributed In-Memory OLAP System
-1840	Geo-social skyline queries
-1841	An adaptive fuzzy k-nearest neighbor method based on parallel particle swarm optimization for bankruptcy prediction
-1842	A Unified View of Matrix Factorization Models
-1843	TopicExplorer: exploring document collections with topic models
-1844	Two Sides of a Coin: Separating Personal Communication and Public Dissemination Accounts in Twitter
-1845	Expertise Ranking of Users in QA Community
-1846	IMAX: The Big Picture of Dynamic XML Statistics.
-1847	Fires on the web: towards efficient exploring historical web graphs
-1848	Persuasive, Authorative and Topical Answers for Complex Question Answering.
-1849	Combining Language Model with Sentiment Analysis for Opinion Retrieval of Blog-Post.
-1850	Genomic Information Retrieval Through Selective Extraction and Tagging by the ASU-BioAL Group.
-1851	CSIR at TREC 2008 Expert Search Task: Modeling Expert Evidence in Expertise Retrieval.
-1852	Mining User Interests from Information Sharing Behaviors in Social Media
-1853	Event Relationship Analysis for Temporal Event Search
-1854	Accelerating Topic Model Training on a Single Machine
-1855	Indri TREC Notebook 2006: Lessons Learned From Three Terabyte Tracks.
-1856	Graph evolution via social diffusion processes
-1857	A Probabilistic Approach for Events Identification from Social Media RSS Feeds
-1858	Efficient centrality monitoring for time-evolving graphs
-1859	SubClass: classification of multidimensional noisy data using subspace clusters
-1860	Passage Retrieval by Shrinkage of Language Models.
-1861	Multiview semi-supervised learning for ranking multilingual documents
-1862	Keywords filtering over probabilistic XML data
-1863	Spectral Decomposition for Optimal Graph Index Prediction
-1864	Nerding out on twitter: fun, patriotism and #curiosity
-1865	Probabilistic Top-k Dominating Query over Sliding Windows
-1866	AVR-Tree: Speeding Up the NN and ANN Queries on Location Data
-1867	TREC Genomics Track at UIC.
-1868	Scalable k-nearest neighbor graph construction based on greedy filtering
-1869	Mining Appliance Usage Patterns in Smart Home Environment
-1870	Characterizing video access patterns in mainstream media portals
-1871	Discovery of Areas with Locally Maximal Confidence from Location Data
-1872	Passage Relevancy Through Semantic Relatedness.
-1873	Active learning for hierarchical text classification
-1874	Spectral analysis of k-balanced signed graphs
-1875	Real-Time Television ROI Tracking Using Mirrored Experimental Designs
-1876	Consistent Query Answering Based on Repairing Inconsistent Attributes with Nulls
-1877	Knowledge-Powered Deep Learning for Word Embedding
-1878	Building decision trees for the multi-class imbalance problem
-1879	Indexing network voronoi diagrams
-1880	Community Distribution Outlier Detection in Heterogeneous Information Networks
-1881	BC-BSP: A BSP-Based Parallel Iterative Processing System for Big Data on Cloud Architecture
-1882	Privacy-Preserving Reachability Query Services
-1883	Interactive Retrieval Using Weights.
-1884	Overview of the TREC 2011 Entity Track.
-1885	Learning to predict trending queries: classification - based
-1886	A New, Fast and Accurate Algorithm for Hierarchical Clustering on Euclidean Distances
-1887	Top- k similarity join over multi-valued objects
-1888	Experiments at the University of Edinburgh for the TREC 2006 QA Track.
-1889	Scalable complex event processing on top of mapreduce
-1890	Evaluation of Stemming, Query Expansion and Manual Indexing Approaches for the Genomic Task.
-1891	Data management challenges and opportunities in cloud computing
-1892	ALFRED: crowd assisted data extraction
-1893	TREC 14 Enterprise Track at CSIRO and ANU.
-1894	Matrix Factorization With Aggregated Observations
-1895	Efficient Algorithms for Skyline Top-K Keyword Queries on XML Streams
-1896	Workload-Aware Cache for Social Media Data
-1897	Complex Interactive Question Answering Enhanced with Wikipedia.
-1898	Objectively Evaluating Interestingness Measures for Frequent Itemset Mining
-1899	MultiAspectSpotting: Spotting Anomalous Behavior within Count Data Using Tensor
-1900	Beyond Poisson: Modeling Inter-Arrival Time of Requests in a Datacenter
-1901	Mobile agents for network intrusion resistance
-1902	Cross-lingual sentiment classification via bi-view non-negative matrix tri-factorization
-1903	Examining Overfitting in Relevance Feedback: Sabir Research at TREC 2007.
-1904	University of Texas School of Information at TREC 2007.
-1905	CD: a coupled discretization algorithm
-1906	Distributed Anonymization for Multiple Data Providers in a Cloud System
-1907	IR-Specific Searches at TREC 2007: Genomics & Blog Experiments.
-1908	Aspect-Based Sentiment Analysis of Amazon Reviews for Fitness Tracking Devices
-1909	ρ-uncertainty Anonymization by Partial Suppression
-1910	Boot-Strapping Language Identifiers for Short Colloquial Postings
-1911	Inferring Strange Behavior from Connectivity Pattern in Social Networks
-1912	Estimating missing data in data streams
-1913	Mining triadic closure patterns in social networks
-1914	FIMO: A Novel WiFi Localization Method
-1915	Scalable top- k keyword search in relational databases
-1916	Exploring the Legal Discovery and Enterprise Tracks at the University of Iowa.
-1917	Item set mining based on cover similarity
-1918	Topical Presentation of Search Results on Database
-1919	Multi-strategic approach of fast composition of web services
-1920	The geological disasters defense expert system of the massive pipeline network SCADA system based on FNN
-1921	Larger residuals, less work: active document scheduling for latent dirichlet allocation
-1922	Trust prediction using positive, implicit, and negative information
-1923	A topic based document relevance ranking model
-1924	Network Reconstruction for the Identification of miRNA:mRNA Interaction Networks
-1925	Event registry: learning about world events from news
-1926	Collective viewpoint identification of low-level participation
-1927	Feature representation for customer attrition risk prediction in retail banking
-1928	Infrastructure for supporting exploration and discovery in web archives
-1929	A*DAX: A Platform for Cross-Domain Data Linking, Sharing and Analytics
-1930	Acquiring commonsense knowledge for sentiment analysis using human computation
-1931	Learning to rank for joy
-1932	General spatial skyline operator
-1933	Online Visualization of Geospatial Stream Data using the WorldWide Telescope
-1934	Fractal Based Anomaly Detection over Data Streams
-1935	Synonym-Based Expansion and Boosting-Based Re-Ranking: A Two-phase Approach for Genomic Information Retrieval.
-1936	Overview of the TREC 2009 Web Track.
-1937	Summarizing social image search results
-1938	Overview of the TREC 2007 Enterprise Track
+187	Computing the Split Points for Learning Decision Tree in MapReduce
+188	Memory-Aware BWT by segmenting sequences to support subsequence search
+189	A path-based approach for efficient structural join with not-predicates
+190	Stochastic local clustering for massive graphs
+191	Combination of Evidence for Effective Web Search
+192	A Method for Fine-Grained Document Alignment Using Structural Information
+193	Panel: One Platform for Mining Structured & Unstructured Data: Dream or Reality?
+194	OMC-IDS: at the cross-roads of OLAP mining and intrusion detection
+195	Active learning with evolving streaming data
+196	Discriminative Subnetworks with Regularized Spectral Learning for Global-State Network Data
+197	A Generative Bayesian Model for Item and User Recommendation in Social Rating Networks with Trust Relationships
+198	Constrained-hLDA for Topic Discovery in Chinese Microblogs
+199	Probabilistic matrix factorization leveraging contexts for unsupervised relation extraction
+200	Semi-supervised Clustering on Heterogeneous Information Networks
+201	Maximum consistency preferential random walks
+202	Hypergraph learning with hyperedge expansion
+203	Instant social graph search
+204	Heterogeneous Stream Processing and Crowdsourcing for Traffic Monitoring: Highlights
+205	Efficiency vs. Effectiveness in Terabyte-Scale Information Retrieval.
+206	Features for art painting classification based on vector quantization of MPEG-7 descriptors
+207	Named entity recognition and identification for finding the owner of a home page
+208	ASAWA: An Automatic Partition Key Selection Strategy
+209	Experiments with Language Models for Known-Item Finding of E-mail Messages.
+210	Quantifying reciprocity in large weighted communication networks
+211	A new formal description model of network attacking and defence knowledge of oil and gas field SCADA system
+212	Automatic keywords generation for contextual advertising
+213	York University at TREC 2005: HARD Track
+214	Minimizing Explanations of Why-Not Questions
+215	RankMass Crawler: A Crawler with High PageRank Coverage Guarantee.
+216	Gaussian Process Multi-task Learning Using Joint Feature Selection
+217	Efficient Querying of Correlated Uncertain Data with Cached Results
+218	Relaxed Online SVMs in the TREC Spam Filtering Track.
+219	Trade area analysis using user generated mobile location data
+220	Higher order contractive auto-encoder
+221	An Integrated Model for User Attribute Discovery: A Case Study on Political Affiliation Identification
+222	Collaborative similarity measure for intra graph clustering
+223	New exact concise representation of rare correlated patterns: application to intrusion detection
+224	Stuctured Queries for Legal Search.
+225	wNeighbors: a method for finding k nearest neighbors in weighted regions
+226	SINBAD: towards structure-independent querying of common neighbors in XML databases
+227	WTF: the who to follow service at Twitter
+228	Unsupervised feature selection via unified trace ratio formulation and K-means clustering (TRACK)
+229	Understanding user spatial behaviors for location-based recommendations
+230	Bi-directional Representation Learning for Multi-label Classification
+231	A Skylining Approach to Optimize Influence and Cost in Location Selection
+232	Emotion Recognition of Pop Music Based on Maximum Entropy with Priors
+233	Data Overload: What Can We Do?
+234	Multi-category item recommendation using neighborhood associations in trust networks
+235	A grid-based index and queries for large-scale geo-tagged video collections
+236	Making Sense of Suppressions and Failures in Sensor Data: A Bayesian Approach.
+237	Permutation testing improves Bayesian network learning
+238	CrowdFill: a system for collecting structured data from the crowd
+239	Learning to infer social ties in large networks
+240	University of Glasgow at TREC 2009: Experiments with Terrier
+241	Microsoft Cambridge at TREC 14: Enterprise Track.
+242	Adapted Features and Instance Selection for Improving Co-training
+243	A Probabilistic Model for Diversifying Recommendation Lists
+244	Using Subjective Adjectives in Opinion Retrieval from Blogs.
+245	A Random Method for Quantifying Changing Distributions in Data Streams
+246	The BlogVox Opinion Retrieval System
+247	AUDIO : an integrity auditing framework of outlier-mining-as-a-service systems
+248	Collaborative filtering via temporal euclidean embedding
+249	Experiments for HARD and Enterprise Tracks.
+250	Quality aware privacy protection for location-based services
+251	Semi-supervised Gaussian Process Ordinal Regression
+252	Using Syntactic and Semantic Relation Analysis in Question Answering.
+253	HITCleaner: A Light-Weight Online Data Cleaning System
+254	Fast tree-based mining of frequent itemsets from uncertain data
+255	BEST of KAUST at TREC 2011: Building Effective Search in Twitter.
+256	Aggregating information from the crowd and the network
+257	Web usage mining with semantic analysis
+258	User churn in focused question answering sites: characterizations and prediction
+259	Mining Correlation Patterns among Appliances in Smart Home Environment
+260	Multi-label Classification with Output Kernels
+261	Shortest Path Computation over Disk-Resident Large Graphs Based on Extended Bulk Synchronous Parallel Methods
+262	Ensemble clustering for result diversification
+263	Privacy preserving semi-supervised learning for labeled graphs
+264	The ACE theorem for querying the web of data
+265	Estimate unlabeled-data-distribution for semi-supervised PU learning
+266	Harnessing the Wisdom of Crowds for Corpus Annotation through CAPTCHA
+267	Protecting sensitive relationships against inference attacks in social networks
+268	Fast and Exact Mining of Probabilistic Data Streams
+269	Overview of the TREC 2013 Contextual Suggestion Track
+270	Efficient mining of contrast patterns on large scale imbalanced real-life data
+271	Unsupervised feature weighting based on local feature relatedness
+272	Iterative Model Refinement of Recommender MDPs Based on Expert Feedback
+273	Optimized Adaptive Hybrid Indexing for In-memory Column Stores
+274	An Axiomatic Approach to IR--UIUC TREC 2005 Robust Track Experiments.
+275	Overview of the TREC 2006 Enterprise Track.
+276	Scalable mining of frequent tri-concepts from folksonomies
+277	Exploring Traits of Adjectives to Predict Polarity Opinion in Blogs and Semantic Filters in Genomics.
+278	Iterative algorithm for inferring entity types from enumerative descriptions
+279	Inferring the demographics of search users: social data meets search queries
+280	EEG-MINE: Mining and Understanding Epilepsy Data
+281	ACRec: a co-authorship based random walk model for academic collaboration recommendation
+282	Staffing Open Collaborative Projects Based on the Degree of Acquaintance
+283	Query Allocation in Wireless Sensor Networks with Multiple Base Stations
+284	Closed sets for labeled data
+285	Multiscale bilinear recurrent neural network for prediction of MPEG video traffic
+286	Using classifier-based nominal imputation to improve machine learning
+287	Optimizing Pipelined Execution for Distributed In-Memory OLAP System
+288	Geo-social skyline queries
+289	An adaptive fuzzy k-nearest neighbor method based on parallel particle swarm optimization for bankruptcy prediction
+290	A Unified View of Matrix Factorization Models
+291	TopicExplorer: exploring document collections with topic models
+292	Two Sides of a Coin: Separating Personal Communication and Public Dissemination Accounts in Twitter
+293	Expertise Ranking of Users in QA Community
+294	IMAX: The Big Picture of Dynamic XML Statistics.
+295	Fires on the web: towards efficient exploring historical web graphs
+296	Persuasive, Authorative and Topical Answers for Complex Question Answering.
+297	Combining Language Model with Sentiment Analysis for Opinion Retrieval of Blog-Post.
+298	Genomic Information Retrieval Through Selective Extraction and Tagging by the ASU-BioAL Group.
+299	CSIR at TREC 2008 Expert Search Task: Modeling Expert Evidence in Expertise Retrieval.
+300	Mining User Interests from Information Sharing Behaviors in Social Media
+301	Event Relationship Analysis for Temporal Event Search
+302	Accelerating Topic Model Training on a Single Machine
+303	Indri TREC Notebook 2006: Lessons Learned From Three Terabyte Tracks.
+304	Graph evolution via social diffusion processes
+305	A Probabilistic Approach for Events Identification from Social Media RSS Feeds
+306	Efficient centrality monitoring for time-evolving graphs
+307	SubClass: classification of multidimensional noisy data using subspace clusters
+308	Passage Retrieval by Shrinkage of Language Models.
+309	Multiview semi-supervised learning for ranking multilingual documents
+310	Keywords filtering over probabilistic XML data
+311	Spectral Decomposition for Optimal Graph Index Prediction
+312	Nerding out on twitter: fun, patriotism and #curiosity
+313	Probabilistic Top-k Dominating Query over Sliding Windows
+314	AVR-Tree: Speeding Up the NN and ANN Queries on Location Data
+315	TREC Genomics Track at UIC.
+316	Scalable k-nearest neighbor graph construction based on greedy filtering
+317	Mining Appliance Usage Patterns in Smart Home Environment
+318	Characterizing video access patterns in mainstream media portals
+319	Discovery of Areas with Locally Maximal Confidence from Location Data
+320	Passage Relevancy Through Semantic Relatedness.
+321	Active learning for hierarchical text classification
+322	Spectral analysis of k-balanced signed graphs
+323	Real-Time Television ROI Tracking Using Mirrored Experimental Designs
+324	Consistent Query Answering Based on Repairing Inconsistent Attributes with Nulls
+325	Knowledge-Powered Deep Learning for Word Embedding
+326	Building decision trees for the multi-class imbalance problem
+327	Indexing network voronoi diagrams
+328	Community Distribution Outlier Detection in Heterogeneous Information Networks
+329	BC-BSP: A BSP-Based Parallel Iterative Processing System for Big Data on Cloud Architecture
+330	Privacy-Preserving Reachability Query Services
+331	Interactive Retrieval Using Weights.
+332	Overview of the TREC 2011 Entity Track.
+333	Learning to predict trending queries: classification - based
+334	A New, Fast and Accurate Algorithm for Hierarchical Clustering on Euclidean Distances
+335	Top- k similarity join over multi-valued objects
+336	Experiments at the University of Edinburgh for the TREC 2006 QA Track.
+337	Scalable complex event processing on top of mapreduce
+338	Evaluation of Stemming, Query Expansion and Manual Indexing Approaches for the Genomic Task.
+339	Data management challenges and opportunities in cloud computing
+340	ALFRED: crowd assisted data extraction
+341	TREC 14 Enterprise Track at CSIRO and ANU.
+342	Matrix Factorization With Aggregated Observations
+343	Efficient Algorithms for Skyline Top-K Keyword Queries on XML Streams
+344	Workload-Aware Cache for Social Media Data
+345	Complex Interactive Question Answering Enhanced with Wikipedia.
+346	Objectively Evaluating Interestingness Measures for Frequent Itemset Mining
+347	MultiAspectSpotting: Spotting Anomalous Behavior within Count Data Using Tensor
+348	Beyond Poisson: Modeling Inter-Arrival Time of Requests in a Datacenter
+349	Mobile agents for network intrusion resistance
+350	Cross-lingual sentiment classification via bi-view non-negative matrix tri-factorization
+351	Examining Overfitting in Relevance Feedback: Sabir Research at TREC 2007.
+352	University of Texas School of Information at TREC 2007.
+353	CD: a coupled discretization algorithm
+354	Distributed Anonymization for Multiple Data Providers in a Cloud System
+355	IR-Specific Searches at TREC 2007: Genomics & Blog Experiments.
+356	Aspect-Based Sentiment Analysis of Amazon Reviews for Fitness Tracking Devices
+357	ρ-uncertainty Anonymization by Partial Suppression
+358	Boot-Strapping Language Identifiers for Short Colloquial Postings
+359	Inferring Strange Behavior from Connectivity Pattern in Social Networks
+360	Estimating missing data in data streams
+361	Mining triadic closure patterns in social networks
+362	FIMO: A Novel WiFi Localization Method
+363	Scalable top- k keyword search in relational databases
+364	Exploring the Legal Discovery and Enterprise Tracks at the University of Iowa.
+365	Item set mining based on cover similarity
+366	Topical Presentation of Search Results on Database
+367	Multi-strategic approach of fast composition of web services
+368	The geological disasters defense expert system of the massive pipeline network SCADA system based on FNN
+369	Larger residuals, less work: active document scheduling for latent dirichlet allocation
+370	Trust prediction using positive, implicit, and negative information
+371	A topic based document relevance ranking model
+372	Network Reconstruction for the Identification of miRNA:mRNA Interaction Networks
+373	Event registry: learning about world events from news
+374	Collective viewpoint identification of low-level participation
+375	Feature representation for customer attrition risk prediction in retail banking
+376	Infrastructure for supporting exploration and discovery in web archives
+377	A*DAX: A Platform for Cross-Domain Data Linking, Sharing and Analytics
+378	Acquiring commonsense knowledge for sentiment analysis using human computation
+379	Learning to rank for joy
+380	General spatial skyline operator
+381	Online Visualization of Geospatial Stream Data using the WorldWide Telescope
+382	Fractal Based Anomaly Detection over Data Streams
+383	Synonym-Based Expansion and Boosting-Based Re-Ranking: A Two-phase Approach for Genomic Information Retrieval.
+384	Overview of the TREC 2009 Web Track.
+385	Summarizing social image search results
+386	Overview of the TREC 2007 Enterprise Track
