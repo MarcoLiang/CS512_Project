@@ -56,7 +56,7 @@ from utils.load_embedding import *
 
 
 class ModuleNet(nn.Module):
-    def __init__(self, w,
+    def __init__(self,
                  num_node,
                  num_author,
                  num_module,
@@ -70,7 +70,6 @@ class ModuleNet(nn.Module):
         self.dropout_rate = 0.2
         self.num_author = num_author
         self.num_node = num_node
-        self.w = w
 
         # self.entity_embeds = embedding
         # self.entity_embeds = Variable(torch.from_numpy(embedding).float(), requires_grad=False).cuda()

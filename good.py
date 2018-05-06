@@ -150,7 +150,6 @@ def train_model(args):
 
     # decay_rate = 0.95
     # decay_time = 10000
-    w = 0.5
 
     # embed = nn.Embedding(num_node, args.embed_size)
     # embed.weight.data.copy_(torch.from_numpy(embedding_loader(args.id_path, args.embed_path, args.embed)))
@@ -164,7 +163,6 @@ def train_model(args):
     # print('Creating embedding...', num_node, args.embed_size)
 
     kwargs = {
-        'w': w,
         # 'embedding': embed,
         'num_author': dataset.author_num,
         'num_node': num_node,
