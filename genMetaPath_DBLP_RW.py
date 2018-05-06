@@ -136,6 +136,16 @@ class MetaPathGenerator:
             file.write(toks_str)
         file.close()
 
+    def progress(self, count, total, status=''):
+        bar_len = 60
+        filled_len = int(round(bar_len * count / float(total)))
+
+        percents = round(100.0 * count / float(total), 1)
+        bar = '=' * filled_len + '-' * (bar_len - filled_len)
+
+        sys.stdout.write('[%s] %s%s ...%s\r' % (bar, percents, '%', status))
+        sys.stdout.flush()
+
 
     def write_pattern_path(self, meta_path, file, inTest):
         '''
@@ -148,6 +158,7 @@ class MetaPathGenerator:
         [paper1 = 2, paper2 = 3] means paper1 was cited by paper2
 
         '''
+        # print(meta_path)
         self.N += 2
         # [author0, author1,...,author_k = offset - 1, paper0,...,paper_k=offset1+offset2-1, conf0 = offset1+offset2]
         # entities list
@@ -211,21 +222,24 @@ class MetaPathGenerator:
 
 
     def generate_metapath(self, dir_out_train):
-        marked_author = set() # store the id of marked author
+        # marked_author = set() # store the id of marked author
         DBLP_train = open(dir_out_train + '/DBLP_train.txt', 'w')
         for author_id in self.id_author.keys():
             print('Generating meta-path for author:{}'.format(author_id))
-            path_cnt = 0
+            path_cnt = 0.0
             stack = Stack()
-            marked_author.add(author_id)
+            # marked_author.add(author_id)
             meta_path = []
             # stack.push(Node(author_id, 0, 0))
+
+
 
             while path_cnt < self.path_per_author:
                 if stack.isEmpty():
                     stack.push(Node(author_id, 0, 0))
                 node = stack.pop()
 
+                # self.progress(path_cnt, self.path_per_author)
                 entity_type = self.get_entity_type(node.id)
                 # add entity to current meta-path
                 if node.step == len(meta_path):
@@ -233,7 +247,7 @@ class MetaPathGenerator:
                 else:
                     meta_path[node.step] = node.id
                 # check terminate criteria
-                if entity_type == self.author_type and (not node.id in marked_author) and (node.id in self.a_id_train):
+                if entity_type == self.author_type and (node.id in self.a_id_train):
                     inTestSet = author_id in self.a_id_test
                     self.write_pattern_path(meta_path[:node.step + 1], DBLP_train, inTestSet)
                     path_cnt += 1
