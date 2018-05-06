@@ -14,15 +14,17 @@ from utils.data_baseline import BaselineData
 from utils.load_embedding import *
 
 # data options
-parser.add_argument('--batch_size', default=128)
-parser.add_argument('--data_dir', default="./data/classify_task/pattern_50_50")
+parser.add_argument('--batch_size', default=32)
+parser.add_argument('--data_dir', default="./data/classify_task/pattern_90_10")
 
 # module options
 parser.add_argument('--embed_size', default=128)
-parser.add_argument('--embed', default='dw')
-parser.add_argument('--embed_path', default="./embedding_file/deepwalk/focus_embedding_new")
+# parser.add_argument('--embed', default='dw')
+# parser.add_argument('--embed_path', default="./embedding_file/deepwalk/focus_embedding_new")
 # parser.add_argument('--embed', default='esim')
 # parser.add_argument('--embed_path', default="./embedding_file/esim/vec_128_new.dat")
+parser.add_argument('--embed', default='m2v')
+parser.add_argument('--embed_path', default="./embedding_file/m2v/m2vembedding")
 parser.add_argument('--id_path', default="./data/focus/venue_filtered_unique_id")
 parser.add_argument('--classifier_hidden_dim', default=32)
 parser.add_argument('--classifier_output_dim', default=4)
@@ -78,6 +80,7 @@ def main(args):
 def train_model(dataset, args):
 
     embed = embedding_loader(args.id_path, args.embed_path, args.embed)
+    embed = torch.from_numpy(embed).float()
 
     kwargs = {
         'embed': embed,
@@ -93,11 +96,11 @@ def train_model(dataset, args):
     optimizer = torch.optim.Adam(execution_engine.parameters(), lr=args.learning_rate)
     loss_fn = torch.nn.CrossEntropyLoss()#.cuda()
 
-    stats = {
-        'train_losses': [], 'train_losses_ts': [],
-        'train_accs': [], 'val_accs': [], 'val_accs_es': [],
-        'best_val_acc': -1, 'model_e': 0,
-    }
+    # stats = {
+    #     'train_losses': [], 'train_losses_ts': [],
+    #     'train_accs': [], 'val_accs': [], 'val_accs_es': [],
+    #     'best_val_acc': -1, 'model_e': 0,
+    # }
 
     epoch = 0
     while epoch < args.num_epoch:
@@ -119,27 +122,27 @@ def train_model(dataset, args):
             print('Checking training/validation accuracy ... ')
             val_acc = check_accuracy(dataset, execution_engine, args.batch_size)
             print('val accuracy is ', val_acc)
-            stats['val_accs'].append(val_acc)
-            stats['val_accs_es'].append(epoch)
-
-            if val_acc > stats['best_val_acc']:
-                stats['best_val_acc'] = val_acc
-                stats['model_e'] = epoch
-                best_state = get_state(execution_engine)
-
-            checkpoint = {
-                'args': args,
-                'kwargs': kwargs,
-                'state': best_state,
-                'stats': stats,
-            }
-            for k, v in stats.items():
-                checkpoint[k] = v
-            print('Saving checkpoint to %s' % args.checkpoint_path)
-            torch.save(checkpoint, args.checkpoint_path)
+            # stats['val_accs'].append(val_acc)
+            # stats['val_accs_es'].append(epoch)
+            #
+            # if val_acc > stats['best_val_acc']:
+            #     stats['best_val_acc'] = val_acc
+            #     stats['model_e'] = epoch
+            #     best_state = get_state(execution_engine)
+            #
+            # checkpoint = {
+            #     'args': args,
+            #     'kwargs': kwargs,
+            #     'state': best_state,
+            #     'stats': stats,
+            # }
+            # for k, v in stats.items():
+            #     checkpoint[k] = v
+            # print('Saving checkpoint to %s' % args.checkpoint_path)
+            # torch.save(checkpoint, args.checkpoint_path)
 
     print("training is done!")
-    print("best validate accuracy:{}".format(stats['best_val_acc']))
+    # print("best validate accuracy:{}".format(stats['best_val_acc']))
 
 
 def get_state(m):
