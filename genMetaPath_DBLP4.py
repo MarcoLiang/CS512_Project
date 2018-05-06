@@ -306,12 +306,12 @@ class Node:
 def main():
     dir_input = "data/focus/venue_filtered_unique_id"
     dir_output = "data/classify_task/pattern_70_30"
-    train_ratio_lst = [0.7, 0.5, 0.3, 0.1]
+    train_ratio_lst = [0.8]
     for r in train_ratio_lst:
         print("#====================================================#")
         print("#            train : test = {0} : {1}                #".format(r, round(1-r, 1)))
         print("#====================================================#")
-        dir_output = "data/classify_task/pattern_" + str(int(r * 100)) + "_" + str(int((1-r) * 100))
+        dir_output = "data/classify_task/pattern_" + str(int(r * 100)) + "_" + str(int((0.2) * 100))
         print("Start...")
         print("output direction: {}".format(dir_output))
         meta = MetaPathGenerator(5, 3, "focus", train_ratio=r)

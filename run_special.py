@@ -43,7 +43,7 @@ parser.add_argument('--num_epoch', default=100000)
 # Output options
 parser.add_argument('--save_path', default='./model/no_embedding_model_classification/')
 parser.add_argument('--check_every', default=1)
-parser.add_argument('--record_loss_every', default=80)
+parser.add_argument('--record_loss_every', default=200)
 
 
 def train_embedding(dataset, embed, args):
@@ -67,7 +67,7 @@ def train_embedding(dataset, embed, args):
     best_train_acc = 0
     num_train = len(dataset.y_train)
     num_test = len(dataset.y_test)
-    while epoch < 2000:
+    while epoch < 1500:
         dataset.shuffle()
         epoch += 1
 
@@ -103,9 +103,8 @@ def train_embedding(dataset, embed, args):
 
 def train_model(args):
     args.checkpoint_path = args.save_path+'checkpoint.pt'
-    # args.log_path = args.save_path+'log.txt'
-    # log = open(args.log_path, 'w')
-
+    args.log_path = args.save_path+'log.txt'
+    log = open(args.log_path, 'w')
 
     # baseline_dataset = BaselineData(args.data_dir)
 
@@ -266,7 +265,7 @@ def train_model(args):
 
         five_choice = np.random.choice(five_path_train, size=500)
         seven_choice = np.random.choice(seven_path_train, size=1000)
-        nine_choice = np.random.choice(nine_path_train, size=2000)
+        nine_choice = np.random.choice(nine_path_train, size=3000)
         random_choice = np.concatenate([five_choice,seven_choice,nine_choice])
         np.random.shuffle(random_choice)
 
@@ -283,8 +282,10 @@ def train_model(args):
 
         execution_engine.train()
 
+        num_batch = 0
         for batch in dataset.next_batch(dataset.X_train[random_choice], dataset.y_train[random_choice], batch_size=args.batch_size):
             t += 1
+            num_batch += 1
             paths, origin_label = batch
             # labels = origin_label[:,-1]
             labels = origin_label[:, 0]
@@ -299,28 +300,36 @@ def train_model(args):
             # preds = np.argmax(scores, axis=1)
             # num_correct1 += np.sum(preds == labels)
 
-            if t % args.record_loss_every == 0:
-                loss_aver /= args.record_loss_every
-                print(t, m, 'loss:', loss_aver)
-                # stats['train_losses'].append(loss_aver)
-                # stats['train_losses_ts'].append(t)
-                # stats['train_losses_ms'].append(m)
-                loss_aver = 0
+    # if t % args.record_loss_every == 0:
+        loss_aver /= num_batch
+        print('=' * 80)
+        print(t*args.batch_size, m, 'loss:', loss_aver)
+        # stats['train_losses'].append(loss_aver)
+        # stats['train_losses_ts'].append(t)
+        # stats['train_losses_ms'].append(m)
+        loss_aver = 0
 
         execution_engine.eval()
 
-        print('=' * 80)
         print('start evaluate training pathes...')
 
         # random_choice = np.random.choice(range(num_of_has_label_train), size=num_for_weight)
-        five_choice = np.random.choice(five_path_train, size=num_for_weight)
-        seven_choice = np.random.choice(seven_path_train, size=num_for_weight)
-        nine_choice = np.random.choice(nine_path_train, size=num_for_weight)
-        random_choice = np.concatenate([five_choice, seven_choice, nine_choice])
+        # five_choice = np.random.choice(five_path_train, size=num_for_weight)
+        # seven_choice = np.random.choice(seven_path_train, size=num_for_weight)
+        # nine_choice = np.random.choice(nine_path_train, size=num_for_weight)
+        # random_choice = np.concatenate([five_choice, seven_choice, nine_choice])
+        seven_choice = np.random.choice(seven_path_train, size=10000)
+        nine_choice = np.random.choice(nine_path_train, size=10000)
+        random_choice = np.concatenate([five_path_train, seven_choice, nine_choice])
+        num_for_train = len(random_choice)
         X_train = has_label_X_train[random_choice]
         y_train = has_label_y_train[random_choice]
+        # X_train = dataset.X_train[random_choice]
+        # y_train = dataset.y_train[random_choice]
         correct_path = []
         wrong_path = []
+
+        num_correct1, num_correct2 = 0, 0
 
         for batch in dataset.next_batch(X_train, y_train, batch_size=batch_size_for_test):
             paths, origin_label = batch
@@ -350,10 +359,11 @@ def train_model(args):
         # nine_choice = np.random.choice(nine_path, size=int(nine_choice))
         # random_choice = np.concatenate([five_choice,seven_choice,nine_choice])
 
-        random_choice = np.random.choice(range(num_of_no_label_train), size=num_for_test)
-
-        # nine_choice = np.random.choice(nine_path, size=30000)
-        # random_choice = np.concatenate([five_path,seven_path,nine_choice])
+        # random_choice = np.random.choice(range(num_of_no_label_train), size=num_for_test)
+        seven_choice = np.random.choice(seven_path, size=4000)
+        nine_choice = np.random.choice(nine_path, size=20000)
+        random_choice = np.concatenate([five_path,seven_choice,nine_choice])
+        num_for_test = len(random_choice)
 
         correct_path = []
         wrong_path = []
@@ -402,7 +412,7 @@ def train_model(args):
 
         train_acc = float(num_correct1) / num_for_train
         print('train path accuracy is ', train_acc)
-        test_acc = float(num_correct2) / len(random_choice)
+        test_acc = float(num_correct2) / num_for_test
         print('test path accuracy is ', test_acc)
 
         for i, entity2preds in enumerate([entity2preds1,entity2preds2,entity2preds3]):
@@ -426,6 +436,8 @@ def train_model(args):
             # print('vote rate for correct mean={} min={} max={}'.format(vrc_mean, vrc_min, vrc_max))
             # print('vote rate for wrong mean={} min={} max={}'.format(vrw_mean, vrw_min, vrw_max))
 
+        execution_engine.train()
+
         # threshold = 0.9
         # sure_answers = votes_rate>threshold
         # sure_ids = dataset.X_test[sure_answers]
@@ -437,15 +449,13 @@ def train_model(args):
         #         dataset.y_train[i][-1] = ids2preds[last]
 
 
-        # log.write('epoch:{}\ntrain path acc={}\ttest path acc={}\tensemble acc={}'
-        #           '\nvote rate for correct mean={} max={} min={}'
-        #           '\nvote rate for wrong mean={} max={} min={}\n'
-        #           .format(epoch, train_acc, test_acc, en_acc, vrc_mean, vrc_max, vrc_min, vrw_mean,vrw_max, vrw_min))
-        # log.write('id\tresults\t\t\t\tlabel\tcorrect\tvote rate\n')
-        # log_info = np.concatenate((dataset.X_test.reshape(num_test,1), en_results, dataset.y_test.reshape(num_test,1), en_correct.reshape(num_test,1), votes_rate.reshape(num_test,1)), axis=1)
-        # log_info = sorted(log_info, key=lambda x:x[-2])
-        # for i in range(num_test):
-        #     log.write('\t'.join([str(j) for j in log_info[i]])+'\n')
+        log.write('epoch:{}\ntrain path acc={}\ttest path acc={}\tensemble acc={}'
+                  .format(epoch, train_acc, test_acc, en_acc))
+        log.write('id\tresults\t\t\t\tlabel\tcorrect\tvote rate\n')
+        log_info = np.concatenate((dataset.X_test.reshape(num_test,1), en_results, dataset.y_test.reshape(num_test,1), en_correct.reshape(num_test,1)), axis=1)
+        log_info = sorted(log_info, key=lambda x:x[-1])
+        for i in range(num_test):
+            log.write('\t'.join([str(j) for j in log_info[i]])+'\n')
 
         # if epoch % args.check_every == 0:
         #     print('Checking training/validation accuracy ... ')

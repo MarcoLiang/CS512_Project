@@ -15,7 +15,7 @@ from utils.load_embedding import *
 
 # data options
 parser.add_argument('--batch_size', default=128)
-parser.add_argument('--data_dir', default="./data/classify_task/pattern_90_10")
+parser.add_argument('--data_dir', default="./data/classify_task/pattern_50_50")
 
 # module options
 parser.add_argument('--embed_size', default=128)
@@ -47,7 +47,8 @@ class BaselineMLP(nn.Module):
 
         self.dropout_rate = 0.5
 
-        self.entity_embeds = Variable(torch.from_numpy(embed).float(), requires_grad=False).cuda()
+        self.entity_embeds = Variable(embed, requires_grad=False).cuda()
+        # self.entity_embeds = Variable(embed, requires_grad=False).cuda()
 
         self.classifier = nn.Sequential(nn.Linear(embed_size, classifier_hidden_dim, bias=True),
                                         # nn.ReLU(inplace=True),
@@ -86,6 +87,7 @@ def train_model(dataset, args):
     }
 
     execution_engine = BaselineMLP(**kwargs)
+    execution_engine.entity_embeds = execution_engine.entity_embeds.cpu()
     # execution_engine.cuda()
     execution_engine.train()
     optimizer = torch.optim.Adam(execution_engine.parameters(), lr=args.learning_rate)

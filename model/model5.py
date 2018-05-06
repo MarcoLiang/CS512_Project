@@ -59,7 +59,7 @@ class ModuleNet(nn.Module):
                  verbose=True):
         super(ModuleNet, self).__init__()
 
-        self.dropout_rate = 0
+        self.dropout_rate = 0.5
         self.num_author = num_author
 
         # self.entity_embeds = embedding
@@ -74,7 +74,7 @@ class ModuleNet(nn.Module):
         self.classifier = nn.Sequential(nn.Linear(embed_size, classifier_hidden_dim, bias=True),
                                         # nn.ReLU(inplace=True),
                                         nn.Tanh(),
-                                        # nn.Dropout(p=self.dropout_rate, inplace=True),
+                                        nn.Dropout(p=0.5),
                                         nn.Linear(classifier_hidden_dim, classifier_output_dim, bias=True))
 
         # self.module_params = []
@@ -134,10 +134,11 @@ class ModuleNet(nn.Module):
             bias2 = self.look_up_word_embed(path[i+1])
             bias = torch.cat([bias1, bias2], 1)
             x = module(x, bias, flag=True)
-            # x = F.dropout(x, p=self.dropout_rate, training=self.training)
+            x = F.dropout(x, p=self.dropout_rate, training=self.training)
         module = self.function_modules[path[-2]]
         bias = self.look_up_node_embed(path[-1])
         x = module(x, bias, flag=False)
+        x = F.dropout(x, p=self.dropout_rate, training=self.training)
         # module = self.function_modules[path[-2]]
         # bias = self.look_up_embed(path[-1])
         # x = F.tanh(module(x, bias))
