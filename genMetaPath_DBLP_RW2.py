@@ -280,7 +280,7 @@ class MetaPathGenerator:
         return [self.get_entity_type(id) for id in meta_path]
 
 
-    def generate_metapath(self, dir_out_train):
+    def random_walk(self, dir_out_train):
         # marked_author = set() # store the id of marked author
         DBLP_train = open(dir_out_train + '/DBLP_train.txt', 'w')
         for author_id in self.id_author.keys():
@@ -393,7 +393,7 @@ def main():
     meta = MetaPathGenerator(5, 3, "focus", train_ratio=r, random_prob=random_prob, reverse_path=reverse_path)
     meta.read_data(dir_input)
     print('Generating Meta-Path using files in: \n {0}, label by {1}'.format(dir_input, meta.label_by))
-    meta.generate_metapath(dir_output)
+    meta.random_walk(dir_output)
     meta.write_test_set(dir_output)
     meta.write_train_set(dir_output)
     print("#====================================================#")
