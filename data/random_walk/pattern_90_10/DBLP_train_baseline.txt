@@ -1,5 +1,5 @@
-0	Ge Yu	1
 1	Xiaochun Yang	1
+2	Wynne Hsu	2
 3	Satu Elisa Schaeffer	2
 4	Jamie Callan	4
 5	Masatoshi Yoshikawa	1
@@ -16,7 +16,6 @@
 16	Chris H. Q. Ding	2
 17	Boi Faltings	3
 18	Jie Tang	4
-19	Dimitrios Gunopulos	2
 20	Charles L. A. Clarke	4
 21	Koen Vanhoof	2
 22	Michalis Vazirgiannis	2
@@ -39,7 +38,6 @@
 39	Yangbo Zhu	4
 40	Sourav S. Bhowmick	2
 41	Jimmy J. Lin	4
-42	Heng Huang	2
 43	Yuhong Guo	3
 44	Hua Lu	1
 45	Jiaheng Lu	2
@@ -48,8 +46,9 @@
 50	Ioannis Tsamardinos	3
 51	Jennifer Widom	1
 52	Craig Macdonald	4
-53	Iadh Ounis	4
 54	Hugo Zaragoza	4
+55	Stephen Robertson	4
+56	Lior Rokach	2
 57	Hiroyuki Kitagawa	2
 58	Olga Vechtomova	4
 59	Haixun Wang	2
@@ -61,8 +60,8 @@
 65	Hang Cui	4
 66	Tat-Seng Chua	4
 67	Min-Yen Kan	4
+68	Jianzhong Li	1
 69	Carson Kai-Sang Leung	2
-70	Tamer Elsayed	4
 71	Anirban Dasgupta	2
 72	Roi Blanco	4
 73	Wang-Chien Lee	1
@@ -80,17 +79,15 @@
 85	ChengXiang Zhai	4
 86	Ian Soboroff	4
 87	Arjen P. de Vries	4
-88	Miguel E. Ruiz	4
 89	Jianqiang Wang	4
-90	Mizuho Iwaihara	1
+91	Milad Shokouhi	4
 92	Hyung-Jeong Yang	2
+93	Kian-Lee Tan	1
 94	Gemma C. Garriga	2
 95	Dong-Chul Park	2
-96	Russell Greiner	3
 98	Nikos Mamoulis	1
 99	Matthias Renz	2
 100	Gang Wang	2
-101	Geoffrey J. Gordon	3
 102	Alexander Hinneburg	2
 103	Sharma Chakravarthy	1
 104	Maya Ramanath	1
@@ -102,33 +99,35 @@
 110	Chitta Baral	3
 111	Wei Lu	2
 112	Hongyan Liu	2
-113	Tao Wang	3
 114	Trevor Strohman	4
+115	W. Bruce Croft	4
 116	Dijun Luo	2
 117	Yasuhiro Fujiwara	2
 118	Ira Assent	2
+119	Ralph Krieger	2
 120	Cyril Goutte	4
+121	Byron Choi	1
 122	Bingsheng He	1
 123	Victoria S. Uren	4
 124	Ying Zhang	4
+125	Wei Zhou	4
 126	Clement T. Yu	1
 127	Sang-goo Lee	4
 128	Alberto H. F. Laender	4
-129	Nobuhiro Yugami	3
 130	Charles X. Ling	3
 131	Zhi-Hua Zhou	3
 132	Brendan Kitts	2
 133	Fei Huang	4
 134	Jiang Bian	4
 135	Nitesh V. Chawla	2
+136	Cyrus Shahabi	1
 137	Jiawei Han	2
 138	Sabine Bergler	3
 139	Krisztian Balog	4
-140	Farzin Maghoul	4
+141	Elio Masciari	1
 142	Carlo Zaniolo	1
 143	Bonnie Webber	4
 144	Jacques Savoy	4
-145	Katsumi Tanaka	4
 146	Valter Crescenzi	4
 147	Paolo Merialdo	1
 148	Hisashi Kashima	2
@@ -144,15 +143,16 @@
 158	Marc Najork	4
 159	Stelios Paparizos	1
 160	Le Gruenwald	1
+161	Yoshiharu Ishikawa	1
 162	Aditya Kumar Sehgal	4
-163	Christian Borgelt	2
 164	Kristian Kersting	3
 165	Sang-Wook Kim	2
 166	Yuefeng Li	2
 167	Michelangelo Ceci	2
 168	Gregor Leban	2
 169	Bin Zhao	2
+170	Frans Coenen	2
 171	Wee Siong Ng	1
 172	Wolfgang Nejdl	4
-174	Fred Popowich	3
+173	Badrish Chandramouli	1
 175	Aixin Sun	4
